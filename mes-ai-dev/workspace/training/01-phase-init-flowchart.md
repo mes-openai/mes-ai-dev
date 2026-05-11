@@ -48,83 +48,83 @@
 
 ```mermaid
 flowchart TB
-    START([🚀 启动初始化]) --> MODE{选择初始化模式}
+    START([启动初始化]) --> MODE{选择初始化模式}
 
-    MODE -->|全仓初始化| FULL[/mes-init-project<br/>无参数]
-    MODE -->|单仓/定向初始化| SINGLE[/mes-init-project<br/>--services=xxx]
-    MODE -->|断点续传| RESUME[检测 checkpoint<br/>从未完成 Phase 继续]
+    MODE -->|全仓初始化| FULL["mes-init-project 无参数"]
+    MODE -->|单仓定向初始化| SINGLE["mes-init-project --services=xxx"]
+    MODE -->|断点续传| RESUME["检测 checkpoint 从未完成 Phase 继续"]
 
     FULL --> PH1
     SINGLE --> PH1
     RESUME --> PH1
 
-    subgraph PHASE1["Phase 1：仓级扫描"]
-        PH1[后端扫描<br/>mes-init-scan-backend] --> PH2[前端扫描<br/>mes-init-scan-frontend]
-        PH2 --> PH3[数据库索引<br/>mes-init-index-database]
+    subgraph PHASE1 ["Phase 1: 仓级扫描"]
+        PH1["后端扫描 mes-init-scan-backend"] --> PH2["前端扫描 mes-init-scan-frontend"]
+        PH2 --> PH3["数据库索引 mes-init-index-database"]
     end
 
-    subgraph PHASE2["Phase 2：服务深度分析"]
-        PH3 --> PH4[服务包结构分析<br/>mes-init-analyze-service]
-        PH4 --> PH5[配置与依赖分析<br/>mes-init-analyze-config]
-        PH5 --> PH6[前端路由分析<br/>mes-init-analyze-routes]
+    subgraph PHASE2 ["Phase 2: 服务深度分析"]
+        PH3 --> PH4["服务包结构分析 mes-init-analyze-service"]
+        PH4 --> PH5["配置与依赖分析 mes-init-analyze-config"]
+        PH5 --> PH6["前端路由分析 mes-init-analyze-routes"]
     end
 
-    subgraph PHASE3["Phase 3：API 与依赖建图"]
-        PH6 --> PH7[API 端点抽取<br/>mes-init-extract-api]
-        PH7 --> PH8[依赖图构建<br/>mes-init-build-dependency-graph]
-        PH8 --> PH9[Code Map 构建<br/>mes-init-build-code-map]
+    subgraph PHASE3 ["Phase 3: API 与依赖建图"]
+        PH6 --> PH7["API 端点抽取 mes-init-extract-api"]
+        PH7 --> PH8["依赖图构建 mes-init-build-dependency-graph"]
+        PH8 --> PH9["Code Map 构建 mes-init-build-code-map"]
     end
 
-    subgraph PHASE4["Phase 4：业务流与风险扫描"]
-        PH9 --> PH10[业务流扫描<br/>mes-init-scan-flows]
-        PH10 --> PH11[热点扫描<br/>mes-init-scan-hotspots]
-        PH11 --> PH12[模式抽取<br/>mes-init-scan-patterns]
+    subgraph PHASE4 ["Phase 4: 业务流与风险扫描"]
+        PH9 --> PH10["业务流扫描 mes-init-scan-flows"]
+        PH10 --> PH11["热点扫描 mes-init-scan-hotspots"]
+        PH11 --> PH12["模式抽取 mes-init-scan-patterns"]
     end
 
-    subgraph PHASE5["Phase 5：参考知识抽取"]
-        PH12 --> PH13[业务参考提取<br/>mes-init-extract-reference]
-        PH13 --> PH14[测试资产评估<br/>mes-init-assess-testability]
+    subgraph PHASE5 ["Phase 5: 参考知识抽取"]
+        PH12 --> PH13["业务参考提取 mes-init-extract-reference"]
+        PH13 --> PH14["测试资产评估 mes-init-assess-testability"]
     end
 
-    subgraph PHASE6["Phase 6：E2E 验证与知识校验"]
-        PH14 --> PH15[端到端链路验证<br/>mes-init-verify-e2e-chain]
-        PH15 --> PH16[知识完整性校验<br/>mes-init-verify-knowledge]
+    subgraph PHASE6 ["Phase 6: E2E 验证与知识校验"]
+        PH14 --> PH15["端到端链路验证 mes-init-verify-e2e-chain"]
+        PH15 --> PH16["知识完整性校验 mes-init-verify-knowledge"]
     end
 
-    PH16 --> GATE1{步骤门禁审查}
+    PH16 --> GATE1{"步骤门禁审查"}
 
-    GATE1 -->|❌不通过| PH1
-    GATE1 -->|✅通过| STATE_WRITE[写入状态片段<br/>state/fragments/*.yaml]
+    GATE1 -->|不通过| PH1
+    GATE1 -->|通过| STATE_WRITE["写入状态片段 state/fragments/*.yaml"]
 
-    STATE_WRITE --> MODE_CHECK{初始化模式?}
+    STATE_WRITE --> MODE_CHECK{"初始化模式?"}
 
-    MODE_CHECK -->|全仓模式| CONVERGE[Phase 8A：最终收拢<br/>统一生成全局共享文件]
-    MODE_CHECK -->|单仓/定向模式| KEEP_LOCAL[仅保留局部产物<br/>待后续 converge 收口]
+    MODE_CHECK -->|全仓模式| CONVERGE["Phase 8A: 最终收拢 统一生成全局共享文件"]
+    MODE_CHECK -->|单仓定向模式| KEEP_LOCAL["仅保留局部产物 待后续 converge 收口"]
 
-    CONVERGE --> GATE_EXIT{退出门禁}
+    CONVERGE --> GATE_EXIT{"退出门禁"}
     KEEP_LOCAL --> GATE_EXIT
 
-    GATE_EXIT -->|❌不通过| PH1
-    GATE_EXIT -->|✅通过| REPORT1[输出阶段完成产物报告<br/>report/stage-output-report.md]
+    GATE_EXIT -->|不通过| PH1
+    GATE_EXIT -->|通过| REPORT1["输出阶段完成产物报告 report/stage-output-report.md"]
 
-    REPORT1 --> ENRICH_NEEDED{需要深化?}
+    REPORT1 --> ENRICH_NEEDED{"需要深化?"}
 
-    ENRICH_NEEDED -->|是<br/>大仓/超大仓| ENRICH[/mes-init-enrich<br/>按需深化]
-    ENRICH_NEEDED -->|否<br/>小仓已完整| INIT_DONE
+    ENRICH_NEEDED -->|"是 大仓或超大仓"| ENRICH["mes-init-enrich 按需深化"]
+    ENRICH_NEEDED -->|"否 小仓已完整"| INIT_DONE
 
-    subgraph ENRICH_PHASE["深化阶段"]
-        ENRICH --> EN1[服务 detail 深化]
-        EN1 --> EN2[file-summaries 生成]
-        EN2 --> EN3[模式与反模式补充]
-        EN3 --> EN4[ownership 建立]
-        EN4 --> EN5[热点层刷新]
-        EN5 --> EN6[terminology-glossary 充实]
-        EN6 --> EN7[数据库明细生成]
+    subgraph ENRICH_PHASE ["深化阶段"]
+        ENRICH --> EN1["服务 detail 深化"]
+        EN1 --> EN2["file-summaries 生成"]
+        EN2 --> EN3["模式与反模式补充"]
+        EN3 --> EN4["ownership 建立"]
+        EN4 --> EN5["热点层刷新"]
+        EN5 --> EN6["terminology-glossary 充实"]
+        EN6 --> EN7["数据库明细生成"]
     end
 
-    EN7 --> GATE_ENRICH{深化门禁}
-    GATE_ENRICH -->|✅通过| INIT_DONE([✅ 初始化完成])
-    GATE_ENRICH -->|❌不通过| EN1
+    EN7 --> GATE_ENRICH{"深化门禁"}
+    GATE_ENRICH -->|通过| INIT_DONE(["初始化完成"])
+    GATE_ENRICH -->|不通过| EN1
 
     style START fill:#4CAF50,color:white
     style INIT_DONE fill:#4CAF50,color:white
@@ -140,16 +140,13 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    subgraph COMMANDS["初始化三大命令"]
-        direction TB
-        A["/mes-init-project<br/>━━━━━━━━━━━━<br/>🏗️ 基础建图<br/>━━━━━━━━━━━━<br/>仓级地图 + index/profile<br/>+ 局部 registry 片段"]
-        B["/mes-init-enrich<br/>━━━━━━━━━━━━<br/>🔍 深度补充<br/>━━━━━━━━━━━━<br/>detail + file-summaries<br/>+ patterns + ownership"]
-        C["/mes-init-converge<br/>━━━━━━━━━━━━<br/>🔗 全局收敛<br/>━━━━━━━━━━━━<br/>汇总单仓结果到<br/>全局一致状态"]
-    end
+    A["mes-init-project<br>基础建图<br>仓级地图 + index/profile<br>+ 局部 registry 片段"]
+    B["mes-init-enrich<br>深度补充<br>detail + file-summaries<br>+ patterns + ownership"]
+    C["mes-init-converge<br>全局收敛<br>汇总单仓结果到<br>全局一致状态"]
 
     A -->|基础建图完成| B
     B -->|单仓深化完成| C
-    C -->|多次单仓收敛| D([下游阶段可消费<br/>的完整知识库])
+    C -->|多次单仓收敛| D(["下游阶段可消费的完整知识库"])
 
     style A fill:#E3F2FD,stroke:#1976D2
     style B fill:#FFF3E0,stroke:#F57C00
@@ -163,50 +160,50 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    subgraph CODE_MAP["Code Map 产物"]
-        CM1[backend-overview.md<br/>后端服务总览]
-        CM2[frontend-overview.md<br/>前端模块总览]
-        CM3[service-dependencies.md<br/>服务依赖图]
-        CM4[services/service-xxx/<br/>index.md / detail.md<br/>file-summaries.md]
-        CM5[modules/module-xxx/<br/>index.md / frontend-backend-map.md]
+    subgraph CODE_MAP ["Code Map 产物"]
+        CM1["backend-overview.md 后端服务总览"]
+        CM2["frontend-overview.md 前端模块总览"]
+        CM3["service-dependencies.md 服务依赖图"]
+        CM4["services/service-xxx/ index / detail / file-summaries"]
+        CM5["modules/module-xxx/ index / frontend-backend-map"]
     end
 
-    subgraph DATABASE["数据库产物"]
-        DB1[database-index/schema-xxx/<br/>index.md / tables.md<br/>relations.md / registry-fragment.md]
-        DB2[database-registry.md<br/>全局数据库注册表]
+    subgraph DATABASE ["数据库产物"]
+        DB1["database-index/schema-xxx/ index / tables / relations"]
+        DB2["database-registry.md 全局数据库注册表"]
     end
 
-    subgraph API_REG["API 注册表"]
-        API1[services/service-xxx/<br/>api-registry.md]
-        API2[api-registry.md<br/>全局 API 注册表]
+    subgraph API_REG ["API 注册表"]
+        API1["services/service-xxx/ api-registry.md"]
+        API2["api-registry.md 全局 API 注册表"]
     end
 
-    subgraph REFERENCE["参考知识"]
-        REF1[terminology-glossary.md<br/>术语表]
-        REF2[domain-model.md<br/>领域模型]
-        REF3[data-dictionary.md<br/>数据字典]
-        REF4[enum-registry.md<br/>枚举注册表]
-        REF5[error-code-registry.md<br/>错误码注册表]
-        REF6[api-conventions.md<br/>API 约定]
-        REF7[coding-standards.md<br/>编码规范]
+    subgraph REFERENCE ["参考知识"]
+        REF1["terminology-glossary.md 术语表"]
+        REF2["domain-model.md 领域模型"]
+        REF3["data-dictionary.md 数据字典"]
+        REF4["enum-registry.md 枚举注册表"]
+        REF5["error-code-registry.md 错误码注册表"]
+        REF6["api-conventions.md API 约定"]
+        REF7["coding-standards.md 编码规范"]
     end
 
-    subgraph HOT["热点层"]
-        H1[hot-services.md<br/>高频服务]
-        H2[hot-apis.md<br/>高频 API]
-        H3[hot-tables.md<br/>高频表]
+    subgraph HOT ["热点层"]
+        H1["hot-services.md 高频服务"]
+        H2["hot-apis.md 高频 API"]
+        H3["hot-tables.md 高频表"]
     end
 
-    subgraph STATE["状态管理"]
-        S1[state.yaml<br/>全局状态]
-        S2[state/fragments/<br/>局部状态片段]
+    subgraph STATE ["状态管理"]
+        S1["state.yaml 全局状态"]
+        S2["state/fragments/ 局部状态片段"]
     end
 
-    subgraph KNOWLEDGE["深度知识"]
-        K1[business-flows.md<br/>业务流]
-        K2[ownership.md<br/>实体归属]
-        K3[patterns.md<br/>实现模式]
-        K4[legacy-debt.md<br/>技术债务]
+    subgraph KNOWLEDGE ["深度知识"]
+        K1["business-flows.md 业务流"]
+        K2["ownership.md 实体归属"]
+        K3["patterns.md 实现模式"]
+        K4["legacy-debt.md 技术债务"]
     end
 
     style CODE_MAP fill:#E3F2FD,stroke:#1976D2
@@ -255,36 +252,31 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    subgraph TRADITIONAL["❌ 常规初始化流程"]
-        direction TB
-        T1[开发人员拿到项目] --> T2[手动浏览目录]
-        T2 --> T3[问老员工/看文档]
-        T3 --> T4[凭经验理解架构]
-        T4 --> T5[开始写代码]
-        T5 --> T6[发现理解偏差<br/>返工]
-        T6 --> T7[换人接手<br/>知识断层]
-        T7 --> T8[重复踩坑]
-
-        style T6 fill:#FFCDD2
-        style T7 fill:#FFCDD2
-        style T8 fill:#FFCDD2
+    subgraph TRADITIONAL ["常规初始化流程"]
+        T1["开发人员拿到项目"] --> T2["手动浏览目录"]
+        T2 --> T3["问老员工或看文档"]
+        T3 --> T4["凭经验理解架构"]
+        T4 --> T5["开始写代码"]
+        T5 --> T6["发现理解偏差 返工"]
+        T6 --> T7["换人接手 知识断层"]
+        T7 --> T8["重复踩坑"]
     end
 
-    subgraph SKELETON["✅ 骨架初始化流程"]
-        direction TB
-        S1[执行 /mes-init-project] --> S2[自动扫描后端/前端/数据库]
-        S2 --> S3[自动抽取 API/依赖/配置]
-        S3 --> S4[建立四层索引知识库]
-        S4 --> S5[门禁审查确保质量]
-        S5 --> S6[按需深化 /mes-init-enrich]
-        S6 --> S7[全局收敛 /mes-init-converge]
-        S7 --> S8[结构化知识基线就绪<br/>下游阶段直接消费]
-
-        style S5 fill:#C8E6C9
-        style S8 fill:#C8E6C9
+    subgraph SKELETON ["骨架初始化流程"]
+        S1["执行 mes-init-project"] --> S2["自动扫描后端前端数据库"]
+        S2 --> S3["自动抽取 API 依赖 配置"]
+        S3 --> S4["建立四层索引知识库"]
+        S4 --> S5["门禁审查确保质量"]
+        S5 --> S6["按需深化 mes-init-enrich"]
+        S6 --> S7["全局收敛 mes-init-converge"]
+        S7 --> S8["结构化知识基线就绪 下游阶段直接消费"]
     end
 
-    TRADITIONAL ~~~ SKELETON
+    style T6 fill:#FFCDD2
+    style T7 fill:#FFCDD2
+    style T8 fill:#FFCDD2
+    style S5 fill:#C8E6C9
+    style S8 fill:#C8E6C9
 ```
 
 ---

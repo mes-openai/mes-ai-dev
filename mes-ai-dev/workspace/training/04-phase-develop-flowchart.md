@@ -27,105 +27,99 @@
 
 ```mermaid
 flowchart TB
-    START([💻 详细设计完成<br/>design.md 已评审通过]) --> PRECHECK{前置条件检查}
+    START(["详细设计完成 design.md 已评审通过"]) --> PRECHECK{"前置条件检查"}
 
-    PRECHECK -->|设计文档缺失| ABORT_DESIGN[⚠️ 先完成设计阶段<br/>/mes-design-detail]
-    PRECHECK -->|契约不可消费| ABORT_CONTRACT[⚠️ 先确认 contracts.md<br/>与事实源可用]
-    PRECHECK -->|服务链未冻结| ABORT_CHAIN[⚠️ 先在设计阶段<br/>冻结服务链]
-    PRECHECK -->|检查全部通过| GATE_ENTER{进入门禁}
+    PRECHECK -->|"设计文档缺失"| ABORT_DESIGN["先完成设计阶段 mes-design-detail"]
+    PRECHECK -->|"契约不可消费"| ABORT_CONTRACT["先确认 contracts.md 与事实源可用"]
+    PRECHECK -->|"服务链未冻结"| ABORT_CHAIN["先在设计阶段冻结服务链"]
+    PRECHECK -->|"检查全部通过"| GATE_ENTER{"进入门禁"}
 
-    GATE_ENTER -->|❌不通过| FIX_ENTER[补齐前置条件]
+    GATE_ENTER -->|"不通过"| FIX_ENTER["补齐前置条件"]
     FIX_ENTER --> GATE_ENTER
-    GATE_ENTER -->|✅通过| STEP1
+    GATE_ENTER -->|"通过"| STEP1
 
-    subgraph S1["Step 1：确认范围与计划"]
-        STEP1[明确当前实现目标<br/>━━━━━━━━━━━━━━━━<br/>确认设计结论/修复目标<br/>识别多仓/多服务/DB场景<br/>加载必要场景规则]
+    subgraph S1 ["Step 1: 确认范围与计划"]
+        STEP1["明确当前实现目标 确认设计结论 修复目标<br>识别多仓 多服务 DB场景 加载必要场景规则"]
     end
 
     STEP1 --> STEP2
 
-    subgraph S2["Step 2：读取必要输入"]
-        STEP2[消费设计文档 + 规则<br/>━━━━━━━━━━━━━━━━<br/>读取目标仓现有代码结构<br/>读取分层/命名/依赖组织<br/>读取阶段记忆与交接信息]
+    subgraph S2 ["Step 2: 读取必要输入"]
+        STEP2["消费设计文档与规则<br>读取目标仓现有代码结构 分层 命名 依赖组织<br>读取阶段记忆与交接信息"]
     end
 
     STEP2 --> STEP3
 
-    subgraph S3["Step 3：TDD 用例计划（强制前置）"]
-        STEP3[mes-test-plan-cases<br/>━━━━━━━━━━━━━━━━<br/>基于需求+设计+验证对象<br/>生成 test-cases.md<br/>━━━━━━━━━━━━━━━━<br/>AI 初始规划 ✍️<br/>↓<br/>用户补充区 📝<br/>↓<br/>最终确认计划 ✅]
+    subgraph S3 ["Step 3: TDD 用例计划 强制前置"]
+        STEP3["mes-test-plan-cases<br>基于需求 设计 验证对象 生成 test-cases.md<br>AI 初始规划 -> 用户补充区 -> 最终确认计划"]
     end
 
-    STEP3 --> USER_CONFIRM{用户确认<br/>test-cases.md？}
-    USER_CONFIRM -->|❌用户未确认| WAIT_USER[⏳ 等待用户<br/>补充与确认]
+    STEP3 --> USER_CONFIRM{"用户确认 test-cases.md?"}
+    USER_CONFIRM -->|"用户未确认"| WAIT_USER["等待用户补充与确认"]
     WAIT_USER --> USER_CONFIRM
-    USER_CONFIRM -->|✅用户已确认| STEP4
+    USER_CONFIRM -->|"用户已确认"| STEP4
 
-    subgraph S4["Step 4：数据库开发"]
-        STEP4A[mes-develop-database-script<br/>━━━━━━━━━━━━━━━━<br/>DDL/DML 脚本]
-        STEP4B[mes-develop-db-migration<br/>━━━━━━━━━━━━━━━━<br/>迁移策略 + 回滚方案]
-    end
+    STEP4A["mes-develop-database-script DDL 和 DML 脚本"]
+    STEP4B["mes-develop-db-migration 迁移策略与回滚方案"]
 
     STEP4 --> STEP4A
     STEP4 --> STEP4B
-    STEP4A --> GATE_S4{Step 4 门禁<br/>脚本真实性验证}
+    STEP4A --> GATE_S4{"Step 4 门禁 脚本真实性验证"}
     STEP4B --> GATE_S4
 
-    GATE_S4 -->|❌不通过| STEP4
-    GATE_S4 -->|✅通过| STEP5
+    GATE_S4 -->|"不通过"| STEP4
+    GATE_S4 -->|"通过"| STEP5A
 
-    subgraph S5["Step 5：后端分层开发"]
-        direction TB
-        STEP5A[mes-develop-backend-model<br/>━━━━━━━━━━━━━━━━<br/>Entity / DTO / VO]
-        STEP5B[mes-develop-backend-dao<br/>━━━━━━━━━━━━━━━━<br/>Mapper / Repository<br/>MyBatis XML]
-        STEP5C[mes-develop-backend-service<br/>━━━━━━━━━━━━━━━━<br/>业务逻辑层]
-        STEP5D[mes-develop-backend-controller<br/>━━━━━━━━━━━━━━━━<br/>REST 端点]
+    STEP5A["mes-develop-backend-model Entity DTO VO"]
+    STEP5B["mes-develop-backend-dao Mapper Repository MyBatis XML"]
+    STEP5C["mes-develop-backend-service 业务逻辑层"]
+    STEP5D["mes-develop-backend-controller REST 端点"]
+
+    STEP5A --> STEP5B
+    STEP5B --> STEP5C
+    STEP5C --> STEP5D
+
+    STEP5D --> GATE_S5{"Step 5 门禁 真实性专项审查<br>包路径 import 类型 方法 返回值 异常体系"}
+    GATE_S5 -->|"不通过"| STEP5A
+    GATE_S5 -->|"通过"| STEP6A
+
+    STEP6A["mes-develop-frontend-api API 调用层 Axios 请求方法"]
+    STEP6B["mes-develop-frontend-component Vue UI 组件"]
+    STEP6C["mes-develop-frontend-page Vue 页面与路由"]
+
+    STEP6A --> STEP6B
+    STEP6B --> STEP6C
+
+    STEP6C --> GATE_S6{"Step 6 门禁 前端对齐后端 API?"}
+    GATE_S6 -->|"不通过"| STEP6A
+    GATE_S6 -->|"通过"| STEP7
+
+    subgraph S7 ["Step 7: 配置更新"]
+        STEP7["mes-develop-backend-config<br>application.yml restService.properties 其他配置文件"]
     end
 
-    STEP5A --> STEP5B --> STEP5C --> STEP5D
+    STEP7 --> GATE_S7{"Step 7 门禁"}
+    GATE_S7 -->|"不通过"| STEP7
+    GATE_S7 -->|"通过"| STEP8
 
-    STEP5D --> GATE_S5{Step 5 门禁<br/>真实性专项审查<br/>━━━━━━━━━━━━━━━━<br/>包路径 / import / 类型<br/>方法 / 返回值 / 异常体系}
-    GATE_S5 -->|❌不通过| STEP5A
-    GATE_S5 -->|✅通过| STEP6
-
-    subgraph S6["Step 6：前端开发"]
-        STEP6A[mes-develop-frontend-api<br/>━━━━━━━━━━━━━━━━<br/>API 调用层<br/>Axios 请求方法]
-        STEP6B[mes-develop-frontend-component<br/>━━━━━━━━━━━━━━━━<br/>Vue UI 组件]
-        STEP6C[mes-develop-frontend-page<br/>━━━━━━━━━━━━━━━━<br/>Vue 页面 + 路由]
+    subgraph S8 ["Step 8: 执行验证"]
+        STEP8["验证流程<br>1. 新生成测试用例全部通过<br>2. 覆盖率达到 100%<br>3. 静态真实性检查<br>   - Java 引用可解析性<br>   - MyBatis 映射一致性<br>   - Provider 契约一致性"]
     end
 
-    STEP6A --> STEP6B --> STEP6C
+    STEP8 --> GATE_S8{"Step 8 门禁<br>测试全绿? 覆盖率达标?"}
+    GATE_S8 -->|"不通过 只允许补充测试"| STEP8
+    GATE_S8 -->|"通过"| STEP9A
 
-    STEP6C --> GATE_S6{Step 6 门禁<br/>前端对齐后端 API？}
-    GATE_S6 -->|❌不通过| STEP6A
-    GATE_S6 -->|✅通过| STEP7
-
-    subgraph S7["Step 7：配置更新"]
-        STEP7[mes-develop-backend-config<br/>━━━━━━━━━━━━━━━━<br/>application.yml<br/>restService.properties<br/>其他配置文件]
-    end
-
-    STEP7 --> GATE_S7{Step 7 门禁}
-    GATE_S7 -->|❌不通过| STEP7
-    GATE_S7 -->|✅通过| STEP8
-
-    subgraph S8["Step 8：执行验证"]
-        STEP8[验证流程<br/>━━━━━━━━━━━━━━━━<br/>① 新生成测试用例全部通过 ✅<br/>② 覆盖率达到 100% ✅<br/>③ 静态真实性检查 ✅<br/>  - Java 引用可解析性<br/>  - MyBatis 映射一致性<br/>  - Provider 契约一致性]
-    end
-
-    STEP8 --> GATE_S8{Step 8 门禁<br/>测试全绿？<br/>覆盖率达标？}
-    GATE_S8 -->|❌不通过<br/>只允许补充测试| STEP8
-    GATE_S8 -->|✅通过| STEP9
-
-    subgraph S9["Step 9：自审与补强"]
-        STEP9A[mes-develop-self-review<br/>━━━━━━━━━━━━━━━━<br/>代码风格一致性<br/>产物完整性<br/>风险说明]
-        STEP9B[mes-develop-security-review<br/>━━━━━━━━━━━━━━━━<br/>SQL 注入 / XSS<br/>访问控制 / 敏感数据]
-    end
+    STEP9A["mes-develop-self-review 代码风格一致性 产物完整性 风险说明"]
+    STEP9B["mes-develop-security-review SQL注入 XSS 访问控制 敏感数据"]
 
     STEP9A --> STEP9B
-    STEP9B --> GATE_EXIT{退出门禁}
+    STEP9B --> GATE_EXIT{"退出门禁"}
 
-    GATE_EXIT -->|❌不通过| STEP1
-    GATE_EXIT -->|✅通过| REPORT[输出阶段完成产物报告<br/>development-review-report.md<br/>tasks.md 主交接文档]
+    GATE_EXIT -->|"不通过"| STEP1
+    GATE_EXIT -->|"通过"| REPORT["输出阶段完成产物报告<br>development-review-report.md<br>tasks.md 主交接文档"]
 
-    REPORT --> DONE([✅ 代码开发完成<br/>可进入测试阶段])
+    REPORT --> DONE(["代码开发完成 可进入测试阶段"])
 
     style START fill:#2196F3,color:white
     style DONE fill:#4CAF50,color:white
@@ -148,31 +142,31 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    TDD_START[TDD 启动] --> GEN_AI[AI 生成初始测试计划<br/>基于需求 + 设计 + 验证对象<br/>+ 存量测试资产]
+    TDD_START["TDD 启动"] --> GEN_AI["AI 生成初始测试计划<br>基于需求 设计 验证对象 存量测试资产"]
 
-    GEN_AI --> TC_DOC[test-cases.md<br/>━━━━━━━━━━━━━━━━<br/>Section 1: AI 初始规划<br/>Section 2: 用户补充区<br/>Section 3: 最终确认计划]
+    GEN_AI --> TC_DOC["test-cases.md<br>Section 1: AI 初始规划<br>Section 2: 用户补充区<br>Section 3: 最终确认计划"]
 
-    TC_DOC --> USER_PART{用户参与}
+    TC_DOC --> USER_PART{"用户参与"}
 
-    USER_PART -->|用户补充场景| MERGE[合并用户补充<br/>新场景/边界条件<br/>/风险路径/不允许覆盖行为]
-    USER_PART -->|用户无补充| CONFIRM
+    USER_PART -->|"用户补充场景"| MERGE["合并用户补充<br>新场景 边界条件 风险路径 不允许覆盖行为"]
+    USER_PART -->|"用户无补充"| CONFIRM
 
-    MERGE --> CONFIRM{用户确认？}
+    MERGE --> CONFIRM{"用户确认?"}
 
-    CONFIRM -->|❌未确认| BLOCK[⛔ 阻断<br/>不得进入代码生成]
-    CONFIRM -->|✅已确认| CODE_GEN[允许代码生成]
+    CONFIRM -->|"未确认"| BLOCK["阻断 不得进入代码生成"]
+    CONFIRM -->|"已确认"| CODE_GEN["允许代码生成"]
 
-    CODE_GEN --> CODE_CHECK{代码反向对应<br/>test-cases.md？}
-    CODE_CHECK -->|❌超出计划| REFUSE[拒绝<br/>不得脱离用例计划<br/>自由扩写]
-    CODE_CHECK -->|✅对应| TEST_RUN[运行测试]
+    CODE_GEN --> CODE_CHECK{"代码反向对应 test-cases.md?"}
+    CODE_CHECK -->|"超出计划"| REFUSE["拒绝 不得脱离用例计划自由扩写"]
+    CODE_CHECK -->|"对应"| TEST_RUN["运行测试"]
 
-    TEST_RUN --> ALL_GREEN{测试全绿？}
-    ALL_GREEN -->|❌| FIX_ONLY[只修复问题<br/>不扩大重构面]
+    TEST_RUN --> ALL_GREEN{"测试全绿?"}
+    ALL_GREEN -->|"否"| FIX_ONLY["只修复问题 不扩大重构面"]
     FIX_ONLY --> TEST_RUN
-    ALL_GREEN -->|✅| COVERAGE{覆盖率 100%？}
-    COVERAGE -->|❌不足| ADD_TEST[只允许追加测试<br/>不得删除已通过测试]
+    ALL_GREEN -->|"是"| COVERAGE{"覆盖率 100%?"}
+    COVERAGE -->|"不足"| ADD_TEST["只允许追加测试 不得删除已通过测试"]
     ADD_TEST --> COVERAGE
-    COVERAGE -->|✅| TDD_DONE([✅ TDD 闭环完成])
+    COVERAGE -->|"达标"| TDD_DONE(["TDD 闭环完成"])
 
     style BLOCK fill:#FFCDD2,stroke:#C62828
     style REFUSE fill:#FFCDD2,stroke:#C62828
@@ -185,14 +179,14 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    DEV_START[开发阶段执行中] --> CHECK_LIMIT{限边检查}
+    DEV_START["开发阶段执行中"] --> CHECK_LIMIT{"限边检查"}
 
-    CHECK_LIMIT -->|发现仓边界<br/>需要重新定义| REFLOW_1[⛔ 回流 analyze 阶段<br/>开发阶段不得重拍<br/>仓级责任边界]
-    CHECK_LIMIT -->|发现 Provider<br/>选择有误| REFLOW_2[⛔ 回流 design 阶段<br/>开发阶段不得重拍<br/>Provider 选择]
-    CHECK_LIMIT -->|发现私有契约<br/>定义冲突| REFLOW_3[⛔ 回流 analyze/design<br/>开发阶段不得重定义<br/>项目私有契约]
-    CHECK_LIMIT -->|发现 API 复用<br/>判断需修改| REFLOW_4[⛔ 回流 design 阶段<br/>开发阶段不得重拍<br/>API 复用/扩展/新增]
-    CHECK_LIMIT -->|发现服务链<br/>需要绕路| REFLOW_5[⛔ 回流 design 阶段<br/>只能沿冻结路径实现<br/>不得自行改路线]
-    CHECK_LIMIT -->|在范围内| CONTINUE[✅ 继续实现]
+    CHECK_LIMIT -->|"发现仓边界需要重新定义"| REFLOW_1["回流 analyze 阶段<br>开发阶段不得重拍仓级责任边界"]
+    CHECK_LIMIT -->|"发现 Provider 选择有误"| REFLOW_2["回流 design 阶段<br>开发阶段不得重拍 Provider 选择"]
+    CHECK_LIMIT -->|"发现私有契约定义冲突"| REFLOW_3["回流 analyze 或 design<br>开发阶段不得重定义项目私有契约"]
+    CHECK_LIMIT -->|"发现 API 复用判断需修改"| REFLOW_4["回流 design 阶段<br>开发阶段不得重拍 API 复用扩展新增"]
+    CHECK_LIMIT -->|"发现服务链需要绕路"| REFLOW_5["回流 design 阶段<br>只能沿冻结路径实现 不得自行改路线"]
+    CHECK_LIMIT -->|"在范围内"| CONTINUE["继续实现"]
 
     style REFLOW_1 fill:#FFCDD2,stroke:#C62828
     style REFLOW_2 fill:#FFCDD2,stroke:#C62828
@@ -208,22 +202,16 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    subgraph BACKEND["后端分层开发顺序"]
-        direction TB
-        MODEL["① Model 层<br/>mes-develop-backend-model<br/>━━━━━━━━━━━━━━━━<br/>Entity（数据库实体）<br/>DTO（数据传输对象）<br/>VO（视图对象）"]
-        
-        DAO["② DAO 层<br/>mes-develop-backend-dao<br/>━━━━━━━━━━━━━━━━<br/>Mapper 接口<br/>MyBatis XML<br/>namespace / id / parameterType<br/>resultType / resultMap"]
-        
-        SERVICE["③ Service 层<br/>mes-develop-backend-service<br/>━━━━━━━━━━━━━━━━<br/>业务逻辑实现<br/>事务管理<br/>跨服务调用<br/>异常处理"]
-        
-        CONTROLLER["④ Controller 层<br/>mes-develop-backend-controller<br/>━━━━━━━━━━━━━━━━<br/>REST 端点<br/>请求参数校验<br/>响应包装<br/>接口文档对齐"]
-    end
+    MODEL["1 Model 层 mes-develop-backend-model<br>Entity DTO VO"]
+    DAO["2 DAO 层 mes-develop-backend-dao<br>Mapper 接口 MyBatis XML<br>namespace id parameterType resultType resultMap"]
+    SERVICE["3 Service 层 mes-develop-backend-service<br>业务逻辑实现 事务管理 跨服务调用 异常处理"]
+    CONTROLLER["4 Controller 层 mes-develop-backend-controller<br>REST 端点 请求参数校验 响应包装 接口文档对齐"]
 
-    MODEL --> DAO --> SERVICE --> CONTROLLER
+    MODEL --> DAO
+    DAO --> SERVICE
+    SERVICE --> CONTROLLER
 
-    REALITY[真实性检查<br/>━━━━━━━━━━━━━━━━<br/>✅ 真实包路径<br/>✅ 真实 import<br/>✅ 真实类型<br/>✅ 真实方法签名<br/>✅ 真实返回值<br/>✅ 真实异常体系] 
-
-    CONTROLLER --> REALITY
+    CONTROLLER --> REALITY["真实性检查<br>真实包路径 真实 import 真实类型<br>真实方法签名 真实返回值 真实异常体系"]
 
     style MODEL fill:#E3F2FD,stroke:#1976D2
     style DAO fill:#E3F2FD,stroke:#1976D2
@@ -253,7 +241,7 @@ mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/
 │   ├── pitfall-log.md             # 坑点记录
 │   └── decision-log.md            # 开发期决策日志
 ├── handoff/
-│   └── develop-to-test-handoff.md # 开发→测试交接
+│   └── develop-to-test-handoff.md # 开发到测试交接
 └── working/
     ├── test-cases.md              # TDD 用例计划
     └── code-changes-summary.md    # 代码变更摘要
@@ -300,18 +288,18 @@ mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/
 
 ```mermaid
 flowchart TB
-    GSD_DEV[GSD 开发模式] --> WU[工作单元拆分]
+    GSD_DEV["GSD 开发模式"] --> WU["工作单元拆分"]
 
-    WU --> WU1[工作单元 A<br/>━━━━━━━━━━━━━━━━<br/>完整完成条件 ✅<br/>GSD 完成条件 ✅<br/>不完成条件 ❌<br/>可后补项 📝<br/>验证方式 🔍]
-    WU --> WU2[工作单元 B<br/>━━━━━━━━━━━━━━━━<br/>...]
-    WU --> WU3[工作单元 C<br/>━━━━━━━━━━━━━━━━<br/>...]
+    WU --> WU1["工作单元 A<br>完整完成条件 GSD 完成条件<br>不完成条件 可后补项 验证方式"]
+    WU --> WU2["工作单元 B ..."]
+    WU --> WU3["工作单元 C ..."]
 
-    WU1 --> MIN_TEST{最小可提测标准}
-    MIN_TEST -->|满足| PASS_TEST[核心改动闭合 ✅<br/>影响范围已登记 ✅<br/>验证方式已明确 ✅<br/>blocker 未命中硬阻塞 ✅<br/>风险已记录 ✅]
-    MIN_TEST -->|不满足| CONTINUE_WU[继续工作单元]
+    WU1 --> MIN_TEST{"最小可提测标准"}
+    MIN_TEST -->|"满足"| PASS_TEST["核心改动闭合<br>影响范围已登记 验证方式已明确<br>blocker 未命中硬阻塞 风险已记录"]
+    MIN_TEST -->|"不满足"| CONTINUE_WU["继续工作单元"]
 
-    PASS_TEST --> SWEEP[收尾扫描]
-    SWEEP --> DEV_DONE([✅ 开发阶段完成])
+    PASS_TEST --> SWEEP["收尾扫描"]
+    SWEEP --> DEV_DONE(["开发阶段完成"])
 
     style PASS_TEST fill:#C8E6C9,stroke:#388E3C
     style DEV_DONE fill:#4CAF50,color:white
