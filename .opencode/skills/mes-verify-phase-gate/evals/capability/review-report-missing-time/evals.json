@@ -1,0 +1,17 @@
+{
+  "skill": "mes-verify-phase-gate",
+  "eval_name": "review-report-missing-time",
+  "goal": "验证详细审查报告强制字段。",
+  "input": "详细审查报告存在，但缺少审查时间与证据路径。",
+  "expected_behavior": [
+    "必须阻断退出，并指出审查报告不完整。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

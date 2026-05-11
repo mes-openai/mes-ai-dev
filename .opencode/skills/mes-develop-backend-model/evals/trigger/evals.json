@@ -1,0 +1,25 @@
+{
+  "skill": "mes-develop-backend-model",
+  "version": "2.0.0",
+  "purpose": "后端Model层开发 Skill",
+  "samples": [
+    {
+      "id": "missing-field-alignment",
+      "input": "DTO 字段与接口输入真实字段不一致。",
+      "expected": "应指出模型对齐失败并要求修正。",
+      "notes": "验证字段对齐。"
+    },
+    {
+      "id": "wrong-vo-usage",
+      "input": "把实体类当作对外 VO 直接返回。",
+      "expected": "应指出职责混用并要求拆分。",
+      "notes": "验证模型职责边界。"
+    },
+    {
+      "id": "enum-type-mismatch",
+      "input": "枚举类型与真实业务字典不一致。",
+      "expected": "应要求回到真实业务字典确认。",
+      "notes": "验证枚举真实性。"
+    }
+  ]
+}

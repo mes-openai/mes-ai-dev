@@ -1,0 +1,40 @@
+# 知识库统一状态源（唯一已合并机器事实源）
+schema_version: "1.0"
+state_mode: primary
+last_updated: ""
+last_command: ""
+state_fragments_dir: "mes-ai-dev/knowledge/state/fragments/"
+
+merge_control:
+  pending_fragments: []
+  last_merged_fragment: ""
+  last_merged_at: ""
+  merge_status: pending
+
+knowledge:
+  trust:
+    level: unknown
+    last_refresh_time: ""
+
+initialization:
+  scan:
+    status: pending
+    time: ""
+  repository_scale:
+    backend_lines: 0
+    service_count: 0
+    scale_label: ""
+  coverage_summary:
+    backend_coverage_rate: ""
+    frontend_coverage_rate: ""
+
+checkpoint:
+  command: ""
+  mode: ""
+  status: pending
+  started_at: ""
+  updated_at: ""
+
+sync:
+  last_sync: ""
+  status: pending

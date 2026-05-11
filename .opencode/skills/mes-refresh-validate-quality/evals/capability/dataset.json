@@ -1,0 +1,23 @@
+{
+  "skill": "mes-refresh-validate-quality",
+  "dataset_version": "2.0.0",
+  "focus": "知识库质量校验 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "stale-sync-summary",
+      "title": "验证同步状态一致性。",
+      "path": "capability/stale-sync-summary/evals.json"
+    },
+    {
+      "id": "missing-fix-list",
+      "title": "验证问题闭环。",
+      "path": "capability/missing-fix-list/evals.json"
+    },
+    {
+      "id": "quality-pass-with-gaps",
+      "title": "验证质量结论门禁。",
+      "path": "capability/quality-pass-with-gaps/evals.json"
+    }
+  ]
+}

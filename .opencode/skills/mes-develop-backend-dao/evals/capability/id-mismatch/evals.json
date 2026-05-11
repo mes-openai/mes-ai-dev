@@ -1,0 +1,17 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "eval_name": "id-mismatch",
+  "goal": "验证方法映射一致性。",
+  "input": "XML 中的 select id 与接口方法名不一致。",
+  "expected_behavior": [
+    "应指出 id 映射错误并阻断交付。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

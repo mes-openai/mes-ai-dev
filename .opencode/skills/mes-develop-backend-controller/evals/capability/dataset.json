@@ -1,0 +1,23 @@
+{
+  "skill": "mes-develop-backend-controller",
+  "dataset_version": "2.0.0",
+  "focus": "后端Controller层开发 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-response-contract",
+      "title": "验证响应契约真实性。",
+      "path": "capability/missing-response-contract/evals.json"
+    },
+    {
+      "id": "nonexistent-service-call",
+      "title": "验证服务签名真实性。",
+      "path": "capability/nonexistent-service-call/evals.json"
+    },
+    {
+      "id": "wrong-param-binding",
+      "title": "验证参数绑定真实性。",
+      "path": "capability/wrong-param-binding/evals.json"
+    }
+  ]
+}

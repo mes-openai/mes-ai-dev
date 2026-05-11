@@ -1,0 +1,25 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "version": "2.0.0",
+  "purpose": "后端DAO层开发 Skill",
+  "samples": [
+    {
+      "id": "namespace-mismatch",
+      "input": "Mapper XML 的 namespace 与接口全限定名不一致。",
+      "expected": "应判定 MyBatis 映射不一致并要求修正。",
+      "notes": "验证 namespace 一致性。"
+    },
+    {
+      "id": "id-mismatch",
+      "input": "XML 中的 select id 与接口方法名不一致。",
+      "expected": "应指出 id 映射错误并阻断交付。",
+      "notes": "验证方法映射一致性。"
+    },
+    {
+      "id": "invalid-resulttype",
+      "input": "resultType 指向了项目中不存在的 VO 类。",
+      "expected": "应指出类型不可解析并要求改用真实类型。",
+      "notes": "验证类型真实性。"
+    }
+  ]
+}

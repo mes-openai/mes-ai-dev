@@ -1,0 +1,12 @@
+{
+  "skill": "mes-design-check-consistency",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Cross-service consistency validation during design phase. Trigger: consistency check, cross-service, naming conflict",
+      "expected": "mes-design-check-consistency",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

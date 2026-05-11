@@ -1,0 +1,25 @@
+{
+  "skill": "mes-test-plan-cases",
+  "version": "2.0.0",
+  "purpose": "测试用例规划",
+  "samples": [
+    {
+      "id": "missing-high-risk-coverage",
+      "input": "测试计划中没有覆盖高风险业务分支。",
+      "expected": "应指出覆盖不足并要求补齐。",
+      "notes": "验证高风险覆盖。"
+    },
+    {
+      "id": "incomplete-priority-map",
+      "input": "只列了用例，没有区分 P0/P1/P2。",
+      "expected": "应要求补充优先级与执行顺序。",
+      "notes": "验证优先级定义。"
+    },
+    {
+      "id": "data-dependency-ignored",
+      "input": "测试场景依赖特定测试数据，但计划没有说明数据准备。",
+      "expected": "应指出数据依赖缺失。",
+      "notes": "验证数据准备意识。"
+    }
+  ]
+}

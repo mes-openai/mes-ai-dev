@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-scan-hotspots",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Scan high-frequency entry points: hot services, hot APIs, hot tables. Trigger: hotspot, high frequency, hot services, hot apis, hot tables",
+      "expected": "mes-init-scan-hotspots",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

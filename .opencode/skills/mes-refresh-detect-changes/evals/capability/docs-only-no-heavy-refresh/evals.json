@@ -1,0 +1,17 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "eval_name": "docs-only-no-heavy-refresh",
+  "goal": "验证最小影响识别。",
+  "input": "只修改了一份说明文档，没有代码、配置或知识结构变化。",
+  "expected_behavior": [
+    "应识别为轻量变更，不应触发无关的重刷新。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "mes-analyze-parse-requirement",
+  "eval_name": "missing-nonfunctional",
+  "goal": "验证非功能需求识别。",
+  "input": "需求只描述功能，没有性能/权限/审计等非功能要求。",
+  "expected_behavior": [
+    "应指出缺失并提示补充。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

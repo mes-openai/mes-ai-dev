@@ -1,0 +1,23 @@
+{
+  "skill": "mes-develop-backend-model",
+  "dataset_version": "2.0.0",
+  "focus": "后端Model层开发 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-field-alignment",
+      "title": "验证字段对齐。",
+      "path": "capability/missing-field-alignment/evals.json"
+    },
+    {
+      "id": "wrong-vo-usage",
+      "title": "验证模型职责边界。",
+      "path": "capability/wrong-vo-usage/evals.json"
+    },
+    {
+      "id": "enum-type-mismatch",
+      "title": "验证枚举真实性。",
+      "path": "capability/enum-type-mismatch/evals.json"
+    }
+  ]
+}

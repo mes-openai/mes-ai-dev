@@ -1,0 +1,17 @@
+{
+  "skill": "mes-develop-backend-controller",
+  "eval_name": "nonexistent-service-call",
+  "goal": "验证服务签名真实性。",
+  "input": "Controller 调用了目标 service 中并不存在的方法。",
+  "expected_behavior": [
+    "应阻断并要求核对真实 service 签名。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

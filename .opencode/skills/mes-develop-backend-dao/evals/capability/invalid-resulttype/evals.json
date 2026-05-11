@@ -1,0 +1,17 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "eval_name": "invalid-resulttype",
+  "goal": "验证类型真实性。",
+  "input": "resultType 指向了项目中不存在的 VO 类。",
+  "expected_behavior": [
+    "应指出类型不可解析并要求改用真实类型。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

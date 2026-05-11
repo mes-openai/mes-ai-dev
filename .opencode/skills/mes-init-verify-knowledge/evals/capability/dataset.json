@@ -1,0 +1,23 @@
+{
+  "skill": "mes-init-verify-knowledge",
+  "dataset_version": "2.0.0",
+  "focus": "知识库完整性校验 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "empty-template-block",
+      "title": "验证空模板阻断。",
+      "path": "capability/empty-template-block/evals.json"
+    },
+    {
+      "id": "coverage-summary-only",
+      "title": "验证 coverage 双写口径。",
+      "path": "capability/coverage-summary-only/evals.json"
+    },
+    {
+      "id": "convergence-not-complete",
+      "title": "验证收口状态门禁。",
+      "path": "capability/convergence-not-complete/evals.json"
+    }
+  ]
+}

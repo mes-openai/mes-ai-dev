@@ -1,0 +1,25 @@
+{
+  "skill": "mes-develop-backend-service",
+  "version": "2.0.0",
+  "purpose": "后端Service层开发 Skill",
+  "samples": [
+    {
+      "id": "missing-real-exception",
+      "input": "模板里写了 BusinessException，但目标服务真实代码里没有这个异常类。",
+      "expected": "应停止实现并回流确认真实异常体系。",
+      "notes": "验证异常真实性。"
+    },
+    {
+      "id": "wrong-provider-unpack",
+      "input": "provider 实际返回 RequestReturnVO<T>，但实现按 data 字段直接解包。",
+      "expected": "应指出返回契约不一致并要求按真实签名调整。",
+      "notes": "验证 provider 契约一致性。"
+    },
+    {
+      "id": "nonexistent-helper-method",
+      "input": "实现中调用了目标对象并不存在的 validateCreateParam()。",
+      "expected": "应阻断继续编码并要求使用真实存在的方法或回流设计。",
+      "notes": "验证方法真实性。"
+    }
+  ]
+}

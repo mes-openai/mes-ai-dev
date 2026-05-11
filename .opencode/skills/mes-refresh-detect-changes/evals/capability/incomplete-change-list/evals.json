@@ -1,0 +1,17 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "eval_name": "incomplete-change-list",
+  "goal": "验证变更完整性检查。",
+  "input": "变更清单里遗漏了一个已修改文件。",
+  "expected_behavior": [
+    "应指出清单不完整并要求补录。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

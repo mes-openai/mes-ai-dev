@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-analyze-config",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Analyze backend configuration and middleware dependencies. Trigger keywords: analyze config, middleware dependencies, service dependencies, restService.",
+      "expected": "mes-init-analyze-config",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "skill": "mes-develop-security-review",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Security review for code changes. Trigger: security review, vulnerability, SQL injection, XSS, access control",
+      "expected": "mes-develop-security-review",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

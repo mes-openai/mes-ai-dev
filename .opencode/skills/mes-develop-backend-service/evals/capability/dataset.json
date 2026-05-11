@@ -1,0 +1,23 @@
+{
+  "skill": "mes-develop-backend-service",
+  "dataset_version": "2.0.0",
+  "focus": "后端Service层开发 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-real-exception",
+      "title": "验证异常真实性。",
+      "path": "capability/missing-real-exception/evals.json"
+    },
+    {
+      "id": "wrong-provider-unpack",
+      "title": "验证 provider 契约一致性。",
+      "path": "capability/wrong-provider-unpack/evals.json"
+    },
+    {
+      "id": "nonexistent-helper-method",
+      "title": "验证方法真实性。",
+      "path": "capability/nonexistent-helper-method/evals.json"
+    }
+  ]
+}

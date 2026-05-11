@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-extract-api",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Extract all Controller API endpoints from backend microservices. Trigger keywords: extract api, api registry, controller endpoints, rest api.",
+      "expected": "mes-init-extract-api",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

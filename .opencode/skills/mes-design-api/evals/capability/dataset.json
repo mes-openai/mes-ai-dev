@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-api",
+  "dataset_version": "2.0.0",
+  "focus": "API接口设计 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-error-code-mapping",
+      "title": "验证错误码完整性。",
+      "path": "capability/missing-error-code-mapping/evals.json"
+    },
+    {
+      "id": "request-response-inconsistency",
+      "title": "验证请求响应一致性。",
+      "path": "capability/request-response-inconsistency/evals.json"
+    },
+    {
+      "id": "endpoint-duplication",
+      "title": "验证接口去重。",
+      "path": "capability/endpoint-duplication/evals.json"
+    }
+  ]
+}

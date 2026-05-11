@@ -1,0 +1,17 @@
+{
+  "skill": "mes-init-verify-knowledge",
+  "eval_name": "empty-template-block",
+  "goal": "验证空模板阻断。",
+  "input": "api-conventions.md 只有标题，没有任何内容。",
+  "expected_behavior": [
+    "应判定知识库不完整并阻断通过。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "mes-analyze-generate-spec",
+  "eval_name": "proposal-absorption",
+  "goal": "验证 spec 生成时吸收 exploration/proposal 已确认结论。",
+  "cases": [
+    {
+      "id": "capability-002",
+      "goal": "命中 exploration/proposal 输入时，spec 需吸收确认后的推荐方案。",
+      "input": "Generate spec with exploration and proposal conclusions already available.",
+      "expected_behavior": [
+        "能够按需读取 exploration.md 与 proposal.md。",
+        "能够把已确认结论吸收到 spec.md。",
+        "不得把未确认探索假设写入 spec.md。"
+      ],
+      "resources": [
+        "resources/README.md"
+      ]
+    }
+  ]
+}

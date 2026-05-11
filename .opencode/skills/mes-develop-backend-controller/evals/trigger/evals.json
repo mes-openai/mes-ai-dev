@@ -1,0 +1,25 @@
+{
+  "skill": "mes-develop-backend-controller",
+  "version": "2.0.0",
+  "purpose": "后端Controller层开发 Skill",
+  "samples": [
+    {
+      "id": "missing-response-contract",
+      "input": "控制器方法直接返回不明确的原始对象，且项目真实契约要求统一响应包装。",
+      "expected": "应提示返回契约不一致并要求按真实响应包装修正。",
+      "notes": "验证响应契约真实性。"
+    },
+    {
+      "id": "nonexistent-service-call",
+      "input": "Controller 调用了目标 service 中并不存在的方法。",
+      "expected": "应阻断并要求核对真实 service 签名。",
+      "notes": "验证服务签名真实性。"
+    },
+    {
+      "id": "wrong-param-binding",
+      "input": "请求参数绑定字段与真实 DTO 字段不一致。",
+      "expected": "应指出参数绑定不一致并要求按真实字段调整。",
+      "notes": "验证参数绑定真实性。"
+    }
+  ]
+}

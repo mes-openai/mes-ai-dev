@@ -1,0 +1,19 @@
+{
+  "skill": "mes-skeleton-reset",
+  "eval_name": "core-flow",
+  "cases": [
+    {
+      "id": "capability-001",
+      "goal": "覆盖该 Skill 的主执行路径。",
+      "input": "清理骨架阶段产物，用于骨架迁移到新项目后从零开始初始化。Trigger: skeleton reset, clean skeleton, reset project, migrate skeleton, clear artifacts",
+      "expected_behavior": [
+        "能够识别 Skill 适用场景",
+        "能够按 INDEX 与 modules 导航读取详细指令",
+        "能够在不改变原意的前提下执行核心流程"
+      ],
+      "resources": [
+        "resources/README.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "mes-design-database",
+  "eval_name": "invalid-entity-mapping",
+  "goal": "验证字段真实性。",
+  "input": "实体字段设计与现有真实数据字典/字段语义冲突。",
+  "expected_behavior": [
+    "应阻断并要求回到真实数据字典对齐。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

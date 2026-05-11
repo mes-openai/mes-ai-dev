@@ -1,0 +1,17 @@
+{
+  "skill": "mes-analyze-identify-repos",
+  "eval_name": "missing-schema-owner",
+  "goal": "验证 schema 归属识别。",
+  "input": "一个数据库 schema 与多个仓库交互，但没有识别 schema 归属。",
+  "expected_behavior": [
+    "应指出 schema 归属与影响范围。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

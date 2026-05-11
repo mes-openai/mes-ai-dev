@@ -1,0 +1,12 @@
+{
+  "skill": "mes-refresh-update-api-registry",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Update API registry based on detected changes. Trigger: update API, refresh API registry, API changes",
+      "expected": "mes-refresh-update-api-registry",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

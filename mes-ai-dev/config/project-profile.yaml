@@ -1,0 +1,17 @@
+project:
+  name: "MES系统"
+  description: "制造执行系统"
+
+paths:
+  backend: "jalor/"
+  frontend: "web/"
+  database: "dbscript/"
+  workspace: "mes-ai-dev/"
+
+tech_stack:
+  backend_framework: "jalor"
+  backend_language: "java"
+  frontend_framework: "vue"
+  database_type: "mysql"
+  microservice: true
+  service_discovery: "restService.properties"

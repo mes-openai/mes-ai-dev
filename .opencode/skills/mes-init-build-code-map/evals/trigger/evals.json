@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-build-code-map",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Aggregate all analysis results to build complete code map. Trigger keywords: build code map, code map overview, aggregate analysis, code structure.",
+      "expected": "mes-init-build-code-map",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

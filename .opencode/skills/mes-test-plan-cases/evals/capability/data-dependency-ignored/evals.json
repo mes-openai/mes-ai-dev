@@ -1,0 +1,17 @@
+{
+  "skill": "mes-test-plan-cases",
+  "eval_name": "data-dependency-ignored",
+  "goal": "验证数据准备意识。",
+  "input": "测试场景依赖特定测试数据，但计划没有说明数据准备。",
+  "expected_behavior": [
+    "应指出数据依赖缺失。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

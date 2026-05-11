@@ -1,0 +1,60 @@
+<!--
+模板名称：MyBatis XML 映射模板
+适用场景：创建 Mapper XML 映射文件
+使用说明：
+1. 先读取目标服务真实存在的 Mapper 接口、现有 XML 文件、DDL/Schema 索引，再替换占位符。
+2. 本模板只提供结构骨架，不提供可直接落库的默认 namespace、表名或类型定义。
+3. `namespace`、SQL `id`、`parameterType`、`resultType`、`resultMap` 都必须与真实代码一致。
+
+----------- 强制校验清单 -----------
+
+- namespace 必须等于 Mapper 接口全限定名
+- 每个 SQL id 必须与 Mapper 接口方法名一一对应
+- parameterType / resultType / resultMap 必须可解析到真实对象
+- 表名、字段名、Schema 必须有真实 DDL / database-index / 现有 SQL 证据
+- 不得只根据模板或理想命名规则猜测 namespace 和对象类型
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="<真实Mapper接口全限定名>">
+
+    <resultMap id="<真实ResultMap名称>" type="<真实Entity全限定名或别名>">
+        <!-- 按真实字段映射填写 -->
+    </resultMap>
+
+    <sql id="<真实列片段名称>">
+        <!-- 按真实列清单填写 -->
+    </sql>
+
+    <sql id="<真实条件片段名称>">
+        <!-- 按真实查询条件填写 -->
+    </sql>
+
+    <select id="<真实方法名>"
+            parameterType="<真实参数类型>"
+            resultMap="<真实ResultMap名称>">
+        SELECT
+        <include refid="<真实列片段名称>"/>
+        FROM <真实Schema>.<真实表名>
+        <where>
+            <include refid="<真实条件片段名称>"/>
+        </where>
+    </select>
+
+    <insert id="<真实方法名>" parameterType="<真实参数类型>">
+        INSERT INTO <真实Schema>.<真实表名>
+        <!-- 按真实字段填写 -->
+    </insert>
+
+    <update id="<真实方法名>" parameterType="<真实参数类型>">
+        UPDATE <真实Schema>.<真实表名>
+        <!-- 按真实字段填写 -->
+    </update>
+
+    <delete id="<真实方法名>" parameterType="<真实参数类型>">
+        DELETE FROM <真实Schema>.<真实表名>
+        <!-- 必须有真实 WHERE 条件 -->
+    </delete>
+</mapper>

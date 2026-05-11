@@ -1,0 +1,17 @@
+{
+  "skill": "mes-design-approach",
+  "eval_name": "no-comparison-options",
+  "goal": "验证方案对比完整性。",
+  "input": "技术方案直接给结论，没有列出可比较的备选方案。",
+  "expected_behavior": [
+    "应要求补齐方案对比。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

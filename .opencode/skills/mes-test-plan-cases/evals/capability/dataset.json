@@ -1,0 +1,23 @@
+{
+  "skill": "mes-test-plan-cases",
+  "dataset_version": "2.0.0",
+  "focus": "测试用例规划",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-high-risk-coverage",
+      "title": "验证高风险覆盖。",
+      "path": "capability/missing-high-risk-coverage/evals.json"
+    },
+    {
+      "id": "incomplete-priority-map",
+      "title": "验证优先级定义。",
+      "path": "capability/incomplete-priority-map/evals.json"
+    },
+    {
+      "id": "data-dependency-ignored",
+      "title": "验证数据准备意识。",
+      "path": "capability/data-dependency-ignored/evals.json"
+    }
+  ]
+}

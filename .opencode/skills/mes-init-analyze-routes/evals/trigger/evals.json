@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-analyze-routes",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Analyze frontend routes and page components mapping to backend APIs. Trigger keywords: analyze routes, page components, frontend backend map, route analysis.",
+      "expected": "mes-init-analyze-routes",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

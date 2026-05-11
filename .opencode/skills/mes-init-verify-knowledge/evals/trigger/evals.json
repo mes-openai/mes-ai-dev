@@ -1,0 +1,25 @@
+{
+  "skill": "mes-init-verify-knowledge",
+  "version": "2.0.0",
+  "purpose": "知识库完整性校验 Skill",
+  "samples": [
+    {
+      "id": "empty-template-block",
+      "input": "api-conventions.md 只有标题，没有任何内容。",
+      "expected": "应判定知识库不完整并阻断通过。",
+      "notes": "验证空模板阻断。"
+    },
+    {
+      "id": "coverage-summary-only",
+      "input": "state.yaml 只有 coverage_summary，没有对应 detail，且场景要求双写兼容。",
+      "expected": "应指出 coverage 明细缺失并要求补齐。",
+      "notes": "验证 coverage 双写口径。"
+    },
+    {
+      "id": "convergence-not-complete",
+      "input": "初始化流程中 convergence 尚未完成，但用户尝试直接宣布知识库可用。",
+      "expected": "应阻止结论并要求完成收口。",
+      "notes": "验证收口状态门禁。"
+    }
+  ]
+}

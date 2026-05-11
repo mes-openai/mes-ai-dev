@@ -1,0 +1,25 @@
+{
+  "skill": "mes-design-database",
+  "version": "2.0.0",
+  "purpose": "数据库设计 Skill",
+  "samples": [
+    {
+      "id": "table-truth-missing-evidence",
+      "input": "新增表但没有事实来源、证据路径或批准依据。",
+      "expected": "应指出表真实性不足并要求补证。",
+      "notes": "验证表真实性核验。"
+    },
+    {
+      "id": "invalid-entity-mapping",
+      "input": "实体字段设计与现有真实数据字典/字段语义冲突。",
+      "expected": "应阻断并要求回到真实数据字典对齐。",
+      "notes": "验证字段真实性。"
+    },
+    {
+      "id": "migration-without-rollback",
+      "input": "提交了 DDL 变更，但没有回滚方案。",
+      "expected": "应指出迁移方案不完整并要求补齐回滚路径。",
+      "notes": "验证迁移完整性。"
+    }
+  ]
+}

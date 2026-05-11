@@ -1,0 +1,17 @@
+{
+  "skill": "mes-design-service-chain",
+  "eval_name": "wrong-call-order",
+  "goal": "验证调用顺序正确性。",
+  "input": "调用链顺序与业务流程不一致。",
+  "expected_behavior": [
+    "应要求调整调用顺序并解释原因。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

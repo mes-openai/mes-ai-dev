@@ -1,0 +1,17 @@
+{
+  "skill": "mes-design-api",
+  "eval_name": "request-response-inconsistency",
+  "goal": "验证请求响应一致性。",
+  "input": "请求与响应字段语义不一致，且无说明。",
+  "expected_behavior": [
+    "应指出契约不一致并要求统一说明。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

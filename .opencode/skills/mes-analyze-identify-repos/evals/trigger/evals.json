@@ -1,0 +1,25 @@
+{
+  "skill": "mes-analyze-identify-repos",
+  "version": "2.0.0",
+  "purpose": "仓库影响识别",
+  "samples": [
+    {
+      "id": "single-repo-false-assumption",
+      "input": "一个需求实际上涉及后端、前端和数据库，但只判断成单仓影响。",
+      "expected": "应识别为多仓影响并列出受影响仓库。",
+      "notes": "验证多仓识别。"
+    },
+    {
+      "id": "missing-schema-owner",
+      "input": "一个数据库 schema 与多个仓库交互，但没有识别 schema 归属。",
+      "expected": "应指出 schema 归属与影响范围。",
+      "notes": "验证 schema 归属识别。"
+    },
+    {
+      "id": "external-fact-source-needed",
+      "input": "仓库调用关系必须以配置文件和实际代码为准，不能只看接口表象。",
+      "expected": "应优先识别外部事实源并按真实配置归纳。",
+      "notes": "验证外部事实源识别。"
+    }
+  ]
+}

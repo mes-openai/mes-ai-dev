@@ -1,0 +1,25 @@
+{
+  "skill": "mes-design-api",
+  "version": "2.0.0",
+  "purpose": "API接口设计 Skill",
+  "samples": [
+    {
+      "id": "missing-error-code-mapping",
+      "input": "接口设计中没有错误码定义，但场景明确要求可追踪错误码。",
+      "expected": "应要求补齐错误码映射。",
+      "notes": "验证错误码完整性。"
+    },
+    {
+      "id": "request-response-inconsistency",
+      "input": "请求与响应字段语义不一致，且无说明。",
+      "expected": "应指出契约不一致并要求统一说明。",
+      "notes": "验证请求响应一致性。"
+    },
+    {
+      "id": "endpoint-duplication",
+      "input": "两个接口功能重叠且命名冲突。",
+      "expected": "应提示接口重复并要求收敛。",
+      "notes": "验证接口去重。"
+    }
+  ]
+}

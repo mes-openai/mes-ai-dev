@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-scan-patterns",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Extract real implementation patterns, anti-patterns and test assets from codebase. Trigger: pattern catalog, anti-pattern, test asset",
+      "expected": "mes-init-scan-patterns",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

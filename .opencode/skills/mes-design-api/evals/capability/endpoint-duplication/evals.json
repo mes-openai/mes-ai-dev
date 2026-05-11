@@ -1,0 +1,17 @@
+{
+  "skill": "mes-design-api",
+  "eval_name": "endpoint-duplication",
+  "goal": "验证接口去重。",
+  "input": "两个接口功能重叠且命名冲突。",
+  "expected_behavior": [
+    "应提示接口重复并要求收敛。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

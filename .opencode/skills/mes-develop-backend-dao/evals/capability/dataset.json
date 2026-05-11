@@ -1,0 +1,23 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "dataset_version": "2.0.0",
+  "focus": "后端DAO层开发 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "namespace-mismatch",
+      "title": "验证 namespace 一致性。",
+      "path": "capability/namespace-mismatch/evals.json"
+    },
+    {
+      "id": "id-mismatch",
+      "title": "验证方法映射一致性。",
+      "path": "capability/id-mismatch/evals.json"
+    },
+    {
+      "id": "invalid-resulttype",
+      "title": "验证类型真实性。",
+      "path": "capability/invalid-resulttype/evals.json"
+    }
+  ]
+}

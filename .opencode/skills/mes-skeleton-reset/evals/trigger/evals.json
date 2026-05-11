@@ -1,0 +1,12 @@
+{
+  "skill": "mes-skeleton-reset",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "清理骨架阶段产物，用于骨架迁移到新项目后从零开始初始化。Trigger: skeleton reset, clean skeleton, reset project, migrate skeleton, clear artifacts",
+      "expected": "mes-skeleton-reset",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

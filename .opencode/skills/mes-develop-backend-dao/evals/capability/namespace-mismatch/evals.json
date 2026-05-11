@@ -1,0 +1,17 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "eval_name": "namespace-mismatch",
+  "goal": "验证 namespace 一致性。",
+  "input": "Mapper XML 的 namespace 与接口全限定名不一致。",
+  "expected_behavior": [
+    "应判定 MyBatis 映射不一致并要求修正。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

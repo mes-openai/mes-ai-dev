@@ -1,0 +1,23 @@
+{
+  "skill": "mes-verify-phase-gate",
+  "dataset_version": "2.0.0",
+  "focus": "阶段门禁自动校验 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "must-pass-missing-stage-output",
+      "title": "验证阶段退出 must-pass。",
+      "path": "capability/must-pass-missing-stage-output/evals.json"
+    },
+    {
+      "id": "review-report-missing-time",
+      "title": "验证详细审查报告强制字段。",
+      "path": "capability/review-report-missing-time/evals.json"
+    },
+    {
+      "id": "java-reference-not-resolvable",
+      "title": "验证代码生成真实性专项。",
+      "path": "capability/java-reference-not-resolvable/evals.json"
+    }
+  ]
+}

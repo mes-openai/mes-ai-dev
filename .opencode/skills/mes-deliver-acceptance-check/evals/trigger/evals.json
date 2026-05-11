@@ -1,0 +1,25 @@
+{
+  "skill": "mes-deliver-acceptance-check",
+  "version": "2.0.0",
+  "purpose": "验收检查 Skill",
+  "samples": [
+    {
+      "id": "missing-requirement-trace",
+      "input": "验收报告没有把交付物与需求项逐项对应。",
+      "expected": "应要求补齐需求追溯。",
+      "notes": "验证需求追溯。"
+    },
+    {
+      "id": "uat-evidence-missing",
+      "input": "写了“UAT通过”，但没有任何证据路径。",
+      "expected": "应指出 UAT 证据缺失。",
+      "notes": "验证验收证据链。"
+    },
+    {
+      "id": "known-blocker-ignored",
+      "input": "仍有阻断级问题未解决，但想直接通过验收。",
+      "expected": "应阻断验收通过。",
+      "notes": "验证阻断问题处理。"
+    }
+  ]
+}

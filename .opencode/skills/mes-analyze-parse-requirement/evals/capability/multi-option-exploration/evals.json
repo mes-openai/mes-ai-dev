@@ -1,0 +1,18 @@
+{
+  "skill": "mes-analyze-parse-requirement",
+  "eval_name": "multi-option-exploration",
+  "goal": "验证复杂需求场景下 exploration/proposal 条件产物触发。",
+  "input": "需求涉及两个可行落仓方案，且用户尚未确认 provider 与复用路径。",
+  "expected_behavior": [
+    "应识别该场景不能直接把未冻结判断写入 spec。",
+    "应触发 exploration.md 或 proposal.md 的条件产出要求。"
+  ],
+  "acceptance_criteria": [
+    "能识别多方案与边界不清场景",
+    "能给出 exploration/proposal 的正确触发结论",
+    "不得把未确认假设当作既定事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "skill": "mes-test-performance-analysis",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Analyze performance of code changes and database queries. Trigger: performance, slow query, N+1, optimization",
+      "expected": "mes-test-performance-analysis",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

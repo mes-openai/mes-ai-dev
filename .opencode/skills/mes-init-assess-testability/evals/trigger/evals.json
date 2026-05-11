@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-assess-testability",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Assess test asset usability and identify services without regression coverage. Trigger: testability, test usability, regression gap",
+      "expected": "mes-init-assess-testability",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

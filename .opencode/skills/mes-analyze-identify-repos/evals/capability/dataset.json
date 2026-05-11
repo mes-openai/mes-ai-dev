@@ -1,0 +1,23 @@
+{
+  "skill": "mes-analyze-identify-repos",
+  "dataset_version": "2.0.0",
+  "focus": "仓库影响识别",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "single-repo-false-assumption",
+      "title": "验证多仓识别。",
+      "path": "capability/single-repo-false-assumption/evals.json"
+    },
+    {
+      "id": "missing-schema-owner",
+      "title": "验证 schema 归属识别。",
+      "path": "capability/missing-schema-owner/evals.json"
+    },
+    {
+      "id": "external-fact-source-needed",
+      "title": "验证外部事实源识别。",
+      "path": "capability/external-fact-source-needed/evals.json"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "mes-deliver-acceptance-check",
+  "eval_name": "uat-evidence-missing",
+  "goal": "验证验收证据链。",
+  "input": "写了“UAT通过”，但没有任何证据路径。",
+  "expected_behavior": [
+    "应指出 UAT 证据缺失。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

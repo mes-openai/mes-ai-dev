@@ -1,0 +1,17 @@
+{
+  "skill": "mes-develop-backend-model",
+  "eval_name": "wrong-vo-usage",
+  "goal": "验证模型职责边界。",
+  "input": "把实体类当作对外 VO 直接返回。",
+  "expected_behavior": [
+    "应指出职责混用并要求拆分。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

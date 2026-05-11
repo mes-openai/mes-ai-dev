@@ -1,0 +1,25 @@
+{
+  "skill": "mes-design-approach",
+  "version": "2.0.0",
+  "purpose": "技术方案设计 Skill",
+  "samples": [
+    {
+      "id": "no-comparison-options",
+      "input": "技术方案直接给结论，没有列出可比较的备选方案。",
+      "expected": "应要求补齐方案对比。",
+      "notes": "验证方案对比完整性。"
+    },
+    {
+      "id": "risk-not-evaluated",
+      "input": "方案涉及跨服务改造，但没有风险评估。",
+      "expected": "应指出风险评估缺失。",
+      "notes": "验证风险评估。"
+    },
+    {
+      "id": "decision-without-evidence",
+      "input": "最终技术决策没有绑定需求、现状或约束证据。",
+      "expected": "应要求补证并重述决策依据。",
+      "notes": "验证决策证据链。"
+    }
+  ]
+}

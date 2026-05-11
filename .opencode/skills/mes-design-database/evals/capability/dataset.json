@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-database",
+  "dataset_version": "2.0.0",
+  "focus": "数据库设计 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "table-truth-missing-evidence",
+      "title": "验证表真实性核验。",
+      "path": "capability/table-truth-missing-evidence/evals.json"
+    },
+    {
+      "id": "invalid-entity-mapping",
+      "title": "验证字段真实性。",
+      "path": "capability/invalid-entity-mapping/evals.json"
+    },
+    {
+      "id": "migration-without-rollback",
+      "title": "验证迁移完整性。",
+      "path": "capability/migration-without-rollback/evals.json"
+    }
+  ]
+}

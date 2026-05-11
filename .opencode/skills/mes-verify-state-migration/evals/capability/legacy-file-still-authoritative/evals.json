@@ -1,0 +1,17 @@
+{
+  "skill": "mes-verify-state-migration",
+  "eval_name": "legacy-file-still-authoritative",
+  "goal": "验证主事实源收口。",
+  "input": "旧状态文件还在被下游当作主事实源使用。",
+  "expected_behavior": [
+    "应判定迁移未完成并要求回收旧源。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "mes-verify-phase-gate",
+  "eval_name": "java-reference-not-resolvable",
+  "goal": "验证代码生成真实性专项。",
+  "input": "后端生成引用了一个在目标包中不存在的异常类。",
+  "expected_behavior": [
+    "必须阻断进入下一步骤，并提示 Java 引用可解析性失败。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

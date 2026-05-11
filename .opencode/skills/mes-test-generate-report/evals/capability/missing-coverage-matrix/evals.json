@@ -1,0 +1,17 @@
+{
+  "skill": "mes-test-generate-report",
+  "eval_name": "missing-coverage-matrix",
+  "goal": "验证覆盖矩阵完整性。",
+  "input": "测试报告只有结论，没有覆盖矩阵。",
+  "expected_behavior": [
+    "应指出覆盖矩阵缺失。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

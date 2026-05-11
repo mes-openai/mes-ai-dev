@@ -1,0 +1,17 @@
+{
+  "skill": "mes-init-verify-knowledge",
+  "eval_name": "coverage-summary-only",
+  "goal": "验证 coverage 双写口径。",
+  "input": "state.yaml 只有 coverage_summary，没有对应 detail，且场景要求双写兼容。",
+  "expected_behavior": [
+    "应指出 coverage 明细缺失并要求补齐。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别该场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

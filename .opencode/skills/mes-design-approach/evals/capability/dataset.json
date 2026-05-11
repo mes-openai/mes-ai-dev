@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-approach",
+  "dataset_version": "2.0.0",
+  "focus": "技术方案设计 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "no-comparison-options",
+      "title": "验证方案对比完整性。",
+      "path": "capability/no-comparison-options/evals.json"
+    },
+    {
+      "id": "risk-not-evaluated",
+      "title": "验证风险评估。",
+      "path": "capability/risk-not-evaluated/evals.json"
+    },
+    {
+      "id": "decision-without-evidence",
+      "title": "验证决策证据链。",
+      "path": "capability/decision-without-evidence/evals.json"
+    }
+  ]
+}

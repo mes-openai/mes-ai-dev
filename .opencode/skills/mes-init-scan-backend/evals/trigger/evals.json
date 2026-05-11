@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-scan-backend",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Scan backend directory structure and identify all microservice projects. Trigger keywords: scan backend, identify microservices, backend overview, init backend scan.",
+      "expected": "mes-init-scan-backend",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

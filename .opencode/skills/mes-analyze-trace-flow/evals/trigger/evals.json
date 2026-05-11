@@ -1,0 +1,12 @@
+{
+  "skill": "mes-analyze-trace-flow",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Trace business flow across services following API call chains. Trigger: business flow, call chain",
+      "expected": "mes-analyze-trace-flow",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

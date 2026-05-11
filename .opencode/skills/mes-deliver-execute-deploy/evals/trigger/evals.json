@@ -1,0 +1,12 @@
+{
+  "skill": "mes-deliver-execute-deploy",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Execute deployment according to plan. Trigger: execute deploy, deploy, rollout, go live",
+      "expected": "mes-deliver-execute-deploy",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

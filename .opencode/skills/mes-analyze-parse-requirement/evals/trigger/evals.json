@@ -1,0 +1,25 @@
+{
+  "skill": "mes-analyze-parse-requirement",
+  "version": "2.0.0",
+  "purpose": "需求解析",
+  "samples": [
+    {
+      "id": "ambiguous-business-rule",
+      "input": "需求里出现“及时”“尽快”“支持多种情况”，但没有可执行规则。",
+      "expected": "应标出模糊点并列为待确认事项。",
+      "notes": "验证模糊点识别。"
+    },
+    {
+      "id": "missing-nonfunctional",
+      "input": "需求只描述功能，没有性能/权限/审计等非功能要求。",
+      "expected": "应指出缺失并提示补充。",
+      "notes": "验证非功能需求识别。"
+    },
+    {
+      "id": "multi-actor-flow",
+      "input": "一个需求涉及多个角色和多个业务步骤。",
+      "expected": "应拆出结构化流程与角色边界。",
+      "notes": "验证结构化分解。"
+    }
+  ]
+}

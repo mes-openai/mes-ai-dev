@@ -1,0 +1,17 @@
+{
+  "skill": "mes-refresh-validate-quality",
+  "eval_name": "stale-sync-summary",
+  "goal": "验证同步状态一致性。",
+  "input": "sync 摘要时间早于最近刷新时间。",
+  "expected_behavior": [
+    "应指出同步状态过期。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

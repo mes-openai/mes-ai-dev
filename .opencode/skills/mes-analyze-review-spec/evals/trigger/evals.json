@@ -1,0 +1,12 @@
+{
+  "skill": "mes-analyze-review-spec",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Review requirement specification for completeness, consistency, testability. Trigger: review requirement",
+      "expected": "mes-analyze-review-spec",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}

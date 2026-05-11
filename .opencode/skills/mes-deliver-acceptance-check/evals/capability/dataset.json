@@ -1,0 +1,23 @@
+{
+  "skill": "mes-deliver-acceptance-check",
+  "dataset_version": "2.0.0",
+  "focus": "验收检查 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-requirement-trace",
+      "title": "验证需求追溯。",
+      "path": "capability/missing-requirement-trace/evals.json"
+    },
+    {
+      "id": "uat-evidence-missing",
+      "title": "验证验收证据链。",
+      "path": "capability/uat-evidence-missing/evals.json"
+    },
+    {
+      "id": "known-blocker-ignored",
+      "title": "验证阻断问题处理。",
+      "path": "capability/known-blocker-ignored/evals.json"
+    }
+  ]
+}

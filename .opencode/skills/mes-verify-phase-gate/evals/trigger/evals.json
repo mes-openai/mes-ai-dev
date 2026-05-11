@@ -1,0 +1,25 @@
+{
+  "skill": "mes-verify-phase-gate",
+  "version": "2.0.0",
+  "purpose": "阶段门禁自动校验 Skill",
+  "samples": [
+    {
+      "id": "must-pass-missing-stage-output",
+      "input": "阶段退出时没有生成 stage-output-report.md，但其他产物都已存在。",
+      "expected": "必须阻断退出，并指出阶段完成产物报告缺失。",
+      "notes": "验证阶段退出 must-pass。"
+    },
+    {
+      "id": "review-report-missing-time",
+      "input": "详细审查报告存在，但缺少审查时间与证据路径。",
+      "expected": "必须阻断退出，并指出审查报告不完整。",
+      "notes": "验证详细审查报告强制字段。"
+    },
+    {
+      "id": "java-reference-not-resolvable",
+      "input": "后端生成引用了一个在目标包中不存在的异常类。",
+      "expected": "必须阻断进入下一步骤，并提示 Java 引用可解析性失败。",
+      "notes": "验证代码生成真实性专项。"
+    }
+  ]
+}

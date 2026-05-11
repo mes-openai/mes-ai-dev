@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-service-chain",
+  "dataset_version": "2.0.0",
+  "focus": "服务调用链设计 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-transaction-boundary",
+      "title": "验证事务边界设计。",
+      "path": "capability/missing-transaction-boundary/evals.json"
+    },
+    {
+      "id": "wrong-call-order",
+      "title": "验证调用顺序正确性。",
+      "path": "capability/wrong-call-order/evals.json"
+    },
+    {
+      "id": "no-failure-path",
+      "title": "验证失败路径覆盖。",
+      "path": "capability/no-failure-path/evals.json"
+    }
+  ]
+}

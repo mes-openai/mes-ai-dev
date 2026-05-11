@@ -1,0 +1,17 @@
+{
+  "skill": "mes-refresh-validate-quality",
+  "eval_name": "missing-fix-list",
+  "goal": "验证问题闭环。",
+  "input": "发现问题后只给总体结论，没有修复项列表。",
+  "expected_behavior": [
+    "应要求补齐修复项。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

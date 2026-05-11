@@ -1,0 +1,19 @@
+{
+  "skill": "mes-test-performance-analysis",
+  "eval_name": "core-flow",
+  "cases": [
+    {
+      "id": "capability-001",
+      "goal": "覆盖该 Skill 的主执行路径。",
+      "input": "Analyze performance of code changes and database queries. Trigger: performance, slow query, N+1, optimization",
+      "expected_behavior": [
+        "能够识别 Skill 适用场景",
+        "能够按 INDEX 与 modules 导航读取详细指令",
+        "能够在不改变原意的前提下执行核心流程"
+      ],
+      "resources": [
+        "resources/README.md"
+      ]
+    }
+  ]
+}

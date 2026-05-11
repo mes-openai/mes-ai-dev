@@ -1,0 +1,23 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "dataset_version": "2.0.0",
+  "focus": "代码变更检测",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "docs-only-no-heavy-refresh",
+      "title": "验证最小影响识别。",
+      "path": "capability/docs-only-no-heavy-refresh/evals.json"
+    },
+    {
+      "id": "cross-layer-change-scope",
+      "title": "验证多层影响识别。",
+      "path": "capability/cross-layer-change-scope/evals.json"
+    },
+    {
+      "id": "incomplete-change-list",
+      "title": "验证变更完整性检查。",
+      "path": "capability/incomplete-change-list/evals.json"
+    }
+  ]
+}

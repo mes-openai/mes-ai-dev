@@ -1,0 +1,25 @@
+{
+  "skill": "mes-design-service-chain",
+  "version": "2.0.0",
+  "purpose": "服务调用链设计 Skill",
+  "samples": [
+    {
+      "id": "missing-transaction-boundary",
+      "input": "服务调用链有多步写操作，但没有事务边界说明。",
+      "expected": "应指出事务边界缺失。",
+      "notes": "验证事务边界设计。"
+    },
+    {
+      "id": "wrong-call-order",
+      "input": "调用链顺序与业务流程不一致。",
+      "expected": "应要求调整调用顺序并解释原因。",
+      "notes": "验证调用顺序正确性。"
+    },
+    {
+      "id": "no-failure-path",
+      "input": "链路只画了成功路径，没有异常与回退说明。",
+      "expected": "应指出异常路径缺失。",
+      "notes": "验证失败路径覆盖。"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "mes-deliver-acceptance-check",
+  "eval_name": "missing-requirement-trace",
+  "goal": "验证需求追溯。",
+  "input": "验收报告没有把交付物与需求项逐项对应。",
+  "expected_behavior": [
+    "应要求补齐需求追溯。"
+  ],
+  "acceptance_criteria": [
+    "能正确识别场景是否命中核心约束",
+    "能输出与 Skill 原意一致的处理结论",
+    "不得把模板默认假设当作项目事实"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

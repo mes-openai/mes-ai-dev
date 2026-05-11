@@ -1,0 +1,23 @@
+{
+  "skill": "mes-test-generate-report",
+  "dataset_version": "2.0.0",
+  "focus": "测试报告生成",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "missing-coverage-matrix",
+      "title": "验证覆盖矩阵完整性。",
+      "path": "capability/missing-coverage-matrix/evals.json"
+    },
+    {
+      "id": "defect-list-incomplete",
+      "title": "验证缺陷记录完整性。",
+      "path": "capability/defect-list-incomplete/evals.json"
+    },
+    {
+      "id": "unsupported-pass-conclusion",
+      "title": "验证结论一致性。",
+      "path": "capability/unsupported-pass-conclusion/evals.json"
+    }
+  ]
+}

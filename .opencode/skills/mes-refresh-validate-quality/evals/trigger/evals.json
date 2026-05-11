@@ -1,0 +1,25 @@
+{
+  "skill": "mes-refresh-validate-quality",
+  "version": "2.0.0",
+  "purpose": "知识库质量校验 Skill",
+  "samples": [
+    {
+      "id": "stale-sync-summary",
+      "input": "sync 摘要时间早于最近刷新时间。",
+      "expected": "应指出同步状态过期。",
+      "notes": "验证同步状态一致性。"
+    },
+    {
+      "id": "missing-fix-list",
+      "input": "发现问题后只给总体结论，没有修复项列表。",
+      "expected": "应要求补齐修复项。",
+      "notes": "验证问题闭环。"
+    },
+    {
+      "id": "quality-pass-with-gaps",
+      "input": "关键索引缺失但质量结论写成通过。",
+      "expected": "应阻止通过并指出缺口。",
+      "notes": "验证质量结论门禁。"
+    }
+  ]
+}

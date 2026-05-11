@@ -1,0 +1,28 @@
+{
+  "skill": "mes-analyze-parse-requirement",
+  "dataset_version": "2.0.0",
+  "focus": "需求解析",
+  "case_count": 4,
+  "cases": [
+    {
+      "id": "ambiguous-business-rule",
+      "title": "验证模糊点识别。",
+      "path": "capability/ambiguous-business-rule/evals.json"
+    },
+    {
+      "id": "missing-nonfunctional",
+      "title": "验证非功能需求识别。",
+      "path": "capability/missing-nonfunctional/evals.json"
+    },
+    {
+      "id": "multi-actor-flow",
+      "title": "验证结构化分解。",
+      "path": "capability/multi-actor-flow/evals.json"
+    },
+    {
+      "id": "multi-option-exploration",
+      "title": "验证 exploration/proposal 条件产物触发。",
+      "path": "capability/multi-option-exploration/evals.json"
+    }
+  ]
+}

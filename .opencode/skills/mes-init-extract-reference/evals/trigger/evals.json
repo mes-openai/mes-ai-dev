@@ -1,0 +1,25 @@
+{
+  "skill": "mes-init-extract-reference",
+  "version": "2.0.0",
+  "purpose": "业务参考知识提取",
+  "samples": [
+    {
+      "id": "empty-template-block",
+      "input": "api-conventions.md 只有标题，没有内容。",
+      "expected": "应识别为空模板，不得当作已提取的真实规范。",
+      "notes": "验证空模板阻断。"
+    },
+    {
+      "id": "enum-and-code-consistency",
+      "input": "代码中的枚举、错误码和文档术语存在不一致。",
+      "expected": "应输出候选参考并标注待确认项。",
+      "notes": "验证术语一致性。"
+    },
+    {
+      "id": "budget-aware-extraction",
+      "input": "输入仓库很大，参考知识很多，但上下文预算有限。",
+      "expected": "应优先抽取高价值参考并控制预算。",
+      "notes": "验证预算控制。"
+    }
+  ]
+}

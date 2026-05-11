@@ -1,0 +1,25 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "version": "2.0.0",
+  "purpose": "代码变更检测",
+  "samples": [
+    {
+      "id": "docs-only-no-heavy-refresh",
+      "input": "只修改了一份说明文档，没有代码、配置或知识结构变化。",
+      "expected": "应识别为轻量变更，不应触发无关的重刷新。",
+      "notes": "验证最小影响识别。"
+    },
+    {
+      "id": "cross-layer-change-scope",
+      "input": "同时修改了后端接口、前端路由与数据库脚本。",
+      "expected": "应识别跨层影响并输出完整变更清单。",
+      "notes": "验证多层影响识别。"
+    },
+    {
+      "id": "incomplete-change-list",
+      "input": "变更清单里遗漏了一个已修改文件。",
+      "expected": "应指出清单不完整并要求补录。",
+      "notes": "验证变更完整性检查。"
+    }
+  ]
+}

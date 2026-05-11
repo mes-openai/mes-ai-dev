@@ -1,0 +1,23 @@
+{
+  "skill": "mes-init-extract-reference",
+  "dataset_version": "2.0.0",
+  "focus": "业务参考知识提取",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "empty-template-block",
+      "title": "验证空模板阻断。",
+      "path": "capability/empty-template-block/evals.json"
+    },
+    {
+      "id": "enum-and-code-consistency",
+      "title": "验证术语一致性。",
+      "path": "capability/enum-and-code-consistency/evals.json"
+    },
+    {
+      "id": "budget-aware-extraction",
+      "title": "验证预算控制。",
+      "path": "capability/budget-aware-extraction/evals.json"
+    }
+  ]
+}

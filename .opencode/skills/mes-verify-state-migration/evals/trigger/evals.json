@@ -1,0 +1,25 @@
+{
+  "skill": "mes-verify-state-migration",
+  "version": "2.0.0",
+  "purpose": "统一状态源迁移校验 Skill",
+  "samples": [
+    {
+      "id": "legacy-file-still-authoritative",
+      "input": "旧状态文件还在被下游当作主事实源使用。",
+      "expected": "应判定迁移未完成并要求回收旧源。",
+      "notes": "验证主事实源收口。"
+    },
+    {
+      "id": "yaml-missing-required-fragment",
+      "input": "state.yaml 已存在，但关键片段未迁移。",
+      "expected": "应指出迁移不完整。",
+      "notes": "验证片段迁移完整性。"
+    },
+    {
+      "id": "compat-view-not-aligned",
+      "input": "兼容视图与统一状态源渲染结果不一致。",
+      "expected": "应指出兼容视图未对齐。",
+      "notes": "验证兼容视图一致性。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill": "mes-verify-state-migration",
+  "dataset_version": "2.0.0",
+  "focus": "统一状态源迁移校验 Skill",
+  "case_count": 3,
+  "cases": [
+    {
+      "id": "legacy-file-still-authoritative",
+      "title": "验证主事实源收口。",
+      "path": "capability/legacy-file-still-authoritative/evals.json"
+    },
+    {
+      "id": "yaml-missing-required-fragment",
+      "title": "验证片段迁移完整性。",
+      "path": "capability/yaml-missing-required-fragment/evals.json"
+    },
+    {
+      "id": "compat-view-not-aligned",
+      "title": "验证兼容视图一致性。",
+      "path": "capability/compat-view-not-aligned/evals.json"
+    }
+  ]
+}

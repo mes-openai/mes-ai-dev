@@ -1,0 +1,25 @@
+{
+  "skill": "mes-test-generate-report",
+  "version": "2.0.0",
+  "purpose": "测试报告生成",
+  "samples": [
+    {
+      "id": "missing-coverage-matrix",
+      "input": "测试报告只有结论，没有覆盖矩阵。",
+      "expected": "应指出覆盖矩阵缺失。",
+      "notes": "验证覆盖矩阵完整性。"
+    },
+    {
+      "id": "defect-list-incomplete",
+      "input": "报告里提到存在问题，但没有缺陷清单。",
+      "expected": "应要求补齐缺陷清单。",
+      "notes": "验证缺陷记录完整性。"
+    },
+    {
+      "id": "unsupported-pass-conclusion",
+      "input": "大量遗留风险存在，但结论仍写“通过”。",
+      "expected": "应指出结论与证据不一致。",
+      "notes": "验证结论一致性。"
+    }
+  ]
+}

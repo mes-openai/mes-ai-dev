@@ -1,0 +1,12 @@
+{
+  "skill": "mes-init-build-dependency-graph",
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "trigger-001",
+      "input": "Build complete dependency graph including service calls, API mappings, and database ownership. Trigger keywords: dependency graph, service dependencies, build dependencies.",
+      "expected": "mes-init-build-dependency-graph",
+      "notes": "基础触发样例，后续可按真实场景扩充。"
+    }
+  ]
+}
