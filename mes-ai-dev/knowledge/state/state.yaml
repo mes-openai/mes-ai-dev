@@ -1,4 +1,4 @@
-# 知识库统一状态源（唯一已合并机器事实源）
+﻿# 知识库统一状态源（唯一已合并机器事实源）
 schema_version: "1.0"
 state_mode: primary
 last_updated: ""

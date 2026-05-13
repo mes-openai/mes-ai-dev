@@ -7,7 +7,7 @@
 - api-conventions.md 只有标题，没有任何内容。
 
 ## 建议证据片段
-- `mes-ai-dev/knowledge/reference/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
 - `mes-ai-dev/knowledge/state/state.yaml`
 - `mes-ai-dev/knowledge/state/state-detail/`
 

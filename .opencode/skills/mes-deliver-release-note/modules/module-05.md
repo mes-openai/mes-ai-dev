@@ -91,6 +91,6 @@
 
 1. 读取发布说明模板
 2. 按模板格式填充所有内容
-3. 写入 `workspace/delivery/REQ-YYYYMMDD-XXX/release-note.md`
+3. 写入 `workspace/delivery/{REQ-ID}/release-note.md`
 
 **Step Gate C**：`release-note.md` 缺少变更清单、已知问题、版本号依据或升级指南 → 打回步骤6-7重做，不得交付交接阶段。

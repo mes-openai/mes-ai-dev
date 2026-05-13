@@ -1,7 +1,7 @@
 # 输出
 
 ## 输出
-- `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/tasks.md`
+- `mes-ai-dev/workspace/development/{REQ-ID}/tasks.md`
 
 ### 输出格式
 ```markdown

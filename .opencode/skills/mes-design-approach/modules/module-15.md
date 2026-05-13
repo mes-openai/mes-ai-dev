@@ -2,8 +2,8 @@
 
 ## 输入
 
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md` - OpenSpec 需求规格主文档
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md` - 原始需求文档
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md` - OpenSpec 需求规格主文档
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md` - 原始需求文档
 - `mes-ai-dev/knowledge/code-map/backend-overview.md` - 后端服务总览
 - `mes-ai-dev/knowledge/code-map/frontend-overview.md` - 前端模块总览
 - **业务参考知识（必须）**

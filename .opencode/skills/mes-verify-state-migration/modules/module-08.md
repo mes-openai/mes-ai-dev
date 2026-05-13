@@ -5,9 +5,9 @@
 - `mes-ai-dev/workspace/refresh/state-migration-report-{YYYYMMDD}.md`
 
 统一使用：
-- `mes-ai-dev/templates/governance/state-migration-report-template.md`
-- `mes-ai-dev/templates/governance/detailed-review-report-template.md`（落盘模板）
-- `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`（统一最小字段集约束）
+- `.opencode/references/mes-ai-reference/templates/governance/state-migration-report-template.md`
+- `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md`（落盘模板）
+- `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`（统一最小字段集约束）
 
 > **模板使用要求**：
 > - 模板只提供迁移校验报告骨架，不可保留占位文本

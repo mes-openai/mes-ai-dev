@@ -39,7 +39,7 @@ task(
 
 ## 交接协议
 
-该 Agent 完成后只交付 `mes-ai-dev/workspace/{phase}/REQ-*/audit-{dimension}.md`，并优先使用 `mes-ai-dev/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 根据报告中的“通过/不通过”结论决定是否进入下一阶段；若为不通过，返工 Agent 仅依据报告中列出的问题、证据和修复建议开展修复，不依赖额外上下文补充。
+该 Agent 完成后只交付 `mes-ai-dev/workspace/{phase}/REQ-*/audit-{dimension}.md`，并优先使用 `.opencode/references/mes-ai-reference/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 根据报告中的“通过/不通过”结论决定是否进入下一阶段；若为不通过，返工 Agent 仅依据报告中列出的问题、证据和修复建议开展修复，不依赖额外上下文补充。
 
 ## 约束规则
 

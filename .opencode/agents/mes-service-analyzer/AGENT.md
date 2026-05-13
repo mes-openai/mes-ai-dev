@@ -41,7 +41,7 @@ task(
 
 ## 交接协议
 
-该 Agent 完成后只通过上述三个索引文件进行交接，不额外依赖对话历史；若需要附加结果交接文件，应优先使用 `mes-ai-dev/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。`mes-init-build-code-map` 与 `mes-init-build-dependency-graph` 在后续阶段直接读取这些文件进行合并、校验和依赖抽取；若为刷新阶段，则由主控 Agent 按服务目录收集新版文件并替换对应知识库视图。
+该 Agent 完成后只通过上述三个索引文件进行交接，不额外依赖对话历史；若需要附加结果交接文件，应优先使用 `.opencode/references/mes-ai-reference/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。`mes-init-build-code-map` 与 `mes-init-build-dependency-graph` 在后续阶段直接读取这些文件进行合并、校验和依赖抽取；若为刷新阶段，则由主控 Agent 按服务目录收集新版文件并替换对应知识库视图。
 
 ## 约束规则
 

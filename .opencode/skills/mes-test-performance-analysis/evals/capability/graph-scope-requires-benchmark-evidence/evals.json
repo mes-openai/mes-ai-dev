@@ -1,0 +1,22 @@
+{
+  "skill": "mes-test-performance-analysis",
+  "eval_name": "graph-scope-requires-benchmark-evidence",
+  "goal": "验证性能分析能使用 GitNexus / graphify 辅助定位热点范围，但不会用图谱关系替代真实性能测试、指标和回归结论。",
+  "input": "GitNexus 显示订单查询链路涉及 controller、service、mapper 和三张表，graphify 生成了热点关系导读；但没有压测命令、样本数据规模、执行环境、SQL explain、响应时间、吞吐量或对比基线。",
+  "expected_behavior": [
+    "可以依据图谱提出候选热点、影响范围和需要观测的调用链",
+    "必须说明图谱只提供范围导读，不能替代性能测试或数据库执行计划",
+    "必须要求补齐基准环境、数据规模、压测脚本或命令、关键指标和对比基线",
+    "必须要求用真实指标验证 N+1、慢查询、索引缺失或缓存退化等判断",
+    "不得仅凭调用链复杂或表数量多就下结论为性能不通过"
+  ],
+  "acceptance_criteria": [
+    "输出中明确区分候选热点与已验证性能问题",
+    "性能结论依赖可复现指标、SQL explain 或压测结果",
+    "缺少基准证据时应输出待验证项和补证清单",
+    "graphify / GitNexus 不被当作性能测试执行或覆盖率证据"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

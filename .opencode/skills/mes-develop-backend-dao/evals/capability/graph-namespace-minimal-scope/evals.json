@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-backend-dao",
+  "eval_name": "graph-namespace-minimal-scope",
+  "goal": "验证图谱仅用于最小 DAO 映射修复。",
+  "input": "GitNexus 发现 namespace 与接口名不一致，同时还提示 XML 存在可重构命名；当前任务仅修复映射错误。",
+  "expected_behavior": [
+    "应把 GitNexus 结果仅作为最小改动定位依据，不把命名重构纳入当前任务",
+    "应优先回到真实 mapper / XML / 接口定义确认最小修改集合",
+    "不得因为图谱发现额外问题而扩大范围或顺手优化"
+  ],
+  "acceptance_criteria": [
+    "能区分最小修复与扩范围重构",
+    "能明确图谱只用于定位，不替代事实源",
+    "能保持修改精准、不触碰无关文件"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -7,7 +7,7 @@
 - state.yaml 只有 coverage_summary，没有对应 detail，且场景要求双写兼容。
 
 ## 建议证据片段
-- `mes-ai-dev/knowledge/reference/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
 - `mes-ai-dev/knowledge/state/state.yaml`
 - `mes-ai-dev/knowledge/state/state-detail/`
 

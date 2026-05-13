@@ -2,7 +2,7 @@
   "skill": "mes-design-approach",
   "dataset_version": "2.0.0",
   "focus": "技术方案设计 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "no-comparison-options",
@@ -18,6 +18,11 @@
       "id": "decision-without-evidence",
       "title": "验证决策证据链。",
       "path": "capability/decision-without-evidence/evals.json"
+    },
+    {
+      "id": "graph-advisory-not-decision",
+      "title": "验证图谱辅助不替代技术方案决策。",
+      "path": "capability/graph-advisory-not-decision/evals.json"
     }
   ]
 }

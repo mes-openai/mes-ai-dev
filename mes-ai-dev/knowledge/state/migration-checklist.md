@@ -28,13 +28,13 @@
 | 统一状态源 | `mes-ai-dev/knowledge/state/state.yaml` |
 | 人工摘要 | `mes-ai-dev/knowledge/state/summary.md` |
 | 字段参考 | `mes-ai-dev/knowledge/state/state-schema-reference.md` |
-| 状态规则索引 | `mes-ai-dev/knowledge/rules/state/state-rendering-index.md` |
+| 状态规则索引 | `.opencode/references/mes-ai-reference/rules/state/state-rendering-index.md` |
 | 兼容视图 | `mes-ai-dev/knowledge/baseline.md` |
 | 兼容视图 | `mes-ai-dev/knowledge/init-coverage.md` |
 | **历史遗留** | `mes-ai-dev/knowledge/.init-checkpoint.yaml` |
 | **历史遗留** | `mes-ai-dev/knowledge/.sync-record.json` |
 | 总规则 | `AGENTS.md` |
-| 门禁规则索引 | `mes-ai-dev/knowledge/reference/phase-gates/index.md` |
+| 门禁规则索引 | `.opencode/references/mes-ai-reference/reference/phase-gates/index.md` |
 
 ---
 

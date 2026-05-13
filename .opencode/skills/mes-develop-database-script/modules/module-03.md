@@ -20,8 +20,8 @@
 
 ### 2. 读取设计文档
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（数据相关部分）
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（数据相关部分）
 
 ### 3. 读取现有数据库信息
 1. **识别Schema**：从设计文档确定涉及的数据库Schema
@@ -39,7 +39,7 @@
 - 约束命名约定
 
 ### 5. 编写DDL脚本
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/ddl-xxx.sql`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/database/ddl-xxx.sql`
 
 **DDL脚本结构**：
 ```sql

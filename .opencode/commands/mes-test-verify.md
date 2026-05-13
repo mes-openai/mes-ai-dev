@@ -39,6 +39,10 @@ description: "执行完整测试验证"
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
+**阶段工作目录命名说明**：本命令必须遵循 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md`。测试阶段开始前必须复用上游 `{REQ-ID}`，并重新计算当前输出目录为 `mes-ai-dev/workspace/testing/{REQ-ID}/`；不得把测试计划、单元测试结果或测试报告写入需求、设计或开发目录。
+
 **审查报告强制要求**：本命令中的测试报告、阶段门禁结论和验收性判断，均必须具备详细审查报告结构，至少保留结论、问题、风险、整改、证据路径和闭环状态。
 
 **阶段完成产物报告**：
@@ -52,12 +56,12 @@ description: "执行完整测试验证"
 
 **测试与覆盖率强制要求**：
 - 本轮新生成测试用例必须全部通过
-- 本轮生成/修改并纳入验证范围的代码行覆盖率必须达到 100%
+- 本轮生成/修改并纳入验证范围的代码行覆盖率、分支覆盖率和方法覆盖率必须全部达到 100%
 - 覆盖率不足时，只允许补充测试用例，不得删除已经生成且验证通过的测试用例
 
 **阶段详细审查报告**：
 - `/mes-test-verify` 完成后必须输出 `test-review-report.md`
-- 落盘目录：`mes-ai-dev/workspace/testing/REQ-YYYYMMDD-XXX/`
+- 落盘目录：`mes-ai-dev/workspace/testing/{REQ-ID}/`
 - 报告必须满足详细审查报告最小字段集，并包含明确审查时间与完整证据链
 - 报告未生成或内容不达标，不得通过测试验证阶段退出门禁
 
@@ -133,11 +137,11 @@ description: "执行完整测试验证"
 
 ### 七、模板绑定说明
 
-- 命中 blocker 或关键缺陷时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录阻断与可带风险问题
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小提测集与当前可交付倾向
-- 测试完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 测试阶段结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 或关键缺陷时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录阻断与可带风险问题
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小提测集与当前可交付倾向
+- 测试完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 测试阶段结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 

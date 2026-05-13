@@ -35,14 +35,14 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 **契约级知识边界**：
 - `/mes-init-project` 现在不仅要建立仓/模块/数据库/依赖图基础知识，还必须识别统一响应、错误码、SDK 请求/响应模型、公共异常、认证/MQ/网关等**契约级知识**
 - 初始化阶段关于三态规则、来源优先级、来源类型、unknown 阻断与反编译兜底的**唯一主定义**，以以下文件为准：
-  - `mes-ai-dev/knowledge/rules/phases/phase-init.md`
-  - `mes-ai-dev/knowledge/reference/knowledge-consumption/contracts.md`
-  - `mes-ai-dev/knowledge/rules/scenarios/scenario-external-contract-source.md`
+  - `.opencode/references/mes-ai-reference/rules/phases/phase-init.md`
+  - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/contracts.md`
+  - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-external-contract-source.md`
 - 本命令只负责提醒：命中业务仓外契约定义源时，必须按主定义执行，不得自行降级为模板补洞或常识推断
 
 **空模板阻断规则**：
 - `api-conventions.md`、`error-code-registry.md` 等契约类文件若仍为空模板/占位态，不得在后续 analyze/design 阶段默认视为已知规范
-- “文件存在不等于知识存在 / 占位态不可消费”的唯一主定义以 `mes-ai-dev/knowledge/reference/phase-gates/common.md` 为准
+- “文件存在不等于知识存在 / 占位态不可消费”的唯一主定义以 `.opencode/references/mes-ai-reference/reference/phase-gates/common.md` 为准
 
 **共享文件写入策略**：
 - 无论全仓还是单仓，Phase 1-8 都先写按仓库/模块/Schema 命名的局部产物
@@ -60,6 +60,8 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 - `/mes-init-enrich` 负责在后续深化或存量补录时 **补充/刷新** hot层
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
+
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
 
 **阶段完成产物报告**：
 - `/mes-init-project` 完成后必须输出一份阶段完成产物报告
@@ -161,7 +163,7 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 
 ## 大仓模式判定（Phase 0 自动执行）
 
-> **完整阈值定义与强制规则**：见 `mes-ai-dev/knowledge/rules/repository-scale-rules.md`。
+> **完整阈值定义与强制规则**：见 `.opencode/references/mes-ai-reference/rules/repository-scale-rules.md`。
 
 Phase 0 自动判定代码仓规模（优先读取 `state.yaml.initialization.repository_scale`，缺失时读取 `baseline.md` 摘要视图），并根据规模调整执行流程：
 

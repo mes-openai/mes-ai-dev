@@ -1,0 +1,22 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "eval_name": "graph-assisted-refresh-boundary",
+  "goal": "验证知识刷新检测不会用图谱推断替代 diff、状态源或刷新证据。",
+  "input": "git diff 只显示一个 API 文件和一个文档文件变化，但 GitNexus 图谱提示多个间接消费者，graphify 导读显示多个相关知识节点。",
+  "expected_behavior": [
+    "应以 git diff、state.yaml、refresh-hints.md 或等价证据作为刷新边界主依据",
+    "GitNexus 结果只能作为依赖影响面候选线索",
+    "graphify 导读只能作为刷新关系说明",
+    "不得把图谱推断直接写成知识已更新或知识不受影响",
+    "不得因图谱弱关联触发无边界全量刷新"
+  ],
+  "acceptance_criteria": [
+    "刷新范围与真实变更证据对应",
+    "图谱候选影响面被标记为待复核或建议检查",
+    "未更新原因和后续动作清晰",
+    "未触发无关知识文件重写"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

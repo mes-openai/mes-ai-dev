@@ -46,11 +46,11 @@
 **Step Gate B**：SQL注入/XSS/越权/敏感数据/鉴权/上传/CSRF 任一检查维度未完成或证据不足 → 打回步骤3-9重做，不得生成安全审查报告。
 
 ### 10. 生成安全审查报告
-将审查结果写入：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/security-review-report.md`
+将审查结果写入：`mes-ai-dev/workspace/development/{REQ-ID}/security-review-report.md`
 
 统一约束：
-- 必须符合 `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`
-- 若需要套用模板落盘，再使用 `mes-ai-dev/templates/governance/detailed-review-report-template.md`
+- 必须符合 `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`
+- 若需要套用模板落盘，再使用 `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md`
 - 不得只输出安全问题表，必须补齐审查范围、审查依据、风险评估、整改闭环、证据路径和复审状态
 
 **报告格式**：

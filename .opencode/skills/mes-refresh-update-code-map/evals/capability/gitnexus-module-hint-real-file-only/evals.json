@@ -1,0 +1,22 @@
+{
+  "skill": "mes-refresh-update-code-map",
+  "eval_name": "gitnexus-module-hint-real-file-only",
+  "goal": "验证 GitNexus 可提示受影响模块，但 code-map 更新必须基于真实文件变化，不得把图谱推断写成确认知识。",
+  "input": "git diff 仅显示 jalor/order-service/src/main/java/.../OrderStatusService.java 一个文件发生方法内部逻辑调整；state.yaml 显示 code-map 新鲜度仅需局部刷新；refresh-hints.md 指向 order-service 的 service 层说明；GitNexus 提示 order、plan、quality 多个模块存在间接调用关系。",
+  "expected_behavior": [
+    "应以真实变更文件确定 code-map 局部更新对象",
+    "GitNexus 模块影响提示只能作为候选检查清单，不得直接导致多个模块 code-map 被重写",
+    "code-map 中确认事实必须来自变更文件、源码定义点、配置或既有知识文件",
+    "未发生真实变化的模块应保持不变，或仅在报告中列为待复核候选",
+    "不得把图谱推断的间接调用关系写成已确认模块职责或已确认业务流"
+  ],
+  "acceptance_criteria": [
+    "更新范围限定在真实变更文件所属服务或模块",
+    "候选受影响模块被标记为待复核而非确认更新",
+    "未重写无 diff 支撑的 overview、index、detail 或 file-summaries",
+    "输出包含真实文件证据与图谱辅助线索的明确区分"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

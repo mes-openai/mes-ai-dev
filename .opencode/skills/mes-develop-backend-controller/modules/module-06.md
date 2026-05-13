@@ -20,8 +20,8 @@
 
 ### 2. 读取设计文档和现有代码
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计（核心）
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（API相关部分）
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计（核心）
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（API相关部分）
 3. `jalor/service-xxx/src/main/java/com/jalor/xxx/service/XxxService.java` - Service接口
 4. `jalor/service-xxx/src/main/java/com/jalor/xxx/dto/XxxDTO.java` - DTO类
 5. `jalor/service-xxx/src/main/java/com/jalor/xxx/vo/XxxVO.java` - VO类
@@ -65,7 +65,7 @@
 ### 6. 开发Controller类
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/controller/XxxController.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-controller-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-controller-template.java`
 
 执行步骤：
 1. 读取模板文件

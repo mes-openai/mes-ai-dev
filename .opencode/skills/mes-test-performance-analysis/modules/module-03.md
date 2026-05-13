@@ -66,8 +66,8 @@
 
 ### 4. 读取数据库设计
 读取数据库设计文档和DDL脚本：
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md`
-- `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/ddl-xxx.sql`
+- `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md`
+- `mes-ai-dev/workspace/development/{REQ-ID}/database/ddl-xxx.sql`
 
 **检查项**：
 1. **缺少索引的高频查询字段**：

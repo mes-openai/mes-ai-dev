@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-build-dependency-graph",
+  "eval_name": "dependency-edge-tristate-required",
+  "goal": "验证依赖关系图构建必须对图谱依赖边区分确认、候选、未知。",
+  "input": "输入包含三类边：restService.properties 确认的 A->B、GitNexus 推断但无配置/代码证据的 A->C、graphify 仅在导读中提到但无法定位源文件的 A->D。",
+  "expected_behavior": [
+    "A->B 标记为确认并引用配置证据",
+    "A->C 标记为候选并列出待验证代码/配置路径",
+    "A->D 标记为未知或待补证，不进入确认依赖统计",
+    "不得让候选/未知边污染共享最终 service-dependencies"
+  ],
+  "acceptance_criteria": [
+    "每条依赖边均包含状态与事实来源",
+    "确认边必须可追溯到真实代码、配置、API 或数据库证据",
+    "图谱推断边不得替代 dependency-graph 正式产物事实",
+    "converge 前仅形成局部依赖片段与 pending_shared_files"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

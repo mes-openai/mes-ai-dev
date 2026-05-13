@@ -24,7 +24,7 @@
 ### 9. 输出服务调用链设计文档
 
 输出设计文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/service-chain-design.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/service-chain-design.md`
 
 文档结构：
 ```markdown

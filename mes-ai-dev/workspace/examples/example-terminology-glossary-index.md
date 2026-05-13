@@ -1,6 +1,6 @@
 # 术语表索引（示例）
 
-> 示例文件，演示 `knowledge/reference/terminology-glossary.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
+> 示例文件，演示 `mes-ai-dev/knowledge/reference/terminology-glossary.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
 > 完整术语条目应下沉到服务级或术语组分片，不在本文件中全量展开。
 
 ## 一、文件定位

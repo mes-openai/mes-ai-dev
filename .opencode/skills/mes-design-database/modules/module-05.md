@@ -68,7 +68,7 @@
 ### 8. 输出数据库设计文档
 
 输出设计文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md`
 
 文档结构：
 ```markdown

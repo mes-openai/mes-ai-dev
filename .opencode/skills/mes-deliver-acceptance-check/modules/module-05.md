@@ -81,7 +81,7 @@
 
 1. 读取验收报告模板
 2. 按模板格式填充所有内容
-3. 写入 `workspace/delivery/REQ-YYYYMMDD-XXX/acceptance-report.md`
+3. 写入 `workspace/delivery/{REQ-ID}/acceptance-report.md`
 
 验收报告必须补齐：
 - 审查目标与范围

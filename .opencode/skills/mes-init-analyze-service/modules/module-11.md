@@ -10,7 +10,7 @@
 对每个服务生成仓库画像文档：
 ```
 路径：mes-ai-dev/knowledge/code-map/services/service-<artifact-id>/repo-profile.md
-模板参考：mes-ai-dev/templates/repo-profile-template.md
+模板参考：.opencode/references/mes-ai-reference/templates/repo-profile-template.md
 ```
 
 **Step Gate B**：包结构、层级统计、配置/依赖分析或服务详情文档存在缺口 → 打回步骤3-7.5重做，不得交付下游初始化步骤。

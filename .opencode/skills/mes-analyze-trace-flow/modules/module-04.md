@@ -21,10 +21,10 @@
 **Step Gate C**：调用链路不完整、分支/异常流程遗漏或风险点未标注 → 打回步骤6-7重做，不得生成追踪报告。
 
 ### 8. 使用追踪报告模板生成交付文件
-生成文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/business-flow-trace.md`
+生成文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/business-flow-trace.md`
 
 统一使用：
-- `mes-ai-dev/templates/analyze/business-flow-trace-report-template.md`
+- `.opencode/references/mes-ai-reference/templates/analyze/business-flow-trace-report-template.md`
 
 > **模板使用要求**：
 > - 模板只提供结构化追踪报告骨架，不可保留占位文本

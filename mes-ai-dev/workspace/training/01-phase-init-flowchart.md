@@ -42,6 +42,14 @@
 6. **断点续传**：大仓初始化中断后可从 checkpoint 继续，不必从头再来
 7. **契约级知识识别**：自动识别统一响应、错误码、SDK 模型、认证/MQ 契约等跨服务公共契约
 
+**初始化阶段执行原则**：
+- 编码前思考：先明确初始化 scope、仓/模块/Schema 边界、产物层级和未知项标记方式。
+- 简洁优先：优先建立下游可消费的最小知识基线，不生成无关深度长文档。
+- 精准修改：单仓、定向或深化初始化不得越界扫描或覆盖非当前 scope 共享知识。
+- 目标驱动执行：以知识覆盖、局部产物、状态片段和下游消费映射作为完成标准。
+- 可按需使用 GitNexus 类代码知识图谱辅助抽取结构关系、调用链、依赖链和热点入口。
+- 可按需使用 graphify 类能力形成初始化图谱报告或 wiki 导读，但不得替代确认/候选/未知三态结论。
+
 ---
 
 ## 二、初始化阶段整体流程图
@@ -71,7 +79,7 @@ flowchart TB
 
     subgraph PHASE3 ["Phase 3: API 与依赖建图"]
         PH6 --> PH7["API 端点抽取 mes-init-extract-api"]
-        PH7 --> PH8["依赖图构建 mes-init-build-dependency-graph"]
+        PH7 --> PH8["依赖图构建 mes-init-build-dependency-graph<br>按需结合 GitNexus 图谱辅助校验"]
         PH8 --> PH9["Code Map 构建 mes-init-build-code-map"]
     end
 
@@ -82,7 +90,7 @@ flowchart TB
     end
 
     subgraph PHASE5 ["Phase 5: 参考知识抽取"]
-        PH12 --> PH13["业务参考提取 mes-init-extract-reference"]
+        PH12 --> PH13["业务参考提取 mes-init-extract-reference<br>按需使用 graphify 形成知识导读"]
         PH13 --> PH14["测试资产评估 mes-init-assess-testability"]
     end
 
@@ -98,8 +106,10 @@ flowchart TB
 
     STATE_WRITE --> MODE_CHECK{"初始化模式?"}
 
-    MODE_CHECK -->|全仓模式| CONVERGE["Phase 8A: 最终收拢 统一生成全局共享文件"]
-    MODE_CHECK -->|单仓定向模式| KEEP_LOCAL["仅保留局部产物 待后续 converge 收口"]
+    MODE_CHECK -->|全仓模式| PHASE7["Phase 7: 局部结果汇总与收拢准备"]
+    MODE_CHECK -->|单仓/定向模式| KEEP_LOCAL["仅保留局部产物 待后续 converge 收口"]
+
+    PHASE7 --> CONVERGE["Phase 8A: 最终收拢 统一生成全局共享文件"]
 
     CONVERGE --> GATE_EXIT{"退出门禁"}
     KEEP_LOCAL --> GATE_EXIT

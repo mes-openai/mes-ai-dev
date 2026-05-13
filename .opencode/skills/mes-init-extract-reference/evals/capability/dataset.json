@@ -1,8 +1,8 @@
 {
   "skill": "mes-init-extract-reference",
-  "dataset_version": "2.0.0",
+  "dataset_version": "2.1.0",
   "focus": "业务参考知识提取",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "empty-template-block",
@@ -18,6 +18,11 @@
       "id": "budget-aware-extraction",
       "title": "验证预算控制。",
       "path": "capability/budget-aware-extraction/evals.json"
+    },
+    {
+      "id": "graph-reference-requires-fact-source",
+      "title": "验证术语枚举错误码必须来自事实源。",
+      "path": "capability/graph-reference-requires-fact-source/evals.json"
     }
   ]
 }

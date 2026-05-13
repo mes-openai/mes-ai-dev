@@ -7,7 +7,7 @@
 - 初始化流程中 convergence 尚未完成，但用户尝试直接宣布知识库可用。
 
 ## 建议证据片段
-- `mes-ai-dev/knowledge/reference/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
 - `mes-ai-dev/knowledge/state/state.yaml`
 - `mes-ai-dev/knowledge/state/state-detail/`
 

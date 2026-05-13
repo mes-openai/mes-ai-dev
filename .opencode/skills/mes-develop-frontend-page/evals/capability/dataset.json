@@ -2,7 +2,8 @@
   "skill": "mes-develop-frontend-page",
   "dataset_version": "1.0.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "route-page-minimal-scope"
   ],
   "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
 }

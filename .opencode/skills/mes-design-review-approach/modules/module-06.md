@@ -77,8 +77,8 @@
 ### 9. 输出评审报告
 
 输出评审报告至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design-review-report.md`
-- 统一约束：必须符合 `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`；需要落盘模板时再使用 `mes-ai-dev/templates/governance/detailed-review-report-template.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/design-review-report.md`
+- 统一约束：必须符合 `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`；需要落盘模板时再使用 `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md`
 
 评审报告结构：
 ```markdown

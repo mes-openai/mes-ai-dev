@@ -1,7 +1,7 @@
 # 领域模型
 
-> 由 `/mes-init-project` 阶段自动生成，用于沉淀核心领域实体、实体关系与业务规则。
-> 本模板在初始化阶段由 `mes-init-extract-reference` 结合后端模型与数据库关联信息补全。
+> 本文件为项目侧领域模型知识产物，由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/domain-model-template.md`；SDK 升级不得覆盖本文件。
 
 ## 核心实体定义
 

@@ -1,7 +1,7 @@
 # 数据字典
 
-> 由 `/mes-init-project` 阶段自动生成，用于记录字段级业务含义、取值约束与命名约定。
-> 本模板在初始化阶段由 `mes-init-extract-reference` 结合实体定义、注释与数据库脚本补全。
+> 本文件为项目侧数据字典知识产物，由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/data-dictionary-template.md`；SDK 升级不得覆盖本文件。
 
 ## 公共字段定义
 

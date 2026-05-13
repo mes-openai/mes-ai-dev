@@ -65,7 +65,7 @@ spring:
 ```
 
 ### 6. 创建配置变更清单
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/backend/config-change-list.md`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/backend/config-change-list.md`
 
 **配置变更清单格式**：
 ```markdown

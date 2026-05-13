@@ -1,8 +1,8 @@
 {
   "skill": "mes-analyze-identify-repos",
-  "dataset_version": "2.0.0",
+  "dataset_version": "2.1.0",
   "focus": "仓库影响识别",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "single-repo-false-assumption",
@@ -18,6 +18,11 @@
       "id": "external-fact-source-needed",
       "title": "验证外部事实源识别。",
       "path": "capability/external-fact-source-needed/evals.json"
+    },
+    {
+      "id": "graph-weak-link-repo-boundary",
+      "title": "验证图谱弱关联不扩大确认仓库范围。",
+      "path": "capability/graph-weak-link-repo-boundary/evals.json"
     }
   ]
 }

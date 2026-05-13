@@ -15,11 +15,11 @@
 按以下顺序读取必要的输入文件：
 
 1. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 重点提取：UI需求、交互需求、功能需求
 
 2. **技术方案文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
    - 重点提取：涉及的前端模块、技术选型
 
 3. **前端总览**
@@ -35,7 +35,7 @@
    - 用途：了解前端API调用与后端服务的对应关系
 
 6. **API设计文档**
-    - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
+    - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md`
     - 用途：了解需要调用的后端接口
 
 **Step Gate A**：前置输入不完整、模块范围不清或 API 基线不足 → 打回步骤2重做，不得进入前端架构分析。

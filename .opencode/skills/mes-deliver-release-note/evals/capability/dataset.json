@@ -2,7 +2,8 @@
   "skill": "mes-deliver-release-note",
   "dataset_version": "1.0.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-weak-link-not-release-content"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "能力评测骨架，覆盖核心流程与图谱弱关联不得进入未交付发布内容的交付边界。"
 }

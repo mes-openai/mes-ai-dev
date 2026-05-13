@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-analyze-service",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-call-requires-service-index-evidence"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充图谱调用关系必须回到代码结构与 service index 验证的回归样例。"
 }

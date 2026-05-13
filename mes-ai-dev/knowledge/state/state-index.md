@@ -9,13 +9,13 @@ trigger:
 cost_level: low
 summary_first: false
 default_allowed: true
-parent_index: knowledge/reference/knowledge-consumption/state.md
+parent_index: .opencode/references/mes-ai-reference/reference/knowledge-consumption/state.md
 related_files:
   - knowledge/state/state.yaml
   - knowledge/state/state-detail/
-  - knowledge/rules/state/state-rendering-index.md
-  - knowledge/rules/context-budget-baseline.md
-  - knowledge/reference/rule-authority-matrix.md
+  - .opencode/references/mes-ai-reference/rules/state/state-rendering-index.md
+  - .opencode/references/mes-ai-reference/rules/context-budget-baseline.md
+  - .opencode/references/mes-ai-reference/reference/rule-authority-matrix.md
 ---
 
 # 状态文件索引
@@ -57,7 +57,7 @@ mes-ai-dev/knowledge/state/
 
 1. 先读 `state/state.yaml`，用于高频事实判断
 2. 若主文件摘要不足，再按需下钻 `state-detail/*.yaml`
-3. 若当前只是规则判断而非状态字段消费，优先读 `knowledge/rules/state/state-rendering-index.md`
+3. 若当前只是规则判断而非状态字段消费，优先读 `.opencode/references/mes-ai-reference/rules/state/state-rendering-index.md`
 
 ---
 
@@ -112,14 +112,14 @@ mes-ai-dev/knowledge/state/
 
 ## 7. 边界说明
 
-- 本索引不定义预算阈值；预算口径以 `mes-ai-dev/knowledge/rules/context-budget-baseline.md` 为准
-- 本索引不改变主定义边界；规则主定义关系以 `mes-ai-dev/knowledge/reference/rule-authority-matrix.md` 为准
+- 本索引不定义预算阈值；预算口径以 `.opencode/references/mes-ai-reference/rules/context-budget-baseline.md` 为准
+- 本索引不改变主定义边界；规则主定义关系以 `.opencode/references/mes-ai-reference/reference/rule-authority-matrix.md` 为准
 - 本索引不替代 `state.yaml`，也不替代 state 规则正文
 
 ---
 
 ## 8. 相关入口
 
-- 状态规则索引：`mes-ai-dev/knowledge/rules/state/state-rendering-index.md`
-- 状态消费分片：`mes-ai-dev/knowledge/reference/knowledge-consumption/state.md`
-- 轻量化迁移方案：`mes-ai-dev/knowledge/rules/governance/state-yaml-lightweight-migration-plan.md`
+- 状态规则索引：`.opencode/references/mes-ai-reference/rules/state/state-rendering-index.md`
+- 状态消费分片：`.opencode/references/mes-ai-reference/reference/knowledge-consumption/state.md`
+- 轻量化迁移方案：`.opencode/references/mes-ai-reference/rules/governance/state-yaml-lightweight-migration-plan.md`

@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-analyze-config",
+  "eval_name": "graph-dependency-not-config-source",
+  "goal": "验证配置与依赖分析不得由图谱推断补全真实配置依赖。",
+  "input": "GitNexus 推断 order-service 依赖 payment-service，但 application.yml、bootstrap.yml、resource/restService.properties 与其他配置文件均未声明 payment-service。",
+  "expected_behavior": [
+    "优先读取真实配置文件与 restService.properties 作为确认来源",
+    "将图谱推断但配置缺失的依赖标记为候选或未知",
+    "不得补写确认配置依赖或污染 service-dependencies",
+    "输出缺失配置证据的待补证说明"
+  ],
+  "acceptance_criteria": [
+    "确认依赖必须引用真实配置文件路径与键名",
+    "图谱推断不得替代配置事实源",
+    "候选/未知项不得进入下游阶段确认输入",
+    "converge 前不得覆盖共享最终依赖文件"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

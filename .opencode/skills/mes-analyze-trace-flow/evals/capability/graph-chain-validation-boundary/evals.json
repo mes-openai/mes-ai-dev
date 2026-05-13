@@ -1,0 +1,22 @@
+{
+  "skill": "mes-analyze-trace-flow",
+  "eval_name": "graph-chain-validation-boundary",
+  "goal": "验证业务链路追踪不会把 GitNexus 调用链候选或 graphify 关系导读直接写成正式服务链。",
+  "input": "需求要求追踪生产报工提交链路。GitNexus 给出 UI 页面、workorder 服务、equipment 服务、quality 服务四段可能调用链；graphify 导读显示报工、设备状态和质检结果存在关系。但 dependency graph 只确认 UI 调用 workorder 报工 API，workorder 到 quality 的调用缺少配置和代码定义点，equipment 只是概念相邻。",
+  "expected_behavior": [
+    "应把 GitNexus 调用链标注为候选链路，并逐段回到 API registry、dependency graph、restService 配置或代码定义点验证",
+    "应只把 UI 到 workorder 报工 API 写成确认链路",
+    "应把 workorder 到 quality 标为待补证，把 equipment 标为候选或未知",
+    "不得用 graphify 导读替代正式业务链、服务链或数据链结论",
+    "应为每段链路记录事实源、确认状态和待验证动作"
+  ],
+  "acceptance_criteria": [
+    "链路输出逐段区分确认、候选、未知或待补证",
+    "正式链路结论均有事实源支撑",
+    "未因概念相邻扩大到无关服务或页面",
+    "链路验收标准可追溯到确认链路和事实源"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

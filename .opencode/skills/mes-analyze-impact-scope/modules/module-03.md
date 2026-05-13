@@ -25,7 +25,7 @@
 ### 2. 读取需求解析结果
 从文件交接路径读取：
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md
+mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md
 ```
 
 提取关键信息：

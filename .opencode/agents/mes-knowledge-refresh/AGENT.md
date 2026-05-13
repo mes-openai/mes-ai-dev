@@ -45,7 +45,7 @@ task(
 
 ## 交接协议
 
-刷新完成后必须把实际变更写回 `mes-ai-dev/knowledge/`，并同步写入 `mes-ai-dev/workspace/refresh/refresh-completion-{part}.md` 作为交接凭据；完成文件应优先使用 `mes-ai-dev/templates/completion-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 根据该完成文件汇总本轮刷新结果，并按目标部分读取更新后的知识库文件继续执行验证或发布；跨阶段只认知识库文件与完成标记，不依赖额外对话说明。
+刷新完成后必须把实际变更写回 `mes-ai-dev/knowledge/`，并同步写入 `mes-ai-dev/workspace/refresh/refresh-completion-{part}.md` 作为交接凭据；完成文件应优先使用 `.opencode/references/mes-ai-reference/templates/completion-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 根据该完成文件汇总本轮刷新结果，并按目标部分读取更新后的知识库文件继续执行验证或发布；跨阶段只认知识库文件与完成标记，不依赖额外对话说明。
 
 ## 约束规则
 

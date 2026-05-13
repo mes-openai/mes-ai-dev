@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-scan-patterns",
+  "eval_name": "single-sample-not-global-pattern",
+  "goal": "验证实现模式抽取不得把 GitNexus 或 graphify 发现的单个样例推广为全局规范。",
+  "input": "图谱发现一个 Controller 使用 ResultVO 返回格式，但同仓其他 Controller 存在 ResponseEntity、Map 与 ResultVO 多种返回模式。",
+  "expected_behavior": [
+    "抽样或扫描多个同类文件验证模式是否稳定",
+    "将单个样例标记为候选模式或局部模式",
+    "不得写成全局 coding standard 或后续 develop 阶段强制规范",
+    "输出适用范围、反例与待确认项"
+  ],
+  "acceptance_criteria": [
+    "全局模式必须有多点证据或明确人工确认",
+    "单例证据不得污染规则、模式库或开发阶段输入",
+    "候选模式需标注适用范围与置信度",
+    "不得全量重写 modules 或修改业务代码"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -7,7 +7,7 @@
 - 
 
 ## 建议证据片段
-- `mes-ai-dev/templates/reference/response-conventions-template.md`
+- `.opencode/references/mes-ai-reference/templates/reference/response-conventions-template.md`
 - `jalor/src/main/java/.../controller/`
 - `mes-ai-dev/knowledge/reference/error-code-registry.md`
 

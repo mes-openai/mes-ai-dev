@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `workspace/REQ-xxx/deliverable/design.md`
 - `workspace/REQ-xxx/report/`
-- `mes-ai-dev/templates/`
+- `.opencode/references/mes-ai-reference/templates/`
 
 ## 观察点
 - 该用例用于验证 Skill 在输入齐备、结构正常、约束明确时，能够沿主路径完成处理。

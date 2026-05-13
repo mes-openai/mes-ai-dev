@@ -28,7 +28,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 > **开发阶段限边说明**：
 > 开发阶段不得重做仓级责任边界、provider 选择、项目私有契约定义、现有接口复用 / 扩展 / 新增主路径。
 > 若开发过程中发现以上决策存在冲突或事实不足，必须回流 analyze/design，不得在 develop 阶段直接拍板。
-> 相关主定义以 `mes-ai-dev/knowledge/rules/phases/phase-develop.md` 与 `mes-ai-dev/knowledge/reference/phase-gates/develop.md` 为准。
+> 相关主定义以 `.opencode/references/mes-ai-reference/rules/phases/phase-develop.md` 与 `.opencode/references/mes-ai-reference/reference/phase-gates/develop.md` 为准。
 
 > **服务链依赖说明**：
 > 若设计阶段已冻结服务链与禁止路径，开发阶段只能沿冻结后的主路径实现；不得因为某条路径“技术上可实现”就绕开架构允许路径。
@@ -37,6 +37,10 @@ description: "执行完整代码开发，按任务计划逐步实现"
 **预期耗时**：根据需求复杂度，可能数小时到数天
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
+
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
+**阶段工作目录命名说明**：本命令必须遵循 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md`。开发阶段开始前必须复用上游已解析的 `{REQ-ID}`，并重新计算当前输出目录为 `mes-ai-dev/workspace/development/{REQ-ID}/`；不得沿用 `workspace/requirements/{REQ-ID}/` 或 `workspace/designs/{REQ-ID}/` 作为开发产物目录。
 
 **审查报告强制要求**：本命令中的自审、验证证据、门禁审查和相关验收性结论，必须输出详细审查报告；不得退化为摘要式记录、单表格记录或仅问题列表。
 
@@ -52,7 +56,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 
 **测试与覆盖率强制要求**：
 - 代码生成后，必须先验证本轮新生成测试用例全部通过
-- 随后必须复核本轮生成/修改并纳入验证范围的代码行覆盖率达到 100%
+- 随后必须复核本轮生成/修改并纳入验证范围的代码行覆盖率、分支覆盖率和方法覆盖率均达到 100%
 - 覆盖率不足时，只允许补充测试用例，不得删除已经生成且验证通过的测试用例
 
 **存量项目结构强制要求**：
@@ -61,7 +65,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 
 **阶段详细审查报告**：
 - `/mes-develop-code` 完成后必须输出 `development-review-report.md`
-- 落盘目录：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/`
+- 落盘目录：`mes-ai-dev/workspace/development/{REQ-ID}/`
 - 报告必须满足详细审查报告最小字段集，并包含明确审查时间与完整证据链
 - 报告未生成或内容不达标，不得通过代码开发阶段退出门禁
 
@@ -155,11 +159,11 @@ description: "执行完整代码开发，按任务计划逐步实现"
 
 ### 八、模板绑定说明
 
-- 命中 blocker 时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录开发 blocker 分类与推进判定
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小可提测结果
-- 工作单元完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 开发阶段结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录开发 blocker 分类与推进判定
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小可提测结果
+- 工作单元完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 开发阶段结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 
@@ -362,7 +366,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 
 若命中业务仓外契约场景，还应显式引用：
 
-- `knowledge/reference/knowledge-consumption/contracts.md`
+- `.opencode/references/mes-ai-reference/reference/knowledge-consumption/contracts.md`
 - `api-conventions.md`
 - `error-code-registry.md`
 

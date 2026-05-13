@@ -26,6 +26,6 @@
 
 ### 8. 生成交付文件
 将影响范围分析结果追加到：
-`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 
 **Step Gate D**：影响范围报告缺少服务/模块/表范围、调用链或风险说明 → 打回步骤8重做，不得交付设计阶段使用。

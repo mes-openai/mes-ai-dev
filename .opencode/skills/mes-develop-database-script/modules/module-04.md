@@ -1,7 +1,7 @@
 # 执行步骤（2/2）
 
 ### 6. 编写DML脚本
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/dml-xxx.sql`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/database/dml-xxx.sql`
 
 **DML脚本结构**：
 ```sql
@@ -36,7 +36,7 @@ WHERE `status` = 'ACTIVE';
 ```
 
 ### 7. 编写回滚脚本
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/rollback-xxx.sql`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/database/rollback-xxx.sql`
 
 **回滚脚本结构**：
 ```sql

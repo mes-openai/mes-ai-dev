@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-analyze-service",
+  "eval_name": "graph-call-requires-service-index-evidence",
+  "goal": "验证微服务架构分析不得把图谱推断调用关系直接写成服务确认事实。",
+  "input": "GitNexus 推断 OrderService 调用 StockService，但 service index、包结构与代码定义点中未找到 StockServiceClient、RestService 配置或 import/call 证据。",
+  "expected_behavior": [
+    "回到包结构、分层目录、service index、代码定义点与配置文件验证调用关系",
+    "缺少证据的调用关系标记为候选或未知",
+    "不得将图谱推断调用写入确认服务依赖或下游 design/develop 可直接消费事实",
+    "输出待补证来源与验证路径"
+  ],
+  "acceptance_criteria": [
+    "确认调用关系必须引用真实代码或配置证据",
+    "候选调用关系不得污染 service detail、dependency graph 或后续阶段输入",
+    "三态标注完整且冲突时以事实源为准",
+    "未越界分析非当前服务目录"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

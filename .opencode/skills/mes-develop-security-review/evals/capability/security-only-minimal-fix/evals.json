@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-security-review",
+  "eval_name": "security-only-minimal-fix",
+  "goal": "验证安全审查只输出安全结论不扩范围。",
+  "input": "安全审查发现一个输入校验问题，同时代码里还有命名和格式化可以顺手整理。",
+  "expected_behavior": [
+    "应只围绕安全问题给出最小修复建议",
+    "应避免把命名、格式化或无关重构混入审查结论",
+    "应把非安全问题留给对应开发任务，不在安全审查中扩范"
+  ],
+  "acceptance_criteria": [
+    "能保持安全结论聚焦",
+    "能拒绝无关代码整理",
+    "能明确最小安全修复边界"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

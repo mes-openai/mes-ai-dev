@@ -24,7 +24,7 @@ task(
     "mes-develop-backend-controller",
     "mes-develop-backend-config"
   ],
-  prompt="开发服务 {service-name} 的代码，设计文档在 {design-doc-path}，代码模板在 mes-ai-dev/templates/。先检查 mes-ai-dev/workspace/locks/{service-name}.lock，再按 Model→DAO→Service→Controller→Config 顺序实现，并在完成后写入 mes-ai-dev/workspace/development/{req-id}/{service-name}-completion.md。"
+  prompt="开发服务 {service-name} 的代码，设计文档在 {design-doc-path}，代码模板在 .opencode/references/mes-ai-reference/templates/。先检查 mes-ai-dev/workspace/locks/{service-name}.lock，再按 Model→DAO→Service→Controller→Config 顺序实现，并在完成后写入 mes-ai-dev/workspace/development/{req-id}/{service-name}-completion.md。"
 )
 ```
 
@@ -35,7 +35,7 @@ task(
 | 输入项 | 路径 | 用途 |
 |------|------|------|
 | 设计文档 | `mes-ai-dev/workspace/designs/REQ-*/design-doc.md` | 提供业务流程、分层职责与实现边界 |
-| 代码模板 | `mes-ai-dev/templates/backend-*-template.java` | 复用统一骨架与命名规范 |
+| 代码模板 | `.opencode/references/mes-ai-reference/templates/backend-*-template.java` | 复用统一骨架与命名规范 |
 | 目标服务代码 | `jalor/<service-path>/src/main/java/` | 对齐既有包结构、命名习惯和框架写法 |
 | 服务配置文件 | `jalor/<service-path>/src/main/resources/` | 更新接口、映射、配置或资源声明 |
 | 并发锁文件 | `mes-ai-dev/workspace/locks/<service-name>.lock` | 检查服务是否被其他需求或 Agent 占用 |
@@ -52,12 +52,12 @@ task(
 
 ## 交接协议
 
-完成后必须写入 `mes-ai-dev/workspace/development/REQ-*/<service-name>-completion.md`，并优先使用 `mes-ai-dev/templates/completion-template.md` 填充四要素（结论 / 风险 / 下一步 / 证据路径）。内容至少包含已修改文件清单、实现功能点、受影响接口、依赖变更和待验证事项。主控 Agent 只读取该完成文件进行汇总，再决定是否触发联调、测试执行或审核 Agent；跨服务协作不得依赖会话记忆，只能依赖该交接文件和实际代码变更。
+完成后必须写入 `mes-ai-dev/workspace/development/REQ-*/<service-name>-completion.md`，并优先使用 `.opencode/references/mes-ai-reference/templates/completion-template.md` 填充四要素（结论 / 风险 / 下一步 / 证据路径）。内容至少包含已修改文件清单、实现功能点、受影响接口、依赖变更和待验证事项。主控 Agent 只读取该完成文件进行汇总，再决定是否触发联调、测试执行或审核 Agent；跨服务协作不得依赖会话记忆，只能依赖该交接文件和实际代码变更。
 
 ## 约束规则
 
 1. 开发前必须检查 `mes-ai-dev/workspace/locks/`，发现锁冲突时不得继续写代码。
-2. 必须优先使用 `mes-ai-dev/templates/` 中的模板，不得绕过模板随意新建风格不一致代码。
+2. 必须优先使用 `.opencode/references/mes-ai-reference/templates/` 中的模板，不得绕过模板随意新建风格不一致代码。
 3. 只修改当前分配服务，不跨服务直接变更其他仓库或其他微服务实现。
 4. 实现顺序必须遵循 `Model → DAO → Service → Controller → Config`，不得跳层倒序扩散。
 5. 只能更新与当前功能直接相关的配置，不得顺手做无关重构或批量格式化。

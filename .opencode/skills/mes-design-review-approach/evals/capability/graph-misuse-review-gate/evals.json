@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-review-approach",
+  "eval_name": "graph-misuse-review-gate",
+  "goal": "验证设计评审能拦截 GitNexus / graphify 被误用为正式设计结论、服务链未冻结和设计对象未映射的问题。",
+  "design_input": "待审 design.md 声称采用 workorder -> quality -> equipment 链路，依据为 GitNexus 和 graphify；文档未记录 Provider 选择理由、禁止路径、契约边界、开发任务、测试对象或验收标准映射。",
+  "graph_assistance": "GitNexus 显示三段候选调用链；graphify 导读显示报工、质检、设备、通知关系紧密，但 API registry 和 dependency graph 只确认 workorder 报工接口。",
+  "expected_behavior": [
+    "应判定当前设计不通过或有条件通过，指出 GitNexus 仅可作校验线索，不能替代服务链和 Provider 结论",
+    "应指出 graphify 仅为导读，不能替代 design.md 正文结论和阶段门禁证据",
+    "应要求补充服务链冻结、Provider 选择理由、禁止路径、契约边界和事实源",
+    "应拦截新增不必要中间层、聚合层、平行机制以及设计范围扩大到未确认模块",
+    "应要求把关键设计对象映射到开发任务、测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "评审结论明确识别图谱误用",
+    "服务链未冻结和 Provider 选择缺失被列为 must-fix",
+    "范围膨胀和不必要架构层被拦截",
+    "输出补正清单覆盖设计文档、开发任务、测试对象和验收标准映射"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

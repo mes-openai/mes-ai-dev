@@ -8,7 +8,7 @@
 - 按需读取：知识库文件
 
 ### 下游输出
-- 输出文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec-review-report.md`
+- 输出文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec-review-report.md`
 - 若评审通过 → 传递给：`mes-design-approach`（详细设计）
 - 若评审不通过 → 返回需求分析阶段修正
 

@@ -15,38 +15,42 @@
 按以下顺序读取所有设计阶段的产出文件：
 
 1. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 用途：作为设计文档的需求概述部分
 
 2. **原始需求文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
    - 用途：补充需求背景信息
 
 3. **技术方案文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
    - 用途：整合技术方案决策部分
 
 4. **数据库设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md`
    - 用途：整合数据库设计部分
 
 5. **API设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md`
    - 用途：整合API接口设计部分
 
 6. **前端设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/frontend-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/frontend-design.md`
    - 用途：整合前端设计部分
 
 7. **服务调用链设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/service-chain-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/service-chain-design.md`
    - 用途：整合服务调用链设计部分
 
 8. **设计文档模板**
-    - 路径：`mes-ai-dev/templates/design-doc-template.md`
-    - 用途：作为最终 `design.md` 主文档的结构模板
+- 模板选择优先级：用户显式提供的模板路径或模板内容 → 项目级自定义模板 `.opencode/references/mes-ai-reference/templates/design/custom-design-doc-template.md` → 默认模板 `.opencode/references/mes-ai-reference/templates/design/design-doc-template.md`
+- 用途：作为最终 `design.md` 主文档的结构模板
+- 要求：使用用户模板时必须保留用户模板中的固定章节；若用户模板缺少骨架要求的必要设计内容，应以子章节、附录或补充表格方式补齐。
+- 异常处理：若用户提供模板路径但文件不存在，必须暂停并要求用户更正路径；不得静默回退默认模板。若用户直接粘贴模板内容，应将其作为本次执行的内联模板依据，并在 `mes-ai-dev/workspace/designs/{REQ-ID}/template-source.md` 记录模板来源、接收时间和固定章节清单。若项目级自定义模板不存在且用户未提供模板，则自动回退默认模板并在执行计划中说明。
 
 **Step Gate A**：设计输入不完整、模板缺失或整合范围不清 → 打回步骤2重做，不得进入内容整合策略。
+
+**Step Gate A-1：目录与模板确认**：必须先按 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md` 解析 `{REQ-ID}`，并声明需求输入目录 `mes-ai-dev/workspace/requirements/{REQ-ID}/`、设计输出目录 `mes-ai-dev/workspace/designs/{REQ-ID}/`、实际采用的模板来源。设计产物不得写入 `workspace/requirements/{REQ-ID}/`。若模板来源为用户内联内容或项目级自定义模板，必须生成或更新 `template-source.md` 记录来源与固定章节；若用户模板路径不存在，门禁不通过。
 
 ### 3. 内容整合策略
 

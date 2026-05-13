@@ -1,0 +1,24 @@
+{
+  "skill": "mes-deliver-acceptance-check",
+  "eval_name": "graph-relation-not-acceptance-evidence",
+  "goal": "验证 graphify 显示需求与测试存在关系时，验收结论仍必须依据 test-report、acceptance trace 和验收确认材料。",
+  "input": "graphify 导读显示需求 REQ-2026-DEL-01 与测试用例 TC-18、TC-19、验收材料 UAT-summary 存在关系；但 test-report.md 未记录 TC-19 执行结果，acceptance-trace-matrix.md 缺少 REQ-2026-DEL-01 到验收结论的映射，业务验收确认尚未签署。",
+  "graph_guidance": "graphify 关系导读只用于定位需求、测试、验收材料之间的候选关系和缺口排查入口。",
+  "formal_evidence": "正式验收依据为 test-report.md、acceptance-trace-matrix.md 或等价验收追溯章节、UAT 记录和业务/项目验收确认。",
+  "conflict_precedence": "当 graphify 导读与测试报告、验收追溯或人工确认不一致时，以正式测试和验收材料为准。",
+  "expected_behavior": [
+    "不得仅凭 graphify 显示有关联就判定验收通过或给出 Go 结论",
+    "应指出 TC-19 执行结果缺失、验收追溯缺口和业务确认未签署",
+    "应要求补齐 test-report、acceptance trace 或等价验收证据后再形成验收结论",
+    "可将 graphify 关系作为材料定位导读，但不得替代验收证据链"
+  ],
+  "acceptance_criteria": [
+    "明确区分图谱导读与正式验收证据",
+    "Go/No-Go 或验收通过结论来自真实测试和验收材料",
+    "冲突时以 test-report、acceptance trace 和人工确认为准",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

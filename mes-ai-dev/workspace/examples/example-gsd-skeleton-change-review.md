@@ -3,7 +3,7 @@
 > 示例文件，演示如何对 GSD 执行增强层的骨架接入结果进行骨架修改审查。
 > 适用于规则、模板、状态、导航与命令层接入后的综合审查场景。
 >
-> **当前阅读边界说明**：本示例反映的是早期 GSD 接入阶段的审查口径；当前 GSD 主规则已下沉到 `mes-ai-dev/knowledge/rules/scenarios/scenario-gsd.md`，旧 `knowledge/rules/gsd-execution-mode.md` 仅保留为兼容入口。
+> **当前阅读边界说明**：本示例反映的是早期 GSD 接入阶段的审查口径；当前 GSD 主规则已下沉到 `mes-ai-dev/knowledge/rules/scenarios/scenario-gsd.md`，旧 `mes-ai-dev/knowledge/rules/gsd-execution-mode.md` 仅保留为兼容入口。
 
 ---
 

@@ -12,6 +12,12 @@
 - 交付阶段不重新定义契约、provider 或仓边界，基于测试与回归结果做发布判断
 - 必须形成明确的 Go/No-Go 倾向与回滚策略
 - 发布后观察项与后补治理动作必须显式记录
+- 编码前思考：发布前明确交付对象、Go/No-Go 标准、风险分层、回滚策略和观察指标
+- 简洁优先：交付材料服务发布判断、回滚恢复和交接消费，不生成无关长文档
+- 精准修改：不得在交付阶段重做需求、设计、测试或仓边界决策
+- 目标驱动执行：以部署计划、验收结论、回滚路径和交接状态作为完成标准
+- 可按需使用 GitNexus 类代码知识图谱核对发布包影响面、调用链、消费者和回滚路径
+- 可按需使用 graphify 类能力表达需求项、测试结论、验收结论、发布风险与交接对象之间的关系
 
 **触发命令**：`/mes-deliver-release`
 
@@ -33,7 +39,7 @@ flowchart TB
     GATE_ENTER -->|"通过"| STEP1
 
     subgraph S1 ["Step 1: 部署规划"]
-        STEP1["mes-deliver-deploy-plan<br>制定部署策略与环境规划<br>确定回滚方案与发布窗口<br>识别发布依赖与前置条件"]
+        STEP1["mes-deliver-deploy-plan<br>制定部署策略与环境规划<br>确定回滚方案与发布窗口<br>识别发布依赖与前置条件<br>按需使用 GitNexus 核对发布影响面"]
     end
 
     STEP1 --> GATE_S1{"Step 1 门禁<br>回滚方案已制定?"}
@@ -72,7 +78,7 @@ flowchart TB
     STEP5 --> STEP6
 
     subgraph S6 ["Step 6: 交付交接"]
-        STEP6["mes-deliver-handover<br>生成交接文档与交付物清单<br>记录知识刷新建议<br>记录 retrospective 建议"]
+        STEP6["mes-deliver-handover<br>生成交接文档与交付物清单<br>记录知识刷新建议<br>记录 retrospective 建议<br>按需补充 graphify 交付关系导读"]
     end
 
     STEP6 --> GATE_EXIT{"退出门禁"}
@@ -143,7 +149,7 @@ flowchart LR
 ## 五、发布交付阶段产物结构
 
 ```
-mes-ai-dev/workspace/delivery/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/delivery/{REQ-ID}/
 ├── deliverable/
 │   ├── release-note.md            # 发布说明与版本变更日志
 │   └── handover-doc.md            # 交接文档

@@ -1,0 +1,22 @@
+{
+  "skill": "mes-analyze-generate-spec",
+  "eval_name": "graph-guide-not-spec",
+  "goal": "验证规格生成不会把 graphify 关系导读或 GitNexus 推断直接写入 spec.md 的正式结论。",
+  "input": "准备生成 spec.md。graphify 导读建议把生产报工、设备停机、质检判定合并为一个端到端规格；GitNexus 显示三者存在弱调用关系。但 exploration.md 仅确认本次需求是生产报工字段补录，API registry 只确认报工接口变更，用户未确认设备停机和质检判定变更。",
+  "expected_behavior": [
+    "应把 graphify 导读作为导航说明或补充背景，不得替代 spec.md 正式规格",
+    "spec.md 正式范围应限定为已确认的生产报工字段补录",
+    "设备停机和质检判定只能进入候选、未知或后续确认项",
+    "正式需求、影响范围和验收标准必须引用 exploration/proposal、API registry、dependency graph、代码定义点或人工确认等事实源",
+    "不得因图谱弱关联生成跨模块规格或扩大验收标准"
+  ],
+  "acceptance_criteria": [
+    "spec 正文区分确认结论、候选线索和未知项",
+    "正式规格结论均有事实源或人工确认支撑",
+    "graphify 导读未被当作正式规格来源",
+    "验收标准只覆盖确认需求且可追溯"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

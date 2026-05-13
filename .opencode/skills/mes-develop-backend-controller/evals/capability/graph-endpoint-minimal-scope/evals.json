@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-backend-controller",
+  "eval_name": "graph-endpoint-minimal-scope",
+  "goal": "验证图谱仅用于最小接口修改。",
+  "input": "graphify 显示该 controller 还可合并另一个 endpoint，但当前任务只修复一个参数绑定错误。",
+  "expected_behavior": [
+    "应把 graphify 仅作为接口关系导读，不把合并 endpoint 当作当前任务",
+    "应优先依据真实请求 / 响应契约做最小接口修改",
+    "不得扩大到响应结构重构或无关路由调整"
+  ],
+  "acceptance_criteria": [
+    "能保持接口改动精准",
+    "能拒绝无关路由和响应重构",
+    "能将图谱发现限制在当前任务边界内"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

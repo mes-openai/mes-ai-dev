@@ -1,7 +1,7 @@
 # 共享知识片段目录说明
 
 > 本目录用于初始化/深化阶段的共享知识局部结果暂存。
-> 这些片段**不直接作为下游消费事实源**，必须由主控 Agent 或 `/mes-init-converge` 串行收口后，才能写入 `knowledge/reference/`、`knowledge/rules/` 与 `knowledge/code-map/` 下的最终共享文件。
+> 这些片段**不直接作为下游消费事实源**，必须由主控 Agent 或 `/mes-init-converge` 串行收口后，才能写入 `.opencode/references/mes-ai-reference/reference/`、`.opencode/references/mes-ai-reference/rules/` 与 `knowledge/code-map/` 下的最终共享文件。
 
 ---
 
@@ -9,14 +9,14 @@
 
 以下共享知识文件在单仓、分批、多 session 初始化/深化场景下，不得直接写最终文件，必须先写片段：
 
-- `knowledge/reference/terminology-glossary.md`
-- `knowledge/reference/domain-model.md`
-- `knowledge/reference/data-dictionary.md`
-- `knowledge/reference/enum-registry.md`
-- `knowledge/reference/error-code-registry.md`
-- `knowledge/reference/permission-matrix.md`
-- `knowledge/rules/api-conventions.md`
-- `knowledge/rules/coding-standards.md`
+- `mes-ai-dev/knowledge/reference/terminology-glossary.md`
+- `mes-ai-dev/knowledge/reference/domain-model.md`
+- `mes-ai-dev/knowledge/reference/data-dictionary.md`
+- `mes-ai-dev/knowledge/reference/enum-registry.md`
+- `mes-ai-dev/knowledge/reference/error-code-registry.md`
+- `mes-ai-dev/knowledge/reference/permission-matrix.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/coding-standards.md`
 - `knowledge/code-map/business-flows.md`
 - `knowledge/code-map/ownership.md`
 - `knowledge/code-map/patterns.md`

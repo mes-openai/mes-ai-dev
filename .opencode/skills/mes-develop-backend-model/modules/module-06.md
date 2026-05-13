@@ -20,9 +20,9 @@
 
 ### 2. 读取设计文档
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
-3. `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/ddl-xxx.sql` - DDL脚本
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
+3. `mes-ai-dev/workspace/development/{REQ-ID}/database/ddl-xxx.sql` - DDL脚本
 
 ### 3. 定位目标服务
 1. 从设计文档确定涉及的微服务
@@ -50,7 +50,7 @@
 ### 5. 开发Entity类
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/entity/XxxEntity.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-entity-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-entity-template.java`
 
 执行步骤：
 1. 读取模板文件
@@ -61,7 +61,7 @@
 ### 6. 开发DTO类
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/dto/XxxDTO.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-dto-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-dto-template.java`
 
 执行步骤：
 1. 读取模板文件
@@ -72,7 +72,7 @@
 ### 7. 开发VO类
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/vo/XxxVO.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-vo-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-vo-template.java`
 
 执行步骤：
 1. 读取模板文件

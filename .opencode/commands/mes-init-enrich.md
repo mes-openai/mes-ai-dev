@@ -61,6 +61,8 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
 **阶段完成产物报告**：
 - `/mes-init-enrich` 完成后必须输出一份阶段完成产物报告
 - 报告必须说明：深化标准产物、已生成文件、各文件作用、未生成文件及未生成原因
@@ -131,7 +133,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 ## 大仓模式判定（自动）
 
-> **完整阈值定义与强制规则**：见 `mes-ai-dev/knowledge/rules/repository-scale-rules.md`。
+> **完整阈值定义与强制规则**：见 `.opencode/references/mes-ai-reference/rules/repository-scale-rules.md`。
 
 执行前自动判定代码仓规模（优先读取 `state.yaml.initialization.repository_scale`，缺失时读取 `baseline.md` 摘要视图），并根据规模调整深化策略：
 

@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-generate-doc",
+  "eval_name": "graph-guide-not-design-doc",
+  "goal": "验证设计文档生成不会把 graphify 导读、GitNexus 候选链路或关系图替代 design.md 正式设计结论。",
+  "design_input": "阶段已有需求规格、影响范围、接口设计、数据库设计和服务链草案；多 Provider 场景命中，必须在 design.md 中沉淀正式结论、冻结服务链并映射开发 / 测试 / 验收。",
+  "graph_assistance": "GitNexus 提供候选服务链和接口依赖；graphify 生成需求、接口、表、服务链、测试对象之间的关系导读图。部分关系未经过事实源确认。",
+  "expected_behavior": [
+    "应把 GitNexus 内容作为候选依赖和服务链校验线索，未经验证不得写成正式结论",
+    "应把 graphify 内容作为文档导读或附录说明，不得替代 design.md 正文章节",
+    "design.md 必须包含技术方案、接口设计、数据模型、服务链 / Provider / 契约边界、风险和验证映射",
+    "必须标注正式结论的事实来源，并把未确认图谱关系列为待补证或不采用路径",
+    "不得因图谱导读扩大到未确认模块或新增不必要中间层、聚合层、平行机制"
+  ],
+  "acceptance_criteria": [
+    "design.md 正文存在完整正式设计结论，而非仅有图谱导读链接或摘要",
+    "服务链已冻结，Provider 选择理由和契约边界已记录",
+    "图谱候选关系均标注验证状态或不采用原因",
+    "设计对象已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

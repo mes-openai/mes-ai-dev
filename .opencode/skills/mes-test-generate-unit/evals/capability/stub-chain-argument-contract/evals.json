@@ -1,0 +1,22 @@
+{
+  "skill": "mes-test-generate-unit",
+  "eval_name": "stub-chain-argument-contract",
+  "goal": "验证单元测试生成时能识别 Mockito 参数契约与链式 stub 初始化风险，避免用万能 mock 或弱断言掩盖真实行为。",
+  "input": "为一个 Java Service 生成单元测试：方法先调用 configClient.getTenantConfig(tenantId).getStorage().getRootPath()，再调用 repository.save(dto)，其中 save 参数包含跨平台构造的 Path 与业务状态字段。",
+  "expected_behavior": [
+    "stub 前必须完整构造 tenantConfig、storage、rootPath 等返回链对象，禁止让链式调用在测试执行时空指针失败",
+    "同一个 Mockito 调用内不得混用裸值与 matcher；固定 tenantId 应使用 eq(...) 或全裸值保持一致",
+    "repository.save(dto) 的复杂参数必须使用 ArgumentCaptor 或 argThat(...) 校验 Path 规范化结果和业务状态字段",
+    "不得以 any() 覆盖全部参数、不得只 verify 调用次数、不得删除断言或吞异常制造通过",
+    "涉及 Path 的输入和断言必须使用 Path/Paths/normalize 或项目既有跨平台工具，不得硬编码盘符或路径分隔符"
+  ],
+  "acceptance_criteria": [
+    "输出中明确给出返回链初始化策略，且不会因未初始化嵌套对象产生 NullPointerException",
+    "Mockito matcher 使用策略一致，并能解释为什么固定值使用 eq(...) 或 captor 校验",
+    "复杂 DTO 参数至少包含一个真实字段级断言，不能退化为 any() 或非空断言",
+    "路径相关断言具备 Windows / Linux 可移植性"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

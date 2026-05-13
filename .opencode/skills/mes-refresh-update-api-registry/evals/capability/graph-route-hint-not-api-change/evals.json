@@ -1,0 +1,22 @@
+{
+  "skill": "mes-refresh-update-api-registry",
+  "eval_name": "graph-route-hint-not-api-change",
+  "goal": "验证 API registry 更新必须基于真实 Controller、route、API 注解或契约变化，graphify / GitNexus 关系导读不得触发 API 变更。",
+  "input": "git diff 只包含 service 实现内部日志调整和一处文档说明；state.yaml 显示 API registry 当前状态有效；refresh-hints.md 未声明 API 契约变化；graphify 导读提示该 service 与某 Controller 存在调用关系，GitNexus 提示路由链路可能相关。",
+  "expected_behavior": [
+    "应检查 git diff 中是否存在 Controller、route、API 注解、请求参数、响应结构、错误码或契约文件变化",
+    "在缺少真实 API 变更证据时，不得更新 API registry",
+    "GitNexus 与 graphify 关系只能作为候选链路说明或待复核提示",
+    "应记录 API registry 未更新原因，并说明图谱导读不构成 API 变更证据",
+    "不得把图谱中的 Controller 关联写成新增、删除或修改 API"
+  ],
+  "acceptance_criteria": [
+    "API registry 保持不变或仅记录未更新说明",
+    "输出明确区分真实 API 证据与图谱候选关系",
+    "未新增、删除或修改无 diff 支撑的 API 条目",
+    "后续复核建议不扩大为无边界刷新任务"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

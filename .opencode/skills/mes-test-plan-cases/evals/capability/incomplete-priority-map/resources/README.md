@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `workspace/REQ-xxx/deliverable/design.md`
 - `workspace/REQ-xxx/report/`
-- `mes-ai-dev/templates/`
+- `.opencode/references/mes-ai-reference/templates/`
 
 ## 观察点
 - 该用例模拟的核心异常/风险是：只列了用例，没有区分 P0/P1/P2。

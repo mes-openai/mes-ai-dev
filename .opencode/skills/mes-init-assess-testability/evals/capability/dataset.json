@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-assess-testability",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-test-coverage-not-test-asset"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充测试资产可用性必须基于真实测试文件的回归样例。"
 }

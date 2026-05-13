@@ -1,0 +1,22 @@
+{
+  "skill": "mes-test-plan-cases",
+  "eval_name": "tdd-graph-path-mockito-risk-plan",
+  "goal": "验证测试用例规划能在 TDD 前置阶段识别图谱边界、跨平台路径和 Mockito 质量风险，并把风险转化为可执行测试计划。",
+  "input": "需求涉及文件导入服务：graphify 已给出导入链路导读；实现将使用 Path 拼接临时目录并调用 repository.save(importRecord)。用户要求先规划测试用例，再生成代码。",
+  "expected_behavior": [
+    "必须先输出 TDD 测试计划，并明确等待用户补充或确认后再进入代码生成",
+    "必须把 graphify / GitNexus 结果标为测试范围导读或候选链路，不得当作覆盖率或测试执行证据",
+    "必须规划 Windows / Linux 路径兼容用例，包括路径拼接、normalize 断言和临时目录机制",
+    "必须规划 Mockito 风险用例，包括 matcher 一致性、ArgumentCaptor / argThat 参数校验和 stub 返回链初始化",
+    "必须禁止万能 mock、弱断言、吞异常、删除断言制造通过，并把这些列入验收标准"
+  ],
+  "acceptance_criteria": [
+    "计划中包含 TDD 顺序：测试计划先行、用户确认、再生成/修改代码",
+    "计划中至少包含一个跨平台路径测试点和一个 Mockito 参数契约测试点",
+    "计划明确图谱只用于范围导读，真实通过结论依赖测试执行与覆盖率证据",
+    "计划能阻断删除断言、吞异常、弱断言和过宽 mock 的低质量用例"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

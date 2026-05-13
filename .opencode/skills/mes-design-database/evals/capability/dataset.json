@@ -2,7 +2,7 @@
   "skill": "mes-design-database",
   "dataset_version": "2.0.0",
   "focus": "数据库设计 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "table-truth-missing-evidence",
@@ -18,6 +18,11 @@
       "id": "migration-without-rollback",
       "title": "验证迁移完整性。",
       "path": "capability/migration-without-rollback/evals.json"
+    },
+    {
+      "id": "graph-table-relation-not-ddl",
+      "title": "验证图谱表关系不替代数据库设计结论。",
+      "path": "capability/graph-table-relation-not-ddl/evals.json"
     }
   ]
 }

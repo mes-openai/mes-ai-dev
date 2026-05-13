@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-build-code-map",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graphify-wiki-not-code-map"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充 graphify wiki 不得替代 code-map 正式产物的回归样例。"
 }

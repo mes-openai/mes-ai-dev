@@ -25,6 +25,6 @@
 | 刷新说明 | `workspace/refresh/README.md` | **保留** | 否 |
 | 示例文件 | `workspace/examples/` | **保留** | 否 |
 | 状态追踪 | `workspace/status-tracker.md` | 重置为初始模板 | 是 |
-| 规则目录 | `knowledge/rules/` | **保留** | 否 |
-| 参考目录 | `knowledge/reference/` | **保留** | 否 |
+| 规则目录 | `.opencode/references/mes-ai-reference/rules/` | **保留** | 否 |
+| 参考目录 | `.opencode/references/mes-ai-reference/reference/` | **保留** | 否 |
 | 模板目录 | `templates/` | **保留** | 否 |

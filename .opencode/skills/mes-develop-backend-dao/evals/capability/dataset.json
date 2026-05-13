@@ -2,7 +2,7 @@
   "skill": "mes-develop-backend-dao",
   "dataset_version": "2.0.0",
   "focus": "后端DAO层开发 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "namespace-mismatch",
@@ -18,6 +18,11 @@
       "id": "invalid-resulttype",
       "title": "验证类型真实性。",
       "path": "capability/invalid-resulttype/evals.json"
+    },
+    {
+      "id": "graph-namespace-minimal-scope",
+      "title": "验证图谱仅用于最小 DAO 映射修复。",
+      "path": "capability/graph-namespace-minimal-scope/evals.json"
     }
   ]
 }

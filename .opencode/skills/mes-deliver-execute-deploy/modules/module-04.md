@@ -4,4 +4,4 @@
 
 | 输出项 | 路径 | 说明 |
 |--------|------|------|
-| deploy-log | `mes-ai-dev/workspace/delivery/REQ-YYYYMMDD-XXX/deploy-log.md` | 部署日志 |
+| deploy-log | `mes-ai-dev/workspace/delivery/{REQ-ID}/deploy-log.md` | 部署日志 |

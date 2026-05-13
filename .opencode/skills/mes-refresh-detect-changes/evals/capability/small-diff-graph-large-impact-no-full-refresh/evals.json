@@ -1,0 +1,22 @@
+{
+  "skill": "mes-refresh-detect-changes",
+  "eval_name": "small-diff-graph-large-impact-no-full-refresh",
+  "goal": "验证 diff 很小但图谱提示大影响面时，刷新检测不得用图谱推断替代真实变更证据或触发无边界全量刷新。",
+  "input": "git diff 仅显示一个配置项默认值调整和一处 README 说明更新，state.yaml 显示知识库已初始化且无全局刷新标记，refresh-hints.md 仅提示检查对应服务配置说明；GitNexus 提示该配置可能被多个服务间接读取，graphify 导读展示多个潜在相关知识节点。",
+  "expected_behavior": [
+    "应以 git diff、state.yaml、refresh-hints.md 与真实代码或配置变化确定刷新边界",
+    "GitNexus 大影响面只能作为候选复核线索，不得直接升级为全量刷新依据",
+    "graphify 导读只能说明潜在关系，不得替代变更检测结果、刷新计划或未更新原因",
+    "应只建议检查与真实变更文件直接相关的 code-map、dependency-graph 或配置知识片段",
+    "不得重写无真实变更证据支撑的 API registry、数据库索引、共享知识或全局概览"
+  ],
+  "acceptance_criteria": [
+    "刷新范围与小 diff 和 refresh-hints.md 明确对应",
+    "图谱提示的大影响面被标记为候选、待复核或建议检查",
+    "输出明确说明未触发全量刷新的原因",
+    "未把图谱弱关联写成确认变更或确认知识"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

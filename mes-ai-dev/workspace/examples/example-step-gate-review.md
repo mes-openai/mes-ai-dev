@@ -27,8 +27,8 @@
 
 | 输入项 | 路径/来源 | 状态 | 备注 |
 |--------|-----------|------|------|
-| 需求规格 | `mes-ai-dev/workspace/requirements/REQ-20260416-001/requirement-spec.md` | 已确认 | 已通过需求分析阶段门禁 |
-| 设计主文档 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design-doc.md` | 已确认 | 已形成 API 设计章节草稿 |
+| 需求规格 | `mes-ai-dev/workspace/requirements/REQ-20260416-001/spec.md` | 已确认 | 已通过需求分析阶段门禁 |
+| 设计主文档 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design.md` | 已确认 | 已形成 API 设计章节草稿 |
 
 ### 2.2 本步骤输出
 
@@ -111,6 +111,6 @@
 
 | 证据编号 | 类型 | 路径/命令 | 说明 |
 |----------|------|-----------|------|
-| E-01 | 文件 | `mes-ai-dev/workspace/requirements/REQ-20260416-001/requirement-spec.md` | 需求规格输入 |
-| E-02 | 文件 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design-doc.md` | 设计主文档输入 |
+| E-01 | 文件 | `mes-ai-dev/workspace/requirements/REQ-20260416-001/spec.md` | 需求规格输入 |
+| E-02 | 文件 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design.md` | 设计主文档输入 |
 | E-03 | 文件 | `mes-ai-dev/workspace/designs/REQ-20260416-001/api-design.md` | 本步骤输出 |

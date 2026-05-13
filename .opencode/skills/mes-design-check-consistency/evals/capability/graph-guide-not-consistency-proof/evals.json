@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-check-consistency",
+  "eval_name": "graph-guide-not-consistency-proof",
+  "goal": "验证跨服务一致性检查不会把 graphify 导读或 GitNexus 候选关系替代契约、Provider、服务链和设计文档一致性证明。",
+  "design_input": "设计涉及报工接口、质量校验 Provider 和报工记录字段，必须检查 design.md、api-design.md、database-design.md 与服务链设计之间是否一致。",
+  "graph_assistance": "GitNexus 显示接口、Provider 和 Mapper 有候选依赖；graphify 导读把接口、表、服务链和验收标准放入同一关系图，但未提供正式设计对象之间的一致性证明。",
+  "expected_behavior": [
+    "应把 GitNexus 作为候选依赖校验入口，并回到正式设计文档、API 契约、数据库设计和代码事实源比对",
+    "应说明 graphify 仅为关系导读，不得替代跨服务一致性检查结论",
+    "必须检查服务链 / Provider / 接口契约 / 数据库对象 / 前端对象是否在 design.md 及专项文档中一致",
+    "应拦截未冻结服务链、Provider 选择缺失、图谱推断替代契约边界、设计范围扩大的问题",
+    "一致性问题必须映射到待修正设计对象、开发任务、测试对象或验收标准"
+  ],
+  "acceptance_criteria": [
+    "一致性结论基于正式设计文档和事实源，而非图谱导读",
+    "识别服务链未冻结、Provider 选择缺失或契约边界缺失",
+    "识别并阻断未确认模块范围扩张和不必要平行机制",
+    "输出的问题项均有修正目标和验证映射"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

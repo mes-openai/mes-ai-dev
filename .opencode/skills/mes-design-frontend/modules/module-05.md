@@ -65,7 +65,7 @@ actions: {
 ### 9. 输出前端设计文档
 
 输出设计文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/frontend-design.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/frontend-design.md`
 
 文档结构：
 ```markdown

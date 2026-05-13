@@ -9,6 +9,8 @@ description: "Design microservice call chain and data flow. Trigger: service cha
 - 本文件仅保留 Skill 元数据、适用边界与最小读取入口。
 - 详细导航统一以下层 `INDEX.md` 为准；执行说明以下层 `modules/` 正文为准。
 - `evals/` 属于 Skill 的正式组成部分，用于触发验证与能力回归。
+- GitNexus 类代码知识图谱能力可用于校验服务链、调用链、Provider 路径与依赖闭环，但不得替代设计阶段的事实源与服务链冻结结论。
+- graphify 类知识图谱能力可用于输出关系导读或调用链摘要，但不得替代 `INDEX.md`、`modules/` 或设计主文档。
 
 ## 适用场景
 - Design microservice call chain and data flow. Trigger: service chain, call chain, orchestration

@@ -87,6 +87,6 @@
 
 1. 读取部署计划模板
 2. 按模板格式填充所有内容
-3. 写入 `workspace/delivery/REQ-YYYYMMDD-XXX/deploy-plan.md`
+3. 写入 `workspace/delivery/{REQ-ID}/deploy-plan.md`
 
 **Step Gate D**：`deploy-plan.md` 缺少部署顺序、环境差异、验证步骤或回滚方案 → 打回步骤8重做，不得交付部署执行阶段。

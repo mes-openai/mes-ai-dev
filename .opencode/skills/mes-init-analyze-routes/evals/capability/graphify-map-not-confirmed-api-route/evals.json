@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-analyze-routes",
+  "eval_name": "graphify-map-not-confirmed-api-route",
+  "goal": "验证前后端映射不得由 graphify 关系图直接确认。",
+  "input": "graphify 显示订单页面关联 /api/order/audit，但 src/router、页面组件、src/api 调用层中仅发现 /api/order/list 调用。",
+  "expected_behavior": [
+    "以真实 route、页面组件与 API 调用代码作为确认映射依据",
+    "将 graphify 中的 /api/order/audit 关系标记为候选或未知",
+    "不得把关系图直接写入确认 frontend-backend-map",
+    "输出未映射 API 或待补证项"
+  ],
+  "acceptance_criteria": [
+    "确认映射必须能追溯到 route/component/api 调用文件",
+    "graphify 关系必须标注不确定性",
+    "不得污染 API registry 或前后端映射最终文件",
+    "单仓扫描保持在指定 web scope 内"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

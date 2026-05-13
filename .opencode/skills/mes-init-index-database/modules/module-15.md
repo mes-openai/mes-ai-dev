@@ -8,9 +8,9 @@
   - `registry-fragment.md` — Schema级注册片段，供最终收拢使用
 - 全局数据库注册表：`mes-ai-dev/knowledge/dependency-graph/database-registry.md`（由最终收拢阶段统一生成）
 - 模板参考：
-  - `mes-ai-dev/templates/governance/schema-index-template.md`
-  - `mes-ai-dev/templates/governance/schema-tables-template.md`
-  - `mes-ai-dev/templates/governance/schema-relations-template.md`
+  - `.opencode/references/mes-ai-reference/templates/governance/schema-index-template.md`
+  - `.opencode/references/mes-ai-reference/templates/governance/schema-tables-template.md`
+  - `.opencode/references/mes-ai-reference/templates/governance/schema-relations-template.md`
 - 内容格式：
 
 说明：

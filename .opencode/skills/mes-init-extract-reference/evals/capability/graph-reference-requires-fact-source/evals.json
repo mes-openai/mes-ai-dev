@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-extract-reference",
+  "eval_name": "graph-reference-requires-fact-source",
+  "goal": "验证业务参考知识提取不得把 graphify 术语关系或 GitNexus 命名推断当作术语、枚举、错误码确认事实。",
+  "input": "graphify 导读中出现 OrderStatus=APPROVED、错误码 E_ORDER_001，但代码枚举、constants、错误码配置、API 文档与知识库 reference 中未找到对应定义。",
+  "expected_behavior": [
+    "回到真实枚举类、常量、错误码配置、API 文档或人工确认来源验证术语与错误码",
+    "缺少事实源的术语、枚举、错误码标记为候选或未知",
+    "不得写入确认 terminology、domain-model、data-dictionary、api-conventions 或 coding-standards",
+    "输出待补证来源与不确定性说明"
+  ],
+  "acceptance_criteria": [
+    "确认参考知识必须有明确事实源路径或人工确认记录",
+    "graphify/GitNexus 推断不得替代 reference 正式产物",
+    "候选/未知项不得污染 analyze/design/develop/test 阶段可消费知识",
+    "三态、证据来源与待补证项完整"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

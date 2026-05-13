@@ -1,0 +1,21 @@
+{
+  "skill": "mes-develop-self-review",
+  "eval_name": "tdd-and-scope-self-check",
+  "goal": "验证自审必须覆盖 TDD 与最小范围。",
+  "input": "代码已经生成，但自审时还发现可以重构命名和提炼公共方法。",
+  "expected_behavior": [
+    "应先检查 TDD 证据、测试全绿与覆盖要求",
+    "应只验证当前任务范围，不把命名重构或提炼公共方法纳入结论",
+    "应把无关格式化、重命名和顺手优化判为不应发生",
+    "若涉及单元测试，应检查 Windows / Linux 路径兼容、Mockito matcher 一致性与 stub 初始化"
+  ],
+  "acceptance_criteria": [
+    "能确认自审关注最小范围",
+    "能确认先有测试计划与验证证据",
+    "能明确拒绝无关重构",
+    "能明确识别跨平台路径、matcher、stub 三类测试风险"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

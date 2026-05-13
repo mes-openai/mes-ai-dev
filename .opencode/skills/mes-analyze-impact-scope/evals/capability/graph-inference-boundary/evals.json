@@ -1,0 +1,23 @@
+{
+  "skill": "mes-analyze-impact-scope",
+  "eval_name": "graph-inference-boundary",
+  "goal": "验证影响范围分析不会把 GitNexus / graphify 图谱推断直接写成确定事实或导致范围膨胀。",
+  "input": "需求描述只明确影响工单派发确认，GitNexus 图谱提示工单、设备、质量三个服务存在调用链弱关联，graphify 导读显示三个模块都出现在同一业务概念图中，但知识库 dependency-graph 只确认工单服务和派发确认 API 为事实源。",
+  "expected_behavior": [
+    "应将图谱结果标记为候选线索或待复核关系",
+    "应回到知识库事实源、服务索引、dependency graph、API registry、代码定义点或人工确认中验证",
+    "不得把图谱推断直接写入确认影响范围",
+    "不得因弱关联扩大到无关仓、服务、表或页面",
+    "正式影响结论应区分确认、候选、未知和风险说明",
+    "应只把工单服务和派发确认 API 写入确认影响范围，设备、质量服务只能列为候选或待验证"
+  ],
+  "acceptance_criteria": [
+    "输出中明确区分事实来源与图谱推断，并标注确认、候选、未知三类状态",
+    "正式影响范围只包含已有事实源支撑的仓、服务、表、页面或接口",
+    "图谱弱关联未被升级为确认事实，风险和待补证项清晰可追溯",
+    "影响范围结论能追溯到知识库、API registry、dependency graph、代码定义点或人工确认之一"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

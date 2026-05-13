@@ -23,7 +23,7 @@
 
 | 序号 | 标准产物 | 作用 | 本阶段是否应生成 | 备注 |
 |------|----------|------|------------------|------|
-| 1 | `design-doc.md` | 汇总详细设计主文档 | 是 | 主产物 |
+| 1 | `design.md` | 汇总详细设计主文档 | 是 | 主产物 |
 | 2 | `database-design.md` | 数据库设计说明 | 是 | 本需求涉及表结构调整 |
 | 3 | `api-design.md` | 接口设计说明 | 是 | 本需求新增接口 |
 | 4 | `frontend-design.md` | 前端页面与交互设计 | 是 | 本需求涉及前端页面 |
@@ -39,7 +39,7 @@
 
 | 序号 | 文件路径 | 文件作用 | 生成状态 | 可直接消费 | 备注 |
 |------|----------|----------|----------|------------|------|
-| 1 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design-doc.md` | 汇总详细设计主文档 | ✅已生成 | 是 | 已完成主控整合 |
+| 1 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design.md` | 汇总详细设计主文档 | ✅已生成 | 是 | 已完成主控整合 |
 | 2 | `mes-ai-dev/workspace/designs/REQ-20260416-001/database-design.md` | 表结构、索引与字段设计 | ✅已生成 | 是 | 含表结构调整说明 |
 | 3 | `mes-ai-dev/workspace/designs/REQ-20260416-001/api-design.md` | 请求/响应与错误码设计 | ✅已生成 | 是 | 已对齐后端 Controller |
 | 4 | `mes-ai-dev/workspace/designs/REQ-20260416-001/frontend-design.md` | 页面、组件与交互设计 | ✅已生成 | 是 | 已说明前后端映射 |
@@ -103,7 +103,7 @@
 
 | 证据编号 | 类型 | 路径/命令 | 说明 |
 |----------|------|-----------|------|
-| E-01 | 标准产物 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design-doc.md` | 主设计文档 |
+| E-01 | 标准产物 | `mes-ai-dev/workspace/designs/REQ-20260416-001/design.md` | 主设计文档 |
 | E-02 | 标准产物 | `mes-ai-dev/workspace/designs/REQ-20260416-001/database-design.md` | 数据库设计 |
 | E-03 | 标准产物 | `mes-ai-dev/workspace/designs/REQ-20260416-001/api-design.md` | 接口设计 |
 | E-04 | 标准产物 | `mes-ai-dev/workspace/designs/REQ-20260416-001/frontend-design.md` | 前端设计 |

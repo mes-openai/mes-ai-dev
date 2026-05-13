@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-backend-service",
+  "eval_name": "graph-contract-minimal-scope",
+  "goal": "验证图谱仅用于最小 service 契约修复。",
+  "input": "GitNexus 发现 provider 调用链还有一个可优化分支，但当前任务只要求修复返回契约不一致。",
+  "expected_behavior": [
+    "应把图谱作为调用链导航，不把可优化分支纳入当前任务",
+    "应回到真实 provider 签名与 service 代码确认最小修复",
+    "不得扩大到异常体系重构或顺手优化"
+  ],
+  "acceptance_criteria": [
+    "能区分契约修复与结构优化",
+    "能保持修改最小且精准",
+    "能避免图谱发现非目标问题后混入当前任务"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

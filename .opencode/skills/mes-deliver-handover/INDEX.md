@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 交付交接主线优先读取输出增强、输入依赖、输出产物、执行步骤与异常处理模块。
 - 项目概况、交付物清单、运维/回滚要点、后续待办、签署确认与检查清单模块仅在当前任务需要时进入。
+- GitNexus 类代码知识图谱可用于核对交付对象、调用链、回滚影响面与知识刷新对象；graphify 类图谱可用于交接关系导读，但不得替代发布/验收/交接证据。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -46,5 +47,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

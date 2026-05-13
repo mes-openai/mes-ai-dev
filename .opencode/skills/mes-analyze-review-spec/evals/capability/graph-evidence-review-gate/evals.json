@@ -1,0 +1,22 @@
+{
+  "skill": "mes-analyze-review-spec",
+  "eval_name": "graph-evidence-review-gate",
+  "goal": "验证规格审查能拦截把图谱推断写成事实、范围膨胀和验收标准不可追溯的问题。",
+  "input": "待审 spec.md 声称库存服务、设备服务和质检页面均受影响，依据是 GitNexus 图谱和 graphify 关系导读；文档未列出 API registry、dependency graph、代码定义点、知识库事实源或人工确认。验收标准包含库存扣减和设备停机联动，但原始需求只确认质检结果回传字段。",
+  "expected_behavior": [
+    "应判定该 spec 未通过或有条件通过，指出图谱推断被误写为确认事实",
+    "应要求将库存服务、设备服务和质检页面拆为候选或待补证项，除非补充事实源",
+    "应指出 graphify 导读不能替代正式规格和影响范围证据",
+    "应要求验收标准回到确认需求与事实源，删除或降级未确认联动验收",
+    "应明确需要补充的知识库事实源、API registry、dependency graph、代码定义点或人工确认"
+  ],
+  "acceptance_criteria": [
+    "审查结论识别图谱误用和范围膨胀",
+    "审查意见要求区分确认、候选、未知或待补证",
+    "审查意见要求正式结论具备事实源",
+    "审查意见覆盖验收标准可追溯性"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

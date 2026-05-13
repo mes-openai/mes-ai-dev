@@ -7,7 +7,7 @@
 - 输入仓库很大，参考知识很多，但上下文预算有限。
 
 ## 建议证据片段
-- `mes-ai-dev/knowledge/reference/`
+- `.opencode/references/mes-ai-reference/reference/`
 - `jalor/src/main/java/.../enums/`
 - `jalor/src/main/java/.../constants/`
 

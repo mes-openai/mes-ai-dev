@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-frontend-page",
+  "eval_name": "route-page-minimal-scope",
+  "goal": "验证页面修改不外溢。",
+  "input": "当前只需调整一个页面的路由显示问题，graphify 还提示页面可以和相邻模块合并。",
+  "expected_behavior": [
+    "应只处理当前页面的最小修改",
+    "应避免无关路由重构、模块合并和顺手优化",
+    "应把 graphify 只作为页面关系导读"
+  ],
+  "acceptance_criteria": [
+    "能保持页面改动最小",
+    "能拒绝无关路由合并",
+    "能与现有前端路由结构对齐"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

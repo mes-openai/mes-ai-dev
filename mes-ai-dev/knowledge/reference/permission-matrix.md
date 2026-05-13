@@ -1,6 +1,7 @@
 # 权限矩阵
 
-> 定义各角色在 MES-AI-DEV 框架中的操作权限。
+> 本文件为项目侧权限矩阵知识产物，可由初始化/刷新阶段基于团队角色与项目治理要求生成/调整。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/permission-matrix-template.md`；SDK 升级不得覆盖本文件。
 
 ---
 

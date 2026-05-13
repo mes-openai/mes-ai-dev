@@ -40,7 +40,7 @@ task(
 
 ## 交接协议
 
-该 Agent 完成后把测试代码写回目标仓库测试目录，并把结构化结果写入 `mes-ai-dev/workspace/testing/REQ-*/{test-type}-results.md`；结果文件应优先使用 `mes-ai-dev/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。后续 `mes-test-generate-report` 或主控 Agent 只读取结果文件进行汇总；若存在失败项，开发 Agent 仅根据结果文件中的失败用例、错误信息和定位建议进行修复，不依赖额外说明。
+该 Agent 完成后把测试代码写回目标仓库测试目录，并把结构化结果写入 `mes-ai-dev/workspace/testing/REQ-*/{test-type}-results.md`；结果文件应优先使用 `.opencode/references/mes-ai-reference/templates/results-template.md` 组织四要素（结论 / 风险 / 下一步 / 证据路径）。后续 `mes-test-generate-report` 或主控 Agent 只读取结果文件进行汇总；若存在失败项，开发 Agent 仅根据结果文件中的失败用例、错误信息和定位建议进行修复，不依赖额外说明。
 
 ## 约束规则
 

@@ -6,4 +6,4 @@
   - `detail.md` — 完整详情（~8K token）
   - `file-summaries.md` — 文件摘要（~100 token/文件）
   - `repo-profile.md` — 仓库画像（~3K token，一致性评分+风险热力图+AI开发建议）
-- 模板参考：`mes-ai-dev/templates/repo-profile-template.md`
+- 模板参考：`.opencode/references/mes-ai-reference/templates/repo-profile-template.md`

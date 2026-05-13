@@ -7,7 +7,7 @@
 - 接口设计中没有错误码定义，但场景明确要求可追踪错误码。
 
 ## 建议证据片段
-- `mes-ai-dev/templates/reference/response-conventions-template.md`
+- `.opencode/references/mes-ai-reference/templates/reference/response-conventions-template.md`
 - `jalor/src/main/java/.../controller/`
 - `mes-ai-dev/knowledge/reference/error-code-registry.md`
 

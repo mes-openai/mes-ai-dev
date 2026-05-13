@@ -15,11 +15,11 @@
 按以下顺序读取必要的输入文件：
 
 1. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 重点提取：功能需求、非功能需求、约束条件
 
 2. **原始需求文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
    - 用途：理解业务背景和上下文
 
 3. **第0层索引（系统总览）**

@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-database",
+  "eval_name": "graph-table-relation-not-ddl",
+  "goal": "验证数据库设计不会把 GitNexus / graphify 的表关系或实体关系导读替代 Schema、表范围、DDL、迁移和回滚正式结论。",
+  "design_input": "需求只确认在报工记录中新增校验状态字段，已确认 Schema 为 workorder，未确认新增基表、跨库同步表或独立聚合表。",
+  "graph_assistance": "GitNexus 显示报工实体与质检记录、设备状态、人员班组实体存在引用或字段名相似关系；graphify 导读建议建立报工-质检-设备的关系图。",
+  "expected_behavior": [
+    "应把 GitNexus 表和实体关系作为候选线索，并回到真实数据库对象、DDL、实体定义、Mapper 或数据字典验证",
+    "应说明 graphify 仅为数据关系导读，不能替代表真实性核验、字段设计、索引、迁移和回滚方案",
+    "正式数据库结论必须写入 design.md 或 database-design.md，并明确 Schema、表、字段、索引、DDL 和 rollback",
+    "不得因图谱关系新增未经确认的独立基表、聚合表、同步表或跨库平行机制",
+    "数据库设计对象必须映射到开发任务、迁移脚本、测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "表和字段结论均有事实源支撑",
+    "DDL、迁移、回滚和风险说明进入正式设计文档",
+    "未因图谱关系扩大到未确认 Schema、表或模块",
+    "数据库对象已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

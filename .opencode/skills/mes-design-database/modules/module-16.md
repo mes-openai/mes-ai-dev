@@ -2,4 +2,4 @@
 
 ## 输出
 
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计文档

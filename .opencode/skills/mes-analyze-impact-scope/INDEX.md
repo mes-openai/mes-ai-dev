@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 影响范围分析主线优先读取执行步骤、输入、输出、约束与审核模块。
 - 分析依据、影响结论、协作补充等模块只在当前任务需要时进入。
+- GitNexus 类代码知识图谱可作为影响范围、调用链、依赖链与复用路径的辅助导航；graphify 类图谱可作为关系导读补充，但二者都不得替代项目事实源、阶段门禁与分析结论。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -45,5 +46,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

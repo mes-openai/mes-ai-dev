@@ -28,20 +28,24 @@ description: "执行完整详细设计，从需求规格到设计文档"
 > **服务链冻结说明**：
 > 若存在多个候选 provider、多个仓落点或现有接口复用路径，设计阶段必须冻结最终服务链、provider 选择理由、禁止路径与复用优先结论。
 > 相关主定义以以下文件为准：
-> - `mes-ai-dev/knowledge/rules/phases/phase-design.md`
-> - `mes-ai-dev/knowledge/reference/phase-gates/design.md`
-> - `mes-ai-dev/knowledge/rules/scenarios/scenario-multi-repo.md`
+> - `.opencode/references/mes-ai-reference/rules/phases/phase-design.md`
+> - `.opencode/references/mes-ai-reference/reference/phase-gates/design.md`
+> - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-multi-repo.md`
 > 本命令只负责要求这些结果必须形成，不再重复完整展开其原理定义。
 
 **预期耗时**：约15-25分钟
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
-**审查报告强制要求**：本命令中的设计评审、跨步骤门禁与阶段出口结论，均必须形成详细审查报告；不得仅记录“通过/不通过”或简略评审意见。详细审查报告结构必须符合 `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`，若使用场景模板，再以 `mes-ai-dev/templates/governance/detailed-review-report-template.md` 作为落盘载体。
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
+**阶段工作目录命名说明**：本命令必须遵循 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md`。执行前先从用户输入、`workspace/requirements/{REQ-ID}/spec.md` 或上游交接材料解析 `{REQ-ID}`：`US[0-9]+` 优先，`ITRQ[0-9]+` 次之，无编号时才生成 `REQ-YYYYMMDD-{序号}`。详细设计阶段只能读取 `mes-ai-dev/workspace/requirements/{REQ-ID}/` 作为需求输入，所有设计产物必须写入 `mes-ai-dev/workspace/designs/{REQ-ID}/`，禁止写入需求目录。
+
+**审查报告强制要求**：本命令中的设计评审、跨步骤门禁与阶段出口结论，均必须形成详细审查报告；不得仅记录“通过/不通过”或简略评审意见。详细审查报告结构必须符合 `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`，若使用场景模板，再以 `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md` 作为落盘载体。
 
 **阶段详细审查报告**：
 - `/mes-design-detail` 完成后必须输出 `design-review-report.md`
-- 落盘目录：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/`
+- 落盘目录：`mes-ai-dev/workspace/designs/{REQ-ID}/`
 - 报告必须满足详细审查报告最小字段集，并包含明确审查时间与完整证据链
 - 报告未生成或内容不达标，不得通过详细设计阶段退出门禁
 
@@ -124,11 +128,11 @@ GSD 模式下，设计阶段必须显式识别：
 
 ### 八、模板绑定说明
 
-- 命中 blocker 时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录设计 blocker 分类与处理路径
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小设计包
-- 当前设计完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 设计阶段结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录设计 blocker 分类与处理路径
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小设计包
+- 当前设计完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 设计阶段结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 

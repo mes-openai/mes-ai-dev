@@ -1,0 +1,24 @@
+{
+  "skill": "mes-deliver-handover",
+  "eval_name": "graph-guide-not-handover-doc",
+  "goal": "验证 graphify 可作为交接关系导读，但不得替代 handover-doc、go-nogo、deploy-plan 等正式交付文档。",
+  "input": "graphify 生成了交接导读，串联需求、部署计划、验收结论、运维风险和回滚路径；但 handover-doc.md 缺失运维联系人和未关闭风险，go-nogo.md 仅有草稿未签核，deploy-plan.md 的回滚步骤未包含数据库回退验证。",
+  "graph_guidance": "graphify 交接导读可作为关系导航、阅读入口和材料索引。",
+  "formal_evidence": "正式交接依据为 handover-doc.md、go-nogo.md、deploy-plan.md、部署日志、验收报告、回滚指南和签署确认。",
+  "conflict_precedence": "当 graphify 导读与正式交接文档或交付阶段主产物不一致时，以正式文档和阶段门禁证据为准，并修正或移除导读。",
+  "expected_behavior": [
+    "不得用 graphify 交接导读替代 handover-doc、go-nogo 或 deploy-plan",
+    "应指出 handover-doc 运维联系人和未关闭风险缺失、go-nogo 未签核、deploy-plan 回滚验证不完整",
+    "应要求补齐正式交付文档和签署确认后再完成交接",
+    "可保留 graphify 作为交接关系导读，但必须标注其不构成正式交付结论"
+  ],
+  "acceptance_criteria": [
+    "明确区分交接导读与正式交付文档",
+    "交接完成结论来自 handover-doc、go-nogo、deploy-plan 和验收/部署证据",
+    "冲突时以正式交付文档和阶段门禁证据为准",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

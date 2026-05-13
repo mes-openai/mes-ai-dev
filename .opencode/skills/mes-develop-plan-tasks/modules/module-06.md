@@ -19,9 +19,9 @@
 
 ### 2. 读取设计文档
 按顺序读取以下文档：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
-3. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
+3. `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计
 
 **Step Gate A**：设计输入读取不完整或关键设计基线缺失 → 打回步骤2重做，不得进入实现路径分析。
 
@@ -84,6 +84,6 @@
 **Step Gate C**：任务拆分顺序、依赖关系或并行组划分不正确 → 打回步骤4-5重做，不得生成任务清单。
 
 ### 6. 生成任务清单
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/tasks.md`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/tasks.md`
 
 **Step Gate D**：tasks 缺少任务分组、依赖、AI适配度或执行建议 → 打回步骤6重做，不得交付开发阶段使用。

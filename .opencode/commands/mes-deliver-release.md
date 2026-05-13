@@ -35,6 +35,10 @@ description: "执行完整发布交付流程，包括部署规划、验收检查
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
+**阶段工作目录命名说明**：本命令必须遵循 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md`。发布交付阶段开始前必须复用上游 `{REQ-ID}`，并重新计算当前输出目录为 `mes-ai-dev/workspace/delivery/{REQ-ID}/`；不得把交付、发布说明或交接文档写入需求、设计、开发或测试目录。
+
 **审查报告强制要求**：本命令中的验收检查、Go/No-Go 决策、交付审计和步骤级门禁结论，必须输出详细审查报告，不得仅保留审批流水、检查清单或口头结论。
 
 **阶段完成产物报告**：
@@ -44,7 +48,7 @@ description: "执行完整发布交付流程，包括部署规划、验收检查
 
 **阶段详细审查报告**：
 - `/mes-deliver-release` 完成后必须输出 `delivery-review-report.md`
-- 落盘目录：`mes-ai-dev/workspace/delivery/REQ-YYYYMMDD-XXX/`
+- 落盘目录：`mes-ai-dev/workspace/delivery/{REQ-ID}/`
 - 报告必须满足详细审查报告最小字段集，并包含明确审查时间与完整证据链
 - 报告未生成或内容不达标，不得通过发布交付阶段退出门禁
 
@@ -122,11 +126,11 @@ description: "执行完整发布交付流程，包括部署规划、验收检查
 
 ### 七、模板绑定说明
 
-- 命中 blocker 或关键发布风险时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录阻断发布风险与后补动作
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小上线包与当前发布判断
-- 交付完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 发布交付结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 或关键发布风险时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录阻断发布风险与后补动作
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小上线包与当前发布判断
+- 交付完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 发布交付结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 

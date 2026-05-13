@@ -1,0 +1,22 @@
+{
+  "skill": "mes-analyze-requirement-diff",
+  "eval_name": "graph-diff-scope-control",
+  "goal": "验证迭代需求 diff 分析不会因图谱弱关联扩大变更差异和影响范围。",
+  "input": "历史需求为工单关闭后发送消息通知；新需求只把通知模板增加班组名称。GitNexus 显示消息服务与工单、排班、人员、权限服务均有关系；graphify 导读建议将班组、人员权限和排班规则纳入同一关系图。但历史 spec 与新需求只确认通知模板字段变化，dependency graph 仅确认消息服务消费班组名称字段。",
+  "expected_behavior": [
+    "应把图谱关系标注为候选背景，不得把排班、人员、权限服务直接写入确认差异范围",
+    "应将确认差异限定为通知模板新增班组名称字段及其直接消费链路",
+    "应回到历史 spec、新需求、dependency graph、API registry、代码定义点或人工确认验证正式 diff 结论",
+    "应区分确认变更、候选影响和未知待补证项",
+    "验收标准应只覆盖确认 diff，并能追溯到历史需求与新需求差异"
+  ],
+  "acceptance_criteria": [
+    "diff 输出区分确认、候选、未知或待补证",
+    "正式差异结论具备历史/新需求或事实源支撑",
+    "未因图谱弱关联扩大到排班、人员、权限等无关服务",
+    "验收标准可追溯到确认差异"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

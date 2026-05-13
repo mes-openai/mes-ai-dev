@@ -6,7 +6,7 @@
 |--------|------|------|
 | 统一状态源 | `mes-ai-dev/knowledge/state/state.yaml` | 唯一机器事实源 |
 | 人工摘要 | `mes-ai-dev/knowledge/state/summary.md` | 人工阅读版摘要 |
-| 渲染规范 | `mes-ai-dev/knowledge/rules/state-rendering-spec.md` | 字段映射与渲染顺序 |
+| 渲染规范 | `.opencode/references/mes-ai-reference/rules/state-rendering-spec.md` | 字段映射与渲染顺序 |
 | 兼容视图-baseline | `mes-ai-dev/knowledge/baseline.md` | 兼容摘要视图 |
 | 兼容视图-coverage | `mes-ai-dev/knowledge/init-coverage.md` | 兼容清单视图 |
 | 历史遗留-checkpoint | `mes-ai-dev/knowledge/.init-checkpoint.yaml` | 历史遗留进度文件，仅专项核查引用 |

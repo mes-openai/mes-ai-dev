@@ -1,8 +1,8 @@
 {
   "skill": "mes-init-verify-knowledge",
-  "dataset_version": "2.0.0",
+  "dataset_version": "2.1.0",
   "focus": "知识库完整性校验 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "empty-template-block",
@@ -18,6 +18,11 @@
       "id": "convergence-not-complete",
       "title": "验证收口状态门禁。",
       "path": "capability/convergence-not-complete/evals.json"
+    },
+    {
+      "id": "graph-pollution-detection",
+      "title": "验证识别图谱推断污染事实源。",
+      "path": "capability/graph-pollution-detection/evals.json"
     }
   ]
 }

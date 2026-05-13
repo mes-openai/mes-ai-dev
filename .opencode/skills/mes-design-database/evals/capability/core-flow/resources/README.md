@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `dbscript/`
 - `mes-ai-dev/knowledge/database-index/`
-- `mes-ai-dev/templates/design/database-design-template.md`
+- `.opencode/references/mes-ai-reference/templates/design/database-design-template.md`
 
 ## 观察点
 - 该用例用于验证 Skill 在输入齐备、结构正常、约束明确时，能够沿主路径完成处理。

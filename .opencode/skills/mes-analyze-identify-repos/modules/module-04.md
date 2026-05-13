@@ -68,6 +68,6 @@ mes-ai-dev/knowledge/database-index/schema-xxx/
 
 ### 8. 生成交付文件
 将仓库影响清单追加到：
-`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 
 **Step Gate C**：仓库影响清单缺少仓库范围、Schema、配置项或风险等级 → 打回步骤7-8重做，不得交付开发规划阶段。

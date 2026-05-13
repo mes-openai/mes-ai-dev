@@ -1,8 +1,9 @@
 {
   "skill": "mes-design-review-approach",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-misuse-review-gate"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充设计评审拦截图谱误用与服务链未冻结的能力回归样例。"
 }

@@ -2,4 +2,4 @@
 
 ## 输出
 
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/service-chain-design.md` - 服务调用链设计文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/service-chain-design.md` - 服务调用链设计文档

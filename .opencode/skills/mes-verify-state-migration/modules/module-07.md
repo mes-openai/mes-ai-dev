@@ -25,7 +25,7 @@
 ```
 mes-ai-dev/knowledge/state/state.yaml
 mes-ai-dev/knowledge/state/summary.md
-mes-ai-dev/knowledge/rules/state-rendering-spec.md
+.opencode/references/mes-ai-reference/rules/state-rendering-spec.md
 mes-ai-dev/knowledge/baseline.md
 mes-ai-dev/knowledge/init-coverage.md
 mes-ai-dev/knowledge/.init-checkpoint.yaml

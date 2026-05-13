@@ -20,7 +20,7 @@
 - 与存量项目结构一致性：目录位置、分层模式、依赖组织、测试组织、参考实现模式
 - 代码模式一致性：
   - 使用 `templates/design/code-pattern-consistency-template.md` 记录参考实现对齐情况
-  - 产出写入：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/code-pattern-consistency.md`
+  - 产出写入：`mes-ai-dev/workspace/development/{REQ-ID}/code-pattern-consistency.md`
 - 前后端一致性：数据结构、字段名、类型、格式
 
 #### 4.4 完整性审查
@@ -57,13 +57,13 @@
 **Step Gate D**：设计偏差未记录、变更申请关联缺失或偏差判断不清 → 打回步骤5重做，不得生成最终自审报告。
 
 ### 6. 使用模板生成报告
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/self-review-report.md`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/self-review-report.md`
 
 统一使用：
-- `mes-ai-dev/templates/governance/self-review-report-template.md`
-- `mes-ai-dev/templates/governance/design-deviation-template.md`
-- `mes-ai-dev/templates/governance/detailed-review-report-template.md`（落盘模板）
-- `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`（统一最小字段集约束）
+- `.opencode/references/mes-ai-reference/templates/governance/self-review-report-template.md`
+- `.opencode/references/mes-ai-reference/templates/governance/design-deviation-template.md`
+- `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md`（落盘模板）
+- `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`（统一最小字段集约束）
 
 > **模板使用要求**：
 > - 自审报告模板承接六维审核结果、问题分级、评分与结论

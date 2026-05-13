@@ -2,7 +2,9 @@
   "skill": "mes-handle-emergency-fix",
   "dataset_version": "1.0.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "gitnexus-log-conflict-minimal-hotfix",
+    "graphify-postmortem-conflict-mainflow"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "能力评测骨架，覆盖核心流程、GitNexus 图谱与现场日志冲突时的最小热修边界，以及 graphify 事故导读不得替代 postmortem 和回流主链动作。"
 }

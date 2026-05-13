@@ -36,7 +36,7 @@
 
 **执行命令**：`/mes-analyze-requirement`
 **产出文件**：
-- `workspace/requirements/REQ-20260411-001/requirement-spec.md` — 需求规格
+- `workspace/requirements/REQ-20260411-001/spec.md` — 需求规格
 - `workspace/requirements/REQ-20260411-001/impact-scope.md` — 影响范围
 
 **影响范围关键内容**：
@@ -68,7 +68,7 @@
 ## 阶段3：详细设计
 
 **执行命令**：`/mes-design-detail`
-**产出文件**：`workspace/designs/REQ-20260411-001/design-doc.md`
+**产出文件**：`workspace/designs/REQ-20260411-001/design.md`
 
 **API设计关键内容**：
 ```markdown
@@ -198,10 +198,10 @@ ALTER TABLE t_production_work_report
 workspace/status-tracker.md                              ← 需求状态总表
 workspace/requirements/REQ-20260411-001/
 ├── raw-requirement.md                                   ← 阶段1产出
-├── requirement-spec.md                                  ← 阶段2产出
+├── spec.md                                              ← 阶段2产出
 └── impact-scope.md                                      ← 阶段2产出
 workspace/designs/REQ-20260411-001/
-└── design-doc.md                                        ← 阶段3产出
+└── design.md                                            ← 阶段3产出
 workspace/development/REQ-20260411-001/
 ├── task-plan.md                                         ← 阶段4产出
 ├── db-migration.md                                      ← 阶段4产出

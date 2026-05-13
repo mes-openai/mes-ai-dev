@@ -1,8 +1,8 @@
 {
   "skill": "mes-analyze-parse-requirement",
-  "dataset_version": "2.0.0",
+  "dataset_version": "2.1.0",
   "focus": "需求解析",
-  "case_count": 4,
+  "case_count": 5,
   "cases": [
     {
       "id": "ambiguous-business-rule",
@@ -23,6 +23,11 @@
       "id": "multi-option-exploration",
       "title": "验证 exploration/proposal 条件产物触发。",
       "path": "capability/multi-option-exploration/evals.json"
+    },
+    {
+      "id": "graph-candidate-fact-boundary",
+      "title": "验证图谱候选线索不被写成需求事实。",
+      "path": "capability/graph-candidate-fact-boundary/evals.json"
     }
   ]
 }

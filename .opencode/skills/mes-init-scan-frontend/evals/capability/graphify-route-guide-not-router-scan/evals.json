@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-scan-frontend",
+  "eval_name": "graphify-route-guide-not-router-scan",
+  "goal": "验证前端目录扫描不得用 graphify 页面关系导读替代真实 router 与 component 扫描。",
+  "input": "graphify wiki 展示 page-order-list -> page-order-detail 的页面关系，但 web/src/router 中仅注册 /orders/list，且 components 目录未发现 OrderDetail 组件。",
+  "expected_behavior": [
+    "以真实 router 配置与组件文件扫描作为确认事实来源",
+    "将 graphify 导读中的 OrderDetail 页面关系标记为候选或未知",
+    "不得把 graphify 页面关系直接写入确认页面清单或前端总览最终文件",
+    "记录缺失路由或组件的待补证项"
+  ],
+  "acceptance_criteria": [
+    "确认页面必须能追溯到 router 或 component 文件",
+    "graphify 关系导读必须标注可信度或不确定性",
+    "不得以关系图替代真实目录扫描",
+    "单仓 scope 下不扫描未指定前端仓或外部资料目录"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

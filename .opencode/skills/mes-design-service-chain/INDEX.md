@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 服务调用链设计主线优先读取执行步骤、调用链设计、数据流设计、事务边界、异常处理、输入、输出、约束与审核模块。
 - 需求概述、涉及服务列表、调用方式、性能优化、监控追踪与交接说明模块仅在当前任务需要时进入。
+- GitNexus 类代码知识图谱可用于校验调用链、Provider 路径、依赖闭环与影响面；graphify 类图谱可用于关系导读，但不得替代设计主文档、服务链冻结结论与事实源。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -47,5 +48,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

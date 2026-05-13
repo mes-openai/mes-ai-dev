@@ -24,7 +24,7 @@
 ### 2. 读取需求规格文档
 从文件交接路径读取：
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md
+mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md
 ```
 
 提取关键信息：

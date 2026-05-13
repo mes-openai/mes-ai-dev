@@ -2,4 +2,4 @@
 
 ## 输出
 
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md` - 技术方案设计文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md` - 技术方案设计文档

@@ -19,8 +19,8 @@
 
 ### 2. 读取设计文档和现有代码
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（前端 UI 部分）
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（前端 UI 部分）
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
 3. `mes-ai-dev/knowledge/code-map/frontend-overview.md` - 前端总览（公共组件列表）
 4. `mes-ai-dev/knowledge/code-map/modules/module-xxx/detail.md` - 模块详情
 5. `mes-ai-dev/knowledge/code-map/modules/module-xxx/file-summaries.md` - 模块文件摘要（用于定位组件文件）
@@ -51,9 +51,9 @@
 
 #### 组件模板选择规则
 - 若目标模块沿用 **Vue2 / Options API** 风格，优先使用：
-  - `mes-ai-dev/templates/code/vue-component-options-api.vue`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-component-options-api.vue`
 - 若目标模块沿用 **Vue3 / Composition API / TypeScript** 风格，优先使用：
-  - `mes-ai-dev/templates/code/vue-component-composition-api.vue`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-component-composition-api.vue`
 
 > **使用要求**：
 > - 模板只提供组件骨架，不可原样提交占位命名（如 `XxxComponent`、`xxx-detail`）
@@ -65,7 +65,7 @@
 
 #### 子组件模板
 - 需要详情展示或纯展示型子组件时，参考：
-  - `mes-ai-dev/templates/code/vue-detail-subcomponent.vue`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-detail-subcomponent.vue`
 
 ### 8. 组件开发检查
 完成组件开发后，至少检查：

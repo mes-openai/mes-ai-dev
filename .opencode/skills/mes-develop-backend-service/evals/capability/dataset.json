@@ -2,7 +2,7 @@
   "skill": "mes-develop-backend-service",
   "dataset_version": "2.0.0",
   "focus": "后端Service层开发 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "missing-real-exception",
@@ -18,6 +18,11 @@
       "id": "nonexistent-helper-method",
       "title": "验证方法真实性。",
       "path": "capability/nonexistent-helper-method/evals.json"
+    },
+    {
+      "id": "graph-contract-minimal-scope",
+      "title": "验证图谱仅用于最小 service 契约修复。",
+      "path": "capability/graph-contract-minimal-scope/evals.json"
     }
   ]
 }

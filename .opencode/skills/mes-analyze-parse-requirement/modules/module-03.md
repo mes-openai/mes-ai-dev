@@ -22,7 +22,7 @@
 ### 2. 创建需求目录
 生成需求编号 `REQ-YYYYMMDD-XXX`（日期+当日序号），创建目录：
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/requirements/{REQ-ID}/
 ```
 
 **Step Gate A**：需求目录未正确创建或需求编号不合规 → 打回步骤2重做，不得进入需求要素解析。

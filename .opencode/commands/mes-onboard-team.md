@@ -28,7 +28,7 @@ description: "团队接入引导，展示框架使用流程和角色职责"
 
 ### 步骤1：读取接入规范
 
-1. 读取 `mes-ai-dev/knowledge/reference/team-onboarding-guide.md`
+1. 读取 `.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md`
 2. 提取角色职责、交接规则和 Command 速查表
 
 **Step Gate A**：接入规范未读取完整或提取结果不可消费 → 打回步骤1重做
@@ -59,7 +59,7 @@ description: "团队接入引导，展示框架使用流程和角色职责"
 2. 执行 /mes-init-project 生成知识库
 3. 知识库验证通过后即可使用
 
-详见：knowledge/reference/team-onboarding-guide.md
+详见：.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md
 ```
 
 **已初始化状态**：
@@ -96,7 +96,7 @@ description: "团队接入引导，展示框架使用流程和角色职责"
 - 测试团队：审核测试用例，确认测试结果
 - 运维团队：审核部署计划，执行部署
 
-详见：knowledge/reference/team-onboarding-guide.md
+详见：.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md
 ```
 
 ### 步骤4：提示下一步
@@ -114,4 +114,4 @@ description: "团队接入引导，展示框架使用流程和角色职责"
 1. 本命令仅展示信息，不执行任何修改操作
 2. 引导信息基于当前框架状态动态生成
 3. 首次使用建议先执行 `/mes-init-project` 初始化知识库
-4. 详细规范请参考 `knowledge/reference/team-onboarding-guide.md`
+4. 详细规范请参考 `.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md`

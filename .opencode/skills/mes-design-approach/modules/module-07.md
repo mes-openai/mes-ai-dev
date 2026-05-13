@@ -48,7 +48,7 @@
 3. 制定灰度发布方案（灰度维度、比例、观察指标、回滚条件）
 4. 设计双写/双读过渡方案（如涉及数据迁移）
 5. 制定历史数据迁移策略（迁移范围、脚本、校验、回滚）
-6. 产出写入：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/compatibility-design.md`
+6. 产出写入：`mes-ai-dev/workspace/designs/{REQ-ID}/compatibility-design.md`
 
 ### 5B. 跨服务一致性校验
 
@@ -56,7 +56,7 @@
 1. 使用 `templates/cross-service-consistency-template.md` 模板
 2. 调用 `mes-design-check-consistency` Skill 执行校验
 3. 检查维度：字段命名、错误码、状态枚举、接口语义、数据格式
-4. 产出写入：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/cross-service-consistency.md`
+4. 产出写入：`mes-ai-dev/workspace/designs/{REQ-ID}/cross-service-consistency.md`
 
 ### 5C. ADR强制触发判断
 
@@ -67,7 +67,7 @@
 4. **权限模型变更** — 新增/修改角色、数据权限、操作权限
 5. **性能方案取舍** — 涉及缓存/异步/分库分表等性能方案的取舍
 
-产出写入：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/adr-{序号}-{标题}.md`
+产出写入：`mes-ai-dev/workspace/designs/{REQ-ID}/adr-{序号}-{标题}.md`
 
 ### 5D. 安全设计点输出
 
@@ -88,7 +88,7 @@
 ### 6. 技术决策记录
 
 输出技术决策文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
 - 格式：Markdown
 
 文档结构：

@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-verify-e2e-chain",
+  "eval_name": "e2e-chain-requires-layer-evidence",
+  "goal": "验证端到端链路必须具备 UI、API、Service、DB 各层证据，不能只依赖图谱路径。",
+  "input": "GitNexus/graphify 给出订单创建 UI -> API -> Service -> DB 链路，但仅找到 UI 路由和 Controller，未找到 Service 调用与 DDL/Mapper 表证据。",
+  "expected_behavior": [
+    "逐层核验 UI、API、Service、DB 证据",
+    "缺失 Service 或 DB 证据时将链路标记为候选或不完整",
+    "不得输出确认 E2E 链路或测试阶段可直接执行链路",
+    "记录断点、待补证项与门禁结论"
+  ],
+  "acceptance_criteria": [
+    "确认 E2E 链路必须覆盖 UI/API/Service/DB 证据",
+    "图谱路径不得替代链路验证",
+    "缺层时必须阻断确认结论",
+    "验证报告不得污染后续 test-report 或测试用例输入"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

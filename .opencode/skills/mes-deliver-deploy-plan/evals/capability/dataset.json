@@ -2,7 +2,8 @@
   "skill": "mes-deliver-deploy-plan",
   "dataset_version": "1.0.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-consumers-not-deploy-scope"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "能力评测骨架，覆盖核心流程与图谱导读不得替代真实部署证据的交付边界。"
 }

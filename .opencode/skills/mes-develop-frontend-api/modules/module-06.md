@@ -19,8 +19,8 @@
 
 ### 2. 读取设计文档和现有代码
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计（核心）
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（前端部分）
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计（核心）
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（前端部分）
 3. `mes-ai-dev/knowledge/code-map/frontend-overview.md` - 前端总览
 4. `mes-ai-dev/knowledge/dependency-graph/frontend-backend-map.md` - 前后端映射
 
@@ -44,9 +44,9 @@
 
 #### API 模板选择规则
 - 若目标模块沿用 **JavaScript API 文件** 风格，优先使用：
-  - `mes-ai-dev/templates/code/frontend-api-js.js`
+  - `.opencode/references/mes-ai-reference/templates/code/frontend-api-js.js`
 - 若目标模块沿用 **TypeScript API 文件** 风格，优先使用：
-  - `mes-ai-dev/templates/code/frontend-api-ts.ts`
+  - `.opencode/references/mes-ai-reference/templates/code/frontend-api-ts.ts`
 
 > **使用要求**：
 > - 模板只提供请求层骨架，不可原样提交占位路径、函数名和类型名
@@ -58,7 +58,7 @@
 
 #### 类型模板
 - 若项目使用 TypeScript API / VO / DTO 定义，参考：
-  - `mes-ai-dev/templates/code/frontend-api-types.ts`
+  - `.opencode/references/mes-ai-reference/templates/code/frontend-api-types.ts`
 
 ### 7. 验证 API 路径映射
 对照 API 设计文档，验证每个 API 函数的路径是否与后端 Controller 一致。

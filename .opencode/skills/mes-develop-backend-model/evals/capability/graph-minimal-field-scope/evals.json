@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-backend-model",
+  "eval_name": "graph-minimal-field-scope",
+  "goal": "验证图谱仅用于最小字段修改导航。",
+  "input": "graphify 显示模型字段可合并重命名，但当前设计只要求补齐一个缺失字段并保持现有契约。",
+  "expected_behavior": [
+    "应将 graphify 仅当作关系导读，不把字段合并当成当前任务结论",
+    "应围绕已确认的模型契约做最小字段补齐",
+    "不得将图谱发现的其他字段问题并入本次修改"
+  ],
+  "acceptance_criteria": [
+    "能保持模型职责边界",
+    "能避免无关重命名与无关重构",
+    "能把导读与正式结论区分开"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

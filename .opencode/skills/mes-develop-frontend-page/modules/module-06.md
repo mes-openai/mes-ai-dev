@@ -19,8 +19,8 @@
 
 ### 2. 读取设计文档和现有代码
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（前端页面部分）
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（前端页面部分）
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
 3. `mes-ai-dev/knowledge/code-map/frontend-overview.md` - 前端总览（路由结构）
 4. `mes-ai-dev/knowledge/code-map/modules/module-xxx/detail.md` - 模块详情
 5. `mes-ai-dev/knowledge/code-map/modules/module-xxx/file-summaries.md` - 模块文件摘要（用于定位页面与路由文件）
@@ -42,9 +42,9 @@
 
 #### 页面模板选择规则
 - 若目标模块沿用 **Vue2 / Options API** 风格，优先使用：
-  - `mes-ai-dev/templates/code/vue-page-options-api.vue`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-page-options-api.vue`
 - 若目标模块沿用 **Vue3 / Composition API / TypeScript** 风格，优先使用：
-  - `mes-ai-dev/templates/code/vue-page-composition-api.vue`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-page-composition-api.vue`
 
 > **使用要求**：
 > - 模板只提供页面骨架，不可原样提交占位命名（如 `XxxPage`、`xxx-component`）
@@ -56,14 +56,14 @@
 
 #### 路由模板
 - 新增页面路由时，参考：
-  - `mes-ai-dev/templates/code/vue-route-config.js`
+  - `.opencode/references/mes-ai-reference/templates/code/vue-route-config.js`
 
 > **使用要求**：
 > - 路由 path / name / meta 必须按现有模块规范替换
 > - 若项目实际使用 TypeScript 路由、分模块路由或异步路由注册，必须优先遵循现有写法
 
 ### 7. 创建路由变更清单
-创建文件：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/frontend/route-change-list.md`
+创建文件：`mes-ai-dev/workspace/development/{REQ-ID}/frontend/route-change-list.md`
 
 路由变更清单必须至少包含：
 - 新增路由 / 修改路由的路径、名称、组件文件

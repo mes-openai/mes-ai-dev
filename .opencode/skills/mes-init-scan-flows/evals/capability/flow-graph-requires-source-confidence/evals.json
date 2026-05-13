@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-scan-flows",
+  "eval_name": "flow-graph-requires-source-confidence",
+  "goal": "验证业务链路扫描输出的图谱链路必须标注事实来源、可信状态与置信度。",
+  "input": "GitNexus 给出 UI -> OrderController -> OrderService -> OrderMapper -> t_order 的链路，其中 UI 与 Controller 有代码证据，OrderMapper 到 t_order 仅为命名推断。",
+  "expected_behavior": [
+    "逐段标注事实来源、确认/候选/未知状态与置信度",
+    "仅将有 UI/API/Service/DAO/SQL 或人工确认的段落列为确认",
+    "命名推断的表关系标记为候选或未知",
+    "不得把完整链路直接写成后续 test 阶段确认 E2E 事实"
+  ],
+  "acceptance_criteria": [
+    "业务流每段均包含来源和状态",
+    "图谱推断必须保留为候选/待复核",
+    "缺失 DB 证据时不得形成确认端到端链路",
+    "输出不污染 e2e-chains 或 test 阶段输入"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -26,7 +26,7 @@
 
 #### 2.1 需求解析和影响范围
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md
+mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md
 ```
 
 提取信息：
@@ -37,7 +37,7 @@ mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md
 
 #### 2.2 业务流程追踪
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/business-flow-trace.md
+mes-ai-dev/workspace/requirements/{REQ-ID}/business-flow-trace.md
 ```
 
 提取信息：

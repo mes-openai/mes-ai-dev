@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-scan-hotspots",
+  "eval_name": "centrality-not-hotspot-proof",
+  "goal": "验证热点扫描不得仅凭图谱中心性确认 hot services、hot APIs 或 hot tables。",
+  "input": "GitNexus 中 CustomerService 中心性最高，但调用统计、API registry、业务流、提交频率与表访问证据均不足。",
+  "expected_behavior": [
+    "将中心性高的节点作为热点候选而非确认热点",
+    "结合代码调用、API 使用、业务流、数据库访问或人工确认进行验证",
+    "缺少综合证据时输出候选/未知与待补证说明",
+    "不得更新共享最终 hot-services/hot-apis/hot-tables 排行"
+  ],
+  "acceptance_criteria": [
+    "确认热点至少包含图谱之外的事实证据",
+    "仅中心性证据不得进入确认排行",
+    "三态、证据来源与置信度标注完整",
+    "converge 前仅产出局部热点候选片段"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

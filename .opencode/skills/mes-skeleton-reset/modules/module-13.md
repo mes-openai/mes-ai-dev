@@ -11,6 +11,6 @@
 | `workspace/examples/` 整目录 | 示例文件供参考 |
 | `workspace/locks/` 整目录（如有） | 锁文件用于并发控制 |
 | `workspace/delivery/README.md`（如有） | 交付目录说明 |
-| `knowledge/rules/` 整目录 | 骨架规则不应随项目迁移而清理 |
-| `knowledge/reference/` 整目录 | 骨架参考不应随项目迁移而清理 |
+| `.opencode/references/mes-ai-reference/rules/` 整目录 | 骨架规则不应随项目迁移而清理 |
+| `.opencode/references/mes-ai-reference/reference/` 整目录 | 骨架参考不应随项目迁移而清理 |
 | `templates/` 整目录 | 模板不应随项目迁移而清理 |

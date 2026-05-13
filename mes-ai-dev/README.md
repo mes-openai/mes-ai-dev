@@ -38,7 +38,7 @@
 | 产物分类管理 | 🗂️ | deliverable / report / evidence / handoff / memory / working 分类存放 |
 | 目标仓结构对齐 | 🏗️ | 以真实代码结构为唯一事实来源，不另造虚拟结构 |
 
-> **详细说明**：见 [`mes-ai-dev/knowledge/reference/feature-details.md`](knowledge/reference/feature-details.md)
+> **详细说明**：见 [`.opencode/references/mes-ai-reference/reference/feature-details.md`](../.opencode/references/mes-ai-reference/reference/feature-details.md)
 
 ---
 
@@ -161,7 +161,7 @@ graph TB
 
 **加载顺序**：Core 常驻 → Phase 按阶段加载 → Scenario/Governance 按需加载 → Skill/Template 按需加载
 
-> 详细加载矩阵：[`mes-ai-dev/knowledge/reference/skeleton-loading-matrix.md`](knowledge/reference/skeleton-loading-matrix.md)
+> 详细加载矩阵：[`.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`](../.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md)
 
 ### 6.2 全链路研发阶段
 
@@ -247,7 +247,7 @@ flowchart TB
     style K fill:#c8e6c9
 ```
 
-> 门禁详细定义：[`mes-ai-dev/knowledge/reference/phase-gates/index.md`](knowledge/reference/phase-gates/index.md)
+> 门禁详细定义：[`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`](../.opencode/references/mes-ai-reference/reference/phase-gates/index.md)
 
 ### 6.4 知识消费架构
 
@@ -285,13 +285,13 @@ graph TB
 
 **消费原则**：总览 → 索引 → 文件摘要 → 精准代码，按需逐层深入
 
-> 消费详细规则：[`mes-ai-dev/knowledge/reference/knowledge-consumption/index.md`](knowledge/reference/knowledge-consumption/index.md)
+> 消费详细规则：[`.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`](../.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md)
 
 ### 6.5 上下文预算控制
 
 各阶段默认加载范围：5K-10K token，复杂场景上限 16K，超过 20K 强制回退。
 
-> 详细估算与优化策略：[`mes-ai-dev/knowledge/reference/context-budget-guide.md`](knowledge/reference/context-budget-guide.md)
+> 详细估算与优化策略：[`.opencode/references/mes-ai-reference/reference/context-budget-guide.md`](../.opencode/references/mes-ai-reference/reference/context-budget-guide.md)
 
 ---
 
@@ -305,12 +305,12 @@ graph TB
 |:----:|------|------|
 | 1 | 整体定位 | 本 README |
 | 2 | 常驻总则 | [`AGENTS.md`](../AGENTS.md) |
-| 3 | 骨架加载矩阵 | [`knowledge/reference/skeleton-loading-matrix.md`](knowledge/reference/skeleton-loading-matrix.md) |
-| 4 | 阶段规则 | [`knowledge/rules/phases/`](knowledge/rules/phases/) |
-| 5 | 场景规则 | [`knowledge/rules/scenarios/`](knowledge/rules/scenarios/) |
-| 6 | 模板库 | [`templates/template-index.md`](templates/template-index.md) |
-| 7 | 团队学习指南 | [`knowledge/reference/team-onboarding-guide.md`](knowledge/reference/team-onboarding-guide.md) |
-| 8 | 人类操作手册 | [`操作地图-飞行员手册.md`](操作地图-飞行员手册.md) |
+| 3 | 骨架加载矩阵 | [`.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`](../.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md) |
+| 4 | 阶段规则 | [`.opencode/references/mes-ai-reference/rules/phases/`](../.opencode/references/mes-ai-reference/rules/phases/) |
+| 5 | 场景规则 | [`.opencode/references/mes-ai-reference/rules/scenarios/`](../.opencode/references/mes-ai-reference/rules/scenarios/) |
+| 6 | 模板库 | [`.opencode/references/mes-ai-reference/templates/template-index.md`](../.opencode/references/mes-ai-reference/templates/template-index.md) |
+| 7 | 团队学习指南 | [`.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md`](../.opencode/references/mes-ai-reference/reference/team-onboarding-guide.md) |
+| 8 | 人类操作手册 | [`.opencode/references/mes-ai-reference/reference/operator-flight-manual.md`](../.opencode/references/mes-ai-reference/reference/operator-flight-manual.md) |
 
 ### 7.1.1 给维护者的两份新增导航
 
@@ -318,18 +318,18 @@ graph TB
 
 | 文档 | 适合什么时候读 | 你会得到什么 |
 |------|----------------|--------------|
-| [`knowledge/reference/skeleton-artifact-ownership-guide.md`](knowledge/reference/skeleton-artifact-ownership-guide.md) | 想判断某类文件该由谁主导维护时 | AI 主生成 / 人补充 / 人主导的责任边界、推荐维护方式、提示词示例、同步刷新清单 |
-| [`knowledge/reference/stage-artifact-guide.md`](knowledge/reference/stage-artifact-guide.md) | 想快速看懂各阶段产物和阅读重点时 | 各阶段具体产物、过程 / 最终产物区分、人工阅读优先级、目录阅读路径 |
+| [`.opencode/references/mes-ai-reference/reference/skeleton-artifact-ownership-guide.md`](../.opencode/references/mes-ai-reference/reference/skeleton-artifact-ownership-guide.md) | 想判断某类文件该由谁主导维护时 | AI 主生成 / 人补充 / 人主导的责任边界、推荐维护方式、提示词示例、同步刷新清单 |
+| [`.opencode/references/mes-ai-reference/reference/stage-artifact-guide.md`](../.opencode/references/mes-ai-reference/reference/stage-artifact-guide.md) | 想快速看懂各阶段产物和阅读重点时 | 各阶段具体产物、过程 / 最终产物区分、人工阅读优先级、目录阅读路径 |
 
 如果你只想先看一页速查，再决定深入哪份文档，先看：
 
-- [`knowledge/reference/skeleton-maintainer-quick-reference.md`](knowledge/reference/skeleton-maintainer-quick-reference.md)
+- [`.opencode/references/mes-ai-reference/reference/skeleton-maintainer-quick-reference.md`](../.opencode/references/mes-ai-reference/reference/skeleton-maintainer-quick-reference.md)
 
 ### 7.2 落地指南
 
 完整的 adoption 内容见：
 
-- [`mes-ai-dev/adoption-guide.md`](adoption-guide.md)
+- [`.opencode/references/mes-ai-reference/reference/adoption-guide.md`](../.opencode/references/mes-ai-reference/reference/adoption-guide.md)
 
 包含：典型落地路径、采用前后对比、最小试点建议、失败模式、成功判定标准、角色分工。
 

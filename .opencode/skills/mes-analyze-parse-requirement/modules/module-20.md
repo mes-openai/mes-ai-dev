@@ -6,7 +6,7 @@
 - 原始需求描述（用户提供）
 
 ### 下游输出
-- 输出文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+- 输出文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 - 传递给：`mes-analyze-impact-scope`（影响范围分析）
 - 传递给：`mes-analyze-trace-flow`（流程追踪）
 

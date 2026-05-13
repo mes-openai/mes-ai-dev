@@ -13,6 +13,10 @@
 - **TDD 强制前置**，先写测试计划再写代码
 - **真实性第一**，每行代码都必须来自真实项目结构
 - **存量项目对齐**，不得为生成方便另起平行结构
+- **简洁优先**，优先最小必要实现，不制造无关抽象
+- **精准修改**，只触碰当前任务直接相关文件，不做顺手格式化、无关重命名或无关重构
+- **目标驱动执行**，以编译、测试、覆盖率、TDD 闭环和门禁作为完成标准
+- 可按需使用 GitNexus 类代码知识图谱定位最小改动点、消费者与回归路径，但不得据此扩大未确认范围
 
 **触发命令**：`/mes-develop-code`
 
@@ -45,13 +49,13 @@ flowchart TB
     STEP1 --> STEP2
 
     subgraph S2 ["Step 2: 读取必要输入"]
-        STEP2["消费设计文档与规则<br>读取目标仓现有代码结构 分层 命名 依赖组织<br>读取阶段记忆与交接信息"]
+        STEP2["消费设计文档与规则<br>读取目标仓现有代码结构 分层 命名 依赖组织<br>读取阶段记忆与交接信息<br>按需使用 GitNexus 辅助定位最小改动集合"]
     end
 
     STEP2 --> STEP3
 
     subgraph S3 ["Step 3: TDD 用例计划 强制前置"]
-        STEP3["mes-test-plan-cases<br>基于需求 设计 验证对象 生成 test-cases.md<br>AI 初始规划 -> 用户补充区 -> 最终确认计划"]
+        STEP3["mes-test-plan-cases<br>基于需求 设计 验证对象 生成 test-cases.md<br>AI 初始规划 -> 用户补充区 -> 最终确认计划<br>单元测试计划需考虑跨平台路径与 Mockito 规范"]
     end
 
     STEP3 --> USER_CONFIRM{"用户确认 test-cases.md?"}
@@ -59,15 +63,15 @@ flowchart TB
     WAIT_USER --> USER_CONFIRM
     USER_CONFIRM -->|"用户已确认"| STEP4
 
-    STEP4A["mes-develop-database-script DDL 和 DML 脚本"]
-    STEP4B["mes-develop-db-migration 迁移策略与回滚方案"]
+    subgraph S4 ["Step 4: 数据库开发"]
+        STEP4["进入数据库开发"] --> STEP4A["mes-develop-database-script DDL 和 DML 脚本"]
+        STEP4 --> STEP4B["mes-develop-db-migration 迁移策略与回滚方案"]
+    end
 
-    STEP4 --> STEP4A
-    STEP4 --> STEP4B
     STEP4A --> GATE_S4{"Step 4 门禁 脚本真实性验证"}
     STEP4B --> GATE_S4
 
-    GATE_S4 -->|"不通过"| STEP4
+    GATE_S4 -->|"不通过"| STEP4A
     GATE_S4 -->|"通过"| STEP5A
 
     STEP5A["mes-develop-backend-model Entity DTO VO"]
@@ -225,7 +229,7 @@ flowchart TB
 ## 六、代码开发阶段产物结构
 
 ```
-mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/development/{REQ-ID}/
 ├── deliverable/
 │   └── tasks.md                   # 开发主交接文档（OpenSpec 格式）
 ├── report/
@@ -274,7 +278,7 @@ mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/
 | 检查项 | 层级 | 说明 |
 |--------|------|------|
 | 新生成测试全部通过 | must-pass | 0 失败 |
-| 代码行覆盖率 100% | must-pass | 本轮改动范围内 |
+| 行覆盖率、分支覆盖率、方法覆盖率 100% | must-pass | 本轮改动范围内 |
 | 真实性专项自审完成 | must-pass | Java/MyBatis/Provider 契约一致性 |
 | TDD 执行闭环结论 | must-pass | 计划先行→用户补充→确认→全绿→覆盖率达标 |
 | 存量结构贴合结论 | must-pass | 遵循目标仓既有模式 |

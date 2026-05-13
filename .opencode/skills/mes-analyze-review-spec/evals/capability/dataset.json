@@ -1,8 +1,9 @@
 {
   "skill": "mes-analyze-review-spec",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-evidence-review-gate"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充图谱误用与事实源审查门禁回归样例。"
 }

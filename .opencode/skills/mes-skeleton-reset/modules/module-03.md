@@ -42,8 +42,8 @@
   - workspace/delivery/README.md（保留）
   
   【规则与模板】
-  - knowledge/rules/ 目录（保留）
-  - knowledge/reference/ 目录（保留）
+  - .opencode/references/mes-ai-reference/rules/ 目录（保留）
+  - .opencode/references/mes-ai-reference/reference/ 目录（保留）
   - templates/ 目录（保留）
   
 预期产出：清理报告（workspace/refresh/skeleton-reset-report-<date>.md）

@@ -2,7 +2,7 @@
 
 ## 规则依赖
 
-- `mes-ai-dev/knowledge/rules/state-rendering-spec.md`：统一状态源与摘要/兼容视图的主从关系、一致性判断与冲突修复必须遵循
+- `.opencode/references/mes-ai-reference/rules/state-rendering-spec.md`：统一状态源与摘要/兼容视图的主从关系、一致性判断与冲突修复必须遵循
 
 ### 6. 内容格式合规性
 

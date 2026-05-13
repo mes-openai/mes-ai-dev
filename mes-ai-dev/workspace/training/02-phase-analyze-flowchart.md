@@ -8,7 +8,12 @@
 
 需求分析阶段是骨架的 **第二个消费阶段**，它在初始化建立的知识基线之上，将原始业务需求转化为结构化的需求规格文档，为后续设计与开发提供可消费的输入。
 
-**核心原则**：先规格、后实现。不允许"需求未清楚就直接写代码"。
+**核心原则**：
+- 先规格、后实现。不允许"需求未清楚就直接写代码"。
+- 编码前思考：先暴露假设、歧义、范围边界与方案取舍。
+- 目标驱动执行：验收标准必须能被后续设计、开发、测试和交付追溯。
+- 可按需使用 GitNexus 类代码知识图谱辅助识别影响仓、调用链、依赖链与现有能力复用路径。
+- 可按需使用 graphify 类能力把需求、业务链、影响对象与验收标准图谱化，但正式结论必须回写到 `spec.md`。
 
 **触发命令**：`/mes-analyze-requirement`
 
@@ -42,7 +47,7 @@ flowchart TB
     GATE_S1 -->|"通过"| STEP2
 
     subgraph STEP2_PHASE ["Step 2: 影响范围识别"]
-        STEP2["mes-analyze-identify-repos<br>识别涉及的代码仓 数据库 Schema 与配置"] --> STEP3["mes-analyze-impact-scope<br>分析影响的服务 模块 表"]
+        STEP2["mes-analyze-identify-repos<br>识别涉及的代码仓 数据库 Schema 与配置<br>按需使用 GitNexus 图谱辅助定位"] --> STEP3["mes-analyze-impact-scope<br>分析影响的服务 模块 表 调用链"]
     end
 
     STEP3 --> STEP2_OUT["产出: 影响范围结论<br>受影响仓 服务 模块 表 风险等级 依赖关系"]
@@ -63,7 +68,7 @@ flowchart TB
     GATE_S3 -->|"通过"| STEP7
 
     subgraph STEP4_PHASE ["Step 4: 业务流追踪"]
-        STEP7["mes-analyze-trace-flow<br>追踪跨服务调用链 验证数据流向与依赖"] --> STEP7_OUT["产出: 业务调用链<br>数据流向 异常路径 关键依赖节点"]
+        STEP7["mes-analyze-trace-flow<br>追踪跨服务调用链 验证数据流向与依赖<br>按需结合 graphify 形成关系导读"] --> STEP7_OUT["产出: 业务调用链<br>数据流向 异常路径 关键依赖节点"]
     end
 
     STEP7_OUT --> GATE_S4{"Step 4 门禁"}
@@ -168,7 +173,7 @@ flowchart TB
 ## 四、需求分析阶段产物结构
 
 ```
-mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/requirements/{REQ-ID}/
 ├── deliverable/
 │   └── spec.md                    # 需求规格文档（OpenSpec 格式）
 ├── report/

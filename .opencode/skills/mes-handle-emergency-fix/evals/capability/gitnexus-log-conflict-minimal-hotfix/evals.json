@@ -1,0 +1,27 @@
+{
+  "skill": "mes-handle-emergency-fix",
+  "eval_name": "gitnexus-log-conflict-minimal-hotfix",
+  "goal": "验证 GitNexus 图谱推断与现场日志、监控和症状冲突时，紧急修复必须以现场事实和最小验证为准，并禁止扩大热修范围。",
+  "input": "生产现场 10:12 起 workorder submit 接口 P95 延迟升高并出现 502，监控显示仅 web-to-gateway 链路错误率上升，现场日志显示 gateway timeout 来自 order-confirmation 的短时连接池耗尽；最小复现只覆盖提交确认接口。GitNexus 图谱同时标记 quality-inspection、report-export、archive-job 与 order-confirmation 存在调用链关联，并推断可能需要重构公共事务封装。",
+  "graph_guidance": "GitNexus 可作为故障入口、调用链、候选最小修复点、可能受影响消费者和冒烟路径线索，但所有图谱结论均为待复核候选。",
+  "field_evidence": "现场日志、监控告警、用户症状、最小复现结果、止血后冒烟验证和回滚条件是紧急修复事实源。",
+  "conflict_precedence": "当 GitNexus 推断与现场日志、监控、现场症状或最小验证冲突时，以现场事实和阶段门禁证据为准；图谱只记录为待复核线索。",
+  "expected_behavior": [
+    "应先确认故障目标、影响范围、止血目标、回滚条件和最小验证路径",
+    "应以 gateway/order-confirmation 的现场日志、监控和最小复现作为定位依据，不得把 GitNexus 推断写成确定根因",
+    "热修范围应限制在恢复 submit 确认链路所需的最小代码、配置或运行参数，不得扩展到 quality-inspection、report-export、archive-job 或公共事务重构",
+    "应将 GitNexus 发现的非目标关联记录为待复核风险或后续 analyze/design/develop/test/refresh 回流线索",
+    "修复后必须执行提交确认接口最小冒烟、关键监控恢复检查和回滚条件复核",
+    "事件报告、status-tracker、postmortem 和回流主链动作必须记录现场证据、最小止血动作、最小验证结果、剩余风险与后补计划"
+  ],
+  "acceptance_criteria": [
+    "明确区分 GitNexus 候选线索与现场事实",
+    "冲突时以日志、监控、现场症状和最小验证为准",
+    "不因图谱发现非目标问题扩大热修范围或引入无关重构",
+    "能够验证最小止血、最小冒烟、事件报告、postmortem 和 analyze/design/develop/test/refresh 回流动作",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

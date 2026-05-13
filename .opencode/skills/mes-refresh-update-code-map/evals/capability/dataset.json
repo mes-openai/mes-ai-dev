@@ -1,8 +1,18 @@
 {
   "skill": "mes-refresh-update-code-map",
-  "dataset_version": "1.0.0",
+  "dataset_version": "2.0.0",
+  "focus": "代码地图更新",
+  "case_count": 2,
   "cases": [
-    "core-flow"
-  ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+    {
+      "id": "core-flow",
+      "title": "验证核心执行路径。",
+      "path": "capability/core-flow/evals.json"
+    },
+    {
+      "id": "gitnexus-module-hint-real-file-only",
+      "title": "验证 GitNexus 模块提示不得替代真实文件变化。",
+      "path": "capability/gitnexus-module-hint-real-file-only/evals.json"
+    }
+  ]
 }

@@ -25,7 +25,7 @@
 ### 8. 输出完整设计文档
 
 输出完整设计文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/design.md`
 
 ### 9. 文档版本管理
 
@@ -36,7 +36,7 @@
 
 ### 10. 生成追溯矩阵
 
-读取追溯性模板 `mes-ai-dev/templates/traceability-template.md`，根据设计文档自动填充需求→设计的追溯关系。
+读取追溯性模板 `.opencode/references/mes-ai-reference/templates/traceability-template.md`，根据设计文档自动填充需求→设计的追溯关系。
 
 **追溯矩阵内容**：
 1. **需求→设计追溯**
@@ -49,4 +49,4 @@
    - 标注修改类型（新增/修改）
    - 初始化状态为"待开发"
 
-3. **输出路径**：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/traceability.md`
+3. **输出路径**：`mes-ai-dev/workspace/designs/{REQ-ID}/traceability.md`

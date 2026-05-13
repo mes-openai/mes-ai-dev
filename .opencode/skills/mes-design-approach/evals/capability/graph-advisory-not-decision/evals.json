@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-approach",
+  "eval_name": "graph-advisory-not-decision",
+  "goal": "验证技术方案设计不会把 GitNexus 候选关系或 graphify 导读替代正式方案取舍、设计范围和设计文档结论。",
+  "design_input": "需求只确认在现有工单服务内增加报工提交前校验，已确认服务为 workorder，前端页面为报工页，未确认新增聚合服务或平台化校验中心。",
+  "graph_assistance": "GitNexus 显示 workorder、quality、equipment 与 auth 服务存在调用或依赖候选关系；graphify 导读建议把校验、质检、设备状态和权限关系整理成统一业务图谱。",
+  "expected_behavior": [
+    "应把 GitNexus 结果作为候选影响面和依赖校验线索，逐项回到需求规格、dependency graph、API registry、代码定义点或人工确认验证",
+    "应把 graphify 输出作为关系导读，不得用导读替代技术方案取舍、设计正文或评审结论",
+    "正式方案必须写入 design.md，且明确选择在既有 workorder 链路内实现还是调用已确认 Provider",
+    "不得因图谱弱关联新增中间层、聚合层、平行校验机制或扩大到未确认服务",
+    "设计对象必须映射到开发任务、测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "输出区分图谱候选线索、已验证事实源和正式设计结论",
+    "design.md 中记录方案选择、取舍理由、边界和不采用路径",
+    "未新增未经确认的聚合服务、平台化校验中心或平行机制",
+    "开发任务、测试对象、验收标准均能追溯到确认的设计对象"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

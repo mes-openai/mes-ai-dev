@@ -20,10 +20,10 @@
 
 ### 2. 读取设计文档和Model层
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
 3. `jalor/service-xxx/src/main/java/com/jalor/xxx/entity/XxxEntity.java` - Entity类
-4. `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/ddl-xxx.sql` - DDL脚本
+4. `mes-ai-dev/workspace/development/{REQ-ID}/database/ddl-xxx.sql` - DDL脚本
 
 ### 3. 定位DAO路径
 1. 从服务详情索引确定DAO包路径：`mes-ai-dev/knowledge/code-map/services/service-xxx/detail.md`
@@ -61,7 +61,7 @@
 ### 5. 开发Mapper接口
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/mapper/XxxMapper.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-dao-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-dao-template.java`
 
 执行步骤：
 1. 读取模板文件
@@ -73,7 +73,7 @@
 ### 6. 开发Mapper XML文件
 创建文件：`jalor/service-xxx/src/main/resources/mapper/XxxMapper.xml`
 
-参考代码模板：`mes-ai-dev/templates/code/backend-mybatis-xml-template.xml`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/code/backend-mybatis-xml-template.xml`
 
 执行步骤：
 1. 读取目标服务现有Mapper XML文件（至少2个同类文件）

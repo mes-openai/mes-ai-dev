@@ -31,6 +31,8 @@ description: "刷新知识库，检测变更并更新"
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
 **阶段完成产物报告**：
 - `/mes-refresh-knowledge` 完成后必须输出一份阶段完成产物报告
 - 报告必须说明：知识刷新阶段标准产物、已生成文件、各文件作用、未生成文件及未生成原因
@@ -105,11 +107,11 @@ description: "刷新知识库，检测变更并更新"
 
 ### 七、模板绑定说明
 
-- 命中 blocker 或关键刷新风险时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录刷新阻塞与代偿动作
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小必要刷新结果
-- 刷新完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 知识刷新结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 或关键刷新风险时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录刷新阻塞与代偿动作
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小必要刷新结果
+- 刷新完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 知识刷新结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 

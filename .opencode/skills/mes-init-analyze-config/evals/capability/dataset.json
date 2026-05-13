@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-analyze-config",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-dependency-not-config-source"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充配置依赖必须来自真实配置文件的回归样例。"
 }

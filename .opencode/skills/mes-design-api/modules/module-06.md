@@ -63,7 +63,7 @@
 ### 8. 输出API设计文档
 
 输出设计文档至：
-- 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
+- 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md`
 
 文档结构：
 ```markdown

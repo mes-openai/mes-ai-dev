@@ -1,0 +1,27 @@
+{
+  "skill": "mes-handle-emergency-fix",
+  "eval_name": "graphify-postmortem-conflict-mainflow",
+  "goal": "验证 graphify 事故导读与事件报告或 postmortem 冲突时，紧急修复必须以正式事故材料和主链回流判断为准。",
+  "input": "graphify 生成事故导读，推断本次故障主因是库存服务链路异常，并建议在 postmortem 中关闭 refresh 回流；但事件报告记录的现场症状为报工提交超时，日志和监控指向 order-confirmation 连接池耗尽，最小修复为临时下调并发阈值和补充连接池保护，postmortem 草稿要求补 analyze 范围收敛、design 服务链修正、develop 正式自审、test 回归说明和 refresh-hints。",
+  "graph_guidance": "graphify 可辅助形成事故关系导读、材料索引和阅读导航，但导读中的推断关系必须标注不确定性。",
+  "formal_evidence": "正式结论必须来自事件报告、修复证据、最小验证结果、postmortem、status-tracker、refresh-hints 和阶段门禁检查。",
+  "conflict_precedence": "当 graphify 导读与事件报告、postmortem 或回流主链动作冲突时，以正式事故产物和阶段门禁证据为准，并修正或移除 graphify 导读。",
+  "expected_behavior": [
+    "不得用 graphify 事故导读替代事件报告、修复证据、最小验证结果或 postmortem",
+    "不得接受 graphify 对库存服务主因的推断作为确定结论，除非日志、监控、现场症状和最小验证支持该结论",
+    "应指出正式事故材料中的 order-confirmation 连接池耗尽、临时并发阈值调整、连接池保护和最小验证结果才是本次 postmortem 的依据",
+    "应保留并明确 analyze/design/develop/test/refresh 回流主链动作，不得因 graphify 导读建议而关闭 refresh 回流",
+    "应记录临时措施的适用范围、撤销条件或正式化计划，以及剩余风险",
+    "若保留 graphify 导读，应标注其为导航材料并修正与事件报告、postmortem 不一致的部分"
+  ],
+  "acceptance_criteria": [
+    "明确区分 graphify 事故导读与事件报告/postmortem 正式结论",
+    "冲突时以事件报告、修复证据、最小验证结果和阶段门禁为准",
+    "postmortem 与回流 analyze/design/develop/test/refresh 动作不被 graphify 导读替代或关闭",
+    "能够验证最小止血、最小验证、临时措施留痕、剩余风险和回流主链动作",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

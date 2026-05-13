@@ -86,8 +86,8 @@
 ### 6. 生成交付文件
 
 生成以下文件：
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md` — OpenSpec 需求规格主文档
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/nfr-checklist.md` — NFR 非功能需求清单（强制）
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md` — OpenSpec 需求规格主文档
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/nfr-checklist.md` — NFR 非功能需求清单（强制）
 
 NFR 清单覆盖 8 个维度：
 1. 性能需求（响应时间 / 并发 / 吞吐量 / 批处理 / 数据量级）

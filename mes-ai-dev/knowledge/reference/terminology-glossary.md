@@ -1,7 +1,7 @@
 # 业务术语表
 
-> 由 `/mes-init-project` 阶段自动生成，从代码注释、类名、字段注释中提取业务术语。
-> 本文件是 `AGENTS.md` 中术语表的完整版扩展。
+> 本文件为项目侧业务术语知识产物，由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/terminology-glossary-template.md`；SDK 升级不得覆盖本文件。
 
 ## 术语定义格式
 

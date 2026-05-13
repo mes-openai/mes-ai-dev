@@ -2,7 +2,7 @@
   "skill": "mes-design-service-chain",
   "dataset_version": "2.0.0",
   "focus": "服务调用链设计 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "missing-transaction-boundary",
@@ -18,6 +18,11 @@
       "id": "no-failure-path",
       "title": "验证失败路径覆盖。",
       "path": "capability/no-failure-path/evals.json"
+    },
+    {
+      "id": "graph-chain-not-freeze",
+      "title": "验证图谱候选链路不替代服务链冻结。",
+      "path": "capability/graph-chain-not-freeze/evals.json"
     }
   ]
 }

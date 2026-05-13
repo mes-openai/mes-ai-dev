@@ -1,6 +1,6 @@
 # 领域模型索引（示例）
 
-> 示例文件，演示 `knowledge/reference/domain-model.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
+> 示例文件，演示 `mes-ai-dev/knowledge/reference/domain-model.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
 > 完整领域规则与实体关系应下沉到按业务域拆分的正文文件。
 
 ## 一、文件定位

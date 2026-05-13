@@ -9,7 +9,7 @@
 | 审计范围 | 全仓骨架（初始化产物、状态片段、知识片段、索引示例） |
 | 审计时间 | 2026-04-16T00:55:00+08:00 |
 | 审计人 / Agent | Sisyphus |
-| 适用规则 | `knowledge/rules/path-canonicalization-rules.md` |
+| 适用规则 | `mes-ai-dev/knowledge/rules/path-canonicalization-rules.md` |
 
 ## 二、检查总览
 
@@ -50,7 +50,7 @@
 
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
-| E-01 | 规则 | `knowledge/rules/path-canonicalization-rules.md` | canonical 规则来源 |
-| E-02 | 门禁 | `knowledge/reference/phase-gates/common.md` | must-pass 已引入路径规范要求 |
+| E-01 | 规则 | `mes-ai-dev/knowledge/rules/path-canonicalization-rules.md` | canonical 规则来源 |
+| E-02 | 门禁 | `mes-ai-dev/knowledge/reference/phase-gates/common.md` | must-pass 已引入路径规范要求 |
 | E-03 | 示例 | `workspace/examples/example-terminology-glossary-index.md` | 索引示例已采用 canonical 分片路径 |
 | E-04 | 日志 | `workspace/refresh/skeleton-change-log.md` | 相关治理修改留痕 |

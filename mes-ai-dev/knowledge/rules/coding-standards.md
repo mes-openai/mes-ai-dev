@@ -1,11 +1,7 @@
 # 编码规范
 
-> ⚠️ 本文件是**硬性规则**，违反即视为缺陷。所有Agent在开发阶段**必须遵循**。
-> 规则来源：人工定义或从代码风格确认。
-> 与 `reference/` 下的参考知识不同，参考知识帮助理解，规则约束行为。
-
-> 由 `/mes-init-project` 阶段自动生成，用于沉淀项目中的包结构、命名方式、注解模式与通用编码约定。
-> 本模板在初始化阶段由 `mes-init-extract-reference` 基于后端与前端现有代码风格补全。
+> ⚠️ 本文件是**项目侧硬性规则知识产物**，违反即视为缺陷。所有 Agent 在开发阶段必须遵循已确认内容。
+> 本文件由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。结构模板来源：`.opencode/references/mes-ai-reference/templates/rules/coding-standards-template.md`；SDK 升级不得覆盖本文件。
 
 ## 包结构规范
 

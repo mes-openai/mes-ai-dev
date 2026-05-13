@@ -6,7 +6,7 @@
 - `mes-analyze-parse-requirement` 输出：`raw-requirement.md`
 
 ### 下游输出
-- 追加内容到：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+- 追加内容到：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 - 传递给：`mes-analyze-trace-flow`（业务流程追踪）
 - 传递给：`mes-analyze-identify-repos`（仓库识别）
 

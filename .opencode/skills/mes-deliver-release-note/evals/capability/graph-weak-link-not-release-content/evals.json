@@ -1,0 +1,24 @@
+{
+  "skill": "mes-deliver-release-note",
+  "eval_name": "graph-weak-link-not-release-content",
+  "goal": "验证发布说明不得根据图谱弱关联列出未交付内容。",
+  "input": "graphify 导读显示 REQ-2026-DEL-02 与本次 workorder 报工发布主题存在弱关联，并关联到 quality-inspection 页面；但已交付需求清单只包含 REQ-2026-DEL-01，发布包只包含 workorder-service，测试报告只覆盖报工链路，quality-inspection 未纳入本次发布。",
+  "graph_guidance": "graphify 弱关联只用于提示可能相关的业务主题或后续说明线索。",
+  "formal_evidence": "正式发布说明必须依据已交付需求清单、发布包清单、变更记录、测试通过项、版本范围和签核材料。",
+  "conflict_precedence": "当 graphify 弱关联与已交付清单、发布包或测试通过项不一致时，以正式交付证据为准。",
+  "expected_behavior": [
+    "不得把 REQ-2026-DEL-02 或 quality-inspection 写入已发布内容",
+    "应仅在 release note 已发布范围中列出 REQ-2026-DEL-01 和真实发布包覆盖内容",
+    "可将图谱弱关联标记为不在本次范围、后续计划或待确认项，但不得伪装为已交付",
+    "应要求发布说明与发布包、测试报告和版本范围保持一致"
+  ],
+  "acceptance_criteria": [
+    "明确区分图谱弱关联与正式交付范围",
+    "release note 的已发布内容只来自真实交付证据",
+    "冲突时以已交付清单、发布包和测试通过项为准",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -67,7 +67,7 @@
    - 回滚时间：预估回滚执行时间
 
 ### 8. 生成迁移方案文档
-将迁移方案写入：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/db-migration-plan.md`
+将迁移方案写入：`mes-ai-dev/workspace/development/{REQ-ID}/db-migration-plan.md`
 
 **文档格式**：
 ```markdown

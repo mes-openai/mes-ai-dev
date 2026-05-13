@@ -1,8 +1,8 @@
 {
   "skill": "mes-test-plan-cases",
-  "dataset_version": "2.0.0",
+  "dataset_version": "2.1.0",
   "focus": "测试用例规划",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "missing-high-risk-coverage",
@@ -18,6 +18,11 @@
       "id": "data-dependency-ignored",
       "title": "验证数据准备意识。",
       "path": "capability/data-dependency-ignored/evals.json"
+    },
+    {
+      "id": "tdd-graph-path-mockito-risk-plan",
+      "title": "验证 TDD、图谱边界、跨平台路径与 Mockito 风险规划。",
+      "path": "capability/tdd-graph-path-mockito-risk-plan/evals.json"
     }
   ]
 }

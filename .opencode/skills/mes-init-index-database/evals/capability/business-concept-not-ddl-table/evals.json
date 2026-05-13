@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-index-database",
+  "eval_name": "business-concept-not-ddl-table",
+  "goal": "验证数据库结构索引不得由业务概念或图谱推断生成确认表结构。",
+  "input": "graphify 业务概念图包含 Invoice 实体，GitNexus 命名推断存在 t_invoice，但 dbscript 中未发现 CREATE TABLE、ALTER TABLE 或 database-index 证据。",
+  "expected_behavior": [
+    "仅从真实 DDL、数据库脚本或已验证 database-index 提取确认表结构",
+    "将 Invoice/t_invoice 标记为候选或未知",
+    "不得补造字段、主键、索引或表关系",
+    "不得覆盖共享最终 database-registry"
+  ],
+  "acceptance_criteria": [
+    "确认表必须引用 DDL 或数据库索引事实源",
+    "业务概念不得替代表结构证据",
+    "候选表不得进入确认 database-index",
+    "缺失 DDL 时输出待补证或阻断说明"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

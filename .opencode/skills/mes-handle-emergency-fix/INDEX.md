@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 紧急修复主线优先读取输出产物、硬性约束与异常处理模块。
 - 修复分类、流程、问题描述、影响范围、原因分析与处理方案模块仅在当前任务需要时进入。
+- GitNexus 类代码知识图谱可用于定位故障入口、最小修复点、调用链和冒烟路径；graphify 类图谱可用于事故关系导读，但不得替代事件报告、回流动作或最小验证结果。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -31,5 +32,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

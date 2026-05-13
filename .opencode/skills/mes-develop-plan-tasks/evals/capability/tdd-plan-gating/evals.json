@@ -1,0 +1,21 @@
+{
+  "skill": "mes-develop-plan-tasks",
+  "eval_name": "tdd-plan-gating",
+  "goal": "验证任务规划必须先形成 TDD 计划。",
+  "input": "设计已经给出，但当前只允许先输出开发任务规划；图谱发现还有别的问题也可以一起做。",
+  "expected_behavior": [
+    "应先产出任务分解与测试计划，不得跳过 TDD",
+    "应拒绝把图谱发现的非目标问题并入当前规划",
+    "应把图谱仅用于任务关系导读与最小范围确认",
+    "若涉及测试生成或测试计划，应显式检查 Windows / Linux 路径兼容、Mockito matcher 一致性与 stub 初始化"
+  ],
+  "acceptance_criteria": [
+    "能明确测试计划先于代码生成",
+    "能保持任务边界精准",
+    "能避免规划阶段扩范",
+    "能把跨平台路径、Mockito matcher 和 stub 初始化纳入测试计划门禁"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

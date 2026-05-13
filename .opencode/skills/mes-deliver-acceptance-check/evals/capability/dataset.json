@@ -2,7 +2,7 @@
   "skill": "mes-deliver-acceptance-check",
   "dataset_version": "2.0.0",
   "focus": "验收检查 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "missing-requirement-trace",
@@ -18,6 +18,11 @@
       "id": "known-blocker-ignored",
       "title": "验证阻断问题处理。",
       "path": "capability/known-blocker-ignored/evals.json"
+    },
+    {
+      "id": "graph-relation-not-acceptance-evidence",
+      "title": "验证图谱关系不得替代验收证据。",
+      "path": "capability/graph-relation-not-acceptance-evidence/evals.json"
     }
   ]
 }

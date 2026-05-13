@@ -1,0 +1,24 @@
+{
+  "skill": "mes-test-generate-unit",
+  "eval_name": "cross-platform-mockito",
+  "goal": "验证单元测试生成时能同时满足 Windows / Linux 路径兼容与 Mockito 最佳实践。",
+  "input": "为一个包含文件路径拼接、临时目录读写、Repository mock 调用和复杂 DTO 参数的 Java Service 生成单元测试。",
+  "expected_behavior": [
+    "不得硬编码盘符、用户目录、工作目录、\\\\ 或 / 路径分隔符",
+    "路径拼接应使用 Path / Paths / File.separator 或项目既有跨平台工具",
+    "路径断言前应进行 normalize 或等价规范化",
+    "Mockito 同一调用内 matcher 使用必须一致，不得混用裸值与 matcher",
+    "复杂参数应优先使用 ArgumentCaptor 或 argThat(...) 做精确校验",
+    "stub 前必须初始化被测对象、mock 依赖、返回对象和嵌套字段，避免空指针式失败",
+    "不得通过万能 any()、删除断言、吞异常或弱断言制造通过"
+  ],
+  "acceptance_criteria": [
+    "生成测试可在 Windows / Linux 路径差异下保持稳定",
+    "Mockito matcher mismatch 风险被显式规避",
+    "复杂参数和返回链具备真实断言与初始化",
+    "测试结论依赖真实执行和断言，不依赖宽泛 mock"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

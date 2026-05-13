@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-frontend-api",
+  "eval_name": "api-layer-minimal-wire",
+  "goal": "验证 API 层只做最小接口对接。",
+  "input": "后端只新增一个接口字段，graphify 还提示可以顺便重整请求封装。",
+  "expected_behavior": [
+    "应只做当前接口对接所需的最小修改",
+    "应避免无关封装重构、无关重命名和顺手优化",
+    "应把图谱导读限定在接口对接范围"
+  ],
+  "acceptance_criteria": [
+    "能保持 API 改动最小",
+    "能避免请求层无关重构",
+    "能与既有调用风格对齐"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

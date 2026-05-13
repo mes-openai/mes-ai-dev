@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-database-script",
+  "eval_name": "schema-minimal-change",
+  "goal": "验证数据库脚本只触达目标变更。",
+  "input": "需要给一张表补一个字段和注释，但图谱还发现其他表也可一并整理。",
+  "expected_behavior": [
+    "应只处理目标表的目标变更",
+    "应避免无关 DDL、无关格式化和顺手优化",
+    "应把图谱信息限定为影响范围定位，不扩展脚本范围"
+  ],
+  "acceptance_criteria": [
+    "能保持脚本修改最小",
+    "能避免跨表扩大修改",
+    "能保持 SQL 与既有风格一致"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

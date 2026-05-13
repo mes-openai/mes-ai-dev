@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-service-chain",
+  "eval_name": "graph-chain-not-freeze",
+  "goal": "验证服务链设计不会把 GitNexus 候选调用链或 graphify 导读替代服务链冻结、Provider 选择和契约边界。",
+  "design_input": "需求要求报工提交时执行质量校验，多 provider 场景已命中，必须在进入开发前冻结主服务链、Provider 选择理由、禁止路径和契约兼容边界。",
+  "graph_assistance": "GitNexus 给出 workorder -> quality、workorder -> equipment、workorder -> message 三条候选链路；graphify 导读显示报工、质检、设备、通知均有关联，但未证明本次需求需要全部链路。",
+  "expected_behavior": [
+    "应逐段验证 GitNexus 候选链路的事实源，包括 dependency graph、restService 配置、API registry、代码定义点或人工确认",
+    "应说明 graphify 仅为服务关系导读，不得替代服务链冻结或 Provider 选择结论",
+    "必须冻结唯一主服务链，并记录 Provider 选择理由、禁止路径、失败路径、事务边界和契约兼容边界",
+    "不得把未确认候选链路写成正式服务链，不得新增中间编排层、聚合服务或平行调用机制",
+    "服务链节点必须映射到开发任务、集成测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "输出明确区分确认链路、候选链路、禁止路径和待补证链路",
+    "最终服务链已冻结且 Provider 选择理由可追溯",
+    "graphify 导读未替代 design.md 的服务链正文结论",
+    "服务链设计对象已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

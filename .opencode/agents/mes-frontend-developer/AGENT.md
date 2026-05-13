@@ -44,7 +44,7 @@ task(
 
 ## 交接协议
 
-完成后必须在 `mes-ai-dev/workspace/development/REQ-*/frontend-completion.md` 中列出修改文件、接入路由、调用 API 路径、依赖的公共组件和待后端确认项，并优先使用 `mes-ai-dev/templates/completion-template.md` 填充四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 据此与后端完成标记做接口一致性校验，并决定是否继续触发测试或审核；前后端交接只通过代码与完成文件进行，不依赖额外口头说明。
+完成后必须在 `mes-ai-dev/workspace/development/REQ-*/frontend-completion.md` 中列出修改文件、接入路由、调用 API 路径、依赖的公共组件和待后端确认项，并优先使用 `.opencode/references/mes-ai-reference/templates/completion-template.md` 填充四要素（结论 / 风险 / 下一步 / 证据路径）。主控 Agent 据此与后端完成标记做接口一致性校验，并决定是否继续触发测试或审核；前后端交接只通过代码与完成文件进行，不依赖额外口头说明。
 
 ## 约束规则
 

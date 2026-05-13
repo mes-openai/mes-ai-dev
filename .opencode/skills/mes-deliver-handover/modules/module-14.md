@@ -6,7 +6,7 @@
 - 运维方确认
 ```
 
-3. 写入 `workspace/delivery/REQ-YYYYMMDD-XXX/handover-doc.md`
+3. 写入 `workspace/delivery/{REQ-ID}/handover-doc.md`
 
 **Step Gate C**：交付边界说明或交接文档缺少关键信息 → 打回步骤6-7重做，不得释放并发锁。
 

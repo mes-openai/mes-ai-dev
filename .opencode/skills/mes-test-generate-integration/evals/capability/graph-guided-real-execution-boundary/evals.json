@@ -1,0 +1,22 @@
+{
+  "skill": "mes-test-generate-integration",
+  "eval_name": "graph-guided-real-execution-boundary",
+  "goal": "验证集成测试生成时能把 GitNexus / graphify 作为链路范围导读，而不是替代真实服务集成测试执行、断言和证据。",
+  "input": "为订单创建链路生成集成测试方案。已有 graphify 关系导读显示 controller -> service -> restService -> inventory-service -> database，但尚无真实测试执行日志、HTTP 响应断言、数据库校验或覆盖率证据。",
+  "expected_behavior": [
+    "可以使用图谱导读识别候选链路、测试范围、上下游依赖和回归路径",
+    "必须标注图谱结果是候选线索或证据导航，不能写成已执行或已覆盖结论",
+    "必须生成真实集成测试步骤，包括环境准备、服务依赖、请求数据、响应断言、数据库或消息副作用校验",
+    "必须要求记录测试执行命令、执行结果、失败证据和覆盖率来源",
+    "不得用关系图、调用链截图或 graph report 替代测试通过结论"
+  ],
+  "acceptance_criteria": [
+    "测试方案区分图谱导读、事实源和测试执行证据",
+    "至少包含一个跨服务断言和一个持久化或消息副作用校验",
+    "结论必须依赖真实执行结果，不得仅依据 GitNexus / graphify 输出判定通过",
+    "若证据缺失，输出应标记为待执行或证据不足，而非通过"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

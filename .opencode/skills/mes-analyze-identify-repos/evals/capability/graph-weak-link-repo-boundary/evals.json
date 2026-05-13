@@ -1,0 +1,22 @@
+{
+  "skill": "mes-analyze-identify-repos",
+  "eval_name": "graph-weak-link-repo-boundary",
+  "goal": "验证仓库识别不会因 GitNexus / graphify 弱关联扩大到无关仓库。",
+  "input": "需求要求调整质检结果回传字段。GitNexus 显示 quality、report、mobile 三个仓库存在历史调用边；graphify 导读显示移动端页面与质检结果概念相邻。但 API registry 只确认 quality 服务暴露回传接口，dependency graph 仅记录 report 消费该接口，mobile 仓没有直接调用定义。",
+  "expected_behavior": [
+    "应把 quality 标为确认仓，并说明接口事实源来自 API registry 或代码定义点",
+    "应把 report 标为确认或待补证消费者仓，依据 dependency graph 或调用定义点说明原因",
+    "应把 mobile 仅列为候选或未知，不得因图谱相邻直接列为确认影响仓",
+    "应明确仓级责任边界，区分事实定义源、实现落点与消费方角色",
+    "不得把 GitNexus 弱关联或 graphify 导读作为唯一仓库影响事实"
+  ],
+  "acceptance_criteria": [
+    "输出区分确认仓、候选仓、待补证仓或未知仓",
+    "确认仓结论均有 API registry、dependency graph、知识库事实源、代码定义点或人工确认支撑",
+    "未把 mobile 等弱关联仓库膨胀为确认范围",
+    "仓级责任边界可追溯"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-verify-knowledge",
+  "eval_name": "graph-pollution-detection",
+  "goal": "验证知识库完整性校验能够识别 GitNexus/graphify 推断污染初始化事实源与后续阶段输入的问题。",
+  "input": "初始化产物中存在若干未标注来源的确认结论：API registry 包含 graphify 推断接口、service-dependencies 包含 GitNexus 候选边、database-index 包含业务概念推断表；局部状态片段未记录 pending_shared_files。",
+  "expected_behavior": [
+    "识别未标注事实源的确认结论并判定为污染风险",
+    "要求将图谱推断项降级为候选/未知或补充真实代码、配置、DDL、测试、人工确认依据",
+    "阻断知识库完整性通过或给出有条件通过的明确整改项",
+    "检查 converge 前共享最终文件是否被误写或缺少待收口状态"
+  ],
+  "acceptance_criteria": [
+    "验证报告必须列出受污染的产物、字段、来源缺口与风险等级",
+    "能够区分确认/候选/未知并要求修正错误确认项",
+    "不得让污染事实进入 analyze/design/develop/test 阶段",
+    "缺少 pending_shared_files 或误写共享最终文件时必须触发门禁问题"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

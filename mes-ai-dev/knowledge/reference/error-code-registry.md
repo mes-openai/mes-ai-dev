@@ -1,7 +1,7 @@
 # 错误码注册表
 
-> 由 `/mes-init-project` 阶段自动生成，用于汇总系统错误码规范、服务编号与触发条件。
-> 本模板在初始化阶段由 `mes-init-extract-reference` 扫描异常类、错误码常量类与接口返回定义后补全。
+> 本文件为项目侧错误码注册表知识产物，由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/error-code-registry-template.md`；SDK 升级不得覆盖本文件。
 
 ## 一、当前状态
 

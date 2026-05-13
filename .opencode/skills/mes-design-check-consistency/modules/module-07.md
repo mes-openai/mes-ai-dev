@@ -1,4 +1,4 @@
 # 输出
 
 ## 输出
-- `workspace/designs/REQ-YYYYMMDD-XXX/cross-service-consistency.md`
+- `workspace/designs/{REQ-ID}/cross-service-consistency.md`

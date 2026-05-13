@@ -31,7 +31,7 @@
 1. `test-cases.md` 是否已存在
 2. 是否记录用户补充区与用户确认结论
 3. 本轮新生成测试用例是否全部通过
-4. 本轮生成/修改并纳入验证范围的代码行覆盖率是否达到 100%
+4. 本轮生成/修改并纳入验证范围的行覆盖率、分支覆盖率、方法覆盖率是否均达到 100%
 
 **后端验证**：
 1. 检查生成的 Java 文件是否存在语法错误（括号匹配、分号、import 完整性）
@@ -55,15 +55,15 @@
 
 ### 2. 读取任务计划和设计文档
 按顺序读取：
-1. `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/tasks.md` - OpenSpec 开发任务主文档
-2. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档
-3. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API设计
-4. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计
-5. `mes-ai-dev/workspace/testing/REQ-YYYYMMDD-XXX/test-cases.md` - TDD 用例计划与用户确认结论
+1. `mes-ai-dev/workspace/development/{REQ-ID}/tasks.md` - OpenSpec 开发任务主文档
+2. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档
+3. `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API设计
+4. `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计
+5. `mes-ai-dev/workspace/testing/{REQ-ID}/test-cases.md` - TDD 用例计划与用户确认结论
 
 ### 3. 读取所有开发的代码文件
 根据任务计划，读取所有已完成的代码文件：
-- 数据库脚本：`mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/`
+- 数据库脚本：`mes-ai-dev/workspace/development/{REQ-ID}/database/`
 - 后端代码：`jalor/service-xxx/src/main/java/com/jalor/xxx/`
 - 前端代码：`web/module-xxx/src/`
 

@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-index-database",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "business-concept-not-ddl-table"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充表结构必须来自真实 DDL/database-index 的回归样例。"
 }

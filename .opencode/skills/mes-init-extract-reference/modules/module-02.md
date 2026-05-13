@@ -6,7 +6,7 @@
 
 在开始提取前，检测是否为存量仓（已有人工开发的大型代码仓）：
 
-1. 统计代码行数，判断仓规模标签（参见 `knowledge/rules/repository-scale-rules.md`）
+1. 统计代码行数，判断仓规模标签（参见 `.opencode/references/mes-ai-reference/rules/repository-scale-rules.md`）
 2. 若仓规模为 `medium` 及以上，启用**存量仓模式**：
    - **优先真实边界**：从代码中提取实际的职责划分、API归属、表归属，优先于理想化分类
    - **延后抽象术语**：先提取具体实体名、API路径、表名、配置项名，再归纳为抽象术语体系
@@ -15,6 +15,7 @@
    - **参考实现优先**：找到最规范、最完整的模块标记为参考实现
 
 ### Step 1: 提取业务术语
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/terminology-glossary-template.md`
 - 扫描 Entity 类名、字段注释、枚举注释。
 - 汇总术语中文名、英文名、定义、关联实体和来源服务。
 - 无法确认定义时标注来源依据与置信度。
@@ -28,6 +29,7 @@
 **Step Gate A**：术语、领域模型或基础参考信息提取不完整 → 打回步骤1-3重做，不得进入枚举/错误码/API/编码规范提取。
 
 ### Step 2: 构建领域模型
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/domain-model-template.md`
 - 分析 Entity 间关联关系，包括 JPA 注解、外键引用和代码中的对象依赖。
 - 识别核心实体、从属实体和聚合边界。
 - 用文本方式输出实体关系，并标注推断依据。
@@ -45,21 +47,25 @@
 输出：追加到 `domain-model.md` 的业务规则章节
 
 ### Step 3: 生成数据字典
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/data-dictionary-template.md`
 - 提取 Entity 字段定义、注释、类型和约束信息。
 - 汇总公共字段含义与各业务域字段定义。
 - 归纳字段命名规范，未检测到的模式标注“未检测到”。
 
 ### Step 4: 提取枚举注册表
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/enum-registry-template.md`
 - 扫描所有 enum 类，提取枚举值、含义、使用场景和来源位置。
 - 同步识别状态码、类型码和标志位常量。
 - 按服务分组组织，缺失部分标注“未检测到”。
 
 ### Step 5: 提取错误码
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/error-code-registry-template.md`
 - 扫描错误码常量类和异常类。
 - 提取错误码编号、HTTP 状态、描述、触发条件和来源位置。
 - 若编码规则不统一，记录现状并标注置信度。
 
 ### Step 6: 推断API约定
+- 模板来源：`.opencode/references/mes-ai-reference/templates/rules/api-conventions-template.md`
 - 分析现有 Controller 的 URL 模式、HTTP 方法、参数命名与响应包装。
 - 汇总分页、排序、过滤、认证授权和版本管理规则。
 - 对未出现的模式明确标注“未检测到”。
@@ -76,11 +82,13 @@
 - 若未确认外部契约源，不得输出统一响应、统一错误码、统一认证或统一 MQ 契约全局结论。
 
 ### Step 7: 推断编码规范
+- 模板来源：`.opencode/references/mes-ai-reference/templates/rules/coding-standards-template.md`
 - 分析现有代码的包结构、命名、注解模式、日志与异常处理方式。
 - 同步观察配置管理方式与前后端共性风格。
 - 输出规则说明、示例、来源依据和置信度。
 
 ### Step 8: 生成权限矩阵（新增）
+- 模板来源：`.opencode/references/mes-ai-reference/templates/reference/permission-matrix-template.md`
 - 扫描Controller层的权限注解（@PreAuthorize、@Secured等）。
 - 分析角色定义（从用户角色相关代码或配置推断）。
 - 提取命令与文件的访问权限关系（从业务逻辑推断）。

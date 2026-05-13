@@ -12,6 +12,11 @@
 - 设计文档必须对开发和测试阶段 **可直接消费**，不能只给抽象口号
 - 所有设计对象必须绑定 **真实事实来源**，不得用模板或通用常识补洞
 - 服务链必须在设计阶段 **冻结**，开发阶段不得自行改路线
+- 编码前思考：设计前列明约束、备选方案、取舍理由、兼容性与回退边界
+- 简洁优先：优先最小可行设计和现有模式复用，不为局部需求制造复杂抽象
+- 精准修改：设计范围不得超出已确认仓、服务、表、接口、页面和配置
+- 可按需使用 GitNexus 类代码知识图谱校验依赖关系、服务链、Provider 路径与影响面
+- 可按需使用 graphify 类能力为 `design.md` 补充关系导读，但不得替代设计正文
 
 **触发命令**：`/mes-design-detail`
 
@@ -52,7 +57,7 @@ flowchart TB
     GATE_S2 -->|"已收敛"| STEP3
 
     subgraph S3 ["Step 3: 形成方案骨架"]
-        STEP3["mes-design-approach<br>先形成设计主线 再展开局部对象 明确各维度设计范围"]
+        STEP3["mes-design-approach<br>先形成设计主线 再展开局部对象 明确各维度设计范围<br>按需使用 GitNexus 校验依赖与调用关系"]
     end
 
     STEP3 --> STEP3_OUT["产出: 方案主路径<br>API 数据 服务调用 前端是否在本轮设计范围"]
@@ -91,7 +96,7 @@ flowchart TB
     GATE_S6 -->|"不通过"| STEP6
     GATE_S6 -->|"通过"| STEP7A
 
-    STEP7A["mes-design-generate-doc 生成完整设计文档 design.md"]
+    STEP7A["mes-design-generate-doc 生成完整设计文档 design.md<br>按需补充 graphify 关系导读"]
     STEP7B["mes-design-record-decisions 记录 ADR 决策背景 备选 理由 影响"]
     STEP7C["mes-design-review-approach 设计评审 可行性 一致性 完整性"]
 
@@ -201,7 +206,7 @@ flowchart TB
 ## 四、详细设计阶段产物结构
 
 ```
-mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/designs/{REQ-ID}/
 ├── deliverable/
 │   └── design.md                  # 详细设计文档（OpenSpec 格式）
 ├── report/

@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 任务规划主线优先读取“输出增强要求、执行步骤、输入、输出、约束、审核”。
 - 仓画像、依赖关系、并行建议等模块仅在当前任务确有需要时进入。
+- GitNexus 类代码知识图谱可用于缩小实现范围、确认最小改动集合和回归路径；graphify 类图谱可用于任务关系导读，但不得替代设计结论、任务拆解或 TDD 计划。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -48,5 +49,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

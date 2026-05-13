@@ -9,6 +9,8 @@ description: "Create handover document and deliverables checklist. Trigger: hand
 - 本文件仅保留 Skill 元数据、适用边界与最小读取入口。
 - 详细导航统一以下层 `INDEX.md` 为准；执行说明以下层 `modules/` 正文为准。
 - `evals/` 属于 Skill 的正式组成部分，用于触发验证与能力回归。
+- GitNexus 类代码知识图谱能力可用于核对交付对象、调用链、回滚影响面与知识刷新对象，但不得替代发布/验收/交接证据。
+- graphify 类知识图谱能力可用于交接关系导读，但不得替代 `INDEX.md`、`modules/` 或交付主结论。
 
 ## 适用场景
 - Create handover document and deliverables checklist. Trigger: handover, delivery, turnover, knowledge transfer

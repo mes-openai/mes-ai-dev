@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-frontend",
+  "eval_name": "graph-route-guide-not-ui-scope",
+  "goal": "验证前端设计不会把 graphify 页面关系导读或 GitNexus API 候选依赖替代已确认路由、页面、组件和交互范围。",
+  "design_input": "需求只确认修改报工提交页面的校验提示和接口返回字段展示，已确认路由为 /workorder/report，未确认新增质检页面、设备看板或统一校验组件库。",
+  "graph_assistance": "GitNexus 显示报工页面可能调用 workorder API，并与 quality API、equipment API 有候选关系；graphify 导读把报工、质检、设备状态页面关联为同一前端业务图谱。",
+  "expected_behavior": [
+    "应把 GitNexus 结果作为 API 调用和页面依赖候选线索，并回到路由、页面组件、API 调用层和设计输入验证",
+    "应说明 graphify 仅为前端关系导读，不得替代 frontend-design 或 design.md 中的页面范围结论",
+    "正式前端设计必须明确页面、路由、组件、交互、权限和 API 映射，并写入设计文档",
+    "不得因图谱相邻关系新增未确认页面、看板、公共组件库、聚合页或平行交互机制",
+    "前端设计对象必须映射到开发任务、UI / E2E 测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "页面、路由、组件和 API 映射来自确认输入或事实源",
+    "graphify 导读未替代正式前端设计结论",
+    "未扩大到未确认页面、模块或公共组件抽象",
+    "前端对象已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

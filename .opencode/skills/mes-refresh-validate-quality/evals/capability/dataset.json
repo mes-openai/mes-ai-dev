@@ -2,7 +2,7 @@
   "skill": "mes-refresh-validate-quality",
   "dataset_version": "2.0.0",
   "focus": "知识库质量校验 Skill",
-  "case_count": 3,
+  "case_count": 4,
   "cases": [
     {
       "id": "stale-sync-summary",
@@ -18,6 +18,11 @@
       "id": "quality-pass-with-gaps",
       "title": "验证质量结论门禁。",
       "path": "capability/quality-pass-with-gaps/evals.json"
+    },
+    {
+      "id": "reject-graph-inference-as-confirmed-knowledge",
+      "title": "验证图谱推断不得误写为确认知识。",
+      "path": "capability/reject-graph-inference-as-confirmed-knowledge/evals.json"
     }
   ]
 }

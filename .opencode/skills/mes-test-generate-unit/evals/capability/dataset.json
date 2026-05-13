@@ -1,8 +1,10 @@
 {
   "skill": "mes-test-generate-unit",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "cross-platform-mockito",
+    "stub-chain-argument-contract"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充跨平台路径、Mockito matcher、ArgumentCaptor/argThat 与 stub 返回链初始化回归样例。"
 }

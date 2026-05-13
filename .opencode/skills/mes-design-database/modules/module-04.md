@@ -15,11 +15,11 @@
 按以下顺序读取必要的输入文件：
 
 1. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 重点提取：数据相关需求、数据实体、数据关系
 
 2. **技术方案文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
    - 重点提取：涉及的服务列表、数据存储决策
 
 3. **数据库注册表**

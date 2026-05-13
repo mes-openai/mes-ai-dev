@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-extract-api",
+  "eval_name": "graph-api-not-controller-source",
+  "goal": "验证 API 端点提取不得把 GitNexus 或 graphify 推断接口写入 API registry 确认项。",
+  "input": "图谱报告列出 POST /order/approve，但 Controller 源码、注解、路由定义与接口配置中只存在 GET /order/list。",
+  "expected_behavior": [
+    "仅从真实 Controller、注解、路由定义或等价代码定义点提取确认 API",
+    "将图谱中的 POST /order/approve 标记为候选或未知",
+    "不得写入确认 API registry 或覆盖共享最终 api-registry",
+    "记录缺失 Controller/注解证据的待补证说明"
+  ],
+  "acceptance_criteria": [
+    "确认 API 必须包含文件路径、类/方法或注解证据",
+    "图谱推断 API 不得作为正式 registry 项",
+    "三态与证据来源完整",
+    "converge 前仅输出局部 registry 片段或待收口状态"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

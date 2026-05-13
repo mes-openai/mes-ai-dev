@@ -15,11 +15,11 @@
 按以下顺序读取必要的输入文件：
 
 1. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 重点提取：跨服务功能需求、数据流转需求
 
 2. **技术方案文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
    - 重点提取：涉及的服务列表、技术决策
 
 3. **服务依赖关系**
@@ -35,7 +35,7 @@
    - 根据技术方案中涉及的服务，读取对应服务目录下的详细索引
 
 6. **API设计文档**
-    - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
+    - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md`
     - 用途：了解新增或修改的API接口
 
 **Step Gate A**：前置输入不完整、服务范围不清或调用基线不足 → 打回步骤2重做，不得进入服务调用关系分析。

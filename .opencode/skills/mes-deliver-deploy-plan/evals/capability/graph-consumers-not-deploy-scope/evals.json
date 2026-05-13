@@ -1,0 +1,24 @@
+{
+  "skill": "mes-deliver-deploy-plan",
+  "eval_name": "graph-consumers-not-deploy-scope",
+  "goal": "验证 GitNexus 提示多个消费者时，部署计划仍必须以真实发布包、环境、依赖和回滚条件为准。",
+  "input": "GitNexus 导读显示本次变更接口存在多个下游消费者，并提示可能影响排产、质检和设备三个模块；但真实发布包仅包含 workorder-service 一个制品，环境清单仅批准灰度环境，依赖确认只覆盖报工链路，回滚条件仅定义 workorder-service 回滚。",
+  "graph_guidance": "GitNexus 多消费者结果只用于提示候选影响面、调用链复核点和回归风险导航。",
+  "formal_evidence": "正式部署计划必须依据真实发布包清单、目标环境、依赖确认、发布窗口、回滚条件和人工签核的发布对象。",
+  "conflict_precedence": "当 GitNexus 导读与真实发布包、环境、依赖或回滚条件不一致时，以真实发布证据和阶段门禁材料为准。",
+  "expected_behavior": [
+    "不得因 GitNexus 显示多个消费者而自动扩大部署范围或新增未签核服务",
+    "应将图谱提示的消费者记录为风险复核项、回归建议或待确认事项",
+    "应要求部署计划明确真实发布包、目标环境、依赖前置条件、回滚触发条件和回滚对象",
+    "若图谱提示的影响面缺少正式发布证据覆盖，应标记为未确认风险，不得写成已发布结论"
+  ],
+  "acceptance_criteria": [
+    "明确区分图谱导读与正式部署证据",
+    "部署范围只来自真实发布包和签核材料",
+    "冲突时以真实发布证据和交付阶段门禁为准",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

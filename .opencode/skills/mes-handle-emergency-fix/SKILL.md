@@ -9,6 +9,8 @@ description: "Handle emergency fix, hotfix, and rollback scenarios. Trigger: eme
 - 本文件仅保留 Skill 元数据、适用边界与最小读取入口。
 - 详细导航统一以下层 `INDEX.md` 为准；执行说明以下层 `modules/` 正文为准。
 - `evals/` 属于 Skill 的正式组成部分，用于触发验证与能力回归。
+- GitNexus 类代码知识图谱能力可用于定位故障入口、最小修复点、调用链和冒烟路径，但不得替代故障事实、修复证据或最小验证结果。
+- graphify 类知识图谱能力可用于事故关系导读或 postmortem 辅助，但不得替代事件报告、回流动作或阶段门禁。
 
 ## 适用场景
 - Handle emergency fix, hotfix, and rollback scenarios. Trigger: emergency, hotfix, rollback, urgent fix, production issue

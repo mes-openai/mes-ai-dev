@@ -8,7 +8,7 @@
 - `mes-analyze-trace-flow` 输出：`business-flow-trace.md`
 
 ### 下游输出
-- 追加内容到：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+- 追加内容到：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 - 传递给：`mes-analyze-generate-spec`（需求规格生成）
 - 传递给：`mes-design-approach`（设计方案）
 

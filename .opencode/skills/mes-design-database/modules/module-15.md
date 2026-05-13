@@ -2,8 +2,8 @@
 
 ## 输入
 
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md` - OpenSpec 需求规格主文档
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md` - 技术方案文档
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md` - OpenSpec 需求规格主文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md` - 技术方案文档
 - `mes-ai-dev/knowledge/dependency-graph/database-registry.md` - 数据库注册表
 - `mes-ai-dev/knowledge/database-index/schema-xxx/` - Schema索引文件
 - **业务参考知识（必须）**

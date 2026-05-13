@@ -15,31 +15,31 @@
 按以下顺序读取必要的设计产出文件：
 
 1. **完整设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/design.md`
    - 用途：作为评审的主要对象
 
 2. **需求规格文档**
-   - 路径：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md`
+   - 路径：`mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md`
    - 用途：作为设计需求的验证基准
 
 3. **技术方案文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md`
    - 用途：验证技术方案的合理性
 
 4. **数据库设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md`
    - 用途：评审数据库设计
 
 5. **API设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md`
    - 用途：评审API接口设计
 
 6. **前端设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/frontend-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/frontend-design.md`
    - 用途：评审前端设计
 
 7. **服务调用链设计文档**
-   - 路径：`mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/service-chain-design.md`
+   - 路径：`mes-ai-dev/workspace/designs/{REQ-ID}/service-chain-design.md`
    - 用途：评审服务调用链设计
 
 8. **相关知识库索引**

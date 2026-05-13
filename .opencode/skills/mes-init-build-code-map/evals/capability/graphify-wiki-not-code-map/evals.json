@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-build-code-map",
+  "eval_name": "graphify-wiki-not-code-map",
+  "goal": "验证 code-map 构建不得被 graphify wiki 或图谱导读替代。",
+  "input": "graphify 已生成项目 wiki 导读，包含模块关系摘要；但 backend-overview、frontend-overview、service detail 与局部 code-map 片段尚未由真实扫描结果汇总。",
+  "expected_behavior": [
+    "将 graphify wiki 仅作为导读或导航材料",
+    "继续基于真实扫描、分析结果与局部片段构建 code-map",
+    "不得把 wiki 摘要直接当作正式 code-map 或阶段门禁结论",
+    "记录 code-map 待收口状态而非覆盖共享最终文件"
+  ],
+  "acceptance_criteria": [
+    "正式 code-map 产物必须追溯到 scan/analyze 输出或源码事实",
+    "graphify 导读与正式 code-map 角色边界清晰",
+    "未完成 converge 前不得宣称共享 code-map 最终可用",
+    "输出包含 pending_shared_files 或等价待收口说明"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

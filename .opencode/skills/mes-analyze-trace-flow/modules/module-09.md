@@ -7,7 +7,7 @@
 - `mes-analyze-impact-scope` 输出：影响范围（追加在 raw-requirement.md）
 
 ### 下游输出
-- 输出文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/business-flow-trace.md`
+- 输出文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/business-flow-trace.md`
 - 传递给：`mes-analyze-identify-repos`（仓库识别）
 - 传递给：`mes-design-approach`（设计方案）
 

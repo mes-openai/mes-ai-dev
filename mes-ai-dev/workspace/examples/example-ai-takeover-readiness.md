@@ -101,7 +101,7 @@
 
 | 编号 | 类型 | 路径/来源 | 说明 |
 |------|------|-----------|------|
-| E-01 | 知识文件 | `knowledge/reference/knowledge-consumption/index.md` | AI 接管关键能力定义来源 |
+| E-01 | 知识文件 | `mes-ai-dev/knowledge/reference/knowledge-consumption/index.md` | AI 接管关键能力定义来源 |
 | E-02 | 模板 | `templates/governance/ai-takeover-readiness-template.md` | readiness 评估结构来源 |
 | E-03 | 状态 | `knowledge/state/state.yaml` | 收口与治理状态来源 |
 | E-04 | 审计 | `workspace/examples/example-path-canonicalization-audit.md` | 路径规范审计结果示例 |

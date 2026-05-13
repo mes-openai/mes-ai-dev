@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `workspace/REQ-xxx/deliverable/design.md`
 - `workspace/REQ-xxx/report/`
-- `mes-ai-dev/templates/`
+- `.opencode/references/mes-ai-reference/templates/`
 
 ## 观察点
 - 该用例模拟的核心异常/风险是：测试计划中没有覆盖高风险业务分支。

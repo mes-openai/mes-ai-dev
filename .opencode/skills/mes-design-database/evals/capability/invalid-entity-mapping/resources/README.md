@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `dbscript/`
 - `mes-ai-dev/knowledge/database-index/`
-- `mes-ai-dev/templates/design/database-design-template.md`
+- `.opencode/references/mes-ai-reference/templates/design/database-design-template.md`
 
 ## 观察点
 - 该用例模拟的核心异常/风险是：实体字段设计与现有真实数据字典/字段语义冲突。

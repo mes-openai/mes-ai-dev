@@ -1,0 +1,24 @@
+{
+  "skill": "mes-deliver-execute-deploy",
+  "eval_name": "graph-status-not-deploy-result",
+  "goal": "验证部署执行结论必须来自部署日志、冒烟验证和回滚结果，而不是图谱状态判断。",
+  "input": "graphify 导读显示发布链路关系完整，GitNexus 显示消费者依赖未发生新增；但部署日志记录 workorder-service 启动失败，冒烟验证 /api/workorder/report 返回 500，回滚执行记录显示已恢复上一版本且回滚后冒烟通过。",
+  "graph_guidance": "graphify / GitNexus 只用于说明候选调用链、消费者关系和排查导航。",
+  "formal_evidence": "正式部署执行结论必须依据部署日志、命令输出、冒烟验证记录、监控观察、回滚执行记录和回滚后验证结果。",
+  "conflict_precedence": "当图谱状态与部署日志、冒烟验证或回滚结果冲突时，以真实部署执行证据为准。",
+  "expected_behavior": [
+    "不得因图谱显示链路完整或依赖正常而判定部署成功",
+    "应基于启动失败和冒烟 500 判定本次部署未成功或触发 No-Go/回滚",
+    "应记录回滚执行与回滚后冒烟通过作为恢复证据",
+    "可使用图谱导读辅助后续排查影响面，但不得替代部署执行结论"
+  ],
+  "acceptance_criteria": [
+    "明确区分图谱导读与正式部署执行证据",
+    "部署结论来自日志、冒烟验证、监控和回滚记录",
+    "冲突时以真实部署和回滚证据为准",
+    "不引入真实 GitNexus 或 graphify 运行依赖"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

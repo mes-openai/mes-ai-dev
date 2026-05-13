@@ -19,7 +19,7 @@
 
 ### 2. 读取设计文档和现有配置
 按顺序读取：
-1. `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/design.md` - OpenSpec 详细设计主文档（配置相关部分）
+1. `mes-ai-dev/workspace/designs/{REQ-ID}/design.md` - OpenSpec 详细设计主文档（配置相关部分）
 2. `mes-ai-dev/knowledge/code-map/services/service-xxx/detail.md` - 服务配置信息
 
 ### 3. 定位配置文件路径

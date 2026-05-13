@@ -8,6 +8,8 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 单元测试生成主线优先读取输入依赖、输出产物、执行步骤与输出示例模块。
 - 触发边界、代码规范、质量检查与注意事项模块仅在当前任务需要时进入。
+- 生成单元测试时必须优先满足 JUnit 5 + Mockito + JDK8、`@Nested` 方法分组、Windows / Linux 路径兼容与 Mockito 最佳实践；GitNexus / graphify 只可作为回归范围与证据关系导读，不得替代真实测试执行与覆盖率结论。
+- 覆盖率门禁为行覆盖率 100%、分支覆盖率 100%、方法覆盖率 100%；断言必须覆盖状态码/结果标识与核心业务数据。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -40,5 +42,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

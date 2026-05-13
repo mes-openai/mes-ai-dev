@@ -2,9 +2,9 @@
 
 ## 输入
 
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/spec.md` - OpenSpec 需求规格主文档
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/tech-approach.md` - 技术方案文档
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/api-design.md` - API接口设计文档
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/spec.md` - OpenSpec 需求规格主文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/tech-approach.md` - 技术方案文档
+- `mes-ai-dev/workspace/designs/{REQ-ID}/api-design.md` - API接口设计文档
 - `mes-ai-dev/knowledge/code-map/frontend-overview.md` - 前端总览
 - `mes-ai-dev/knowledge/code-map/modules/module-xxx/detail.md` - 模块详情索引
 - `mes-ai-dev/knowledge/dependency-graph/frontend-backend-map.md` - 前后端映射

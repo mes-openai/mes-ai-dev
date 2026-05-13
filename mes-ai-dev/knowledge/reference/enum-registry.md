@@ -1,7 +1,7 @@
 # 枚举注册表
 
-> 由 `/mes-init-project` 阶段自动生成，用于汇总系统中的状态码、类型码与标志位定义。
-> 本模板在初始化阶段由 `mes-init-extract-reference` 扫描枚举类、常量类与相关注释后补全。
+> 本文件为项目侧枚举注册表知识产物，由 `/mes-init-project` 或 `/mes-refresh-knowledge` 根据代码仓事实生成/刷新。
+> 结构模板来源：`.opencode/references/mes-ai-reference/templates/reference/enum-registry-template.md`；SDK 升级不得覆盖本文件。
 
 ## 状态码注册表
 

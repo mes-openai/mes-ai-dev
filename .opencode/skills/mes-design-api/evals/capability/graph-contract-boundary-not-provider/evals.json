@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-api",
+  "eval_name": "graph-contract-boundary-not-provider",
+  "goal": "验证 API 设计不会把图谱推断替代 Provider 选择、接口契约边界和 design.md / api-design.md 正式结论。",
+  "design_input": "需求要求报工提交接口返回新增校验结果字段，已确认复用 workorder 服务报工接口；是否调用 quality Provider 需要基于既有契约和服务链冻结结论确认。",
+  "graph_assistance": "GitNexus 显示 workorder controller 与 quality client 有历史调用候选；graphify 导读把报工、质检结果、设备状态关联到同一图谱，但未提供接口定义、Provider 契约或错误码事实源。",
+  "expected_behavior": [
+    "应将 GitNexus Provider 关系标为候选并回到 API registry、restService 配置、Provider 接口定义或代码定义点验证",
+    "应说明 graphify 仅为接口关系导读，不能替代请求响应、错误码、幂等性和兼容性设计",
+    "正式接口契约、Provider 选择理由和禁止路径必须写入 design.md 或 api-design.md",
+    "不得因为图谱相邻关系新增未确认 Provider、网关接口、聚合接口或平行 API",
+    "新增或变更接口必须映射到开发任务、接口测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "Provider 选择有事实源和选择理由，不来自图谱推断",
+    "请求响应、错误码和兼容边界形成正式设计结论",
+    "未新增未确认的聚合接口、平行接口或中间层",
+    "接口设计对象已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

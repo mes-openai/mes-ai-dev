@@ -2,7 +2,7 @@
   "skill": "mes-refresh-detect-changes",
   "dataset_version": "2.0.0",
   "focus": "代码变更检测",
-  "case_count": 3,
+  "case_count": 5,
   "cases": [
     {
       "id": "docs-only-no-heavy-refresh",
@@ -18,6 +18,16 @@
       "id": "incomplete-change-list",
       "title": "验证变更完整性检查。",
       "path": "capability/incomplete-change-list/evals.json"
+    },
+    {
+      "id": "graph-assisted-refresh-boundary",
+      "title": "验证图谱辅助刷新边界。",
+      "path": "capability/graph-assisted-refresh-boundary/evals.json"
+    },
+    {
+      "id": "small-diff-graph-large-impact-no-full-refresh",
+      "title": "验证小 diff 与图谱大影响面不触发无边界全量刷新。",
+      "path": "capability/small-diff-graph-large-impact-no-full-refresh/evals.json"
     }
   ]
 }

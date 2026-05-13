@@ -3,7 +3,7 @@
 ### 6. 开发Service实现类
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/service/impl/XxxServiceImpl.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-service-template.java`（第二部分：Service实现类）
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-service-template.java`（第二部分：Service实现类）
 
 执行步骤：
 1. 读取模板文件（Service实现类部分）
@@ -25,7 +25,7 @@
 ### 7. 开发分页VO（如需要）
 创建文件：`jalor/service-xxx/src/main/java/com/jalor/xxx/vo/PageVO.java`
 
-参考代码模板：`mes-ai-dev/templates/backend-page-vo-template.java`
+参考代码模板：`.opencode/references/mes-ai-reference/templates/backend-page-vo-template.java`
 
 执行步骤：
 1. 读取模板文件

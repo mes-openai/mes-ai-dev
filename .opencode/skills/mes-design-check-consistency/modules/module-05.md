@@ -21,13 +21,13 @@
 ```
 
 ### 2. 读取前置输入
-- `workspace/designs/REQ-YYYYMMDD-XXX/design.md`
-- `workspace/designs/REQ-YYYYMMDD-XXX/api-design.md`
-- `workspace/designs/REQ-YYYYMMDD-XXX/database-design.md`
+- `workspace/designs/{REQ-ID}/design.md`
+- `workspace/designs/{REQ-ID}/api-design.md`
+- `workspace/designs/{REQ-ID}/database-design.md`
 - 涉及服务的 `detail.md`（第1层完整版）
 - `knowledge/code-map/patterns.md`
-- `knowledge/reference/error-code-registry.md`
-- `knowledge/reference/enum-registry.md`
+- `mes-ai-dev/knowledge/reference/error-code-registry.md`
+- `mes-ai-dev/knowledge/reference/enum-registry.md`
 
 **Step Gate A**：设计输入或参考基线读取不完整 → 打回步骤2重做，不得进入各维度一致性对比。
 
@@ -59,6 +59,6 @@
 
 ### 8. 生成报告
 使用 `templates/cross-service-consistency-template.md` 模板生成报告：
-- `workspace/designs/REQ-YYYYMMDD-XXX/cross-service-consistency.md`
+- `workspace/designs/{REQ-ID}/cross-service-consistency.md`
 
 **Step Gate C**：一致性报告缺少冲突分级、建议或服务覆盖范围 → 打回步骤8重做，不得交付设计决策阶段。

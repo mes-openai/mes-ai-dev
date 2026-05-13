@@ -92,4 +92,4 @@
 3. 说明已知限制和规避方案
 4. 列出后续迭代计划
 5. 生成交付确认矩阵（各角色确认事项）
-6. 产出写入：`mes-ai-dev/workspace/delivery/REQ-YYYYMMDD-XXX/delivery-scope.md`
+6. 产出写入：`mes-ai-dev/workspace/delivery/{REQ-ID}/delivery-scope.md`

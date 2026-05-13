@@ -1,8 +1,9 @@
 {
   "skill": "mes-test-generate-integration",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-guided-real-execution-boundary"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充图谱辅助集成测试范围导读不得替代真实执行证据的回归样例。"
 }

@@ -29,19 +29,23 @@ description: "执行完整需求分析，从业务语言到需求规格文档"
 > **多仓 / provider 决策说明**：
 > 若需求涉及多个代码仓、多个微服务、多个候选 provider 或现有接口复用，需求分析阶段必须形成仓级责任边界、provider 选择与 API 复用判断。
 > 相关主定义以以下文件为准：
-> - `mes-ai-dev/knowledge/rules/scenarios/scenario-multi-repo.md`
-> - `mes-ai-dev/knowledge/rules/phases/phase-analyze.md`
+> - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-multi-repo.md`
+> - `.opencode/references/mes-ai-reference/rules/phases/phase-analyze.md`
 > 本命令只负责要求这些产物必须形成，不再重复完整展开其原理定义。
 
 **预期耗时**：约10-20分钟
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
 
-**审查报告强制要求**：本命令中所有评审/门禁结果必须输出详细审查报告，不得仅输出简略结论或问题清单；详细审查报告结构必须符合 `mes-ai-dev/knowledge/rules/governance/review-report-standard.md`，如使用专用模板，再以 `mes-ai-dev/templates/governance/detailed-review-report-template.md` 作为落盘载体。
+**图谱/TDD Skill 继承说明**：当本命令编排的 Skill 命中 GitNexus / graphify / TDD 单元测试场景时，默认继承 `.opencode/references/mes-ai-reference/rules/governance/skill-graph-tdd-consumption-standard.md`；图谱能力仅作为证据导航或导读，不替代事实证据、阶段结论或门禁判断；TDD/Mockito/路径兼容规则以该统一标准为准。
+
+**阶段工作目录命名说明**：本命令必须遵循 `.opencode/references/mes-ai-reference/rules/governance/stage-workspace-directory-standard.md`。执行前先解析 `{REQ-ID}`：文档内存在 `US[0-9]+` 时使用 US 编号；无 US 但存在 `ITRQ[0-9]+` 时使用 ITRQ 编号；两者均无时才生成 `REQ-YYYYMMDD-{序号}`。需求分析产物只允许写入 `mes-ai-dev/workspace/requirements/{REQ-ID}/`。
+
+**审查报告强制要求**：本命令中所有评审/门禁结果必须输出详细审查报告，不得仅输出简略结论或问题清单；详细审查报告结构必须符合 `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`，如使用专用模板，再以 `.opencode/references/mes-ai-reference/templates/governance/detailed-review-report-template.md` 作为落盘载体。
 
 **阶段详细审查报告**：
 - `/mes-analyze-requirement` 完成后必须输出 `spec-review-report.md`
-- 落盘目录：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/`
+- 落盘目录：`mes-ai-dev/workspace/requirements/{REQ-ID}/`
 - 报告必须满足详细审查报告最小字段集，并包含明确审查时间与完整证据链
 - 报告未生成或内容不达标，不得通过需求分析阶段退出门禁
 
@@ -117,11 +121,11 @@ description: "执行完整需求分析，从业务语言到需求规格文档"
 
 ### 七、模板绑定说明
 
-- 命中 blocker 时，应使用 `mes-ai-dev/templates/governance/blocker-record-template.md` 记录歧义分类、代偿动作与后补动作
-- 以 GSD Continue Exit 继续时，应使用 `mes-ai-dev/templates/governance/minimum-deliverable-template.md` 说明最小需求包
-- 当前需求分析完成状态，应映射到 `mes-ai-dev/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
-- 分析阶段结束前，应使用 `mes-ai-dev/templates/governance/completion-sweep-template.md` 执行收尾扫描
-- 若需独立输出下一步建议，应使用 `mes-ai-dev/templates/governance/next-step-recommendation-template.md`
+- 命中 blocker 时，应使用 `.opencode/references/mes-ai-reference/templates/governance/blocker-record-template.md` 记录歧义分类、代偿动作与后补动作
+- 以 GSD Continue Exit 继续时，应使用 `.opencode/references/mes-ai-reference/templates/governance/minimum-deliverable-template.md` 说明最小需求包
+- 当前需求分析完成状态，应映射到 `.opencode/references/mes-ai-reference/templates/governance/definition-of-done-template.md` 的 GSD 完成定义
+- 分析阶段结束前，应使用 `.opencode/references/mes-ai-reference/templates/governance/completion-sweep-template.md` 执行收尾扫描
+- 若需独立输出下一步建议，应使用 `.opencode/references/mes-ai-reference/templates/governance/next-step-recommendation-template.md`
 
 ## 编排流程
 

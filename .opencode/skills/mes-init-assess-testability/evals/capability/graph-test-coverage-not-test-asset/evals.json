@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-assess-testability",
+  "eval_name": "graph-test-coverage-not-test-asset",
+  "goal": "验证测试资产可用性评估不得把图谱覆盖关系当作真实测试资产。",
+  "input": "GitNexus 显示 OrderService 被 OrderServiceTest 覆盖，但仓库 src/test、test、__tests__ 中未发现对应测试文件或可执行测试配置。",
+  "expected_behavior": [
+    "以真实测试文件、测试配置与可执行入口作为测试资产确认依据",
+    "将图谱覆盖关系标记为候选或未知",
+    "不得将该服务评估为已有可用回归覆盖",
+    "输出无回归入口或待补证清单"
+  ],
+  "acceptance_criteria": [
+    "确认测试资产必须引用真实测试文件路径或执行配置",
+    "图谱覆盖关系不得替代测试资产事实",
+    "缺失测试文件时必须识别回归缺口",
+    "结果不得污染后续 test 阶段测试计划"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-frontend-component",
+  "eval_name": "component-local-scope",
+  "goal": "验证组件修改保持局部。",
+  "input": "当前只需修复一个组件的展示问题，但图谱提示可顺手抽成公共组件。",
+  "expected_behavior": [
+    "应优先局部修复当前组件",
+    "应避免无关抽公共组件、无关重构和顺手优化",
+    "应把图谱仅用于确认受影响边界"
+  ],
+  "acceptance_criteria": [
+    "能保持组件变更局部",
+    "能拒绝无关组件拆分",
+    "能与现有页面结构一致"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

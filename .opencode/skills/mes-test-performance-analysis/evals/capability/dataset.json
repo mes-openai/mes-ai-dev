@@ -1,8 +1,9 @@
 {
   "skill": "mes-test-performance-analysis",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "graph-scope-requires-benchmark-evidence"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充图谱辅助性能分析范围不得替代基准测试、执行指标和回归证据的样例。"
 }

@@ -9,7 +9,7 @@
 ## 建议证据片段
 - `workspace/REQ-xxx/deliverable/tech-approach.md`
 - `mes-ai-dev/knowledge/dependency-graph/`
-- `mes-ai-dev/knowledge/reference/`
+- `.opencode/references/mes-ai-reference/reference/`
 
 ## 观察点
 - 该用例模拟的核心异常/风险是：最终技术决策没有绑定需求、现状或约束证据。

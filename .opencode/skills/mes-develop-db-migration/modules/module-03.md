@@ -21,12 +21,12 @@
 
 ### 2. 读取DDL/DML脚本
 读取已生成的数据库脚本：
-- `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/ddl-xxx.sql` - DDL脚本
-- `mes-ai-dev/workspace/development/REQ-YYYYMMDD-XXX/database/dml-xxx.sql` - DML脚本（如有）
+- `mes-ai-dev/workspace/development/{REQ-ID}/database/ddl-xxx.sql` - DDL脚本
+- `mes-ai-dev/workspace/development/{REQ-ID}/database/dml-xxx.sql` - DML脚本（如有）
 
 ### 3. 读取数据库设计文档
 读取完整数据库变更范围：
-- `mes-ai-dev/workspace/designs/REQ-YYYYMMDD-XXX/database-design.md` - 数据库设计
+- `mes-ai-dev/workspace/designs/{REQ-ID}/database-design.md` - 数据库设计
 
 **Step Gate A**：DDL/DML脚本或数据库设计输入不完整 → 打回步骤2-3重做，不得进入迁移顺序设计。
 

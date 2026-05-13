@@ -2,7 +2,7 @@
 
 ## 规则依赖
 
-- `mes-ai-dev/knowledge/rules/state-rendering-spec.md`：sync 节点写入后，必须按规范刷新摘要/兼容视图，不得自定义字段结构
+- `.opencode/references/mes-ai-reference/rules/state-rendering-spec.md`：sync 节点写入后，必须按规范刷新摘要/兼容视图，不得自定义字段结构
 
 ### 语义变更等级定义
 

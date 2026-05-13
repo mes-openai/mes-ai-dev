@@ -1,8 +1,18 @@
 {
   "skill": "mes-refresh-update-api-registry",
-  "dataset_version": "1.0.0",
+  "dataset_version": "2.0.0",
+  "focus": "API注册表更新",
+  "case_count": 2,
   "cases": [
-    "core-flow"
-  ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+    {
+      "id": "core-flow",
+      "title": "验证核心执行路径。",
+      "path": "capability/core-flow/evals.json"
+    },
+    {
+      "id": "graph-route-hint-not-api-change",
+      "title": "验证图谱路由导读不得替代真实 API 变更证据。",
+      "path": "capability/graph-route-hint-not-api-change/evals.json"
+    }
+  ]
 }

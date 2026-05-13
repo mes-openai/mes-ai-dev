@@ -1,0 +1,22 @@
+{
+  "skill": "mes-refresh-validate-quality",
+  "eval_name": "reject-graph-inference-as-confirmed-knowledge",
+  "goal": "验证质量校验必须识别 GitNexus / graphify 图谱推断被误写为确认知识的问题。",
+  "input": "刷新产物将 graphify 导读中的潜在调用链写入 dependency-graph 为确认依赖边，并将 GitNexus 推断的候选消费者写入 code-map 为已确认影响模块；git diff、state.yaml、refresh-hints.md 和源码定义点均未提供对应确认事实。",
+  "expected_behavior": [
+    "应识别图谱推断被误写为确认知识的质量问题",
+    "应要求将相关内容回退、移除或改写为候选 / 待复核项",
+    "应检查确认知识是否有 git diff、state.yaml、refresh-hints.md、源码、配置、DB、契约或人工确认支撑",
+    "应明确 graphify 导读不得替代刷新产物正文、状态源或人工复核结论",
+    "不得给出质量通过结论，除非推断与事实边界已修正"
+  ],
+  "acceptance_criteria": [
+    "质量结论为不通过或有条件通过，并列出必须修复项",
+    "误写为确认知识的图谱推断被定位到具体知识文件或条目",
+    "修复建议要求补充真实证据或降级为候选待复核",
+    "审核报告明确区分事实、推断和未知"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -24,7 +24,7 @@
 整合之前的所有分析输出：
 
 #### 2.1 需求解析和影响分析
-读取文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+读取文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 
 整合内容：
 - 需求编号和类型
@@ -35,7 +35,7 @@
 - 仓库影响清单
 
 #### 2.2 业务流程追踪
-读取文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/business-flow-trace.md`
+读取文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/business-flow-trace.md`
 
 整合内容：
 - 前端调用链路
@@ -46,8 +46,8 @@
 
 #### 2.3 条件 OpenSpec 产物
 按需读取：
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/exploration.md`
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/proposal.md`
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/exploration.md`
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/proposal.md`
 
 整合内容：
 - 已澄清的歧义与边界
@@ -60,10 +60,10 @@
 
 ### 3. 读取模板文件
 需求规格文档统一使用：
-- `mes-ai-dev/templates/analyze/requirement-spec-template.md`
+- `.opencode/references/mes-ai-reference/templates/analyze/requirement-spec-template.md`
 
 NFR 清单统一使用：
-- `mes-ai-dev/templates/test/nfr-checklist-template.md`
+- `.opencode/references/mes-ai-reference/templates/test/nfr-checklist-template.md`
 
 > **模板使用要求**：
 > - 模板只提供章节结构与字段骨架，不可原样保留占位文本

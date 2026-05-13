@@ -12,6 +12,12 @@
 - 增量刷新优先，不重新全量扫描
 - 优先消费 develop/deliver 产出的 `refresh-hints.md`
 - 不得在未识别变更范围时直接覆盖共享知识文件
+- 编码前思考：刷新前明确变更输入、刷新边界、受影响知识层、证据来源和 converge 判断
+- 简洁优先：只刷新受影响知识，不重写无关共享文件
+- 精准修改：仅更新与本次变更直接相关的知识文件或状态片段
+- 目标驱动执行：以变更检测结果、受影响文件清单、更新证据、未更新原因和新鲜度状态作为完成标准
+- 可按需使用 GitNexus 类代码知识图谱检测依赖影响面、API/服务映射和需刷新对象
+- 可按需使用 graphify 类能力表达变更对象、知识文件、依赖关系与后续动作之间的关系
 
 **触发命令**：`/mes-refresh-knowledge`
 
@@ -24,6 +30,48 @@
 - 开发完成后同步知识库
 - 代码仓库有新提交需要同步
 - 定期维护知识库
+
+---
+
+## 一点五、刷新覆盖范围 vs 初始化产物对照
+
+> 知识刷新会更新初始化阶段产出的**结构化知识**（code-map、api-registry、dependency-graph），但 reference/rules 类共享知识通常需要后续 converge 重算。
+
+```mermaid
+flowchart TB
+    subgraph INIT_PRODUCTS ["初始化产物"]
+        direction TB
+        STRUCTURAL["结构化知识 增量可刷"]
+        SHARED["全局共享知识 需 converge 重算"]
+        REFERENCE["参考规则知识 通常不自动刷"]
+    end
+
+    STRUCTURAL --> S1["code-map<br>services/*/index.md detail.md<br>modules/*/index.md<br>backend-overview.md frontend-overview.md"]
+    STRUCTURAL --> S2["api-registry.md<br>services/*/api-registry.md"]
+    STRUCTURAL --> S3["dependency-graph<br>service-dependencies.md<br>frontend-backend-map.md"]
+    STRUCTURAL --> S4["database-index<br>schema-*/index.md tables.md"]
+
+    SHARED --> H1["hot层<br>hot-services.md hot-apis.md hot-tables.md"]
+    SHARED --> H2["深度知识<br>business-flows.md ownership.md<br>patterns.md legacy-debt.md"]
+
+    REFERENCE --> R1["terminology-glossary.md 术语表"]
+    REFERENCE --> R2["domain-model.md 领域模型"]
+    REFERENCE --> R3["data-dictionary.md 数据字典"]
+    REFERENCE --> R4["enum-registry.md 枚举注册表"]
+    REFERENCE --> R5["error-code-registry.md 错误码"]
+    REFERENCE --> R6["api-conventions.md API约定"]
+    REFERENCE --> R7["coding-standards.md 编码规范"]
+
+    style STRUCTURAL fill:#C8E6C9,stroke:#388E3C
+    style SHARED fill:#FFF9C4,stroke:#F57C00
+    style REFERENCE fill:#FFCDD2,stroke:#C62828
+```
+
+| 产物类别 | 刷新策略 | 触发条件 |
+|----------|---------|---------|
+| **结构化知识** (code-map, api-registry, dependency-graph, database-index) | 增量刷新 | 代码变更直接触发对应文件更新 |
+| **全局共享知识** (hot层, business-flows, ownership, patterns, legacy-debt) | 需 converge 重算 | 刷新影响 overview/registry/hot 基础数据时，需后续执行 `/mes-init-converge` |
+| **参考规则知识** (terminology, domain-model, enum-registry, api-conventions 等) | 通常不自动刷 | 仅在新增枚举/错误码/SDK模型等场景下，命中 `scenario-shared-knowledge-converge` 才会更新 |
 
 ---
 
@@ -40,7 +88,7 @@ flowchart TB
     DETECT_DIRECT --> STEP1
 
     subgraph S1 ["Step 1: 检测变化范围"]
-        STEP1["mes-refresh-detect-changes<br>对比代码仓与知识库差异<br>识别受影响的代码 模式 与契约<br>生成变更影响清单"]
+        STEP1["mes-refresh-detect-changes<br>对比代码仓与知识库差异<br>识别受影响的代码 模式 与契约<br>按需使用 GitNexus 检测依赖影响面<br>生成变更影响清单"]
     end
 
     STEP1 --> GATE_S1{"Step 1 门禁<br>变更范围已明确?"}
@@ -68,7 +116,7 @@ flowchart TB
     GATE_S2 -->|"通过"| STEP5
 
     subgraph S5 ["Step 5: 质量验证"]
-        STEP5["mes-refresh-validate-quality<br>校验更新后知识的一致性<br>检查覆盖率与可信度<br>识别缺失或冲突"]
+        STEP5["mes-refresh-validate-quality<br>校验更新后知识的一致性<br>检查覆盖率与可信度<br>识别缺失或冲突<br>按需补充 graphify 刷新关系导读"]
     end
 
     STEP5 --> GATE_S3{"Step 5 门禁<br>质量验证通过?"}

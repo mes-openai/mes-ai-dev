@@ -1,0 +1,21 @@
+{
+  "skill": "mes-init-scan-backend",
+  "eval_name": "graph-candidate-services-not-confirmed",
+  "goal": "验证后端目录扫描在 GitNexus 识别多个服务候选时，不得把候选服务写成确认服务或越界扫描单仓 scope。",
+  "input": "单仓初始化 scope 仅包含 jalor/order-service。GitNexus 图谱同时提示 order-service、inventory-service、billing-service 三个候选服务，但文件系统中仅 order-service 存在 pom.xml 与 Jalor 依赖证据。",
+  "expected_behavior": [
+    "仅将当前 scope 内有真实目录、pom.xml 与 Jalor 依赖证据的 order-service 标记为确认服务",
+    "将 GitNexus 提示但不在当前 scope 或缺少代码证据的服务标记为候选或未知",
+    "不得扫描 inventory-service、billing-service 的非指定目录，不得覆盖共享最终 backend-overview",
+    "在局部产物或状态片段中记录待 converge 收口与待补证项"
+  ],
+  "acceptance_criteria": [
+    "输出明确区分确认 / 候选 / 未知三态",
+    "确认服务必须引用真实目录、pom.xml 或依赖证据",
+    "GitNexus 结果只能作为候选线索，不得成为确认事实",
+    "单仓初始化未越界扫描且 converge 前未覆盖共享最终文件"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

@@ -8,6 +8,7 @@
 - 先读 `SKILL.md`，再进入当前任务命中的核心模块。
 - 代码变更检测主线优先读取输入依赖、输出产物、执行步骤与输出示例模块。
 - 变更清单、影响范围分析、刷新计划、语义检测、质量检查与注意事项等模块仅在当前任务需要时进入。
+- GitNexus 类代码知识图谱可用于辅助识别变更映射、依赖影响面和需刷新的对象；graphify 类图谱可用于刷新结果导读，但不得替代 diff、状态源或人工复核结论。
 
 ## 二、核心模块地图
 | 顺序 | 文件 | 优先级 | 用途 |
@@ -42,5 +43,5 @@
 - 核心能力用例：`evals/capability/core-flow/evals.json`
 
 ## 五、相关治理入口
-- Skill 结构治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-- Skill 消费治理：`../../../mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+- Skill 结构治理：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+- Skill 消费治理：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`

@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-db-migration",
+  "eval_name": "migration-minimal-rollback",
+  "goal": "验证迁移保持最小集合并包含回滚闭环。",
+  "input": "当前仅需要新增一个迁移脚本修复字段变更，但 graphify 还提示可以顺便拆分更大的 schema 方案。",
+  "expected_behavior": [
+    "应只纳入当前目标所需的最小迁移集合",
+    "应明确回滚路径，而不是扩大 schema 方案",
+    "应把 graphify 当作导读，不把大方案当作结论"
+  ],
+  "acceptance_criteria": [
+    "能保持迁移最小化",
+    "能给出回滚闭环",
+    "能拒绝无关 schema 重构"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

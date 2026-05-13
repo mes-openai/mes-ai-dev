@@ -48,11 +48,11 @@
 **Step Gate C**：新需求/迭代需求判断依据不足或关联历史需求未校准 → 打回步骤5重做，不得生成 raw-requirement 文档。
 
 ### 6. 生成交付文件
-输出文件：`mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/raw-requirement.md`
+输出文件：`mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md`
 
 若命中 OpenSpec 条件产物触发条件，还必须同步生成：
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/exploration.md`（命中探索触发条件时）
-- `mes-ai-dev/workspace/requirements/REQ-YYYYMMDD-XXX/proposal.md`（命中方案取舍或用户确认触发条件时）
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/exploration.md`（命中探索触发条件时）
+- `mes-ai-dev/workspace/requirements/{REQ-ID}/proposal.md`（命中方案取舍或用户确认触发条件时）
 
 `exploration.md` 与 `proposal.md` 不得替代 `spec.md`，其结论必须在后续规格生成阶段被吸收到 `spec.md`。
 

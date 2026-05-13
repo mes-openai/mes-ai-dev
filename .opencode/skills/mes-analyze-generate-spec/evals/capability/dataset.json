@@ -1,9 +1,10 @@
 {
   "skill": "mes-analyze-generate-spec",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
     "core-flow",
-    "proposal-absorption"
+    "proposal-absorption",
+    "graph-guide-not-spec"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充 graphify 导读不得替代正式规格的回归样例。"
 }

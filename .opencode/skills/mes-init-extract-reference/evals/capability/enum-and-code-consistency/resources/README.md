@@ -7,7 +7,7 @@
 - 代码中的枚举、错误码和文档术语存在不一致。
 
 ## 建议证据片段
-- `mes-ai-dev/knowledge/reference/`
+- `.opencode/references/mes-ai-reference/reference/`
 - `jalor/src/main/java/.../enums/`
 - `jalor/src/main/java/.../constants/`
 

@@ -18,7 +18,7 @@ description: "Main orchestrator agent for decomposition, delegation, checkpoint 
 | 输入项 | 路径 | 用途 |
 |------|------|------|
 | 主规则文件 | `AGENTS.md` | 读取协同规则、门禁、锁、治理要求 |
-| 阶段门禁 | `mes-ai-dev/knowledge/reference/phase-gates.md` | 校验进入/退出条件 |
+| 阶段门禁 | `.opencode/references/mes-ai-reference/reference/phase-gates.md` | 校验进入/退出条件 |
 | 统一状态源 | `mes-ai-dev/knowledge/state/state.yaml` | 续传、局部成功收敛、失败恢复 |
 | 人工摘要 | `mes-ai-dev/knowledge/state/summary.md` | 快速查看状态结论 |
 | 覆盖清单 | `mes-ai-dev/knowledge/init-coverage.md` | 汇总对象级状态（兼容视图） |
@@ -45,7 +45,7 @@ description: "Main orchestrator agent for decomposition, delegation, checkpoint 
    - 局部成功保留
    - pending 对象收敛进 checkpoint
    - 共享知识文件串行更新
-3. `*-completion.md` 优先使用 `mes-ai-dev/templates/completion-template.md`，`*-results.md` 优先使用 `mes-ai-dev/templates/results-template.md`
+3. `*-completion.md` 优先使用 `.opencode/references/mes-ai-reference/templates/completion-template.md`，`*-results.md` 优先使用 `.opencode/references/mes-ai-reference/templates/results-template.md`
 4. 若交接文件缺少“结论 / 风险 / 下一步 / 证据路径”任一节，视为交接失败，不得进入下一阶段
 
 ## 约束规则

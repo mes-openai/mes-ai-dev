@@ -4,7 +4,7 @@
 
 ### 仓规模阈值与强制规则
 
-**阈值定义与强制规则**：统一参考 `mes-ai-dev/knowledge/rules/repository-scale-rules.md`，该文件为单一权威来源。
+**阈值定义与强制规则**：统一参考 `.opencode/references/mes-ai-reference/rules/repository-scale-rules.md`，该文件为单一权威来源。
 
 本 Skill 在判定仓规模时优先读取 `mes-ai-dev/knowledge/state/state.yaml` 的 `initialization.repository_scale.scale_label`，兼容回退读取 `baseline.md`，并根据规则文件调整预算。
 

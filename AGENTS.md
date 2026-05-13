@@ -2,6 +2,13 @@
 
 > 本文件为 MES-AI-DEV 的常驻总则。只保留必须常驻的治理约束、执行模型与规则入口。各阶段细则、特殊场景细则、审查结构、目录布局、共享知识写入等详细规则，统一以下沉文件为准。
 
+## 骨架版本信息
+
+- **当前骨架版本**：v0.1.8
+- **最近修改时间**：2026-05-13 11:47:22
+- **时间精度**：秒
+- **时区**：Asia/Shanghai
+
 ---
 
 ## 一、项目概况
@@ -12,6 +19,7 @@
 - **前端代码仓**：`web/`
 - **数据库脚本仓**：`dbscript/`
 - **骨架工作目录**：`mes-ai-dev/`
+- **SDK 静态引用目录**：`.opencode/references/mes-ai-reference/`
 
 ---
 
@@ -26,7 +34,7 @@
 - 所有结果输出前必须审核逻辑正确性、与现有代码一致性、完整性。
 - 所有步骤级输出在进入下一步骤前必须通过适用门禁审查。
 - 审查不通过时必须返工，不得将未通过结果注入下游。
-- 详细审查与门禁规则见：`mes-ai-dev/knowledge/rules/governance/index.md`。
+- 详细审查与门禁规则见：`.opencode/references/mes-ai-reference/rules/governance/index.md`。
 
 ### 2.3 中文输出
 - 所有 `.md` 文件均使用中文输出。
@@ -40,13 +48,21 @@
 
 ### 2.4.1 Skill 目录化原则
 - 所有骨架 Skill 必须保持目录化结构，不得回退为单文件 Skill。
-- Skill 详细结构见：`mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`。
-- Skill 消费规范见：`mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`。
+- Skill 详细结构见：`.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`。
+- Skill 消费规范见：`.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`。
 
 ### 2.5 骨架修改留痕
 - 修改骨架文件（规则、模板、命令、知识结构、状态规范、示例文件等）时，必须同步更新：`mes-ai-dev/workspace/refresh/skeleton-change-log.md`。
+- 后续任何骨架修改，必须同步更新本文件“骨架版本信息”中的“当前骨架版本”和“最近修改时间”，最近修改时间精确到秒。
 - 若变更涉及标准产物、目录职责、标准文件名或产物说明，需同步刷新相关入口与说明文档。
-- 具体治理要求见：`mes-ai-dev/knowledge/rules/skeleton-change-governance.md`。
+- 版本号递增规则与骨架修改详细治理要求见：`.opencode/references/mes-ai-reference/rules/skeleton-change-governance.md`。
+
+### 2.5.1 SDK 引用与项目产物解耦
+- `.opencode/references/mes-ai-reference/` 仅存放随 SDK 发布和覆盖升级的静态规则、参考、模板与治理文档。
+- 项目过程产物仍写入 `mes-ai-dev/workspace/` 及现有阶段产物目录，不得写入 SDK 静态引用目录。
+- 初始化/刷新代码仓生成的项目知识库仍写入 `mes-ai-dev/knowledge/` 既有路径，不得迁移到 SDK 静态引用目录。
+- 由初始化/刷新维护的知识文件（如术语表、领域模型、数据字典、枚举注册表、错误码注册表、API 规范、编码规范、权限矩阵等）即使被 Skill 或规则引用，也必须保持项目侧路径。
+- 骨架文档迁移或新增时，必须区分“读取 SDK 静态引用”和“写入/读取项目产物、刷新型知识库”，避免相对路径因文档位置变化而落入 `.opencode/references/mes-ai-reference/`。
 
 ### 2.6 执行模式
 骨架支持两种执行模式：
@@ -62,7 +78,7 @@
 - 骨架主规则新增/删除/重构
 - 用户明确要求严格按阶段执行
 
-GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
+GSD 详细规则见：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`。
 
 ---
 
@@ -102,34 +118,35 @@ GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
 5. **再按知识消费矩阵读取知识库内容**
 
 运行时最小入口与索引见：
-- `mes-ai-dev/knowledge/rules/index.md`
-- `mes-ai-dev/knowledge/reference/index.md`
+- `.opencode/references/mes-ai-reference/rules/index.md`
+- `.opencode/references/mes-ai-reference/reference/index.md`
 
 ### 3.4 上下文消费原则
 - 永远不全量读取代码目录。
 - 优先按知识分层消费：overview → index → detail/file-summaries → 精准源码。
 - 涉及多个服务/模块时分批处理。
 - 跨阶段或跨 Agent 交接通过 `workspace/` 文件完成，不依赖对话历史。
-- 具体消费规则优先以 `mes-ai-dev/knowledge/reference/index.md` 与 `mes-ai-dev/knowledge/reference/knowledge-consumption/index.md` 为入口按需读取。
+- 具体消费规则优先以 `.opencode/references/mes-ai-reference/reference/index.md` 与 `.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md` 为入口按需读取。
 
 ---
 
 ## 四、规则入口索引
 
-- Rules 总入口：`mes-ai-dev/knowledge/rules/index.md`
-- Core 规则索引：`mes-ai-dev/knowledge/rules/core/index.md`
-- Phase 规则索引：`mes-ai-dev/knowledge/rules/phases/index.md`
-- Scenario 规则索引：`mes-ai-dev/knowledge/rules/scenarios/index.md`
-- Governance 规则索引：`mes-ai-dev/knowledge/rules/governance/index.md`
+- Rules 总入口：`.opencode/references/mes-ai-reference/rules/index.md`
+- Core 规则索引：`.opencode/references/mes-ai-reference/rules/core/index.md`
+- Phase 规则索引：`.opencode/references/mes-ai-reference/rules/phases/index.md`
+- Scenario 规则索引：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`
+- Governance 规则索引：`.opencode/references/mes-ai-reference/rules/governance/index.md`
 
 ---
 
 ## 五、知识与规则参考入口
 
-- Reference 总入口：`mes-ai-dev/knowledge/reference/index.md`
-- 知识消费入口：`mes-ai-dev/knowledge/reference/knowledge-consumption/index.md`
-- 阶段门禁入口：`mes-ai-dev/knowledge/reference/phase-gates/index.md`
-- 骨架加载矩阵：`mes-ai-dev/knowledge/reference/skeleton-loading-matrix.md`
+- Reference 总入口：`.opencode/references/mes-ai-reference/reference/index.md`
+- 知识消费入口：`.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
+- 阶段门禁入口：`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`
+- 骨架加载矩阵：`.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`
+- SDK 与项目侧路径边界矩阵：`.opencode/references/mes-ai-reference/reference/sdk-project-path-boundary.md`
 
 ---
 
@@ -155,7 +172,7 @@ GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
 - 必要的 memory 台账更新
 
 详细要求见：
-- `mes-ai-dev/knowledge/rules/governance/index.md`
+- `.opencode/references/mes-ai-reference/rules/governance/index.md`
 
 ---
 
@@ -167,8 +184,8 @@ GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
 - 并行机会、交接约束、共享写入与升级路径按下沉规则执行。
 
 详细规则入口：
-- `mes-ai-dev/knowledge/rules/governance/shared-knowledge-write-policy.md`
-- `mes-ai-dev/knowledge/reference/exception-handbook.md`
+- `.opencode/references/mes-ai-reference/rules/governance/shared-knowledge-write-policy.md`
+- `.opencode/references/mes-ai-reference/reference/exception-handbook.md`
 
 ---
 
@@ -195,8 +212,8 @@ GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
 - Skill 作为目录化能力消费时，应按“先索引、后模块、按需深入”的原则读取。
 - 不得把 Skill 细则全文常驻；应按当前任务范围精确加载命中模块。
 - Skill 结构与消费细则按需参考对应治理文档：
-  - `mes-ai-dev/knowledge/rules/governance/skill-structure-standard.md`
-  - `mes-ai-dev/knowledge/rules/governance/skill-consumption-standard.md`
+  - `.opencode/references/mes-ai-reference/rules/governance/skill-structure-standard.md`
+  - `.opencode/references/mes-ai-reference/rules/governance/skill-consumption-standard.md`
 
 ---
 
@@ -204,11 +221,11 @@ GSD 详细规则见：`mes-ai-dev/knowledge/rules/scenarios/index.md`。
 
 以下场景不应默认全文常驻，应命中条件后再加载对应规则：
 - 迭代需求：按分析阶段规则与相关 Skill 处理。
-- 多仓协同：`mes-ai-dev/knowledge/rules/scenarios/index.md`
-- 跨阶段变更：`mes-ai-dev/knowledge/rules/scenarios/index.md`
-- 数据库迁移与回滚：`mes-ai-dev/knowledge/rules/scenarios/index.md`
-- 锁冲突与强制接管：`mes-ai-dev/knowledge/rules/scenarios/index.md`
-- 初始化状态片段与统一收口：`mes-ai-dev/knowledge/rules/phases/index.md` 与 `mes-ai-dev/knowledge/rules/scenarios/index.md`
+- 多仓协同：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`
+- 跨阶段变更：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`
+- 数据库迁移与回滚：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`
+- 锁冲突与强制接管：`.opencode/references/mes-ai-reference/rules/scenarios/index.md`
+- 初始化状态片段与统一收口：`.opencode/references/mes-ai-reference/rules/phases/index.md` 与 `.opencode/references/mes-ai-reference/rules/scenarios/index.md`
 
 ---
 

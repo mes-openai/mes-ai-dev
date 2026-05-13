@@ -1,8 +1,9 @@
 {
   "skill": "mes-init-scan-hotspots",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "cases": [
-    "core-flow"
+    "core-flow",
+    "centrality-not-hotspot-proof"
   ],
-  "notes": "最小能力评测骨架，后续按真实回归样例扩充。"
+  "notes": "补充热点判断不得只依赖图谱中心性的回归样例。"
 }

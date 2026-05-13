@@ -1,0 +1,19 @@
+{
+  "skill": "mes-develop-backend-config",
+  "eval_name": "config-minimal-adjustment",
+  "goal": "验证配置修改保持最小且不扩散。",
+  "input": "需要调整一个配置键以修复启动问题，但 graphify 还提示可以顺便整理其他环境项。",
+  "expected_behavior": [
+    "应只修改当前问题所需的配置键",
+    "应避免无关格式化、无关命名和环境项顺手整理",
+    "应先确认配置事实源而不是依据图谱扩大范围"
+  ],
+  "acceptance_criteria": [
+    "能保持配置改动最小",
+    "能拒绝非目标环境项整理",
+    "能保持与现有配置结构一致"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}

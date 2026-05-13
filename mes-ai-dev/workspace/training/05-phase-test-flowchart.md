@@ -12,6 +12,11 @@
 - 测试阶段不重新定义仓边界、provider 或契约，基于上游已冻结结论做验证
 - TDD 闭环必须核对，不得绕开已确认的测试范围
 - 覆盖率 100% 是硬性要求，只允许追加测试，不允许删除已通过用例
+- 目标驱动执行：先明确测试目标、成功标准、证据路径与未覆盖限制
+- 简洁优先：测试用例聚焦目标行为，不为覆盖率制造复杂、脆弱或无意义断言
+- 精准修改：测试失败后的修复不得扩大到无关代码或无关测试
+- 可按需使用 GitNexus 类代码知识图谱反推影响面、调用链与回归路径
+- 可按需使用 graphify 类能力表达需求项、测试对象、证据与风险之间的追溯关系
 
 **触发命令**：`/mes-test-verify`
 
@@ -36,8 +41,8 @@ flowchart TB
     FIX_ENTER --> GATE_ENTER
     GATE_ENTER -->|"通过"| STEP1
 
-    subgraph S1 ["Step 1: 测试规划"]
-        STEP1["mes-test-plan-cases<br>基于 test-cases.md 已确认计划<br>规划单元测试与集成测试范围<br>识别回归测试点"]
+    subgraph S1 ["Step 1: 确认测试目标与核对 TDD 闭环"]
+        STEP1["核对 test-cases.md<br>确认 AI 初始计划 用户补充区 确认结论 已吸收<br>明确本轮测试范围与回归测试点<br>区分必须验证项 建议验证项 可后补项"]
     end
 
     STEP1 --> GATE_S1{"Step 1 门禁<br>测试范围已明确?"}
@@ -45,7 +50,7 @@ flowchart TB
     GATE_S1 -->|"通过"| STEP2
 
     subgraph S2 ["Step 2: 单元测试生成与执行"]
-        STEP2["mes-test-generate-unit<br>为后端各层生成 JUnit 单元测试<br>核对真实包路径 import 类型<br>执行测试并收集结果"]
+        STEP2["mes-test-generate-unit<br>为后端各层生成 JUnit 单元测试<br>核对真实包路径 import 类型<br>执行测试并收集结果<br>检查 Windows/Linux 路径兼容与 Mockito matcher/NPE 风险"]
     end
 
     STEP2 --> GATE_S2{"Step 2 门禁<br>测试全绿? 覆盖率达标?"}
@@ -77,7 +82,7 @@ flowchart TB
     GATE_S5 -->|"通过"| STEP6
 
     subgraph S6 ["Step 6: 测试报告生成"]
-        STEP6["mes-test-generate-report<br>汇总测试结果与覆盖率<br>记录缺陷分类与风险<br>生成 test-review-report.md"]
+        STEP6["mes-test-generate-report<br>汇总测试结果与覆盖率<br>记录缺陷分类与风险<br>按需补充 graphify 追溯关系导读<br>生成 test-review-report.md"]
     end
 
     STEP6 --> GATE_EXIT{"退出门禁"}
@@ -133,7 +138,7 @@ flowchart TB
 ## 四、测试验证阶段产物结构
 
 ```
-mes-ai-dev/workspace/testing/REQ-YYYYMMDD-XXX/
+mes-ai-dev/workspace/testing/{REQ-ID}/
 ├── deliverable/
 │   └── test-report.md             # 测试总结报告
 ├── report/

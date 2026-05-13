@@ -1,0 +1,23 @@
+{
+  "skill": "mes-design-record-decisions",
+  "eval_name": "graph-candidate-not-adr-decision",
+  "goal": "验证 ADR 决策记录不会把 GitNexus 候选关系或 graphify 导读替代架构决策依据、备选方案和设计文档结论。",
+  "design_input": "需要记录是否新增质量校验聚合层的 ADR。需求只确认报工校验，尚未确认新增中间层；服务链和 Provider 选择需以 design.md 冻结结论为准。",
+  "graph_assistance": "GitNexus 显示 workorder、quality、equipment 多个候选依赖；graphify 导读建议用统一校验聚合层串联多个服务，但缺少正式设计结论、性能依据和人工确认。",
+  "expected_behavior": [
+    "应把 GitNexus 候选依赖记录为背景线索或待验证证据，不得作为 ADR 唯一决策依据",
+    "应说明 graphify 仅为导读，不能替代 ADR 的问题背景、备选方案、选择理由和影响分析",
+    "ADR 必须引用 design.md 中已冻结的服务链、Provider 选择和契约边界，或明确阻断记录直到设计补齐",
+    "不得因图谱建议直接采纳新增中间层、聚合层或平行机制",
+    "ADR 决策必须关联后续开发任务、测试对象和验收标准"
+  ],
+  "acceptance_criteria": [
+    "ADR 区分候选图谱线索、事实源和正式决策依据",
+    "若 design.md 未冻结服务链或 Provider，ADR 不把图谱建议写成已决策",
+    "新增中间层或聚合层必须有非图谱事实依据和取舍理由，否则记录为不采用路径",
+    "决策影响已映射到开发任务、测试对象和验收标准"
+  ],
+  "resources": [
+    "resources/README.md"
+  ]
+}
