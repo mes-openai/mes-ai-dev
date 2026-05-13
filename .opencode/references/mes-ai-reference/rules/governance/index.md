@@ -34,6 +34,7 @@
 - 骨架修改治理：`.opencode/references/mes-ai-reference/rules/skeleton-change-governance.md`
 - 上下文预算优化方案：`.opencode/references/mes-ai-reference/rules/governance/context-budget-optimization-plan.md`
 - 上下文预算优化摘要：`.opencode/references/mes-ai-reference/rules/governance/context-budget-optimization-plan-summary.md`
+- Hook 使用标准：`.opencode/references/mes-ai-reference/rules/governance/hook-usage-standard.md`
 
 ---
 

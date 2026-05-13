@@ -27,6 +27,7 @@
 8. 设计阶段若需生成设计文档，必须先完成 overview → index → detail/file-summaries → 精准源码 的知识消费顺序；不得跳过 overview 与 index 直接产出设计。
 9. Skill 采用目录化结构时，默认读取顺序必须为：`SKILL.md` → `INDEX.md` → 命中的 `modules/*.md` → 按需进入 `evals/` 或其他可选目录。
 10. 不得因为 Skill 已拆分为目录结构，就把整组 `modules/` 正文默认常驻；仍应按当前任务范围精确加载。
+11. 若当前执行环境已接入骨架 Hook，则 Hook 只作为治理护栏、上下文路由与同步提醒；不得替代 command、skill、agent、门禁或正式产物。
 
 ---
 

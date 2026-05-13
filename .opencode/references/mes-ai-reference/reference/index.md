@@ -44,6 +44,7 @@
 - 骨架加载矩阵：`.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`
 - 阶段门禁索引：`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`
 - 技能索引：`.opencode/references/mes-ai-reference/reference/phase-skill-index.md`
+- Hook 使用标准：`.opencode/references/mes-ai-reference/rules/governance/hook-usage-standard.md`
 
 ---
 

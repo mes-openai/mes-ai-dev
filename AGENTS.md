@@ -4,8 +4,8 @@
 
 ## 骨架版本信息
 
-- **当前骨架版本**：v0.1.8
-- **最近修改时间**：2026-05-13 11:47:22
+- **当前骨架版本**：v0.1.13
+- **最近修改时间**：2026-05-13 16:49:56
 - **时间精度**：秒
 - **时区**：Asia/Shanghai
 
@@ -147,6 +147,7 @@ GSD 详细规则见：`.opencode/references/mes-ai-reference/rules/scenarios/ind
 - 阶段门禁入口：`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`
 - 骨架加载矩阵：`.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`
 - SDK 与项目侧路径边界矩阵：`.opencode/references/mes-ai-reference/reference/sdk-project-path-boundary.md`
+- Hook 使用标准：`.opencode/references/mes-ai-reference/rules/governance/hook-usage-standard.md`
 
 ---
 
