@@ -283,3 +283,10 @@
 - 执行 /mes-skeleton-reset，清理项目阶段产物、知识库索引与状态文件。
 - 生成清理报告：workspace/refresh/skeleton-reset-report-20260513-131557.md
 
+
+## 2026-05-13 13:50:58 全新工程二次清理
+- 补充清理 workspace/init/ 旧初始化产物。
+- 删除 workspace/command-agent-skill-relationship.md，降低新工程 workspace 残留噪音。
+- 生成补充清理报告：workspace/refresh/skeleton-reset-report-20260513-135058.md。
+- 保留 workspace/examples/ 与 workspace/training/ 作为骨架参考材料。
+
