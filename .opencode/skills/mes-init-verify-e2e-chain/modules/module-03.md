@@ -13,17 +13,17 @@
   3. 标记链路中的断层（无法追踪的环节）
   4. 标记链路中的黑盒（依赖但无法解析的调用）
   5. 生成 e2e-chains.md
-预期产出：knowledge/code-map/e2e-chains.md
+预期产出：mes-ai-dev/knowledge/code-map/e2e-chains.md
 风险：部分链路可能因代码仓不完整而无法追踪
 ```
 
 ### 2. 读取前置输入
 
-- `knowledge/code-map/business-flows.md` — 核心业务动作列表
-- `knowledge/dependency-graph/frontend-backend-map.md` — 前后端映射
-- `knowledge/dependency-graph/service-dependencies.md` — 服务调用关系
-- `knowledge/dependency-graph/api-registry.md` — API注册表
-- `knowledge/dependency-graph/database-registry.md` — 数据库注册表
+- `mes-ai-dev/knowledge/code-map/business-flows.md` — 核心业务动作列表
+- `mes-ai-dev/knowledge/dependency-graph/frontend-backend-map.md` — 前后端映射
+- `mes-ai-dev/knowledge/dependency-graph/service-dependencies.md` — 服务调用关系
+- `mes-ai-dev/knowledge/dependency-graph/api-registry.md` — API注册表
+- `mes-ai-dev/knowledge/dependency-graph/database-registry.md` — 数据库注册表
 
 **Step Gate A**：前置输入不完整或核心业务动作范围不清 → 打回步骤2重做，不得进入逐链路追踪。
 

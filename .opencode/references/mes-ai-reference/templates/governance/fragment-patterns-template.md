@@ -1,13 +1,13 @@
 # 实现模式片段模板
 
-> 用于 `knowledge/fragments/code-map/patterns/*.md`。
+> 用于 `mes-ai-dev/knowledge/fragments/code-map/patterns/*.md`。
 > 仅作为全局实现模式/反模式收口前的局部结果片段。
 
 ## 一、片段元信息
 
 | 字段 | 内容 |
 |------|------|
-| 片段文件 | `code-map/patterns/[scope].md` |
+| 片段文件 | `mes-ai-dev/knowledge/code-map/patterns/[scope].md` |
 | scope 类型 | [repo/service/module] |
 | scope 标识 | [如：mes-production] |
 | 生成时间 | [时间] |

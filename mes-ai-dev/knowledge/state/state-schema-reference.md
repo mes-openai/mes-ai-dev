@@ -1,7 +1,7 @@
 # state.yaml 字段参考
 
-> 本文档用于解释 `state/state.yaml` 关键字段的语义、层级、写入时机与示例结构。
-> 若字段说明与 `state.yaml` 示例、`rules/state/state-rendering-index.md` 及其分片冲突，以状态规则与 `state.yaml` 结构为准。
+> 本文档用于解释 `mes-ai-dev/knowledge/state/state.yaml` 关键字段的语义、层级、写入时机与示例结构。
+> 若字段说明与 `mes-ai-dev/knowledge/state/state.yaml` 示例、`mes-ai-dev/knowledge/rules/state/state-rendering-index.md` 及其分片冲突，以状态规则与 `mes-ai-dev/knowledge/state/state.yaml` 结构为准。
 
 ---
 
@@ -9,10 +9,10 @@
 
 | 文件 | 角色 | 用途 |
 |------|------|------|
-| `state/state.yaml` | 机器事实源 | 保存唯一已合并状态事实 |
-| `state/state-schema-reference.md` | 字段参考 | 解释状态字段的语义、层级与示例 |
-| `rules/state/state-rendering-index.md` | 状态规则索引 | 定义写入顺序、渲染规则与分片导航 |
-| `state/summary.md` | 人工摘要 | 展示关键状态结论 |
+| `mes-ai-dev/knowledge/state/state.yaml` | 机器事实源 | 保存唯一已合并状态事实 |
+| `mes-ai-dev/knowledge/state/state-schema-reference.md` | 字段参考 | 解释状态字段的语义、层级与示例 |
+| `mes-ai-dev/knowledge/rules/state/state-rendering-index.md` | 状态规则索引 | 定义写入顺序、渲染规则与分片导航 |
+| `mes-ai-dev/knowledge/state/summary.md` | 人工摘要 | 展示关键状态结论 |
 
 ---
 
@@ -24,7 +24,7 @@
 | `state_mode` | string | 状态源模式 | 当前固定为 `primary` |
 | `last_updated` | string | 最近更新时间 | ISO 时间字符串 |
 | `last_command` | string | 最近写入命令 | 如 `/mes-init-project`、`/mes-init-converge` |
-| `state_fragments_dir` | string | 状态片段目录 | 指向 `state/fragments/` |
+| `state_fragments_dir` | string | 状态片段目录 | 指向 `mes-ai-dev/knowledge/state/fragments/` |
 | `merge_control` | object | 状态片段收口控制 | 管理待合并状态片段 |
 | `initialization` | object | 初始化状态主模型 | 最核心字段组 |
 | `checkpoint` | object | 断点续传状态 | 记录当前命令执行进度 |
@@ -65,9 +65,9 @@
 记录 coverage 相关状态。在双写兼容阶段：
 
 - `state.yaml.initialization.coverage_summary` 提供高频摘要字段
-- `state-detail/coverage.yaml` 提供 backend / frontend / schema 级明细
+- `mes-ai-dev/knowledge/state/state-detail/coverage.yaml` 提供 backend / frontend / schema 级明细
 
-`init-coverage.md` 应以统一状态源为准，并按“主文件 coverage 摘要 + `state-detail/coverage.yaml` 明细（若存在）”联合渲染。
+`mes-ai-dev/knowledge/init-coverage.md` 应以统一状态源为准，并按“主文件 coverage 摘要 + `mes-ai-dev/knowledge/state/state-detail/coverage.yaml` 明细（若存在）”联合渲染。
 
 | 字段 | 类型 | 含义 |
 |------|------|------|
@@ -266,12 +266,12 @@ last_converged_fragment_batch:
 ## 六、维护要求
 
 1. 新增初始化状态字段时，必须同步更新：
-   - `state/state.yaml` 示例
-- `rules/state/state-rendering-index.md` 及对应分片
-   - `state/summary.md`（如需人工展示）
+   - `mes-ai-dev/knowledge/state/state.yaml` 示例
+   - `mes-ai-dev/knowledge/rules/state/state-rendering-index.md` 及对应分片
+   - `mes-ai-dev/knowledge/state/summary.md`（如需人工展示）
    - 相关命令/Skill 写入说明
 2. 若字段用于阻断初始化闭环，必须同时更新：
-- `reference/phase-gates/index.md` 与相关分片
+   - `mes-ai-dev/knowledge/reference/phase-gates/index.md` 与相关分片
    - `mes-init-verify-knowledge/SKILL.md`
 3. `knowledge/fragments/**/*.md` 不得直接被下游消费；相关追踪字段仅表示“待收口/已收口状态”，不替代正式共享文件。
 
@@ -279,7 +279,7 @@ last_converged_fragment_batch:
 
 ## 七、阅读建议
 
-- 想看**机器状态真实结构**：读 `state/state.yaml`
+- 想看**机器状态真实结构**：读 `mes-ai-dev/knowledge/state/state.yaml`
 - 想看**字段语义和示例**：读本文件
-- 想看**写入顺序/渲染规则**：读 `rules/state/state-rendering-index.md` 与对应分片
-- 想看**人工结论摘要**：读 `state/summary.md`
+- 想看**写入顺序/渲染规则**：读 `mes-ai-dev/knowledge/rules/state/state-rendering-index.md` 与对应分片
+- 想看**人工结论摘要**：读 `mes-ai-dev/knowledge/state/summary.md`

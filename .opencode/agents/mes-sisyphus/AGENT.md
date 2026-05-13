@@ -31,7 +31,7 @@ description: "Main orchestrator agent for decomposition, delegation, checkpoint 
 | 输出项 | 路径 | 说明 |
 |------|------|------|
 | 阶段汇总结果 | `mes-ai-dev/workspace/{phase}/REQ-*/summary-*.md` | 汇总各Agent结果，作为下一阶段输入 |
-| 共享知识文件 | `knowledge/baseline.md` / `init-coverage.md` / `dependency-graph/*.md` | 串行汇总后统一写入 |
+| 共享知识文件 | `mes-ai-dev/knowledge/baseline.md` / `mes-ai-dev/knowledge/init-coverage.md` / `mes-ai-dev/knowledge/dependency-graph/*.md` | 串行汇总后统一写入 |
 | 状态更新 | `mes-ai-dev/knowledge/state/state.yaml` | 记录续传状态、pending 对象 |
 | 冲突/失败摘要 | `mes-ai-dev/workspace/{phase}/REQ-*/orchestration-issue.md` | 记录冲突、失败、升级决策 |
 

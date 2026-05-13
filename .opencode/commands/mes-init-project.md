@@ -27,7 +27,7 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 - `/mes-init-converge` = 全局收敛（将多次单仓初始化结果收敛为接近全仓初始化的全局结果）
 
 **数据库产物边界**：
-- `/mes-init-project` 对数据库默认执行**基础索引模式**：每个纳入范围的 Schema 至少生成 `database-index/schema-<schema-name>/index.md`
+- `/mes-init-project` 对数据库默认执行**基础索引模式**：每个纳入范围的 Schema 至少生成 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/index.md`
 - `index.md` 必须包含最小风险画像，不得仅生成空壳文件或模板占位
 - `tables.md` / `relations.md` 不是基础建图默认强制产物；仅在命令、步骤或执行策略显式声明数据库明细抽取时才强制生成
 - 若本次未生成 `tables.md` / `relations.md`，必须在 `index.md` 中明确当前知识边界、未覆盖范围与后续补齐建议
@@ -50,9 +50,9 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 - 单仓/定向模式：只记录待收拢状态，不直接写共享文件；后续由 `/mes-init-converge` 汇总
 
 **状态写入策略**：
-- 初始化运行中状态不直接覆盖 `state/state.yaml`
-- 每个 repo/module/schema 先写 `state/fragments/*.yaml` 状态片段（含 coverage/checkpoint/pending_shared_files）
-- 全仓模式在 Phase 8A 串行合并状态片段到 `state.yaml`
+- 初始化运行中状态不直接覆盖 `mes-ai-dev/knowledge/state/state.yaml`
+- 每个 repo/module/schema 先写 `mes-ai-dev/knowledge/state/fragments/*.yaml` 状态片段（含 coverage/checkpoint/pending_shared_files）
+- 全仓模式在 Phase 8A 串行合并状态片段到 `mes-ai-dev/knowledge/state/state.yaml`
 - 单仓/定向模式仅保留状态片段，后续由 `/mes-init-converge` 串行合并
 
 **hot层职责边界**：
@@ -126,7 +126,7 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 
 ## 初始化范围清单机制
 
-> **完整定义与更新规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `rules/state-rendering-spec.md`。
+> **完整定义与更新规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`。
 
 本命令仅强调 `mes-init-project` 的差异化要求：
 - 全仓模式：先写状态片段，再在最终收拢阶段刷新 `state.yaml.initialization.coverage` 全部对象状态
@@ -138,10 +138,10 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 
 ## Checkpoint 断点续传机制
 
-> **完整定义与字段规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `rules/state-rendering-spec.md`。
+> **完整定义与字段规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`。
 
 本命令仅保留 `mes-init-project` 特有续传差异：
-1. 默认自动检测：优先读取 `state/fragments/*.yaml` 中未合并的 checkpoint；无片段时再读取 `state.yaml.checkpoint`
+1. 默认自动检测：优先读取 `mes-ai-dev/knowledge/state/fragments/*.yaml` 中未合并的 checkpoint；无片段时再读取 `mes-ai-dev/knowledge/state/state.yaml.checkpoint`
 2. `--resume`：强制从片段或已合并 checkpoint 接续，不重新评估已完成 Phase
 3. `--reset`：删除本次 scope 对应片段后重新开始
 4. 单仓模式续传：只续传该次 scope 中未完成的 repos/modules/schemas
@@ -153,7 +153,7 @@ description: "初始化项目知识库，支持全仓初始化、单仓初始化
 
 ## 同步记录
 
-> **完整定义与状态规则**：见 `AGENTS.md` §4.2「知识库使用规则」与 `rules/state-rendering-spec.md`。
+> **完整定义与状态规则**：见 `AGENTS.md` §4.2「知识库使用规则」与 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`。
 
 本命令仅强调 `mes-init-project` 的初始化职责：首次初始化完成后必须写入 `state.yaml.sync`。
 
@@ -195,7 +195,7 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 │  Phase 0: 模式判定 + checkpoint 检测                         │
 │  ┌─────────────┐                                             │
 │  │guard-context│ ──判定全仓 / 单仓 / 定向初始化模式            │
-│  │   -budget   │ ──优先读取 state/fragments/*.yaml checkpoint │
+│  │   -budget   │ ──优先读取 mes-ai-dev/knowledge/state/fragments/*.yaml checkpoint │
 │  │             │ ──默认续传；仅在 --reset 时重置               │
 │  │             │ ──判定仓规模与存量仓标签                     │
 │  │             │ ──识别是否存在业务仓外契约源（SDK/common等）   │
@@ -341,7 +341,7 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 │  │ 重算总览     │  │ 重算共享注册表 │ │ 汇总全局hot层 │          │
 │  └─────────────┘  └─────────────┘  └─────────────┘          │
 │  同步动作：                                                  │
-│  - 串行合并 `state/fragments/*.yaml` 到 `state.yaml`         │
+│  - 串行合并 `mes-ai-dev/knowledge/state/fragments/*.yaml` 到 `mes-ai-dev/knowledge/state/state.yaml` │
 │  单仓/定向模式：                                               │
 │  - 跳过本阶段，仅记录待 `/mes-init-converge` 收拢                   │
 └─────────────────────────────────────────────────────────────┘
@@ -410,15 +410,16 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 ### 路径与命名规范
 
-- 后端服务目录必须为：`knowledge/code-map/services/service-<service-name>/`
-- 前端模块目录必须为：`knowledge/code-map/modules/module-<module-name>/`
-- Schema 目录必须为：`knowledge/database-index/schema-<schema-name>/`
-- 状态片段必须为：`knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
+- 后端服务目录必须为：`mes-ai-dev/knowledge/code-map/services/service-<service-name>/`
+- 前端模块目录必须为：`mes-ai-dev/knowledge/code-map/modules/module-<module-name>/`
+- Schema 目录必须为：`mes-ai-dev/knowledge/database-index/schema-<schema-name>/`
+- 状态片段必须为：`mes-ai-dev/knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
 - 严禁写入以下变体：
   - `mes-aiai-dev/...`
-  - `knowledge/code-map/services/<service-name>/`（缺少 `service-` 前缀）
-  - `knowledge/database-index/<schema-name>/`（缺少 `schema-` 前缀）
-  - `knowledge/state/fragments/mes-init-enrich-*.yaml`（将命令名写入片段名）
+  - `knowledge/code-map/services/<service-name>/`（错误根目录 + 缺少 `service-` 前缀）
+  - `knowledge/database-index/<schema-name>/`（错误根目录 + 缺少 `schema-` 前缀）
+  - `knowledge/state/fragments/mes-init-enrich-*.yaml`（错误根目录 + 将命令名写入片段名）
+  - `./knowledge/**`（错误知识库根目录；项目级知识库根必须是 `./mes-ai-dev/knowledge/`）
 
 ---
 
@@ -437,7 +438,7 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 ### 数据库单仓初始化
 - 只允许处理 `--schema/--schemas` 指定的Schema
-- 只允许写目标 Schema 目录及其 `registry-fragment.md`
+- 只允许写目标 Schema 目录下的局部产物，例如 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/index.md`
 - 不直接写 `database-registry.md` 共享文件
 
 ### 混合定向初始化
@@ -465,19 +466,18 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 | 产物 | 说明 |
 |------|------|
-| state/fragments/*.yaml | 初始化阶段的 scope 级状态片段 |
-| state.yaml.initialization.recent_execution.pending_reference_fragments | 待收口 reference/rules 片段状态 |
+| mes-ai-dev/knowledge/state/fragments/*.yaml | 初始化阶段的 scope 级状态片段 |
+| state.yaml.initialization.recent_execution.pending_reference_fragments | 待收口 mes-ai-dev/knowledge/reference/rules 片段状态 |
 | state.yaml.initialization.recent_execution.pending_code_map_fragments | 待收口 code-map 片段状态 |
-| services/*/index.md | 后端服务局部索引 |
-| services/*/repo-profile.md | 后端服务仓库画像 |
-| services/*/api-registry.md | 后端服务 API 局部片段 |
-| services/*/service-dependencies.md | 后端服务依赖局部片段 |
-| modules/*/index.md | 前端模块局部索引 |
-| modules/*/frontend-backend-map.md | 前端模块映射局部片段 |
-| database-index/*/index.md | Schema 局部索引 |
-| database-index/*/registry-fragment.md | Schema 注册片段 |
-| knowledge/fragments/reference/**/*.md | reference/rules 局部知识片段 |
-| knowledge/fragments/code-map/**/*.md | code-map 局部知识片段与热点候选片段 |
+| mes-ai-dev/knowledge/code-map/services/*/index.md | 后端服务局部索引 |
+| mes-ai-dev/knowledge/code-map/services/*/repo-profile.md | 后端服务仓库画像 |
+| mes-ai-dev/knowledge/code-map/services/*/api-registry.md | 后端服务 API 局部片段 |
+| mes-ai-dev/knowledge/code-map/services/*/service-dependencies.md | 后端服务依赖局部片段 |
+| mes-ai-dev/knowledge/code-map/modules/*/index.md | 前端模块局部索引 |
+| mes-ai-dev/knowledge/dependency-graph/modules/*/frontend-backend-map.md | 前端模块映射局部片段 |
+| mes-ai-dev/knowledge/database-index/schema-*/index.md | Schema 局部索引 |
+| mes-ai-dev/knowledge/fragments/reference/**/*.md | mes-ai-dev/knowledge/reference/rules 局部知识片段 |
+| mes-ai-dev/knowledge/fragments/code-map/**/*.md | code-map 局部知识片段与热点候选片段 |
 | .init-checkpoint.yaml | **历史遗留**：仅 mes-verify-state-migration 引用 |
 | .sync-record.json | **历史遗留**：仅 mes-verify-state-migration 引用 |
 
@@ -485,16 +485,15 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 | 产物 | 说明 |
 |------|------|
-| state/fragments/*.yaml | **主写入**：仅记录本次执行范围的状态节点、checkpoint 与待收拢共享文件 |
-| state.yaml | 初始化阶段不直接写；由 `/mes-init-converge` 合并片段后统一更新 |
-| 指定 `services/*/index.md` | 仅目标服务 |
-| 指定 `services/*/repo-profile.md` | 仅目标服务 |
-| 指定 `services/*/api-registry.md` | 仅目标服务的 API 片段 |
-| 指定 `services/*/service-dependencies.md` | 仅目标服务依赖片段 |
-| 指定 `modules/*/index.md` | 仅目标模块 |
-| 指定 `modules/*/frontend-backend-map.md` | 仅目标模块映射片段 |
-| 指定 `database-index/*/index.md` | 仅目标Schema |
-| 指定 `database-index/*/registry-fragment.md` | 仅目标Schema注册片段 |
+| mes-ai-dev/knowledge/state/fragments/*.yaml | **主写入**：仅记录本次执行范围的状态节点、checkpoint 与待收拢共享文件 |
+| mes-ai-dev/knowledge/state/state.yaml | 初始化阶段不直接写；由 `/mes-init-converge` 合并片段后统一更新 |
+| 指定 `mes-ai-dev/knowledge/code-map/services/*/index.md` | 仅目标服务 |
+| 指定 `mes-ai-dev/knowledge/code-map/services/*/repo-profile.md` | 仅目标服务 |
+| 指定 `mes-ai-dev/knowledge/code-map/services/*/api-registry.md` | 仅目标服务的 API 片段 |
+| 指定 `mes-ai-dev/knowledge/code-map/services/*/service-dependencies.md` | 仅目标服务依赖片段 |
+| 指定 `mes-ai-dev/knowledge/code-map/modules/*/index.md` | 仅目标模块 |
+| 指定 `mes-ai-dev/knowledge/dependency-graph/modules/*/frontend-backend-map.md` | 仅目标模块映射片段 |
+| 指定 `mes-ai-dev/knowledge/database-index/schema-*/index.md` | 仅目标Schema |
 | 共享 overview / registry / hot / reference / rules 文件 | 初始化阶段一律不直接写入；由 `/mes-init-converge` 统一生成 |
 | init-coverage.md | **兼容视图**：初始化阶段不直接写；由 `/mes-init-converge` 统一渲染 |
 
@@ -502,9 +501,9 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 | 产物 | 说明 |
 |------|------|
-| knowledge/fragments/code-map/hot-services/*.md | 高频服务候选片段 |
-| knowledge/fragments/code-map/hot-apis/*.md | 高频API候选片段 |
-| knowledge/fragments/code-map/hot-tables/*.md | 高频表候选片段 |
+| mes-ai-dev/knowledge/fragments/code-map/hot-services/*.md | 高频服务候选片段 |
+| mes-ai-dev/knowledge/fragments/code-map/hot-apis/*.md | 高频API候选片段 |
+| mes-ai-dev/knowledge/fragments/code-map/hot-tables/*.md | 高频表候选片段 |
 
 ---
 
@@ -531,11 +530,11 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 5. **高频入口强制**：大仓/超大仓（50万+行）必须生成 hot-xxx.md，后续需求优先读取热点
 6. **术语表闭环强制**：若本命令未直接生成 `terminology-glossary.md`，必须在初始化结论中明确标记该产物由 `/mes-init-enrich` 补齐；初始化链路未补齐术语表前，不得宣告"初始化+深化闭环完成"
 6. **存量仓优先真实边界**：优先识别真实边界而非理想结构
-7. **state.yaml 为统一状态源**：初始化阶段运行中不直接写最终 `state.yaml`，仅写 `state/fragments/*.yaml` 与待收口状态；兼容视图统一由 `/mes-init-converge` 渲染
+7. **state.yaml 为统一状态源**：初始化阶段运行中不直接写最终 `state.yaml`，仅写 `mes-ai-dev/knowledge/state/fragments/*.yaml` 与待收口状态；兼容视图统一由 `/mes-init-converge` 渲染
 8. **历史遗留文件**：`.init-checkpoint.yaml` / `.sync-record.json` 仅 `mes-verify-state-migration` 专项核查时引用
 9. **init-coverage.md 属于兼容视图**：后续判断哪些仓已初始化，优先读取 state.yaml.initialization.coverage
 10. **初始化阶段统一收口**：无论全仓还是单仓，只要涉及共享文件，均必须由 `/mes-init-converge` 统一重算与收口
-11. **共享知识片段待收口状态必须入库**：若本次产生 reference/code-map 片段或候选结果，必须写入 `state.yaml.initialization.recent_execution.pending_reference_fragments` / `pending_code_map_fragments`
+11. **共享知识片段待收口状态必须入库**：若本次产生 mes-ai-dev/knowledge/reference/code-map 片段或候选结果，必须写入 `state.yaml.initialization.recent_execution.pending_reference_fragments` / `pending_code_map_fragments`
 12. **锁释放必须留痕**：若本次 scope 锁释放异常，必须记录到 checkpoint / 例外记录中，避免后续 session 误判
 13. **命名与路径强制**：若产物目录/文件名不符合 canonical 规则，必须阻断执行并打回，不得继续生成错误路径产物
 14. **【新增】中/大/超大仓必补齐提示**：当仓规模判定为 medium/large/mega 时，Phase 9 完成后必须输出明确提示：
@@ -586,9 +585,9 @@ Phase 0 会检测代码仓是否为存量仓（有历史提交记录），并标
 
 **预期产出**：
 - 目标执行范围的 index/profile/局部 registry 片段
-- `state/fragments/*.yaml`（主写入：本次 scope 状态片段）
+- `mes-ai-dev/knowledge/state/fragments/*.yaml`（主写入：本次 scope 状态片段）
 - `state.yaml.initialization.recent_execution.pending_reference_fragments` / `pending_code_map_fragments`（记录待收口共享知识片段）
-- 局部 reference/rules/code-map 片段目录
+- 局部 mes-ai-dev/knowledge/reference/rules/code-map 片段目录
 - 所有待 `/mes-init-converge` 汇总的共享文件状态
 - 最终共享文件、state.yaml、summary/baseline/init-coverage 一律由 `/mes-init-converge` 生成或更新
 - **历史遗留**：`.init-checkpoint.yaml` / `.sync-record.json` 仅 mes-verify-state-migration 引用

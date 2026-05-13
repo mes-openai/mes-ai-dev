@@ -1,6 +1,6 @@
 # API 注册索引模板
 
-> 用于生成 `knowledge/dependency-graph/api-registry.md` 的索引版本。
+> 用于生成 `mes-ai-dev/knowledge/dependency-graph/api-registry.md` 的索引版本。
 > 本文件应作为全局 API 消费入口，只保留摘要、分片列表和优先消费建议；完整 API 明细应下沉到服务级片段或局部清单。
 
 ## 一、文件定位
@@ -49,4 +49,4 @@
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
 | E-01 | 片段 | `[路径]` | [说明] |
-| E-02 | 状态 | `state/state.yaml` | [说明] |
+| E-02 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | [说明] |

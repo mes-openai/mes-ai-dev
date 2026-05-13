@@ -26,9 +26,9 @@ related_files:
 
 ## 一、写入规则
 
-- `/mes-init-project` → 先写 `state/fragments/*.yaml`，由最终收拢阶段合并到 `state.yaml` 的初始化摘要字段；若已启用双写兼容，则同步写入 `state-detail/checkpoint.yaml` 与其他对应 detail 明细
-- `/mes-init-enrich` → 先写 `state/fragments/*.yaml`，由主控合并到 `state.yaml` 的 coverage 摘要字段，并默认同步写入 `state-detail/coverage.yaml`
-- `/mes-init-converge` → 先收口 `knowledge/fragments/**/*.md` 与 `state/fragments/*.yaml`，再写 `state.yaml.initialization.convergence` 摘要字段与 `global_summary`，并默认同步写入 `state-detail/convergence.yaml`
+- `/mes-init-project` → 先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`，由最终收拢阶段合并到 `mes-ai-dev/knowledge/state/state.yaml` 的初始化摘要字段；若已启用双写兼容，则同步写入 `mes-ai-dev/knowledge/state/state-detail/checkpoint.yaml` 与其他对应 detail 明细
+- `/mes-init-enrich` → 先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`，由主控合并到 `mes-ai-dev/knowledge/state/state.yaml` 的 coverage 摘要字段，并默认同步写入 `mes-ai-dev/knowledge/state/state-detail/coverage.yaml`
+- `/mes-init-converge` → 先收口 `mes-ai-dev/knowledge/fragments/**/*.md` 与 `mes-ai-dev/knowledge/state/fragments/*.yaml`，再写 `mes-ai-dev/knowledge/state/state.yaml.initialization.convergence` 摘要字段与 `global_summary`，并默认同步写入 `mes-ai-dev/knowledge/state/state-detail/convergence.yaml`
 - `/mes-refresh-knowledge` → 先写 `state.yaml.sync` 摘要字段；若已启用双写兼容，则同步写入 `state-detail/sync.yaml`
 - 门禁校验 → 先写 `state.yaml.global_summary.gate_*`
 
@@ -61,20 +61,20 @@ related_files:
 - 只更新本次执行范围对象
 - 不得清空其他对象状态
 - 只写本次执行范围的仓级产物，不直接写共享 overview/registry/hot 文件
-- 必须将本次 scope 的状态写入 `state/fragments/<scope-type>-<scope-name>.yaml`
+- 必须将本次 scope 的状态写入 `mes-ai-dev/knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
 - 必须将待收拢的共享文件列表记录到片段中的 `pending_shared_files`
-- 必须将待收口的 reference/rules/code-map 片段摘要写入 recent_execution 对应状态区域，并默认同步写入 `state-detail/recent-execution.yaml`
+- 必须将待收口的 `mes-ai-dev/knowledge/reference/`、`mes-ai-dev/knowledge/rules/`、`mes-ai-dev/knowledge/code-map/` 片段摘要写入 recent_execution 对应状态区域，并默认同步写入 `state-detail/recent-execution.yaml`
 
 ---
 
 ## 三、canonical 路径规则
 
-- 状态片段路径固定为：`state/fragments/<scope-type>-<scope-name>.yaml`
+- 状态片段路径固定为：`mes-ai-dev/knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
 - 禁止使用命令名前缀、自由别名或错误根目录变体
 - 服务、模块、Schema 的局部产物路径必须分别符合：
-  - `code-map/services/service-<service-name>/`
-  - `code-map/modules/module-<module-name>/`
-  - `database-index/schema-<schema-name>/`
+  - `mes-ai-dev/knowledge/code-map/services/service-<service-name>/`
+  - `mes-ai-dev/knowledge/code-map/modules/module-<module-name>/`
+  - `mes-ai-dev/knowledge/database-index/schema-<schema-name>/`
 
 ---
 
@@ -107,7 +107,7 @@ related_files:
 
 - `/mes-init-converge` 负责将多次单仓初始化结果收敛为全仓视角结果
 - `/mes-init-project` 全仓模式也必须先生成仓级产物与待收口状态，不得直接生成最终共享文件
-- `/mes-init-converge` 必须先串行合并 `state/fragments/*.yaml` 与 `knowledge/fragments/**/*.md`
+- `/mes-init-converge` 必须先串行合并 `mes-ai-dev/knowledge/state/fragments/*.yaml` 与 `mes-ai-dev/knowledge/fragments/**/*.md`
 - 必须在 `state.yaml.initialization.convergence` 中记录最近收敛摘要状态
 - 若全局收敛结果被接受为基线，必须将 `accepted_as_global_baseline` 置为 `true`
 - 若收敛结果仍与一次全仓初始化存在差异，双写兼容阶段建议将差异明细写入 `state-detail/convergence.yaml`

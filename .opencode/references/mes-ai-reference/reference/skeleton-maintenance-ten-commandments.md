@@ -60,7 +60,7 @@
 
 ## 六、reference 用来解释，不用来偷放新硬规则
 
-`reference/` 下的文档用于解释、引导和沉淀经验，
+`mes-ai-dev/knowledge/reference/` 下的文档用于解释、引导和沉淀经验，
 不应替代正式规则落点。
 
 新增硬约束时，必须先写正式规则，再决定 reference 是否需要补充解释。

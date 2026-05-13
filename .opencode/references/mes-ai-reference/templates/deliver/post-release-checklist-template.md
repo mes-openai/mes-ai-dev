@@ -104,7 +104,7 @@
 | 触发条件 | 刷新范围 | 执行命令 | 责任人 |
 |---------|---------|---------|--------|
 | 观察期结束且发布稳定 | 全量刷新（使用 `refresh-hints.md` 定向） | `/mes-refresh-knowledge` | [姓名] |
-| 紧急修复后 | 受影响服务对应的code-map/registry | `/mes-refresh-knowledge` | [姓名] |
+| 紧急修复后 | 受影响服务对应的mes-ai-dev/knowledge/code-map/registry | `/mes-refresh-knowledge` | [姓名] |
 | 新增配置项/功能开关 | `runtime.md` + 受影响服务的index.md | `/mes-refresh-knowledge` | [姓名] |
 
 ---

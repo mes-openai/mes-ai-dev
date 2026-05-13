@@ -4,7 +4,7 @@
 
 ### must-pass
 - 知识库已初始化
-- `state/state.yaml` 存在且可读取
+- `mes-ai-dev/knowledge/state/state.yaml` 存在且可读取
 - 代码仓库状态可用于检测变更
 
 ---

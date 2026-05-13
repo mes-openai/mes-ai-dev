@@ -9,7 +9,7 @@
 ## 2. 进入条件
 
 - 知识库已初始化
-- `state/state.yaml` 存在且可读取
+- `mes-ai-dev/knowledge/state/state.yaml` 存在且可读取
 - 代码仓库状态可用于检测变更
 - 已具备最小变更输入，如 diff、变更清单、`refresh-hints.md` 或等价证据
 

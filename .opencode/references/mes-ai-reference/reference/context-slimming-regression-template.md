@@ -1,7 +1,7 @@
 # 配置瘦身回归测试问题集模板
 
 > 本模板用于验证配置瘦身后，Agent 的关键行为是否保持稳定。
-> 适用于 AGENTS、developer prompt、rules/reference 索引、Skill 路由等改动后的回归检查。
+> 适用于 AGENTS、developer prompt、mes-ai-dev/knowledge/rules/reference 索引、Skill 路由等改动后的回归检查。
 
 ---
 

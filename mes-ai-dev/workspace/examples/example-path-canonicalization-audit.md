@@ -20,7 +20,7 @@
 | 模块目录前缀 | ✅ | 中 | 模块目录已统一为 `module-<module-name>` |
 | Schema 目录前缀 | ✅ | 高 | Schema 目录已统一为 `schema-<schema-name>` |
 | 状态片段命名 | ✅ | 高 | 状态片段已统一为 `<scope-type>-<scope-name>.yaml` |
-| 知识片段命名 | ✅ | 中 | `knowledge/fragments/` 下片段已采用 canonical 命名 |
+| 知识片段命名 | ✅ | 中 | `mes-ai-dev/knowledge/fragments/` 下片段已采用 canonical 命名 |
 | 索引/示例引用路径一致性 | ✅ | 中 | 术语/领域模型索引示例已回到 canonical 分片路径 |
 
 ## 三、详细检查项
@@ -32,7 +32,7 @@
 | 不存在缺 `module-` 前缀的模块目录 | ✅ | 当前骨架说明中未发现模块目录别名写法 |
 | 不存在缺 `schema-` 前缀的 Schema 目录 | ✅ | `schema-mes_production`、`schema-mes_main` 等示例已统一 |
 | 不存在 `mes-init-enrich-*.yaml` 之类命令名混入片段文件名 | ✅ | 主规则明确禁止且当前骨架示例已对齐 |
-| 索引模板/示例引用的分片路径与实际 canonical 规则一致 | ✅ | 术语表与领域模型索引示例已回归 `knowledge/fragments/...` 路径 |
+| 索引模板/示例引用的分片路径与实际 canonical 规则一致 | ✅ | 术语表与领域模型索引示例已回归 `mes-ai-dev/knowledge/fragments/...` 路径 |
 
 ## 四、问题清单
 

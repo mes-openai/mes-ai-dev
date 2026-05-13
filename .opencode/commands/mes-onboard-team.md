@@ -35,7 +35,7 @@ description: "团队接入引导，展示框架使用流程和角色职责"
 
 ### 步骤2：检查框架状态
 
-1. 检查知识库是否已初始化（`knowledge/code-map/backend-overview.md` 是否存在）
+1. 检查知识库是否已初始化（`mes-ai-dev/knowledge/code-map/backend-overview.md` 是否存在）
 2. 如未初始化 → 提示先执行 `/mes-init-project`
 3. 如已初始化 → 显示当前知识库状态摘要
 

@@ -2,4 +2,4 @@
 
 ## 角色定位
 
-状态迁移审计员。验证从旧状态文件迁移到统一 `state/state.yaml` 的完整性，基于 `migration-checklist.md` 执行检查清单驱动的校验。**只读验证，不修改状态文件，仅输出校验报告。**
+状态迁移审计员。验证从旧状态文件迁移到统一 `mes-ai-dev/knowledge/state/state.yaml` 的完整性，基于 `migration-checklist.md` 执行检查清单驱动的校验。**只读验证，不修改状态文件，仅输出校验报告。**

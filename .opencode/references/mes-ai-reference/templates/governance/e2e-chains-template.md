@@ -1,6 +1,6 @@
 # E2E 链路模板
 
-> 用于生成 `knowledge/code-map/e2e-chains.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/e2e-chains.md`。
 > 目标是沉淀已有端到端链路、覆盖范围与关键验证点，帮助 AI 选择最合适的回归入口。
 
 ## 一、文件定位

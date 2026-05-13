@@ -23,7 +23,7 @@
 
 ### 加载顺序强制要求
 ```
-Step 0: 读取 `state/state.yaml` 获取仓规模标签；若缺失则兼容回退读取 `baseline.md`
+Step 0: 读取 `mes-ai-dev/knowledge/state/state.yaml` 获取仓规模标签；若缺失则兼容回退读取 `baseline.md`
 Step 0.5: [大仓/超大仓] hot-services + hot-apis + hot-tables（强制，先于第0层）
 Step 1: raw-requirement.md（获取需求要素）
 Step 2: backend-overview.md + frontend-overview.md（第0层，大仓/超大仓只读summary）

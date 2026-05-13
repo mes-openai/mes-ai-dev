@@ -32,7 +32,7 @@
 ### 4. 检查跨服务一致性
 
 检查本次决策是否与其他服务的现有决策冲突：
-1. 读取 `dependency-graph/service-dependencies.md`
+1. 读取 `mes-ai-dev/knowledge/dependency-graph/service-dependencies.md`
 2. 检查本次决策涉及的API变更是否影响下游服务
 3. 如有冲突 → 在 ADR 中标注"需协调"
 

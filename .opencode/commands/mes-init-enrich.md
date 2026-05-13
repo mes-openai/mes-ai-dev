@@ -17,7 +17,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 **数据库深化边界**：
 - `/mes-init-enrich` 对数据库执行**深化明细模式**或**增强索引模式**
-- 若本次仅要求补强 Schema 风险画像，则至少更新 `database-index/schema-<schema-name>/index.md`
+- 若本次仅要求补强 Schema 风险画像，则至少更新 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/index.md`
 - 若本次深化目标包含表结构明细，则必须生成 `tables.md`
 - 若本次深化目标包含关系分析，则必须生成 `relations.md`
 - `tables.md` / `relations.md` 若因脚本质量或解析限制无法完整生成，必须在产物与审查结果中明确缺失原因、影响范围与后续补齐建议
@@ -34,11 +34,11 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 - 每次深化完成后，必须同步更新 `mes-ai-dev/knowledge/init-coverage.md`
 - 将目标对象的“深化状态”从 `⏳未深化` 更新为 `✅已深化`
 
-**共享 reference/rules 文件写入边界**：
+**共享 mes-ai-dev/knowledge/reference/rules 文件写入边界**：
 - `terminology-glossary.md`、`domain-model.md`、`data-dictionary.md`、`enum-registry.md`、`error-code-registry.md`、`permission-matrix.md`、`api-conventions.md`、`coding-standards.md` 均视为共享知识文件
 - 多 session 或并行 Agent 不得直接同时写这些文件
 - 深化阶段必须先输出 scope 级参考知识局部结果或待合并清单，再由主控Agent串行汇总写入共享文件
-- 片段目录固定为 `mes-ai-dev/knowledge/fragments/`，命名示例：`reference/terminology/service-xxx.md`、`reference/domain-model/service-xxx.md`、`reference/data-dictionary/schema-xxx.md`、`rules/api-conventions/repo-xxx.md`
+- 片段目录固定为 `mes-ai-dev/knowledge/fragments/`，命名示例：`mes-ai-dev/knowledge/reference/terminology/service-xxx.md`、`mes-ai-dev/knowledge/reference/domain-model/service-xxx.md`、`mes-ai-dev/knowledge/reference/data-dictionary/schema-xxx.md`、`mes-ai-dev/knowledge/rules/api-conventions/repo-xxx.md`
 
 **共享 code-map 全局文件写入边界**：
 - `business-flows.md`、`ownership.md`、`patterns.md`、`legacy-debt.md`、`hot-services.md`、`hot-apis.md`、`hot-tables.md` 均视为共享知识文件
@@ -48,15 +48,15 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 **初始化锁要求**：
 - `/mes-init-enrich` 在深化指定 repo/module/schema 前，必须先获取对应初始化锁
-- 未获取锁前，不得写 detail/file-summaries、数据库索引、reference/rules/code-map 片段或热点候选片段
+- 未获取锁前，不得写 detail/file-summaries、数据库索引、mes-ai-dev/knowledge/reference/rules/code-map 片段或热点候选片段
 - 锁冲突时，可缩小 scope 继续执行不冲突部分，但不得写冲突 scope 的任何局部产物
 - 命令正常结束后必须释放已持有锁；异常退出按 `exception-handbook.md` 处理
 
 **命名与路径要求**：
-- 服务深化结果只能写入 `knowledge/code-map/services/service-<service-name>/`
-- 模块深化结果只能写入 `knowledge/code-map/modules/module-<module-name>/`
-- Schema 深化结果只能写入 `knowledge/database-index/schema-<schema-name>/`
-- 状态片段只能写入 `knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
+- 服务深化结果只能写入 `mes-ai-dev/knowledge/code-map/services/service-<service-name>/`
+- 模块深化结果只能写入 `mes-ai-dev/knowledge/code-map/modules/module-<module-name>/`
+- Schema 深化结果只能写入 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/`
+- 状态片段只能写入 `mes-ai-dev/knowledge/state/fragments/<scope-type>-<scope-name>.yaml`
 - 不允许以命令名、自由别名或错误根目录变体生成文件路径
 
 **步骤级强制门禁**：每个步骤的产出在进入下一步骤前，必须先执行步骤级门禁审查；未通过时当前步骤打回重做，不得将未通过结果注入下一步骤。
@@ -105,9 +105,9 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 ## Checkpoint 断点续传机制
 
-> **完整定义与字段规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `rules/state-rendering-spec.md`。
+> **完整定义与字段规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`。
 
-`/mes-init-enrich` 与 `/mes-init-project` 共用同一收拢模型：运行中 checkpoint 先写 `state/fragments/*.yaml`，合并后再体现在 `state.yaml` 中。
+`/mes-init-enrich` 与 `/mes-init-project` 共用同一收拢模型：运行中 checkpoint 先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`，合并后再体现在 `state.yaml` 中。
 
 本命令仅保留深化场景差异：
 1. 默认自动检测上次未完成的 `/mes-init-enrich` 状态片段与 checkpoint
@@ -119,12 +119,12 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 ## 初始化范围清单联动规则
 
-> **完整定义与更新规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `rules/state-rendering-spec.md`。
+> **完整定义与更新规则**：见 `AGENTS.md` §4.3.1「初始化模式与续传规则」与 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`。
 
 本命令仅强调深化联动差异：
 - `/mes-init-enrich` 完成后必须更新 `state.yaml.initialization.coverage` 中对应服务/模块/Schema的「深化状态」
-- `/mes-init-enrich` 运行中先写 `state/fragments/*.yaml`，结束后由主控串行合并到 `state.yaml.initialization.coverage`
-- `/mes-init-enrich` 若产生 reference/rules/code-map 片段，必须同步更新 `state.yaml.initialization.recent_execution.pending_reference_fragments` / `pending_code_map_fragments`
+- `/mes-init-enrich` 运行中先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`，结束后由主控串行合并到 `state.yaml.initialization.coverage`
+- `/mes-init-enrich` 若产生 mes-ai-dev/knowledge/reference/rules/code-map 片段，必须同步更新 `state.yaml.initialization.recent_execution.pending_reference_fragments` / `pending_code_map_fragments`
 - 未在本次执行范围中的对象不得被误修改
 - 最近命令字段必须写为 `/mes-init-enrich`
 - `baseline.md` 的统计结果必须能追溯到 `state.yaml.initialization.coverage` 明细
@@ -160,7 +160,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 │  │guard-context│ ──判定仓规模（小/中/大/超大）                 │
 │  │   -budget   │ ──检查深化范围是否合法                        │
 │  │             │ ──超大仓→禁止全量深化                         │
-│  │             │ ──优先读取 state/fragments/*.yaml checkpoint │
+│  │             │ ──优先读取 mes-ai-dev/knowledge/state/fragments/*.yaml checkpoint │
 │  │             │ ──判定继续/重置                               │
 │  └─────────────┘                                             │
 │  ⚠️ 超大仓全量深化 = 阻断，必须指定--services                   │
@@ -192,7 +192,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 ┌─────────────────────────────────────────────────────────────┐
 │  Phase 2: Schema风险画像深化                                   │
 │  ┌─────────────┐                                             │
-│  │init-index   │ ──生成 database-index/*/index.md             │
+│  │init-index   │ ──生成 mes-ai-dev/knowledge/database-index/*/index.md │
 │  │ -database   │ ──补充Schema风险画像                          │
 │  │(增强版)     │ ──标注热表/共享表/大表                        │
 │  │             │ ──按目标补充 `tables.md` / `relations.md`     │
@@ -252,7 +252,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 │  │init-extract │ ──先写 terminology/domain/data-dictionary 片段│
 │  │ -reference  │ ──先写 enum/error-code/permission 片段       │
 │  │(增强版)     │ ──先写 api-conventions/coding-standards 片段 │
-│  │             │ ──再由主控串行收口共享 reference/rules 文件   │
+│  │             │ ──再由主控串行收口共享 mes-ai-dev/knowledge/reference/rules 文件   │
 │  └─────────────┘                                             │
 │                                                             │
 │  超大仓规则：                                                 │
@@ -279,15 +279,15 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
                                 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  Step Gate C: Phase 4-7 输出审查                             │
-│  ──patterns/flows/reference/hotspots 未通过 → 打回对应阶段重做 │
-│  ──reference/rules 层若缺失共享知识必备产物或仍为占位骨架 → 不得进入基线更新 │
+│  ──patterns/flows/mes-ai-dev/knowledge/reference/hotspots 未通过 → 打回对应阶段重做 │
+│  ──mes-ai-dev/knowledge/reference/rules 层若缺失共享知识必备产物或仍为占位骨架 → 不得进入基线更新 │
 └─────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  Phase 8: 深化结果校验与待收口状态更新                           │
 │  ┌─────────────┐                                             │
-│  │init-verify  │ ──更新 state/fragments/*.yaml 深化状态        │
+│  │init-verify  │ ──更新 mes-ai-dev/knowledge/state/fragments/*.yaml 深化状态 │
 │  │ -knowledge  │ ──更新 pending_reference_fragments / pending_code_map_fragments │
 │  │             │ ──输出待 `/mes-init-converge` 收口清单            │
 │  └─────────────┘                                             │
@@ -310,19 +310,19 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 
 | 产物 | 生成条件 | 用途 |
 |------|---------|------|
-| state/fragments/*.yaml | **运行中主写入**（所有仓） | 深化状态片段（coverage + checkpoint） |
-| state.yaml.initialization.recent_execution.pending_reference_fragments | 所有仓 | 待收口 reference/rules 片段状态 |
+| mes-ai-dev/knowledge/state/fragments/*.yaml | **运行中主写入**（所有仓） | 深化状态片段（coverage + checkpoint） |
+| state.yaml.initialization.recent_execution.pending_reference_fragments | 所有仓 | 待收口 mes-ai-dev/knowledge/reference/rules 片段状态 |
 | state.yaml.initialization.recent_execution.pending_code_map_fragments | 所有仓 | 待收口 code-map 片段状态 |
 | services/*/detail.md | 指定服务或小仓全量 | 服务完整详情 |
 | services/*/file-summaries.md | 指定服务或小仓全量 | 文件摘要索引 |
 | services/*/repo-profile.md | 指定服务或小仓全量 | 仓库画像（强制） |
-| database-index/*/index.md | 指定Schema或小仓全量 | Schema风险画像（强制） |
-| database-index/*/tables.md | Schema 深化目标包含表结构明细时 | 表结构明细（条件强制） |
-| database-index/*/relations.md | Schema 深化目标包含关系分析时 | 关系明细（条件强制） |
+| mes-ai-dev/knowledge/database-index/*/index.md | 指定Schema或小仓全量 | Schema风险画像（强制） |
+| mes-ai-dev/knowledge/database-index/*/tables.md | Schema 深化目标包含表结构明细时 | 表结构明细（条件强制） |
+| mes-ai-dev/knowledge/database-index/*/relations.md | Schema 深化目标包含关系分析时 | 关系明细（条件强制） |
 | modules/*/detail.md | 指定模块或小仓全量 | 模块完整详情 |
-| patterns/ownership/legacy-debt/hot-* 对应 `knowledge/fragments/code-map/**/*.md` | 所有仓 | code-map 局部片段与热点候选 |
-| terminology/domain-model/data-dictionary/enum/error-code/permission/api-conventions/coding-standards 对应 `knowledge/fragments/reference/**/*.md` / `knowledge/fragments/rules/**/*.md` | 所有仓 | reference/rules 局部片段 |
-| state.yaml / state/summary.md / baseline.md / init-coverage.md | `/mes-init-converge` 统一生成 | 最终状态源与兼容视图 |
+| patterns/ownership/legacy-debt/hot-* 对应 `mes-ai-dev/knowledge/fragments/code-map/**/*.md` | 所有仓 | code-map 局部片段与热点候选 |
+| terminology/domain-model/data-dictionary/enum/error-code/permission/api-conventions/coding-standards 对应 `mes-ai-dev/knowledge/fragments/reference/**/*.md` / `mes-ai-dev/knowledge/fragments/rules/**/*.md` | 所有仓 | mes-ai-dev/knowledge/reference/rules 局部片段 |
+| mes-ai-dev/knowledge/state/state.yaml / mes-ai-dev/knowledge/state/summary.md / mes-ai-dev/knowledge/baseline.md / mes-ai-dev/knowledge/init-coverage.md | `/mes-init-converge` 统一生成 | 最终状态源与兼容视图 |
 | .init-checkpoint.yaml | **历史遗留** | 仅 mes-verify-state-migration 引用 |
 | .sync-record.json | **历史遗留** | 仅 mes-verify-state-migration 引用 |
 
@@ -347,7 +347,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 |------|-------------|---------|---------|
 | Phase 0 | `mes-sisyphus` | 串行 | 执行范围判定、checkpoint 续传决策 |
 | Phase 1-3 | `mes-service-analyzer` | 分批并行 | 各Agent只输出 detail/file-summaries/局部结果文件 |
-| Phase 4-7 | `mes-knowledge-refresh` | 分组并行 | patterns/flows/reference/hotspots 输出局部结果 |
+| Phase 4-7 | `mes-knowledge-refresh` | 分组并行 | patterns/flows/mes-ai-dev/knowledge/reference/hotspots 输出局部结果 |
 | Phase 8 | `mes-sisyphus` | 串行 | 汇总更新深化状态片段与待收口清单，不直接写最终共享文件 |
 
 ### 共享知识文件串行更新
@@ -364,7 +364,7 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 - 已成功的 detail/file-summaries/局部分析结果必须保留
 - 失败对象写入 checkpoint 的 pending 列表，下次续传只重派 pending 对象
 - 若共享知识文件被并行直接写入，视为协同违例，必须回滚并改为主控串行更新
-- reference/rules 共享文件必须先形成 scope 级局部结果或待汇总清单，不得由多个 session 直接覆盖目标文件
+- mes-ai-dev/knowledge/reference/rules 共享文件必须先形成 scope 级局部结果或待汇总清单，不得由多个 session 直接覆盖目标文件
 
 ---
 
@@ -393,40 +393,40 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 6. 业务链路深化：生成 business-flows/ownership 局部片段
 7. 参考知识深化：生成 terminology/domain-model/data-dictionary/enum-registry/error-code/permission/api-conventions/coding-standards 局部片段
 8. 高频入口扫描：生成 hot-* 候选片段（大仓/超大仓强制）
-9. 深化结果校验：更新 state/fragments 与待 `/mes-init-converge` 收口状态
+9. 深化结果校验：更新 `mes-ai-dev/knowledge/state/fragments/*.yaml` 与待 `/mes-init-converge` 收口状态
 
 **预期产出**：
-- state/fragments/*.yaml（主写入：initialization.coverage 深化状态）
+- mes-ai-dev/knowledge/state/fragments/*.yaml（主写入：initialization.coverage 深化状态）
 - state.yaml.initialization.recent_execution.pending_reference_fragments / pending_code_map_fragments
 - services/*/detail.md（指定服务）
 - services/*/file-summaries.md（指定服务）
 - services/*/repo-profile.md（指定服务）
-- database-index/*/index.md（指定Schema）
-- `knowledge/fragments/code-map/patterns/*.md`
-- `knowledge/fragments/code-map/business-flows/*.md`
-- `knowledge/fragments/code-map/ownership/*.md`
-- `knowledge/fragments/code-map/legacy-debt/*.md`
-- `knowledge/fragments/code-map/hot-services/*.md`
-- `knowledge/fragments/code-map/hot-apis/*.md`
-- `knowledge/fragments/code-map/hot-tables/*.md`
+- mes-ai-dev/knowledge/database-index/*/index.md（指定Schema）
+- `mes-ai-dev/knowledge/fragments/code-map/patterns/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/business-flows/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/ownership/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/legacy-debt/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-services/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-apis/*.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-tables/*.md`
 - 所有最终共享文件（overview / registry / hot / reference / rules / state.yaml / summary / baseline / init-coverage）均由 `/mes-init-converge` 统一收口
-- reference/rules 片段目录（运行中主写入）：
-  - `knowledge/fragments/reference/terminology/*.md`
-  - `knowledge/fragments/reference/domain-model/*.md`
-  - `knowledge/fragments/reference/data-dictionary/*.md`
-  - `knowledge/fragments/reference/enum-registry/*.md`
-  - `knowledge/fragments/reference/error-code/*.md`
-  - `knowledge/fragments/reference/permission-matrix/*.md`
-  - `knowledge/fragments/rules/api-conventions/*.md`
-  - `knowledge/fragments/rules/coding-standards/*.md`
+- mes-ai-dev/knowledge/reference/rules 片段目录（运行中主写入）：
+- `mes-ai-dev/knowledge/fragments/reference/terminology/*.md`
+- `mes-ai-dev/knowledge/fragments/reference/domain-model/*.md`
+- `mes-ai-dev/knowledge/fragments/reference/data-dictionary/*.md`
+- `mes-ai-dev/knowledge/fragments/reference/enum-registry/*.md`
+- `mes-ai-dev/knowledge/fragments/reference/error-code/*.md`
+  - `mes-ai-dev/knowledge/fragments/reference/permission-matrix/*.md`
+  - `mes-ai-dev/knowledge/fragments/rules/api-conventions/*.md`
+  - `mes-ai-dev/knowledge/fragments/rules/coding-standards/*.md`
 - code-map 全局片段目录（运行中主写入）：
-  - `knowledge/fragments/code-map/patterns/*.md`
-  - `knowledge/fragments/code-map/business-flows/*.md`
-  - `knowledge/fragments/code-map/ownership/*.md`
-  - `knowledge/fragments/code-map/legacy-debt/*.md`
-  - `knowledge/fragments/code-map/hot-services/*.md`
-  - `knowledge/fragments/code-map/hot-apis/*.md`
-  - `knowledge/fragments/code-map/hot-tables/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/patterns/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/business-flows/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/ownership/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/legacy-debt/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/hot-services/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/hot-apis/*.md`
+  - `mes-ai-dev/knowledge/fragments/code-map/hot-tables/*.md`
 - 兼容视图（从 state.yaml 渲染）：
   - baseline.md
   - init-coverage.md
@@ -446,13 +446,13 @@ description: "按需深化知识库，补充detail/file-summaries/patterns/owner
 2. **分批上限**：中仓/大仓每批≤3服务，避免上下文溢出
 3. **高频入口强制**：大仓/超大仓（50万+行）必须生成hot-xxx.md
 4. **存量仓优先真实边界**：深化时优先识别风险边界和参考实现
-5. **reference/rules/code-map 局部化强制**：初始化/深化链路内只生成局部片段与候选结果，最终共享文件必须由 `/mes-init-converge` 统一收口
+5. **mes-ai-dev/knowledge/reference/rules/code-map 局部化强制**：初始化/深化链路内只生成局部片段与候选结果，最终共享文件必须由 `/mes-init-converge` 统一收口
 6. **初始化锁强制**：每个 repo/module/schema scope 在深化前必须持有对应初始化锁
 6. **默认自动续传**：检测到未合并状态片段或未完成 checkpoint 时，不允许静默从头重跑
 7. **只有 `--reset` 才能清空进度**：防止误覆盖已完成深化结果
 8. **state.yaml 为统一状态源**：深化阶段运行中只写状态片段与待收口状态，最终 state.yaml 由 `/mes-init-converge` 统一更新
 9. **init-coverage.md 为兼容视图**：初始化/深化阶段不直接渲染，统一由 `/mes-init-converge` 从 state.yaml 生成
 10. **历史遗留**：`.init-checkpoint.yaml` / `.sync-record.json` 仅 mes-verify-state-migration 专项核查时引用
-11. **共享文件串行收口**：多 session / 并行 Agent 深化同类 reference/rules/code-map 全局文件时，必须先写局部结果，再由主控串行收口
+11. **共享文件串行收口**：多 session / 并行 Agent 深化同类 mes-ai-dev/knowledge/reference/rules/code-map 全局文件时，必须先写局部结果，再由主控串行收口
 12. **锁释放必须留痕**：若本次深化锁释放异常，必须记录例外事项与未释放 scope，避免后续 session 误判
 13. **路径审查必须阻断错误命名**：发现 `service-` / `module-` / `schema-` 前缀缺失、错误根目录或命令名混入片段文件名时，视为 must-pass 不通过

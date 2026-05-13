@@ -4,10 +4,10 @@
 
 | 规则层 | 用途 |
 |---|---|
-| `rules/core/*.md` | 最小常驻内核 |
-| `rules/phases/phase-*.md` | 当前阶段目标边界、步骤与退出条件 |
-| `rules/scenarios/scenario-*.md` | 命中特殊条件时按需加载 |
-| `rules/governance/*.md` | 审查、收尾、目录、共享写入等共性治理 |
+| `mes-ai-dev/knowledge/rules/core/*.md` | 最小常驻内核 |
+| `mes-ai-dev/knowledge/rules/phases/phase-*.md` | 当前阶段目标边界、步骤与退出条件 |
+| `mes-ai-dev/knowledge/rules/scenarios/scenario-*.md` | 命中特殊条件时按需加载 |
+| `mes-ai-dev/knowledge/rules/governance/*.md` | 审查、收尾、目录、共享写入等共性治理 |
 
 ---
 

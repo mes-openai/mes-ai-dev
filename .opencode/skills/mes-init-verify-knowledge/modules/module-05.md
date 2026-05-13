@@ -2,7 +2,7 @@
 
 ### 3.5 数据库索引内容质量校验
 
-对本次执行范围内所有 `knowledge/database-index/schema-<schema-name>/index.md` 逐个执行以下检查：
+对本次执行范围内所有 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/index.md` 逐个执行以下检查：
 
 1. **章节完整性检查**
    - 是否包含 Schema 概览
@@ -36,11 +36,11 @@
 
 ### 5. 写入统一状态源
 
-> **写入路径（双写兼容总原则）**：初始化运行中先写 `state/fragments/*.yaml`；收拢完成后优先写 `state/state.yaml` 的摘要与高频判断字段；若已启用 `state-detail/` 双写兼容，则同步写入 detail 明细文件；最后再按规范渲染兼容视图。
-> **状态分层原则**：主文件承载唯一已合并机器事实源中的高频判断字段与摘要字段；`state-detail/` 承载 coverage、recent_execution、convergence、sync、checkpoint 等低频明细字段；兼容视图按“主文件摘要 + detail 明细（若存在）”统一渲染。
+> **写入路径（双写兼容总原则）**：初始化运行中先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`；收拢完成后优先写 `mes-ai-dev/knowledge/state/state.yaml` 的摘要与高频判断字段；若已启用 `mes-ai-dev/knowledge/state/state-detail/` 双写兼容，则同步写入 detail 明细文件；最后再按规范渲染兼容视图。
+> **状态分层原则**：主文件承载唯一已合并机器事实源中的高频判断字段与摘要字段；`mes-ai-dev/knowledge/state/state-detail/` 承载 coverage、recent_execution、convergence、sync、checkpoint 等低频明细字段；兼容视图按“主文件摘要 + detail 明细（若存在）”统一渲染。
 > **渲染规范**：字段映射、更新顺序与冲突处理按 `state-rendering-spec.md` 执行。
 
-#### 5.1 初始化阶段写入 state/fragments/*.yaml（运行中主写入）
+#### 5.1 初始化阶段写入 `mes-ai-dev/knowledge/state/fragments/*.yaml`（运行中主写入）
 
 初始化进行中时，先写入 `mes-ai-dev/knowledge/state/fragments/*.yaml`：
 - scope 标识（repo/module/schema）
@@ -49,7 +49,7 @@
 - pending_shared_files
 - pending_state_fragments / merge hints
 
-#### 5.2 收拢后写入 state/state.yaml（最终主写入）
+#### 5.2 收拢后写入 `mes-ai-dev/knowledge/state/state.yaml`（最终主写入）
 
 收拢后应优先写入 `mes-ai-dev/knowledge/state/state.yaml` 的摘要与高频判断节点；
 coverage / recent_execution / convergence / sync / checkpoint 的长字段，在双写兼容阶段允许同步写入 `state-detail/`，而不再默认要求全部长期保留在主文件。

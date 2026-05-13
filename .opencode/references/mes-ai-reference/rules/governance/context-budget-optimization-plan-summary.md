@@ -126,8 +126,9 @@ related_files:
 - `runtime-entry.md`
 - `skeleton-loading-matrix.md`
 - `document-load-metadata-standard.md`
-- `phase-gates.md`
-- `knowledge-consumption-matrix.md`
+- `phase-gates/index.md`
+- `phase-gates/common.md`
+- `knowledge-consumption/index.md`
 
 ## 第二优先级
 - `budget-audit-rules.md`

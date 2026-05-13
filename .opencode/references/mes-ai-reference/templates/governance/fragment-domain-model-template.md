@@ -1,13 +1,13 @@
 # 领域模型片段模板
 
-> 用于 `knowledge/fragments/reference/domain-model/*.md`。
+> 用于 `mes-ai-dev/knowledge/fragments/reference/domain-model/*.md`。
 > 仅作为共享知识局部结果片段，不直接作为最终领域模型消费。
 
 ## 一、片段元信息
 
 | 字段 | 内容 |
 |------|------|
-| 片段文件 | `reference/domain-model/[scope].md` |
+| 片段文件 | `mes-ai-dev/knowledge/reference/domain-model/[scope].md` |
 | scope 类型 | [service/repo/module/schema] |
 | scope 标识 | [如：mes-production] |
 | 生成阶段 | [/mes-init-project / /mes-init-enrich] |

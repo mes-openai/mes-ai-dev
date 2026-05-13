@@ -2,6 +2,6 @@
 
 ## 输入
 
-- `knowledge/code-map/test-assets.md`
-- `knowledge/code-map/backend-overview.md`
+- `mes-ai-dev/knowledge/code-map/test-assets.md`
+- `mes-ai-dev/knowledge/code-map/backend-overview.md`
 - 各服务 src/test/ 目录

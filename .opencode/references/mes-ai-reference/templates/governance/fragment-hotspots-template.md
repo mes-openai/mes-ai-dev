@@ -1,13 +1,13 @@
 # 热点候选片段模板
 
-> 用于 `knowledge/fragments/code-map/hot-services/*.md`、`hot-apis/*.md`、`hot-tables/*.md`。
+> 用于 `mes-ai-dev/knowledge/fragments/code-map/hot-services/*.md`、`hot-apis/*.md`、`hot-tables/*.md`。
 > 仅作为热点候选结果暂存，必须经主控或 `/mes-init-converge` 重算后才能形成正式热点文件。
 
 ## 一、片段元信息
 
 | 字段 | 内容 |
 |------|------|
-| 片段文件 | `code-map/hot-*/[scope].md` |
+| 片段文件 | `mes-ai-dev/knowledge/code-map/hot-*/[scope].md` |
 | scope 类型 | [repo/service/schema] |
 | scope 标识 | [如：mes-production / mes_main] |
 | 热点类型 | [service/api/table] |

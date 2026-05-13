@@ -76,7 +76,7 @@ related_files:
 ### must-pass 检查清单
 - [ ] 已加载 `phase-design.md` 规定的必读入口
 - [ ] 已读取 `.opencode/references/mes-ai-reference/reference/parameter-switch-patterns.md`（命中参数开关/配置取值场景时必选）
-- [ ] 已读取 `knowledge/code-map/backend-overview.md` 和 `knowledge/code-map/frontend-overview.md`
+- [ ] 已读取 `mes-ai-dev/knowledge/code-map/backend-overview.md` 和 `mes-ai-dev/knowledge/code-map/frontend-overview.md`
 - [ ] 已明确后端服务定位（服务名称、代码仓、Schema）
 - [ ] 已明确前端模块定位（模块名称、代码仓、路由路径）
 - [ ] 已遵循现有模式（参数开关、数据字典、既有接口/表/配置）
@@ -88,8 +88,8 @@ related_files:
 - 仅凭需求描述或局部源码片段，未完成仓/服务/模块定位：自动拒绝输出实现型设计结论
 
 ## 三、必读入口
-- `knowledge/code-map/backend-overview.md`
-- `knowledge/code-map/frontend-overview.md`
+- `mes-ai-dev/knowledge/code-map/backend-overview.md`
+- `mes-ai-dev/knowledge/code-map/frontend-overview.md`
 - `mes-ai-dev/knowledge/rules/api-conventions.md`
 - `.opencode/references/mes-ai-reference/reference/phase-gates/index.md`
 - `.opencode/references/mes-ai-reference/reference/phase-gates/common.md`

@@ -1,7 +1,7 @@
 # 初始化范围清单
 
-> **核心原则**：`state/state.yaml` 是唯一已合并机器事实源；初始化运行中状态先写 `state/fragments/*.yaml`。
-> 本文件为兼容清单视图，以统一状态源为准；若已启用双写兼容，则允许按“主文件 coverage 摘要 + state-detail/coverage.yaml 明细（若存在）”联合渲染。
+> **核心原则**：`mes-ai-dev/knowledge/state/state.yaml` 是唯一已合并机器事实源；初始化运行中状态先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`。
+> 本文件为兼容清单视图，以统一状态源为准；若已启用双写兼容，则允许按“主文件 coverage 摘要 + `mes-ai-dev/knowledge/state/state-detail/coverage.yaml` 明细（若存在）”联合渲染。
 > **历史遗留**：.init-checkpoint.yaml / .sync-record.json 已标记为历史。
 
 ---
@@ -70,10 +70,10 @@
 
 | 文件 | 优先级 | 用途 |
 |------|--------|------|
-| state/state.yaml | **主** | 已合并机器事实源，收拢后更新；提供 coverage 摘要与高频判断字段 |
-| state/state-detail/coverage.yaml | 双写兼容明细 | 若已启用双写兼容，承接 backend/frontend/schema 级 coverage 明细 |
-| state/fragments/*.yaml | 初始化运行中主写入 | scope 级状态片段 |
-| init-coverage.md | 回退 | 兼容清单视图，以统一状态源为准，必要时按主文件摘要 + detail 明细联合渲染 |
+| mes-ai-dev/knowledge/state/state.yaml | **主** | 已合并机器事实源，收拢后更新；提供 coverage 摘要与高频判断字段 |
+| mes-ai-dev/knowledge/state/state-detail/coverage.yaml | 双写兼容明细 | 若已启用双写兼容，承接 backend/frontend/schema 级 coverage 明细 |
+| mes-ai-dev/knowledge/state/fragments/*.yaml | 初始化运行中主写入 | scope 级状态片段 |
+| mes-ai-dev/knowledge/init-coverage.md | 回退 | 兼容清单视图，以统一状态源为准，必要时按主文件摘要 + detail 明细联合渲染 |
 
 ---
 

@@ -31,7 +31,7 @@
 | `api-registry.md` | 现有能力复用判断 | 接口设计与复用判断 | Controller/Provider 对齐 | 接口验证对象识别 | 验收/发布接口范围 | API 知识更新 |
 | `database-registry.md` / database-index | 仓/表归属与影响范围 | Schema/表设计边界 | DAO/SQL 实现对齐 | 数据回归验证对象识别 | DB 发布边界 | DB 知识更新 |
 | `frontend-backend-map.md` | 前后端联动范围 | 前端设计与接口映射 | 前端实现对齐 | 前端/E2E 测试对象识别 | 交付影响面说明 | 联动映射更新 |
-| `reference/*.md` | 术语/NFR/契约/规则输入 | 私有契约显式引用 | 禁止用常识补洞 | 测试口径与验收口径引用 | 验收与交付口径引用 | 参考知识更新 |
+| `mes-ai-dev/knowledge/reference/*.md` | 术语/NFR/契约/规则输入 | 私有契约显式引用 | 禁止用常识补洞 | 测试口径与验收口径引用 | 验收与交付口径引用 | 参考知识更新 |
 | `test-assets.md` / `testability-matrix.md` | 可测性风险预警 | 验证点前置设计 | 开发阶段预留验证对象 | 形成测试计划主输入 | 判断交付证据完整性 | 测试知识更新 |
 
 ## 四、下游阶段消费要求

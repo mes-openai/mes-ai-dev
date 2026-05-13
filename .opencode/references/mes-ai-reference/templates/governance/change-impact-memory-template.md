@@ -1,6 +1,6 @@
 # 变更影响记忆模板
 
-> 用于生成 `knowledge/code-map/change-impact-memory.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/change-impact-memory.md`。
 > 目标是沉淀历史改动中真实出现过的联动范围、回归热点、回滚热点和高风险路径，帮助 AI 在后续需求中减少重复踩坑。
 
 ## 一、文件定位

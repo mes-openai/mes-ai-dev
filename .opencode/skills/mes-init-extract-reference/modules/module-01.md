@@ -2,10 +2,10 @@
 
 ## 功能说明
 
-从代码仓提取业务参考知识，生成 `reference/` 目录下的 7 个参考文件，包括术语表、领域模型、数据字典、枚举注册表、错误码注册表、API 规范约定和编码规范。
+从代码仓提取业务参考知识，生成 `mes-ai-dev/knowledge/reference/` 目录下的 7 个参考文件，包括术语表、领域模型、数据字典、枚举注册表、错误码注册表、API 规范约定和编码规范。
 
 > **初始化链路强制要求**：`terminology-glossary.md` 属于初始化/深化闭环必备产物。执行本 Skill 时不得跳过术语表生成，也不得以“后续需求分析再补充”替代当前产出。
-> **共享文件并发要求**：本 Skill 产出的 reference/rules 文件均视为共享知识文件。多 session 或并行 Agent 不得直接同时覆盖最终文件，必须先写 scope 级局部结果或待汇总清单，再由主控串行合并。
+> **共享文件并发要求**：本 Skill 产出的 mes-ai-dev/knowledge/reference/rules 文件均视为共享知识文件。多 session 或并行 Agent 不得直接同时覆盖最终文件，必须先写 scope 级局部结果或待汇总清单，再由主控串行合并。
 
 ## 角色定义
 
@@ -35,7 +35,7 @@
 | workspace/development/ | ROLE_DEVELOPER | ROLE_ADMIN | 开发产出 |
 | workspace/testing/ | ROLE_QA | ROLE_ADMIN | 测试产出 |
 | workspace/delivery/ | ROLE_RELEASE | ROLE_ADMIN | 交付产出 |
-| knowledge/ | 所有角色 | ROLE_ADMIN | 知识库只读 |
+| mes-ai-dev/knowledge/ | 所有角色 | ROLE_ADMIN | 知识库只读 |
 
 ## 置信度标注
 

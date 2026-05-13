@@ -24,7 +24,7 @@
 ### 判定执行流程
 
 ```
-Step 1: 读取 `state/state.yaml` 获取仓规模标签；若缺失则回退读取 baseline.md
+Step 1: 读取 `mes-ai-dev/knowledge/state/state.yaml` 获取仓规模标签；若缺失则回退读取 baseline.md
 Step 1A: 若当前阶段依赖全仓视角结果，同时读取 `state.yaml.initialization.convergence`
 Step 2: 读取 repository-scale-rules.md 获取对应强制规则
 Step 3: 输出仓规模判定结果：
@@ -54,8 +54,8 @@ Step 5: 在预算确认中体现仓规模影响
 
 | 优先级 | 文件 | 用途 | 预估大小 |
 |--------|------|------|---------|
-| 1 | `knowledge/code-map/hot-services.md` | 高频服务排行，优先处理 | ~500 token |
-| 2 | `knowledge/code-map/hot-apis.md` | 高频API排行，定位核心接口 | ~500 token |
-| 3 | `knowledge/code-map/hot-tables.md` | 高频表排行，识别核心数据 | ~500 token |
+| 1 | `mes-ai-dev/knowledge/code-map/hot-services.md` | 高频服务排行，优先处理 | ~500 token |
+| 2 | `mes-ai-dev/knowledge/code-map/hot-apis.md` | 高频API排行，定位核心接口 | ~500 token |
+| 3 | `mes-ai-dev/knowledge/code-map/hot-tables.md` | 高频表排行，识别核心数据 | ~500 token |
 
 读取hot层后，第0层overview可只读取摘要章节（跳过服务列表细节），节省上下文。

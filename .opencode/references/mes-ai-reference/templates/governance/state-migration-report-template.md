@@ -1,6 +1,6 @@
 # 统一状态源迁移校验报告模板
 
-> 本模板用于校验从历史状态文件到统一 `state/state.yaml` 的迁移是否进入稳定期。
+> 本模板用于校验从历史状态文件到统一 `mes-ai-dev/knowledge/state/state.yaml` 的迁移是否进入稳定期。
 
 ---
 
@@ -70,8 +70,8 @@
 |---|--------|------|------|
 | 1 | AGENTS.md 列出渲染规范 | ✅/❌ | — |
 | 2 | AGENTS.md 声明唯一事实源 | ✅/❌ | — |
-| 3 | phase-gates.md 允许新状态源校验 | ✅/❌ | — |
-| 4 | phase-gates.md / state-rendering-spec 纳入 convergence | ✅/❌ | — |
+| 3 | phase-gates/index.md 与对应阶段分片允许新状态源校验 | ✅/❌ | — |
+| 4 | phase-gates/common.md / state-rendering-spec 纳入 convergence | ✅/❌ | — |
 | 5 | baseline.md 引用渲染规范 | ✅/❌ | — |
 | 6 | summary.md 引用渲染规范 | ✅/❌ | — |
 | 7 | state.yaml 引用渲染规范 | ✅/❌ | — |

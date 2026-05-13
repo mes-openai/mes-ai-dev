@@ -222,7 +222,7 @@ task(category="deep", load_skills=["mes-refresh-update-api-registry"], run_in_ba
 
 结果合并:
 - 全部完成后由主控 Agent 串行汇总结果
-- 同步状态写入、摘要视图刷新与共享文件串行更新规则，统一遵循 `AGENTS.md` §10、多 Agent 协作规则，以及 `rules/state-rendering-spec.md`
+- 同步状态写入、摘要视图刷新与共享文件串行更新规则，统一遵循 `AGENTS.md` §10、多 Agent 协作规则，以及 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`
 - 本命令特有约束只有两点：
   1. 仅刷新受影响部分，不做全量重建
   2. 单路更新失败可单独重试，成功分支结果必须保留
@@ -303,7 +303,7 @@ mes-ai-dev/workspace/refresh/
 └── refresh-review-report.md    # 阶段详细审查报告（强制产物）
 
 mes-ai-dev/knowledge/
-└── state/
+├── state/
     └── state.yaml              # 主写入：更新 sync 节点
     └── summary.md              # 人工摘要
 ├── code-map/
@@ -324,4 +324,4 @@ mes-ai-dev/knowledge/
 2. **并行执行**：Phase 2 三部分更新可并行执行
 3. **首次同步**：若无 state.yaml，建议使用 `/mes-init-project` 而非刷新
 4. **变更验证**：刷新后检查变更是否正确同步
-5. **状态与摘要视图规则**：统一遵循 `rules/state-rendering-spec.md`，本命令不重复定义字段与渲染协议
+5. **状态与摘要视图规则**：统一遵循 `mes-ai-dev/knowledge/rules/state-rendering-spec.md`，本命令不重复定义字段与渲染协议

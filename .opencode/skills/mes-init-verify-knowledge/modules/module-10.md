@@ -8,7 +8,7 @@
 3. **客观记录** — 成功/失败如实记录
 4. **6维度全覆盖** — 每个维度必须有具体百分比
 5. **可信度抽检全覆盖** — 每个产物必须标注 depth + confidence + 3项静态校验
-6. **初始化先写状态片段** — 初始化阶段先写 `state/fragments/*.yaml`，收拢后再写 `state/state.yaml`
+6. **初始化先写状态片段** — 初始化阶段先写 `mes-ai-dev/knowledge/state/fragments/*.yaml`，收拢后再写 `mes-ai-dev/knowledge/state/state.yaml`
 7. **兼容视图按双写口径渲染** — `baseline.md` / `init-coverage.md` / `summary.md` 仍以统一状态源为准；若已启用 `state-detail/`，则允许按“主文件摘要 + detail 明细（若存在）”渲染
 8. **渲染规则不可自定义** — 兼容视图字段映射、更新顺序与冲突修复必须遵守 `state-rendering-spec.md`
 9. **历史遗留文件** — `.init-checkpoint.yaml` / `.sync-record.json` 仅 mes-verify-state-migration 专项核查时引用

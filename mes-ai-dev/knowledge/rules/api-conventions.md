@@ -22,7 +22,7 @@
 ## 三、契约索引入口
 
 - 统一响应契约：见 `response-conventions.md` 或对应契约文件
-- 错误契约：见 `reference/error-code-registry.md`
+- 错误契约：见 `mes-ai-dev/knowledge/reference/error-code-registry.md`
 - 认证契约：见相关 reference / pattern 文件
 - 网关契约：见相关 reference / pattern 文件
 

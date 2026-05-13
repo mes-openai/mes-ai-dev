@@ -47,8 +47,8 @@ templates/
 ├── deliver/      # 发布交付阶段模板（7个）
 ├── governance/   # 治理与规范模板（16个）
 ├── code/         # 代码骨架模板（19个）
-├── reference/    # 项目侧 reference 知识结构模板（10个）
-├── rules/        # 项目侧 rules 知识结构模板（2个）
+├── mes-ai-dev/knowledge/reference/    # 项目侧 reference 知识结构模板（10个）
+├── mes-ai-dev/knowledge/rules/        # 项目侧 rules 知识结构模板（2个）
 └── template-index.md  # 本索引文件
 ```
 
@@ -152,12 +152,12 @@ templates/
 | `schema-tables-template.md` | Schema表结构明细 | 数据库 Schema 表结构深化模板 |
 | `schema-relations-template.md` | Schema关系分析 | 数据库 Schema 关系分析深化模板 |
 | `converge-report-template.md` | 初始化收敛报告 | 多次单仓初始化后的全局收敛结果记录 |
-| `fragment-terminology-template.md` | 术语表片段 | reference/terminology 片段模板 |
-| `fragment-domain-model-template.md` | 领域模型片段 | reference/domain-model 片段模板 |
-| `fragment-business-flows-template.md` | 业务链路片段 | code-map/business-flows 片段模板 |
-| `fragment-ownership-template.md` | 实体归属片段 | code-map/ownership 片段模板 |
-| `fragment-patterns-template.md` | 实现模式片段 | code-map/patterns 片段模板 |
-| `fragment-hotspots-template.md` | 热点候选片段 | code-map/hot-* 片段模板 |
+| `fragment-terminology-template.md` | 术语表片段 | mes-ai-dev/knowledge/reference/terminology 片段模板 |
+| `fragment-domain-model-template.md` | 领域模型片段 | mes-ai-dev/knowledge/reference/domain-model 片段模板 |
+| `fragment-business-flows-template.md` | 业务链路片段 | mes-ai-dev/knowledge/code-map/business-flows 片段模板 |
+| `fragment-ownership-template.md` | 实体归属片段 | mes-ai-dev/knowledge/code-map/ownership 片段模板 |
+| `fragment-patterns-template.md` | 实现模式片段 | mes-ai-dev/knowledge/code-map/patterns 片段模板 |
+| `fragment-hotspots-template.md` | 热点候选片段 | mes-ai-dev/knowledge/code-map/hot-* 片段模板 |
 | `fragment-convergence-checklist-template.md` | 片段收口前检查 | 收口前统一检查命名/重复/冲突/可消费性 |
 | `api-registry-index-template.md` | API索引文件 | api-registry 索引化收口模板 |
 | `domain-model-index-template.md` | 领域模型索引 | domain-model 索引化收口模板 |
@@ -181,14 +181,14 @@ templates/
 | `authentication-conventions-template.md` | 认证契约 | 记录认证方式、透传字段、失败口径与来源类型 |
 | `mq-conventions-template.md` | MQ契约 | 记录消息主题、消息体结构、失败处理与来源类型 |
 | `gateway-conventions-template.md` | 网关契约 | 记录网关入口、路由规则、透传字段与来源类型 |
-| `../reference/terminology-glossary-template.md` | 术语表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/terminology-glossary.md` 的结构模板 |
-| `../reference/domain-model-template.md` | 领域模型项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/domain-model.md` 的结构模板 |
-| `../reference/data-dictionary-template.md` | 数据字典项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/data-dictionary.md` 的结构模板 |
-| `../reference/enum-registry-template.md` | 枚举注册表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/enum-registry.md` 的结构模板 |
-| `../reference/error-code-registry-template.md` | 错误码注册表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/error-code-registry.md` 的结构模板 |
-| `../reference/permission-matrix-template.md` | 权限矩阵项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/permission-matrix.md` 的结构模板 |
-| `../rules/api-conventions-template.md` | API 规范项目知识模板 | 生成 `mes-ai-dev/knowledge/rules/api-conventions.md` 的结构模板 |
-| `../rules/coding-standards-template.md` | 编码规范项目知识模板 | 生成 `mes-ai-dev/knowledge/rules/coding-standards.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/terminology-glossary-template.md` | 术语表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/terminology-glossary.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/domain-model-template.md` | 领域模型项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/domain-model.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/data-dictionary-template.md` | 数据字典项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/data-dictionary.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/enum-registry-template.md` | 枚举注册表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/enum-registry.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/error-code-registry-template.md` | 错误码注册表项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/error-code-registry.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/reference/permission-matrix-template.md` | 权限矩阵项目知识模板 | 生成 `mes-ai-dev/knowledge/reference/permission-matrix.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/rules/api-conventions-template.md` | API 规范项目知识模板 | 生成 `mes-ai-dev/knowledge/rules/api-conventions.md` 的结构模板 |
+| `../mes-ai-dev/knowledge/rules/coding-standards-template.md` | 编码规范项目知识模板 | 生成 `mes-ai-dev/knowledge/rules/coding-standards.md` 的结构模板 |
 | `blocker-record-template.md` | blocker 记录 | 记录 blocker 分类、代偿动作、后补动作与升级路径 |
 | `minimum-deliverable-template.md` | 最小可交付 | 记录当前已形成的最小可继续结果 |
 | `definition-of-done-template.md` | DoD 定义 | 定义完整完成 / GSD 完成 / 不完成标准 |
@@ -245,8 +245,8 @@ templates/
 | 阶段坑点台账 | `governance/pitfall-ledger-template.md` | 记录高风险坑点、触发条件、根因与规避动作 |
 | 阶段决策日志 | `governance/decision-log-template.md` | 记录关键决策、取舍原因与 ADR 升级候选 |
 | 阶段阻塞台账 | `governance/blocker-log-template.md` | 记录 blocker 分类、代偿动作与后补动作 |
-| 共享知识片段（术语） | `governance/fragment-terminology-template.md` | 用于 reference/terminology 片段，最终需经主控收口 |
-| 共享知识片段（领域） | `governance/fragment-domain-model-template.md` | 用于 reference/domain-model 片段，最终需经主控收口 |
+| 共享知识片段（术语） | `governance/fragment-terminology-template.md` | 用于 mes-ai-dev/knowledge/reference/terminology 片段，最终需经主控收口 |
+| 共享知识片段（领域） | `governance/fragment-domain-model-template.md` | 用于 mes-ai-dev/knowledge/reference/domain-model 片段，最终需经主控收口 |
 | 共享知识片段（链路/归属/模式） | `governance/fragment-business-flows-template.md` / `fragment-ownership-template.md` / `fragment-patterns-template.md` | 用于 code-map 全局片段，最终需经主控收口 |
 | 共享知识片段（热点候选） | `governance/fragment-hotspots-template.md` | 用于 hot-* 候选片段，最终需统一重算为正式热点文件 |
 | 共享知识片段收口前检查 | `governance/fragment-convergence-checklist-template.md` | 主控或 `/mes-init-converge` 合并片段前的统一检查模板 |
@@ -269,7 +269,7 @@ templates/
 | 业务预警机制设计 | `governance/warning-mechanism-template.md` | 预警触发→展示→处理→记录→关闭完整链路 |
 | 校验失败回退边界设计 | `governance/validation-fallback-template.md` | 校验失败后的回退边界和业务处理流程 |
 | 业务场景定义索引 | `governance/business-scenario-index-template.md` | 从代码提取业务场景候选定义，形成语义定义索引 |
-| 契约模板族（响应/认证/MQ/网关） | `reference/response-conventions-template.md` / `authentication-conventions-template.md` / `mq-conventions-template.md` / `gateway-conventions-template.md` | 用于将业务仓外契约、平台契约与集成契约按来源类型、版本一致性与真实样例统一落盘 |
+| 契约模板族（响应/认证/MQ/网关） | `mes-ai-dev/knowledge/reference/response-conventions-template.md` / `authentication-conventions-template.md` / `mq-conventions-template.md` / `gateway-conventions-template.md` | 用于将业务仓外契约、平台契约与集成契约按来源类型、版本一致性与真实样例统一落盘 |
 | AI接管准备度示例 | `mes-ai-dev/workspace/examples/example-ai-takeover-readiness.md` | 演示 readiness 成品形态，供能力评估场景参考 |
 | 路径 canonical 审计示例 | `mes-ai-dev/workspace/examples/example-path-canonicalization-audit.md` | 演示路径规范审计成品形态，供治理审计场景参考 |
 | 骨架修改审查示例 | `mes-ai-dev/workspace/examples/example-skeleton-change-review.md` | 演示骨架修改审查成品形态，供后续骨架治理审查场景参考 |
@@ -329,8 +329,8 @@ templates/
 | deliver/ | 7 |
 | governance/ | 46 |
 | code/ | 19 |
-| reference/ | 10 |
-| rules/ | 2 |
+| mes-ai-dev/knowledge/reference/ | 10 |
+| mes-ai-dev/knowledge/rules/ | 2 |
 
 ---
 

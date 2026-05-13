@@ -64,7 +64,7 @@ related_files:
 - converge 前准备
 
 ## 三、基本原则
-- 默认先写局部结果、状态片段、reference/rules 片段
+- 默认先写局部结果、状态片段，以及 `mes-ai-dev/knowledge/reference/` / `mes-ai-dev/knowledge/rules/` 片段
 - `/mes-init-project` 与 `/mes-init-enrich` 产局部结果
 - `/mes-init-converge` 统一收口共享知识与状态
 - 初始化允许在输出计划后自动继续
@@ -204,7 +204,7 @@ related_files:
 - 不得边扫描边直接覆盖共享最终文件
 - 不得将局部结果伪装成全局完成态
 - 不得在未明确 scope 时开始正式初始化
-- 不得在收口前直接修改 `knowledge/state/state.yaml`
+- 不得在收口前直接修改 `mes-ai-dev/knowledge/state/state.yaml`
 - 不得以通用框架常识替代项目私有规范
 - 不得在未识别定义点时输出统一响应、错误、认证、MQ 等全局契约结论
 - 不得将空模板、占位文件或仅有章节骨架的文档视为已可消费知识

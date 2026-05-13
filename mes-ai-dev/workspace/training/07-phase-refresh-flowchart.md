@@ -35,7 +35,7 @@
 
 ## 一点五、刷新覆盖范围 vs 初始化产物对照
 
-> 知识刷新会更新初始化阶段产出的**结构化知识**（code-map、api-registry、dependency-graph），但 reference/rules 类共享知识通常需要后续 converge 重算。
+> 知识刷新会更新初始化阶段产出的**结构化知识**（code-map、api-registry、dependency-graph），但 mes-ai-dev/knowledge/reference/rules 类共享知识通常需要后续 converge 重算。
 
 ```mermaid
 flowchart TB

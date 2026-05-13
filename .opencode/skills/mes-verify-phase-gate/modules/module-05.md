@@ -36,7 +36,7 @@
   1A. 若条目要求全仓视角结果，则校验 `state.yaml.initialization.convergence.status=completed`
   1B. 若条目涉及仓规模判定（repository_scale）：
       - 先检查 `state.yaml.repository_scale.scale_label` 是否为有效值（非空且非默认零值）
-      - 若无效，检查 `state/fragments/*.yaml` 是否存在本次 scope 的状态片段
+      - 若无效，检查 `mes-ai-dev/knowledge/state/fragments/*.yaml` 是否存在本次 scope 的状态片段
       - 若片段存在且 `checkpoint.status` 为 completed/partial，标记 `scale_source=fragment`
       - 输出报告中明确标注 scale_source 和 scale_label
   2. 读取 `should-check` 小节条目并执行提示性校验
@@ -78,7 +78,7 @@
 ### 数据库索引专项执行逻辑
 
 ```
-当当前阶段或步骤涉及 database-index/schema-<schema-name>/ 时：
+当当前阶段或步骤涉及 mes-ai-dev/knowledge/database-index/schema-<schema-name>/ 时：
   1. 检查 `index.md` 是否存在，且路径符合 canonical 规则
   2. 检查 `index.md` 是否包含：Schema 概览、风险画像、关键对象摘要
   3. 检查风险画像是否包含：风险等级结论、风险判断依据、关键对象说明

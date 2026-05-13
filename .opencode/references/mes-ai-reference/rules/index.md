@@ -1,6 +1,6 @@
 # Rules 总索引
 
-> 本文件用于导航 `rules/` 下的各类规则索引页。
+> 本文件用于导航 `.opencode/references/mes-ai-reference/rules/` 下的各类规则索引页。
 > 使用时先判断当前需要的是 Core、Phase、Scenario 还是 Governance 规则，再按需进入对应索引，不默认全量加载全部规则正文。
 
 ---

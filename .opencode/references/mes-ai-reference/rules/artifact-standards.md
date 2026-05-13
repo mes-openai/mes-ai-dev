@@ -334,9 +334,9 @@ workspace/delivery/REQ-XXX/    → workspace/archive/REQ-XXX/delivery/
 
 | 文件 | 问题 | 强制结构 |
 |------|------|----------|
-| `dependency-graph/api-registry.md` | 5000+ API 时全量正文不可消费 | 全局索引 + 服务级 API 片段/局部清单 |
-| `reference/domain-model.md` | 领域模型可能跨域膨胀 | 全局索引 + 按业务域正文 |
-| `reference/terminology-glossary.md` | 术语累计过大时不宜全量加载 | 全局索引 + 按服务/术语组正文 |
+| `mes-ai-dev/knowledge/dependency-graph/api-registry.md` | 5000+ API 时全量正文不可消费 | 全局索引 + 服务级 API 片段/局部清单 |
+| `mes-ai-dev/knowledge/reference/domain-model.md` | 领域模型可能跨域膨胀 | 全局索引 + 按业务域正文 |
+| `mes-ai-dev/knowledge/reference/terminology-glossary.md` | 术语累计过大时不宜全量加载 | 全局索引 + 按服务/术语组正文 |
 
 ### 结构要求
 

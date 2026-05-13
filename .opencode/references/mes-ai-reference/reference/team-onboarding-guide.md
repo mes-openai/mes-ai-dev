@@ -236,7 +236,7 @@ MES-AI-DEV 是一套 AI 驱动的开发框架，通过 OpenCode 的 Skill/Comman
 
 ## 七、权限矩阵
 
-各角色对框架命令和文件的权限详见 `reference/permission-matrix.md`。简述如下：
+各角色对框架命令和文件的权限详见 `mes-ai-dev/knowledge/reference/permission-matrix.md`。简述如下：
 
 | 角色 | 可执行命令 | 可读写文件范围 |
 |------|-----------|--------------|
@@ -291,7 +291,7 @@ MES-AI-DEV 是一套 AI 驱动的开发框架，通过 OpenCode 的 Skill/Comman
 |------|---------|------|------|
 | 1 | AGENTS.md + 开发阶段规则 | `AGENTS.md`; `.opencode/references/mes-ai-reference/rules/phases/phase-develop.md` | 理解总则、后端分层与开发阶段边界 |
 | 2 | 编码规范 | mes-ai-dev/knowledge/rules/coding-standards.md | 掌握命名/分层/注解规范 |
-| 3 | 实现模式 | knowledge/code-map/patterns.md | 了解参考实现和遗留债务 |
+| 3 | 实现模式 | mes-ai-dev/knowledge/code-map/patterns.md | 了解参考实现和遗留债务 |
 | 4 | 枚举注册表 | mes-ai-dev/knowledge/reference/enum-registry.md | 理解枚举值定义 |
 | 5 | 后端代码模板 | templates/backend-*-template.java | 了解各层代码骨架 |
 | 6 | 数据库迁移模板 | templates/db-migration-template.md | 理解数据库变更流程 |
@@ -304,8 +304,8 @@ MES-AI-DEV 是一套 AI 驱动的开发框架，通过 OpenCode 的 Skill/Comman
 | 顺序 | 阅读内容 | 路径 | 目的 |
 |------|---------|------|------|
 | 1 | AGENTS.md + 开发阶段规则 | `AGENTS.md`; `.opencode/references/mes-ai-reference/rules/phases/phase-develop.md` | 理解总则、前端结构与开发阶段边界 |
-| 2 | 前后端映射 | knowledge/dependency-graph/frontend-backend-map.md | 理解API调用关系 |
-| 3 | 实现模式（前端部分） | knowledge/code-map/patterns.md | 了解前端实现模式 |
+| 2 | 前后端映射 | mes-ai-dev/knowledge/dependency-graph/frontend-backend-map.md | 理解API调用关系 |
+| 3 | 实现模式（前端部分） | mes-ai-dev/knowledge/code-map/patterns.md | 了解前端实现模式 |
 | 4 | 前端页面模板 | templates/frontend-page-template.vue | 了解页面组件结构 |
 | 5 | 前端API调用模板 | templates/frontend-api-template.js | 了解API调用层写法 |
 | 6 | 前端组件模板 | templates/frontend-component-template.vue | 了解公共组件写法 |
@@ -321,7 +321,7 @@ MES-AI-DEV 是一套 AI 驱动的开发框架，通过 OpenCode 的 Skill/Comman
 | 3 | 缺陷跟踪模板 | templates/defect-tracking-template.md | 学会记录和跟踪缺陷 |
 | 4 | 回归测试数据模板 | templates/regression-testdata-template.md | 理解回归范围和数据治理 |
 | 5 | 测试报告模板 | templates/test-report-template.md | 学会编写测试报告 |
-| 6 | 测试可用性矩阵 | knowledge/code-map/testability-matrix.md | 了解存量测试资产可用性 |
+| 6 | 测试可用性矩阵 | mes-ai-dev/knowledge/code-map/testability-matrix.md | 了解存量测试资产可用性 |
 | 7 | 验收标准分级 | templates/acceptance-criteria-graded-template.md | 理解P0/P1/P2分级 |
 
 ### 8.6 运维工程师
@@ -332,7 +332,7 @@ MES-AI-DEV 是一套 AI 驱动的开发框架，通过 OpenCode 的 Skill/Comman
 |------|---------|------|------|
 | 1 | AGENTS.md §二 业务参考信息 | AGENTS.md | 理解业务术语 |
 | 2 | 环境治理细则 | .opencode/references/mes-ai-reference/rules/environment-governance.md | 理解多环境部署规则 |
-| 3 | 运行时配置 | knowledge/code-map/runtime.md | 了解运行时行为和环境差异 |
+| 3 | 运行时配置 | mes-ai-dev/knowledge/code-map/runtime.md | 了解运行时行为和环境差异 |
 | 4 | 部署计划模板 | templates/deploy-plan-template.md | 学会编写部署计划 |
 | 5 | 回滚方案模板 | templates/rollback-template.md | 学会编写可执行回滚方案 |
 | 6 | Go/No-Go决策模板 | templates/go-nogo-template.md | 理解发布决策流程 |

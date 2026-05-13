@@ -8,7 +8,7 @@
 | `domain-model.md` | 需求分析 |
 | `data-dictionary.md` | 设计 |
 | `enum-registry.md` | 开发 |
-| `phase-gates.md` / `phase-gates/` | 门禁校验 |
+| `phase-gates/index.md` / `phase-gates/` | 门禁校验 |
 | `blocker-handling-guide.md` | blocker 分类与处理 |
 | `dod-definition-guide.md` | 判断完整完成 / GSD 完成 |
 | `governance-memory.md` | 骨架治理经验回查 |

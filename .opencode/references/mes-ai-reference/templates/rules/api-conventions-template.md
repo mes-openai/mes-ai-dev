@@ -4,7 +4,7 @@
 
 > ⚠️ 本文件是**硬性规则**，违反即视为缺陷。所有Agent在开发阶段**必须遵循**。
 > 规则来源：人工定义或从代码风格确认。
-> 与 `reference/` 下的参考知识不同，参考知识帮助理解，规则约束行为。
+> 与 `mes-ai-dev/knowledge/reference/` 下的参考知识不同，参考知识帮助理解，规则约束行为。
 
 > 由 `/mes-init-project` 阶段自动生成，用于沉淀系统的完整 API 设计规范与现有实现模式。
 > 本模板在初始化阶段由 `mes-init-extract-reference` 基于 Controller、路由定义与前后端调用关系补全。
@@ -28,7 +28,7 @@
 ## 三、契约索引入口
 
 - 统一响应契约：见 `response-conventions.md` 或对应契约文件
-- 错误契约：见 `reference/error-code-registry.md`
+- 错误契约：见 `mes-ai-dev/knowledge/reference/error-code-registry.md`
 - 认证契约：见相关 reference / pattern 文件
 - 网关契约：见相关 reference / pattern 文件
 

@@ -1,10 +1,10 @@
 # 知识库状态摘要
 
-> 本文件是 `state/state.yaml` 的人工阅读版摘要。
-> **核心原则**：`state/state.yaml` 是唯一已合并机器事实源；初始化运行中状态先写入 `state/fragments/*.yaml`，收拢后再合并到 `state.yaml`。
+> 本文件是 `mes-ai-dev/knowledge/state/state.yaml` 的人工阅读版摘要。
+> **核心原则**：`mes-ai-dev/knowledge/state/state.yaml` 是唯一已合并机器事实源；初始化运行中状态先写入 `mes-ai-dev/knowledge/state/fragments/*.yaml`，收拢后再合并到 `mes-ai-dev/knowledge/state/state.yaml`。
 > **历史遗留**：.init-checkpoint.yaml / .sync-record.json 已标记为历史，仅专项核查时引用。
-> **双写兼容说明**：若未来启用 `state-detail/sync.yaml`，`.sync-record.json` 允许按“state.yaml.sync 摘要 + state-detail/sync.yaml 明细（若存在）”联合渲染，但不改变其历史遗留定位。
-> **字段说明参考**：详见 `state/state-schema-reference.md`。
+> **双写兼容说明**：若未来启用 `mes-ai-dev/knowledge/state/state-detail/sync.yaml`，`.sync-record.json` 允许按“state.yaml.sync 摘要 + `mes-ai-dev/knowledge/state/state-detail/sync.yaml` 明细（若存在）”联合渲染，但不改变其历史遗留定位。
+> **字段说明参考**：详见 `mes-ai-dev/knowledge/state/state-schema-reference.md`。
 
 ---
 
@@ -69,13 +69,13 @@
 
 ## 六、相关文件
 
-- **统一状态源**：`state/state.yaml`
-- **状态片段目录**：`state/fragments/`
-- **状态规则索引**：`rules/state/state-rendering-index.md`
-- **字段参考**：`state/state-schema-reference.md`
-- **门禁索引**：`reference/phase-gates/index.md`
-- **迁移核查**：`state/migration-checklist.md`
-- **消费矩阵索引**：`reference/knowledge-consumption/index.md`
+- **统一状态源**：`mes-ai-dev/knowledge/state/state.yaml`
+- **状态片段目录**：`mes-ai-dev/knowledge/state/fragments/`
+- **状态规则索引**：`mes-ai-dev/knowledge/rules/state/state-rendering-index.md`
+- **字段参考**：`mes-ai-dev/knowledge/state/state-schema-reference.md`
+- **门禁索引**：`mes-ai-dev/knowledge/reference/phase-gates/index.md`
+- **迁移核查**：`mes-ai-dev/knowledge/state/migration-checklist.md`
+- **消费矩阵索引**：`mes-ai-dev/knowledge/reference/knowledge-consumption/index.md`
 
 > **历史遗留文件**（仅专项核查时引用）：
 > - `.init-checkpoint.yaml` — 断点进度历史遗留文件

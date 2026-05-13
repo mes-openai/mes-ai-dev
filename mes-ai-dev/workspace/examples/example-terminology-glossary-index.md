@@ -13,9 +13,9 @@
 
 | 分组/服务 | 术语数量 | 分片路径 | 优先级 | 说明 |
 |-----------|----------|----------|--------|------|
-| `service-mes-production` | 86 | `knowledge/fragments/reference/terminology/service-mes-production.md` | 高 | 工单、工艺路线、工序等生产核心术语 |
-| `service-mes-quality` | 42 | `knowledge/fragments/reference/terminology/service-mes-quality.md` | 中 | 检验、不良、复判等质量术语 |
-| `group-quality` | 35 | `knowledge/fragments/reference/terminology/group-quality.md` | 高 | 检验、放行、复判等术语组 |
+| `service-mes-production` | 86 | `mes-ai-dev/knowledge/fragments/reference/terminology/service-mes-production.md` | 高 | 工单、工艺路线、工序等生产核心术语 |
+| `service-mes-quality` | 42 | `mes-ai-dev/knowledge/fragments/reference/terminology/service-mes-quality.md` | 中 | 检验、不良、复判等质量术语 |
+| `group-quality` | 35 | `mes-ai-dev/knowledge/fragments/reference/terminology/group-quality.md` | 高 | 检验、放行、复判等术语组 |
 
 ## 三、高频/高歧义术语提示
 
@@ -41,5 +41,5 @@
 
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
-| E-01 | 分片 | `knowledge/fragments/reference/terminology/service-mes-production.md` | 生产术语分片 |
-| E-02 | 状态 | `knowledge/state/state.yaml` | 收口批次与范围来源 |
+| E-01 | 分片 | `mes-ai-dev/knowledge/fragments/reference/terminology/service-mes-production.md` | 生产术语分片 |
+| E-02 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | 收口批次与范围来源 |

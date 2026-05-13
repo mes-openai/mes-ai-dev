@@ -25,7 +25,7 @@
 - `workspace/designs/{REQ-ID}/api-design.md`
 - `workspace/designs/{REQ-ID}/database-design.md`
 - 涉及服务的 `detail.md`（第1层完整版）
-- `knowledge/code-map/patterns.md`
+- `mes-ai-dev/knowledge/code-map/patterns.md`
 - `mes-ai-dev/knowledge/reference/error-code-registry.md`
 - `mes-ai-dev/knowledge/reference/enum-registry.md`
 

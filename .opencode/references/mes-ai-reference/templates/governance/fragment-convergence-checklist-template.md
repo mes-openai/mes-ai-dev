@@ -1,6 +1,6 @@
 # 片段收口前检查清单
 
-> 本模板用于主控 Agent 或 `/mes-init-converge` 在合并 `knowledge/fragments/**/*.md` 前执行统一检查。
+> 本模板用于主控 Agent 或 `/mes-init-converge` 在合并 `mes-ai-dev/knowledge/fragments/**/*.md` 前执行统一检查。
 > 目标是阻止“命名不可映射、重复、冲突、不可消费、候选未重算”等问题直接进入最终共享文件。
 
 ---
@@ -12,7 +12,7 @@
 | 检查时间 | [时间] |
 | 检查人 / 主控Agent | [姓名/Agent] |
 | 收口范围 | [repo/module/schema/service 列表] |
-| 收口目标 | [reference/rules/code-map/hot] |
+| 收口目标 | [mes-ai-dev/knowledge/reference / mes-ai-dev/knowledge/rules / mes-ai-dev/knowledge/code-map / hot-*] |
 | 对应命令 | [/mes-init-project 最终收拢 / /mes-init-converge] |
 
 ---
@@ -21,7 +21,7 @@
 
 | 编号 | 片段路径 | 片段类型 | scope | 当前状态 | 备注 |
 |------|----------|----------|-------|----------|------|
-| F-001 | `knowledge/fragments/reference/terminology/service-xxx.md` | reference/terminology | service-xxx | 待检查 | [备注] |
+| F-001 | `mes-ai-dev/knowledge/fragments/reference/terminology/service-xxx.md` | `mes-ai-dev/knowledge/reference/terminology` | service-xxx | 待检查 | [备注] |
 
 ---
 
@@ -109,5 +109,5 @@
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
 | E-01 | 文件 | `[片段路径]` | [说明] |
-| E-02 | 状态 | `state/state.yaml` | [说明] |
+| E-02 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | [说明] |
 | E-03 | 附录 | `[附录路径]` | [说明] |

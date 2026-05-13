@@ -9,7 +9,7 @@
 
 ## 二、共享知识文件范围
 默认包括：
-- `knowledge/state/state.yaml`、`summary.md`、`baseline.md`、`init-coverage.md`
+- `mes-ai-dev/knowledge/state/state.yaml`、`summary.md`、`baseline.md`、`init-coverage.md`
 - 全局 dependency / registry 文件
 - 全局 reference 共享知识
 - 全局 rules 共享知识
@@ -17,8 +17,8 @@
 
 ## 三、允许直接写入的对象
 - scope 级服务/模块/schema 局部知识结果
-- `knowledge/fragments/...`
-- `knowledge/state/fragments/...`
+- `mes-ai-dev/knowledge/fragments/...`
+- `mes-ai-dev/knowledge/state/fragments/...`
 - workspace 下的报告、evidence、handoff、memory
 
 ## 四、主控收口职责

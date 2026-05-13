@@ -12,6 +12,6 @@
 - [ ] 未覆盖区域是否已标注
 - [ ] 可信度抽检是否全部完成（depth + confidence + 3项静态校验）
 - [ ] 低可信度产物是否有明确的人工复核建议
-- [ ] `reference/terminology-glossary.md` 是否已真实填充并可供需求分析直接消费
-- [ ] 同类 reference/rules 关键文件是否已真实填充并可直接消费
+- [ ] `mes-ai-dev/knowledge/reference/terminology-glossary.md` 是否已真实填充并可供需求分析直接消费
+- [ ] 同类 mes-ai-dev/knowledge/reference/rules 关键文件是否已真实填充并可直接消费
 - [ ] code-map 全局共享文件是否已完成片段收口并形成正式可消费版本

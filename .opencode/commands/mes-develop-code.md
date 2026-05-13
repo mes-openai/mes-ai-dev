@@ -183,7 +183,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 │  └──────────────────┘  └──────────────────┘                 │
 │  ┌──────────────────┐                                        │
 │  │新鲜度预检        │                                        │
-│  │──优先读取state/summary.md，缺失时回退baseline.md │           │
+│  │──优先读取mes-ai-dev/knowledge/state/summary.md，缺失时回退mes-ai-dev/knowledge/baseline.md │           │
 │  │──对比目标服务变更│                                        │
 │  │──过期→强制先刷新 │                                        │
 │  └──────────────────┘                                        │
@@ -333,7 +333,7 @@ description: "执行完整代码开发，按任务计划逐步实现"
 │  │                           │ ──编译结果+静态检查+单证+smoke│
 │  ├───────────────────────────┤                               │
 │  │ 知识库刷新提示            │ ──使用 refresh-hints-template│
-│  │ (refresh-hints.md)        │ ──需更新的code-map/registry  │
+│  │ (refresh-hints.md)        │ ──需更新的mes-ai-dev/knowledge/code-map/registry  │
 │  │                           │ ──按优先级排列刷新项          │
 │  └───────────────────────────┘                               │
 │  ⚠️ 编译不通过 / 新生成测试未全绿 / 覆盖率未达 100% = 阻止退出开发阶段 │

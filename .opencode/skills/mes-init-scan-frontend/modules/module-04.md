@@ -18,7 +18,7 @@
 ### Step 9: 汇总输出
 ```
 工具：Write
-路径：state/fragments/*.yaml / modules/* 目录的后续输入
+路径：mes-ai-dev/knowledge/state/fragments/*.yaml / modules/* 目录的后续输入
 ```
 
 **Step Gate C**：前端总览缺少技术栈、模块、公共组件、API模块或异常列表 → 打回步骤9重做，不得交付后续初始化步骤。

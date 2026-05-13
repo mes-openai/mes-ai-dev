@@ -1,13 +1,13 @@
 # 业务链路片段模板
 
-> 用于 `knowledge/fragments/code-map/business-flows/*.md`。
+> 用于 `mes-ai-dev/knowledge/fragments/code-map/business-flows/*.md`。
 > 仅作为全局业务链路收口前的局部结果片段。
 
 ## 一、片段元信息
 
 | 字段 | 内容 |
 |------|------|
-| 片段文件 | `code-map/business-flows/[scope].md` |
+| 片段文件 | `mes-ai-dev/knowledge/code-map/business-flows/[scope].md` |
 | scope 类型 | [service/repo/module] |
 | scope 标识 | [如：mes-production] |
 | 生成阶段 | [/mes-init-enrich] |

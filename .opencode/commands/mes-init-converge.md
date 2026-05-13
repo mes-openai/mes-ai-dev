@@ -9,9 +9,9 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 
 本命令的定位不是重新扫描业务代码仓，而是：
 - 汇总单仓初始化已生成的局部产物
-- 串行合并 `state/fragments/*.yaml` 状态片段
-- 串行合并 `knowledge/fragments/` 下的 reference/rules 局部结果片段
-- 串行合并 `knowledge/fragments/code-map/` 下的全局知识片段与热点候选结果
+- 串行合并 `mes-ai-dev/knowledge/state/fragments/*.yaml` 状态片段
+- 串行合并 `mes-ai-dev/knowledge/fragments/` 下的 mes-ai-dev/knowledge/reference/rules 局部结果片段
+- 串行合并 `mes-ai-dev/knowledge/fragments/code-map/` 下的全局知识片段与热点候选结果
 - 重算全局 overview / registry / hot 层
 - 做一次全仓视角的覆盖率与一致性校验
 - 将“多次单仓补录”收敛为“可按全仓口径消费”的知识库状态
@@ -57,10 +57,18 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 ## 前置条件
 
 - 已至少执行过一次 `/mes-init-project`
-- `state/state.yaml` 已存在
-- 已存在局部知识产物（如 services/*/index.md、services/*/api-registry.md、modules/*/frontend-backend-map.md、database-index/*/registry-fragment.md）
+- `mes-ai-dev/knowledge/state/state.yaml` 已存在，**或** 已存在待合并的 `mes-ai-dev/knowledge/state/fragments/*.yaml`
+- 已存在可收敛的局部知识产物，至少命中以下一类：
+  - `mes-ai-dev/knowledge/code-map/services/*/index.md`
+  - `mes-ai-dev/knowledge/code-map/services/*/api-registry.md`
+  - `mes-ai-dev/knowledge/dependency-graph/modules/*/frontend-backend-map.md`
+  - `mes-ai-dev/knowledge/database-index/schema-*/index.md`
 - 若采用分仓补录模式，应确认本次需要收敛的 repo/module/schema 已全部完成单仓初始化
-- 若存在共享 reference/rules 片段，应确认其 scope 命名与目标收敛范围一致
+- 若存在共享 mes-ai-dev/knowledge/reference/rules 片段，应确认其 scope 命名与目标收敛范围一致
+
+> **兼容说明**：
+> - 对于 `--services` / `--modules` / `--schemas` 的单仓或定向初始化，`/mes-init-project` 允许仅生成 scope 级局部产物与 `mes-ai-dev/knowledge/state/fragments/*.yaml`，不要求先完成 `state.yaml` 的全局合并态。
+> - 对于仅执行 `--schemas=<schema>` 的数据库定向初始化，`mes-ai-dev/knowledge/database-index/schema-*/index.md` 即属于合法的可收敛局部产物，不得强制要求旧口径的 `mes-ai-dev/knowledge/database-index/*/registry-fragment.md`。
 
 ---
 
@@ -86,14 +94,14 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 - `legacy-debt.md`
 
 ### 目标二点五：共享参考知识文件全局收口
-- `reference/terminology-glossary.md`
-- `reference/domain-model.md`
-- `reference/data-dictionary.md`
-- `reference/enum-registry.md`
-- `reference/error-code-registry.md`
-- `reference/permission-matrix.md`
-- `rules/api-conventions.md`
-- `rules/coding-standards.md`
+- `mes-ai-dev/knowledge/reference/terminology-glossary.md`
+- `mes-ai-dev/knowledge/reference/domain-model.md`
+- `mes-ai-dev/knowledge/reference/data-dictionary.md`
+- `mes-ai-dev/knowledge/reference/enum-registry.md`
+- `mes-ai-dev/knowledge/reference/error-code-registry.md`
+- `mes-ai-dev/knowledge/reference/permission-matrix.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/coding-standards.md`
 
 ### 目标三：全仓视角校验
 - 覆盖率是否完整
@@ -101,7 +109,7 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 - `baseline.md` / `init-coverage.md` / `summary.md` 是否与 `state.yaml` 一致
 
 ### 目标四：更新统一状态源
-- 先合并待收拢的 `state/fragments/*.yaml`
+- 先合并待收拢的 `mes-ai-dev/knowledge/state/fragments/*.yaml`
 - 在 `state.yaml.initialization` 中写入本次全局收敛结果
 - 更新 `state.yaml.initialization.convergence`
 - 清空已完成收口的 `pending_reference_fragments` / `pending_code_map_fragments`，并记录 `last_converged_fragment_batch`
@@ -157,7 +165,7 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 ┌─────────────────────────────────────────────────────────────┐
 │  Phase 1: 局部产物盘点                                         │
 │  ┌─────────────┐                                             │
-│  │init-verify  │ ──盘点 services/modules/database-index 与 state/fragments 局部产物 │
+│  │init-verify  │ ──盘点 services/modules/database-index 与 mes-ai-dev/knowledge/state/fragments 局部产物 │
 │  │ -knowledge  │ ──检查 coverage 是否存在缺口                 │
 │  └─────────────┘                                             │
 └─────────────────────────────────────────────────────────────┘
@@ -177,7 +185,7 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 │  │ 基于局部产物重算总览 │ │ 基于局部片段重算依赖图 │ │ 基于服务级片段重算API注册 │ │
 │  └─────────────┘  └─────────────┘  └─────────────┘          │
 │  ┌───────────────────────────────────────────┐               │
-│  │ reference/rules 共享知识收口              │               │
+│  │ mes-ai-dev/knowledge/reference/rules 共享知识收口              │               │
 │  │ ──汇总 terminology/domain/data-dictionary │               │
 │  │ ──汇总 enum/error-code/permission-matrix  │               │
 │  │ ──收口 api-conventions/coding-standards   │               │
@@ -196,7 +204,7 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
                                 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  Step Gate C: Phase 2-3 输出审查                             │
-│  ──总览/注册表/reference/rules/code-map/hot 层收口未通过 → 打回对应阶段重做 │
+│  ──总览/注册表/mes-ai-dev/knowledge/reference/rules/code-map/hot 层收口未通过 → 打回对应阶段重做 │
 └─────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
@@ -238,15 +246,15 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 
 | 产物 | 说明 |
 |------|------|
-| `state/state.yaml` | **主写入**：记录本次全局收敛结果与最近执行摘要 |
-| `state/fragments/*.yaml` | 待合并的初始化状态片段（收敛后应清空 pending） |
-| `knowledge/fragments/reference/**/*.md` | 待合并的 reference 层局部结果片段 |
-| `knowledge/fragments/rules/**/*.md` | 待合并的 rules 层局部结果片段 |
-| `knowledge/fragments/code-map/**/*.md` | 待合并的 code-map 全局知识片段与热点候选片段 |
-| `state.yaml.initialization.convergence.pending_reference_fragments` | 待收口 reference/rules 片段状态 |
+| `mes-ai-dev/knowledge/state/state.yaml` | **主写入**：记录本次全局收敛结果与最近执行摘要 |
+| `mes-ai-dev/knowledge/state/fragments/*.yaml` | 待合并的初始化状态片段（收敛后应清空 pending） |
+| `mes-ai-dev/knowledge/fragments/reference/**/*.md` | 待合并的 reference 层局部结果片段 |
+| `mes-ai-dev/knowledge/fragments/rules/**/*.md` | 待合并的 rules 层局部结果片段 |
+| `mes-ai-dev/knowledge/fragments/code-map/**/*.md` | 待合并的 code-map 全局知识片段与热点候选片段 |
+| `state.yaml.initialization.convergence.pending_reference_fragments` | 待收口 mes-ai-dev/knowledge/reference/rules 片段状态 |
 | `state.yaml.initialization.convergence.pending_code_map_fragments` | 待收口 code-map 片段状态 |
 | `state.yaml.initialization.convergence.last_converged_fragment_batch` | 最近收口批次记录 |
-| `state/summary.md` | 人工摘要，标注“已完成全局收敛” |
+| `mes-ai-dev/knowledge/state/summary.md` | 人工摘要，标注“已完成全局收敛” |
 | `baseline.md` | **兼容视图**：从 state.yaml 渲染的全局摘要 |
 | `init-coverage.md` | **兼容视图**：从 state.yaml 渲染的全局覆盖清单 |
 | `backend-overview.md` | 基于仓级产物全局重算后的后端总览 |
@@ -262,14 +270,14 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 | `hot-services.md` | 全局热点服务排行 |
 | `hot-apis.md` | 全局热点 API 排行 |
 | `hot-tables.md` | 全局热点表排行 |
-| `reference/terminology-glossary.md` | 全局收口后的业务术语索引文件（正文按服务/术语组分片） |
-| `reference/domain-model.md` | 全局收口后的领域模型索引文件（正文按业务域分片） |
-| `reference/data-dictionary.md` | 全局收口后的数据字典 |
-| `reference/enum-registry.md` | 全局收口后的枚举注册表 |
-| `reference/error-code-registry.md` | 全局收口后的错误码注册表 |
-| `reference/permission-matrix.md` | 全局收口后的权限矩阵 |
-| `rules/api-conventions.md` | 全局收口后的API规范基线 |
-| `rules/coding-standards.md` | 全局收口后的编码规范基线 |
+| `mes-ai-dev/knowledge/reference/terminology-glossary.md` | 全局收口后的业务术语索引文件（正文按服务/术语组分片） |
+| `mes-ai-dev/knowledge/reference/domain-model.md` | 全局收口后的领域模型索引文件（正文按业务域分片） |
+| `mes-ai-dev/knowledge/reference/data-dictionary.md` | 全局收口后的数据字典 |
+| `mes-ai-dev/knowledge/reference/enum-registry.md` | 全局收口后的枚举注册表 |
+| `mes-ai-dev/knowledge/reference/error-code-registry.md` | 全局收口后的错误码注册表 |
+| `mes-ai-dev/knowledge/reference/permission-matrix.md` | 全局收口后的权限矩阵 |
+| `mes-ai-dev/knowledge/rules/api-conventions.md` | 全局收口后的API规范基线 |
+| `mes-ai-dev/knowledge/rules/coding-standards.md` | 全局收口后的编码规范基线 |
 | `workspace/refresh/*-converge-report.md` | 建议使用 `templates/governance/converge-report-template.md` 记录本次收敛结论 |
 | `workspace/refresh/*-fragment-convergence-checklist.md` | 建议使用 `templates/governance/fragment-convergence-checklist-template.md` 记录收口前统一检查结果 |
 
@@ -298,11 +306,11 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 4. **热点层必须全局重算**：不能以单仓增量结果直接替代全局热点层
 5. **全局收敛后才能视为初始化结果可消费**：初始化各阶段/步骤只产生局部结果；未执行 `/mes-init-converge` 前，不得将共享依赖文件视为最终可消费结果
 6. **统一状态源优先**：已合并状态写入 `state.yaml`，兼容视图从 state.yaml 渲染
-7. **初始化状态先片段后合并**：`/mes-init-converge` 必须先串行合并 `state.fragments/*.yaml`，再更新 `state.yaml`
+7. **初始化状态先片段后合并**：`/mes-init-converge` 必须先串行合并 `state.mes-ai-dev/knowledge/fragments/*.yaml`，再更新 `state.yaml`
 8. **共享知识文件必须串行写入**：不得并行覆盖 overview / registry / baseline / init-coverage
 9. **收敛状态必须留痕**：是否已完成全局收敛，应写入 `state.yaml.initialization.convergence`
-10. **共享 reference/rules 文件必须经收口**：多次单仓/多session 初始化后的 reference/rules 共享文件，必须由 `/mes-init-converge` 或主控等价收口过程串行合并，禁止各 session 直接覆盖最终文件
-11. **reference/rules 片段命名必须可追溯**：收敛前必须按 scope 校验 `knowledge/fragments/` 下片段命名是否可映射到 repo/module/schema/service；无法映射的片段不得静默合并
+10. **共享 mes-ai-dev/knowledge/reference/rules 文件必须经收口**：多次单仓/多session 初始化后的 mes-ai-dev/knowledge/reference/rules 共享文件，必须由 `/mes-init-converge` 或主控等价收口过程串行合并，禁止各 session 直接覆盖最终文件
+11. **mes-ai-dev/knowledge/reference/rules 片段命名必须可追溯**：收敛前必须按 scope 校验 `mes-ai-dev/knowledge/fragments/` 下片段命名是否可映射到 repo/module/schema/service；无法映射的片段不得静默合并
 12. **code-map 全局片段也必须经收口**：`business-flows` / `ownership` / `patterns` / `legacy-debt` / `hot-*` 的片段或候选结果，必须由主控或 `/mes-init-converge` 串行汇总，禁止各 session 直接覆盖最终文件
 13. **收口前必须留痕检查**：建议在最终共享文件写入前，使用 `templates/governance/fragment-convergence-checklist-template.md` 记录命名映射、重复、冲突、最小可消费内容、热点候选重算准备度和 state.yaml 对齐情况
 14. **收口锁释放必须留痕**：若 `mes-init-converge.lock` 释放异常或被强制接管，必须记录到例外流程与收口报告中

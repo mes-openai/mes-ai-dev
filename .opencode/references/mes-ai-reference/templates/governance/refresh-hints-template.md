@@ -28,14 +28,14 @@
 
 | 文件 | 更新原因 | 更新内容 |
 |------|---------|---------|
-| `code-map/services/service-xxx/index.md` | [原因] | [需更新的段落/章节] |
-| `code-map/services/service-xxx/detail.md` | [原因] | [需更新的段落/章节] |
-| `code-map/services/service-xxx/file-summaries.md` | [原因] | [新增/修改的文件摘要] |
-| `code-map/modules/module-xxx/index.md` | [原因] | [需更新的段落/章节] |
-| `code-map/backend-overview.md` | [如：新增了API，需更新API计数] | [更新内容] |
-| `code-map/business-flows.md` | [如：链路变更] | [需更新的链路] |
-| `code-map/ownership.md` | [如：实体归属变更] | [需更新的实体] |
-| `code-map/patterns.md` | [如：新增了实现模式] | [需更新的模式] |
+| `mes-ai-dev/knowledge/code-map/services/service-xxx/index.md` | [原因] | [需更新的段落/章节] |
+| `mes-ai-dev/knowledge/code-map/services/service-xxx/detail.md` | [原因] | [需更新的段落/章节] |
+| `mes-ai-dev/knowledge/code-map/services/service-xxx/file-summaries.md` | [原因] | [新增/修改的文件摘要] |
+| `mes-ai-dev/knowledge/code-map/modules/module-xxx/index.md` | [原因] | [需更新的段落/章节] |
+| `mes-ai-dev/knowledge/code-map/backend-overview.md` | [如：新增了API，需更新API计数] | [更新内容] |
+| `mes-ai-dev/knowledge/code-map/business-flows.md` | [如：链路变更] | [需更新的链路] |
+| `mes-ai-dev/knowledge/code-map/ownership.md` | [如：实体归属变更] | [需更新的实体] |
+| `mes-ai-dev/knowledge/code-map/patterns.md` | [如：新增了实现模式] | [需更新的模式] |
 
 ---
 
@@ -43,10 +43,10 @@
 
 | 文件 | 更新原因 | 更新内容 |
 |------|---------|---------|
-| `dependency-graph/api-registry.md` | [如：新增API] | [新增的API注册信息] |
-| `dependency-graph/service-dependencies.md` | [如：新增服务调用] | [新增的依赖关系] |
-| `dependency-graph/database-registry.md` | [如：新增表/列] | [新增的表/列注册信息] |
-| `dependency-graph/frontend-backend-map.md` | [如：前端新增调用] | [新增的映射关系] |
+| `mes-ai-dev/knowledge/dependency-graph/api-registry.md` | [如：新增API] | [新增的API注册信息] |
+| `mes-ai-dev/knowledge/dependency-graph/service-dependencies.md` | [如：新增服务调用] | [新增的依赖关系] |
+| `mes-ai-dev/knowledge/dependency-graph/database-registry.md` | [如：新增表/列] | [新增的表/列注册信息] |
+| `mes-ai-dev/knowledge/dependency-graph/frontend-backend-map.md` | [如：前端新增调用] | [新增的映射关系] |
 
 ---
 
@@ -62,9 +62,9 @@
 
 | 文件 | 更新原因 | 更新内容 |
 |------|---------|---------|
-| `reference/enum-registry.md` | [如：新增枚举值] | [新增的枚举定义] |
-| `reference/data-dictionary.md` | [如：新增字段含义] | [新增的字段定义] |
-| `reference/error-code-registry.md` | [如：新增错误码] | [新增的错误码] |
+| `mes-ai-dev/knowledge/reference/enum-registry.md` | [如：新增枚举值] | [新增的枚举定义] |
+| `mes-ai-dev/knowledge/reference/data-dictionary.md` | [如：新增字段含义] | [新增的字段定义] |
+| `mes-ai-dev/knowledge/reference/error-code-registry.md` | [如：新增错误码] | [新增的错误码] |
 
 ---
 
@@ -72,9 +72,9 @@
 
 > 以下文件经确认无需更新：
 
-- `code-map/frontend-overview.md` — [原因：前端无变更]
-- `code-map/runtime.md` — [原因：无定时任务/MQ/缓存变更]
-- `code-map/test-assets.md` — [原因：无测试框架变更]
+- `mes-ai-dev/knowledge/code-map/frontend-overview.md` — [原因：前端无变更]
+- `mes-ai-dev/knowledge/code-map/runtime.md` — [原因：无定时任务/MQ/缓存变更]
+- `mes-ai-dev/knowledge/code-map/test-assets.md` — [原因：无测试框架变更]
 
 ---
 

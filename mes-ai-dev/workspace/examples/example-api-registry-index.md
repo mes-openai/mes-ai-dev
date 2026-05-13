@@ -1,6 +1,6 @@
 # API 注册索引（示例）
 
-> 示例文件，演示 `knowledge/dependency-graph/api-registry.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
+> 示例文件，演示 `mes-ai-dev/knowledge/dependency-graph/api-registry.md` 在大仓/超大仓场景下应如何以“索引文件”形式输出。
 > 完整 API 明细应继续下沉到服务级片段，不在本文件全量展开。
 
 ## 一、文件定位
@@ -23,9 +23,9 @@
 
 | 服务 | API 数量 | 片段路径 | 优先级 | 说明 |
 |------|----------|----------|--------|------|
-| service-mes-production | 186 | `knowledge/code-map/services/service-mes-production/api-registry.md` | 高 | 工单、报工、完工相关 API 密集 |
-| service-mes-quality | 97 | `knowledge/code-map/services/service-mes-quality/api-registry.md` | 中 | 检验、不良、质量追溯相关 |
-| service-mes-inventory | 143 | `knowledge/code-map/services/service-mes-inventory/api-registry.md` | 高 | 出入库、批次、库存冻结相关 |
+| service-mes-production | 186 | `mes-ai-dev/knowledge/code-map/services/service-mes-production/api-registry.md` | 高 | 工单、报工、完工相关 API 密集 |
+| service-mes-quality | 97 | `mes-ai-dev/knowledge/code-map/services/service-mes-quality/api-registry.md` | 中 | 检验、不良、质量追溯相关 |
+| service-mes-inventory | 143 | `mes-ai-dev/knowledge/code-map/services/service-mes-inventory/api-registry.md` | 高 | 出入库、批次、库存冻结相关 |
 
 ## 四、高频/高风险 API 提示
 
@@ -52,5 +52,5 @@
 
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
-| E-01 | 片段 | `knowledge/code-map/services/service-mes-production/api-registry.md` | 服务级 API 明细片段 |
-| E-02 | 状态 | `knowledge/state/state.yaml` | 收口批次与 pending 状态来源 |
+| E-01 | 片段 | `mes-ai-dev/knowledge/code-map/services/service-mes-production/api-registry.md` | 服务级 API 明细片段 |
+| E-02 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | 收口批次与 pending 状态来源 |

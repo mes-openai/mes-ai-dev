@@ -14,8 +14,8 @@ cost_level: low
 summary_first: false
 parent_index: .opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md
 related_files:
-  - knowledge/code-map/backend-overview.md
-  - knowledge/code-map/frontend-overview.md
+  - mes-ai-dev/knowledge/code-map/backend-overview.md
+  - mes-ai-dev/knowledge/code-map/frontend-overview.md
   - mes-ai-dev/knowledge/reference/data-dictionary.md
   - mes-ai-dev/knowledge/reference/terminology-glossary.md
 ---
@@ -125,8 +125,8 @@ related_files:
 
 ## 六、推荐消费顺序
 
-1. `knowledge/code-map/backend-overview.md`
-2. `knowledge/code-map/frontend-overview.md`
+1. `mes-ai-dev/knowledge/code-map/backend-overview.md`
+2. `mes-ai-dev/knowledge/code-map/frontend-overview.md`
 3. `mes-ai-dev/knowledge/reference/terminology-glossary.md`
 4. `.opencode/references/mes-ai-reference/reference/parameter-switch-patterns.md`
 5. 命中的服务 `index.md` / 模块 `index.md`

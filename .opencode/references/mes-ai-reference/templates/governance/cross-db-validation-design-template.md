@@ -16,7 +16,7 @@ related_files:
   - templates/governance/validation-placement-decision-template.md
   - templates/governance/validation-logic-expression-template.md
   - .opencode/references/mes-ai-reference/rules/scenarios/database-cross-access-rule.md
-  - knowledge/code-map/layer-decoupling-channel.md
+  - mes-ai-dev/knowledge/code-map/layer-decoupling-channel.md
 ---
 
 # 跨库校验方案设计模板（cross-db-validation-design-template）
@@ -444,6 +444,6 @@ graph LR
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
 | E-01 | 架构约束规则 | `.opencode/references/mes-ai-reference/rules/scenarios/database-cross-access-rule.md` | 跨库访问架构约束定义 |
-| E-02 | 限定通道索引 | `knowledge/code-map/layer-decoupling-channel.md` | 限定通道服务索引 |
-| E-03 | 数据库归属 | `knowledge/dependency-graph/database-registry.md` | 数据库归属映射 |
+| E-02 | 限定通道索引 | `mes-ai-dev/knowledge/code-map/layer-decoupling-channel.md` | 限定通道服务索引 |
+| E-03 | 数据库归属 | `mes-ai-dev/knowledge/dependency-graph/database-registry.md` | 数据库归属映射 |
 | E-04 | 限定通道服务 | `jalor/channel-service/...` | 限定通道服务代码位置 |

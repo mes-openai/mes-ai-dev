@@ -41,7 +41,7 @@
 
 1. 读取代码自审报告
 2. 检查是否存在未解决的严重问题
-3. 检查代码规范是否符合 `rules/coding-standards.md`
+3. 检查代码规范是否符合 `mes-ai-dev/knowledge/rules/coding-standards.md`
 4. 确认编译是否通过
 
 **Step Gate B**：测试覆盖、代码质量或非功能需求检查存在缺口 → 打回步骤3-5重做，不得进入逐项评定。

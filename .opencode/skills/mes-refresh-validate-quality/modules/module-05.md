@@ -23,21 +23,21 @@
 逐项检查所有必要文件是否存在：
 
 **Layer 0**：
-- [ ] `code-map/backend-overview.md`
-- [ ] `code-map/frontend-overview.md`
+- [ ] `mes-ai-dev/knowledge/code-map/backend-overview.md`
+- [ ] `mes-ai-dev/knowledge/code-map/frontend-overview.md`
 
 **Layer 1（每个服务）**：
-- [ ] `code-map/services/<service-name>/index.md`
-- [ ] `code-map/services/<service-name>/detail.md`
-- [ ] `code-map/services/<service-name>/file-summaries.md`
+- [ ] `mes-ai-dev/knowledge/code-map/services/<service-name>/index.md`
+- [ ] `mes-ai-dev/knowledge/code-map/services/<service-name>/detail.md`
+- [ ] `mes-ai-dev/knowledge/code-map/services/<service-name>/file-summaries.md`
 
 **依赖图**：
-- [ ] `dependency-graph/service-dependencies.md`
-- [ ] `dependency-graph/api-registry.md`
+- [ ] `mes-ai-dev/knowledge/dependency-graph/service-dependencies.md`
+- [ ] `mes-ai-dev/knowledge/dependency-graph/api-registry.md`
 
 **同步记录**：
-- [ ] `state/state.yaml` 的 sync 摘要字段有效
-- [ ] `state/state.yaml` 的 sync 摘要字段存在且可解释当前同步状态
+- [ ] `mes-ai-dev/knowledge/state/state.yaml` 的 sync 摘要字段有效
+- [ ] `mes-ai-dev/knowledge/state/state.yaml` 的 sync 摘要字段存在且可解释当前同步状态
 
 **Step Gate A**：文件完整性检查不完整或 sync 节点状态不明确 → 打回步骤2重做，不得进入交叉引用一致性检查。
 

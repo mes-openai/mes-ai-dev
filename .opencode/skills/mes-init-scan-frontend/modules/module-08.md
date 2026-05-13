@@ -1,7 +1,7 @@
 # 输出
 
 ## 输出
-- 文件路径：`state/fragments/*.yaml` 中的 coverage 片段与后续 `modules/module-xxx/*` 的输入清单
+- 文件路径：`mes-ai-dev/knowledge/state/fragments/*.yaml` 中的 coverage 片段与后续 `modules/module-xxx/*` 的输入清单
 - 内容格式：
   ```markdown
   # 前端架构总览

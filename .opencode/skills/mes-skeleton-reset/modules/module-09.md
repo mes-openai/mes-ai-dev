@@ -16,10 +16,10 @@
 - 骨架迁移到新项目，需从零开始初始化
 
 ### 影响范围
-- knowledge/code-map/
-- knowledge/dependency-graph/
-- knowledge/database-index/
-- knowledge/state/
+- mes-ai-dev/knowledge/code-map/
+- mes-ai-dev/knowledge/dependency-graph/
+- mes-ai-dev/knowledge/database-index/
+- mes-ai-dev/knowledge/state/
 - workspace/各阶段目录
 
 ### 验证结果

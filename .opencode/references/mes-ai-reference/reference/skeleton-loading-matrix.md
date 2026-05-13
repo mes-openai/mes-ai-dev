@@ -19,6 +19,7 @@
    - `.opencode/references/mes-ai-reference/reference/phase-gates/<当前阶段>.md`
    - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
    - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/<当前主题>.md`
+   - 旧兼容入口仅用于历史迁移说明，不得在新规则、新计划、新审查文档中作为主要来源或第一优先级入口引用。
 3. 非当前阶段门禁分片默认不加载。
 4. 非当前问题范围的消费矩阵主题分片默认不加载。
 5. 场景规则只在命中特殊条件时加载，不得因为“保险起见”默认全文常驻。
@@ -87,7 +88,7 @@
 
 设计阶段补充要求：
 
-- 生成设计文档前必须先读取 `knowledge/code-map/backend-overview.md` 与 `knowledge/code-map/frontend-overview.md`
+- 生成设计文档前必须先读取 `mes-ai-dev/knowledge/code-map/backend-overview.md` 与 `mes-ai-dev/knowledge/code-map/frontend-overview.md`
 - 命中参数开关场景时必须读取 `.opencode/references/mes-ai-reference/reference/parameter-switch-patterns.md`
 - 必须先完成服务/模块/Schema/路由定位，再进入 detail、file-summaries 或精准源码
 
@@ -107,9 +108,9 @@
 - `templates/**/*.md` 正文
 - 非当前阶段门禁分片
 - 非当前问题范围的知识消费分片
-- `knowledge/code-map/` 整目录
-- `knowledge/dependency-graph/` 整目录
-- `knowledge/state/` 整目录
+- `mes-ai-dev/knowledge/code-map/` 整目录
+- `mes-ai-dev/knowledge/dependency-graph/` 整目录
+- `mes-ai-dev/knowledge/state/` 整目录
 
 ### 5.3 灰名单（索引可见，正文按需）
 

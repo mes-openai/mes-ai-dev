@@ -50,7 +50,7 @@
 - 骨架主规则新增/删除/重构
 - 用户明确要求严格按阶段执行
 
-> GSD 详细规则：[`.opencode/references/mes-ai-reference/rules/scenarios/scenario-gsd.md`](../rules/scenarios/scenario-gsd.md)
+> GSD 详细规则：[`.opencode/references/mes-ai-reference/rules/scenarios/scenario-gsd.md`](../mes-ai-dev/knowledge/rules/scenarios/scenario-gsd.md)
 
 ---
 
@@ -130,7 +130,7 @@ MES-AI-DEV 不只保存阶段产物，还将需求分析、详细设计、代码
 - 交接入口稳定
 - 记忆与证据可直接定位
 
-> 产物布局标准：[`.opencode/references/mes-ai-reference/rules/governance/stage-artifact-layout.md`](../rules/governance/stage-artifact-layout.md)
+> 产物布局标准：[`.opencode/references/mes-ai-reference/rules/governance/stage-artifact-layout.md`](../mes-ai-dev/knowledge/rules/governance/stage-artifact-layout.md)
 
 ---
 
@@ -156,11 +156,11 @@ MES-AI-DEV 不只保存阶段产物，还将需求分析、详细设计、代码
 
 | 能力 | 相关规则/文档 |
 |------|---------------|
-| SDD | [`phase-analyze.md`](../rules/phases/phase-analyze.md)、[`phase-design.md`](../rules/phases/phase-design.md) |
-| Harness Engineering | [`agent-core.md`](../rules/core/agent-core.md)、[`execution-baseline.md`](../rules/core/execution-baseline.md) |
-| GSD | [`scenario-gsd.md`](../rules/scenarios/scenario-gsd.md) |
+| SDD | [`phase-analyze.md`](../mes-ai-dev/knowledge/rules/phases/phase-analyze.md)、[`phase-design.md`](../mes-ai-dev/knowledge/rules/phases/phase-design.md) |
+| Harness Engineering | [`agent-core.md`](../mes-ai-dev/knowledge/rules/core/agent-core.md)、[`execution-baseline.md`](../mes-ai-dev/knowledge/rules/core/execution-baseline.md) |
+| GSD | [`scenario-gsd.md`](../mes-ai-dev/knowledge/rules/scenarios/scenario-gsd.md) |
 | ADR | [`mes-design-record-decisions/SKILL.md`](../../../.opencode/skills/mes-design-record-decisions/SKILL.md) + [`mes-design-record-decisions/INDEX.md`](../../../.opencode/skills/mes-design-record-decisions/INDEX.md) |
-| 长上下文管理 | [`knowledge-consumption/index.md`](knowledge-consumption/index.md)、[`budget-audit-rules.md`](../rules/budget-audit-rules.md) |
+| 长上下文管理 | [`knowledge-consumption/index.md`](knowledge-consumption/index.md)、[`budget-audit-rules.md`](../mes-ai-dev/knowledge/rules/budget-audit-rules.md) |
 | 阶段记忆 | [`stage-memory-governance.md`](stage-memory-governance.md) |
-| 产物分类 | [`stage-artifact-layout.md`](../rules/governance/stage-artifact-layout.md) |
-| 目标仓对齐 | [`phase-init.md`](../rules/phases/phase-init.md) |
+| 产物分类 | [`stage-artifact-layout.md`](../mes-ai-dev/knowledge/rules/governance/stage-artifact-layout.md) |
+| 目标仓对齐 | [`phase-init.md`](../mes-ai-dev/knowledge/rules/phases/phase-init.md) |

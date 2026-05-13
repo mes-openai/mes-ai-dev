@@ -112,11 +112,11 @@ MES-AI-DEV 骨架已经具备以下能力：
 
 ### 5.1.2 加载矩阵与索引
 - `.opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md`
-- `.opencode/references/mes-ai-reference/reference/phase-gates.md`
 - `.opencode/references/mes-ai-reference/reference/phase-gates/index.md`
 - `.opencode/references/mes-ai-reference/reference/phase-gates/common.md`
-- `.opencode/references/mes-ai-reference/reference/knowledge-consumption-matrix.md`
 - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
+
+补充说明：`phase-gates.md` 与 `knowledge-consumption-matrix.md` 为兼容入口，不再作为主清单中的默认优先加载对象；若需保留历史兼容说明，应放入迁移或 stub 语境，不得与当前索引化主入口并列。
 
 ### 5.1.3 阶段规则
 - `.opencode/references/mes-ai-reference/rules/phases/phase-init.md`

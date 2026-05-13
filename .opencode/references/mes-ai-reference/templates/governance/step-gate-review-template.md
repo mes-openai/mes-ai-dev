@@ -51,7 +51,7 @@
 
 ### 3.1 数据库索引专项附加审查（命中 database-index 时必填）
 
-> 当当前步骤输出涉及 `database-index/schema-<schema-name>/`、Schema 风险画像、`tables.md`、`relations.md` 时，必须补充本节；未命中时填写“不适用”。
+> 当当前步骤输出涉及 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/`、Schema 风险画像、`tables.md`、`relations.md` 时，必须补充本节；未命中时填写“不适用”。
 
 | 序号 | 检查项 | 结果 | 问题/证据 |
 |------|--------|------|-----------|

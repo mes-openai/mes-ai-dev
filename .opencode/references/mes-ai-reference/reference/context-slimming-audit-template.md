@@ -146,7 +146,7 @@
 | ID | 来源层 | 内容摘要 | 类型 | 频率 | 风险 | 重复 | 动作 | 新位置 |
 |----|--------|----------|------|------|------|------|------|--------|
 | 01 | AGENTS | 项目概况 | G | 高 | 中 | 否 | KEEP | AGENTS |
-| 02 | AGENTS | 长路径枚举 | G | 中 | 低 | 否 | SUM | rules/*/index.md |
+| 02 | AGENTS | 长路径枚举 | G | 中 | 低 | 否 | SUM | mes-ai-dev/knowledge/rules/*/index.md |
 | 03 | Developer | 非实现请求不改代码 | R | 高 | 高 | 是 | MERGE | Developer 主定义 |
 ```
 
@@ -171,7 +171,7 @@
 ```md
 | 原位置 | 原内容 | 动作 | 新位置 |
 |---|---|---|---|
-| AGENTS 第四章 | 长路径索引 | SUM | rules/*/index.md |
+| AGENTS 第四章 | 长路径索引 | SUM | mes-ai-dev/knowledge/rules/*/index.md |
 | Developer 工具段 | Explore 示例 | MOVE | agent guide |
 ```
 

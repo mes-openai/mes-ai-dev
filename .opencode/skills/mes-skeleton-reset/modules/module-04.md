@@ -4,7 +4,7 @@
 
 #### 3.1 重置 state.yaml
 
-将 `knowledge/state/state.yaml` 重置为初始模板：
+将 `mes-ai-dev/knowledge/state/state.yaml` 重置为初始模板：
 
 ```yaml
 # 知识库统一状态源（唯一已合并机器事实源）
@@ -52,20 +52,20 @@ sync:
 #### 3.2 清空 state-detail/
 
 ```bash
-rm -rf knowledge/state/state-detail/*.yaml
+rm -rf mes-ai-dev/knowledge/state/state-detail/*.yaml
 ```
 
-#### 3.3 清空 fragments/
+#### 3.3 清空 mes-ai-dev/knowledge/fragments/
 
 ```bash
-rm -rf knowledge/state/fragments/*
+rm -rf mes-ai-dev/knowledge/state/fragments/*
 ```
 
 #### 3.4 删除历史遗留文件
 
 ```bash
-rm -f knowledge/.sync-record.json
-rm -f knowledge/.init-checkpoint.yaml
+rm -f mes-ai-dev/knowledge/.sync-record.json
+rm -f mes-ai-dev/knowledge/.init-checkpoint.yaml
 ```
 
 **Step Gate C**：状态文件清理或重置不完整 → 打回步骤3重做，不得进入阶段产物清理。

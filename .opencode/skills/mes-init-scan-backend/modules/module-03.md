@@ -54,7 +54,7 @@
 ### Step 6: 汇总输出
 将所有扫描结果汇总为服务清单，供后续服务级产物与最终收拢阶段使用：
 ```
-路径：state/fragments/*.yaml / services/* 目录的后续输入
+路径：mes-ai-dev/knowledge/state/fragments/*.yaml / services/* 目录的后续输入
 说明：不在本 Skill 直接写共享 `backend-overview.md`
 ```
 

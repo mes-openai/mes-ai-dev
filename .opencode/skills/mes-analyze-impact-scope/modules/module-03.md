@@ -42,7 +42,7 @@ mes-ai-dev/workspace/requirements/{REQ-ID}/raw-requirement.md
 
 #### 2.5 大仓模式前置检查（大仓/超大仓强制）
 
-当 `state/state.yaml` 中的仓规模标签为 `large` 或 `mega` 时，**必须在读取第0层overview之前先读取hot层**；若统一状态源缺失，可兼容回退读取 `baseline.md`：
+当 `mes-ai-dev/knowledge/state/state.yaml` 中的仓规模标签为 `large` 或 `mega` 时，**必须在读取第0层overview之前先读取hot层**；若统一状态源缺失，可兼容回退读取 `baseline.md`：
 
 1. 优先读取 `mes-ai-dev/knowledge/state/state.yaml` 获取仓规模标签
 2. 若标签为 `large` 或 `mega`：

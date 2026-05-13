@@ -1,13 +1,13 @@
 # 实体归属片段模板
 
-> 用于 `knowledge/fragments/code-map/ownership/*.md`。
+> 用于 `mes-ai-dev/knowledge/fragments/code-map/ownership/*.md`。
 > 仅作为全局实体归属收口前的局部结果片段。
 
 ## 一、片段元信息
 
 | 字段 | 内容 |
 |------|------|
-| 片段文件 | `code-map/ownership/[scope].md` |
+| 片段文件 | `mes-ai-dev/knowledge/code-map/ownership/[scope].md` |
 | scope 类型 | [service/repo/module] |
 | scope 标识 | [如：mes-production] |
 | 生成时间 | [时间] |

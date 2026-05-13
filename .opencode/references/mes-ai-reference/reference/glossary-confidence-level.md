@@ -14,7 +14,7 @@ related_files:
   - templates/governance/validation-rule-structuring-template.md
   - templates/governance/business-scenario-index-template.md
   - .opencode/references/mes-ai-reference/rules/scenarios/database-cross-access-rule.md
-  - knowledge/code-map/layer-decoupling-channel.md
+  - mes-ai-dev/knowledge/code-map/layer-decoupling-channel.md
 ---
 
 # 置信度分级定义（glossary-confidence-level）

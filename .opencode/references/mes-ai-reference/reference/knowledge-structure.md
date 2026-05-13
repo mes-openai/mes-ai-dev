@@ -1,22 +1,22 @@
 # 知识库结构说明
 
 ## 一、核心分层
-- `code-map/`：代码地图与结构化索引
-- `dependency-graph/`：服务、接口、数据库、前后端映射
-- `database-index/`：Schema 级索引
-- `state/`：统一状态源与状态片段
-- `reference/`：业务语义、门禁、消费入口、手册
-- `rules/`：硬性规则
-- `fragments/`：待收口的局部知识片段
+- `mes-ai-dev/knowledge/code-map/`：代码地图与结构化索引
+- `mes-ai-dev/knowledge/dependency-graph/`：服务、接口、数据库、前后端映射
+- `mes-ai-dev/knowledge/database-index/`：Schema 级索引
+- `mes-ai-dev/knowledge/state/`：统一状态源与状态片段
+- `mes-ai-dev/knowledge/reference/`：业务语义、门禁、消费入口、手册
+- `mes-ai-dev/knowledge/rules/`：硬性规则
+- `mes-ai-dev/knowledge/fragments/`：待收口的局部知识片段
 
 ## 二、推荐先读的参考说明
 
 对于“给人看的骨架说明”，建议优先阅读：
 
-1. `reference/skeleton-maintainer-quick-reference.md`：一页式说明骨架维护时先看什么、先改什么、改完别漏什么。
-1. `reference/skeleton-artifact-ownership-guide.md`：说明哪些内容通常由 AI 生成、哪些由人补充、哪些由人主导。
-2. `reference/stage-artifact-guide.md`：说明各阶段产物、过程产物与最终产物的区别，以及人工阅读重点。
-3. `reference/workspace-structure.md`：说明阶段目录、固定文件与人工阅读优先级。
+1. `mes-ai-dev/knowledge/reference/skeleton-maintainer-quick-reference.md`：一页式说明骨架维护时先看什么、先改什么、改完别漏什么。
+1. `mes-ai-dev/knowledge/reference/skeleton-artifact-ownership-guide.md`：说明哪些内容通常由 AI 生成、哪些由人补充、哪些由人主导。
+2. `mes-ai-dev/knowledge/reference/stage-artifact-guide.md`：说明各阶段产物、过程产物与最终产物的区别，以及人工阅读重点。
+3. `mes-ai-dev/knowledge/reference/workspace-structure.md`：说明阶段目录、固定文件与人工阅读优先级。
 
 ## 三、消费顺序
 优先遵循：overview → index → detail/file-summaries → 精准源码。

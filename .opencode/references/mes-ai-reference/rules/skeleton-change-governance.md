@@ -81,7 +81,7 @@ related_files:
    - 阶段详细审查报告（用于说明审查依据、检查结果、证据链与审查时间）
 11. 任何阶段详细审查报告若缺少审查时间、关键证据链或正式结论，不得视为有效审查产物。
 
-主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/reference/phase-gates.md`、`.opencode/references/mes-ai-reference/rules/artifact-standards.md`
+主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`、`.opencode/references/mes-ai-reference/reference/phase-gates/common.md`、`.opencode/references/mes-ai-reference/rules/artifact-standards.md`
 
 ### 3.1.1 骨架版本与修改时间约束
 
@@ -127,7 +127,7 @@ related_files:
 10. Skill 不得回退为单文件说明结构；后续修改时必须优先保持目录化结构稳定。
 11. 若 Skill 会被阶段流程正式消费，必须在以下至少一处完成注册或引用：
    - `AGENTS.md` 的阶段使用说明、治理入口或相关规则章节
-   - `mes-ai-dev/知识/参考/knowledge-consumption-matrix.md`（若其消费对象是知识文件/规则文件）
+   - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`（若其消费对象是知识文件/规则文件）
    - `mes-ai-dev/操作地图-飞行员手册.md` 的 Skill 速查、流程说明或一键复用说明
    - 相关 Command 文档（若该 Skill 被某个 Command 编排调用）
 12. 若 Skill 会产出标准文档或依赖固定模板，必须补齐模板引用、模板导航或说明入口。
@@ -161,7 +161,7 @@ related_files:
    - `skeleton-constraint-summary.md`
    - `team-onboarding-guide.md`
    - `操作地图-飞行员手册.md`
-   - `knowledge-consumption-matrix.md`
+   - `knowledge-consumption/index.md`
    - `template-index.md`
    - `skeleton-change-log.md`
 2. 若工具能力影响门禁、产物、目录说明、示例、工作区落盘规则，也必须同步补齐对应文件。
@@ -186,12 +186,12 @@ related_files:
 
 ### 3.4 统一状态源与兼容视图约束
 
-1. `knowledge/state/state.yaml` 是唯一已合并机器事实源。
-2. `state/fragments/*.yaml`、`knowledge/fragments/**/*.md` 仅是待收口片段，不得作为下游正式事实源。
+1. `mes-ai-dev/knowledge/state/state.yaml` 是唯一已合并机器事实源。
+2. `mes-ai-dev/knowledge/state/fragments/*.yaml`、`mes-ai-dev/knowledge/fragments/**/*.md` 仅是待收口片段，不得作为下游正式事实源。
 3. `summary.md`、`baseline.md`、`init-coverage.md` 必须以统一状态源为准，不得绕过事实源直接维护；若启用双写兼容，可按主文件摘要 + 对应 `state-detail/` 明细联合渲染。
 4. 禁止直接编辑兼容视图、禁止新代码依赖历史遗留状态文件、禁止并行直接覆盖 `state.yaml`。
 
-主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/rules/state-rendering-spec.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption-matrix.md`
+主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/rules/state-rendering-spec.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
 
 ### 3.5 路径 canonical 与知识结构约束
 
@@ -237,7 +237,7 @@ related_files:
    - `.opencode/references/mes-ai-reference/reference/skeleton-constraint-summary.md`
 11. 若 Skill 从单文件重构为目录化结构，必须保证原意不变，不得借目录重构之名修改触发条件、职责边界、执行步骤或审核结论。
 
-主要来源：`AGENTS.md`、`templates/template-index.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption-matrix.md`
+主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/templates/template-index.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
 
 ### 3.8 历史文档阅读边界约束
 
@@ -245,7 +245,7 @@ related_files:
 2. 历史文档不得作为当前骨架规则的唯一依据。
 3. 历史口径与现行规则冲突时，以最新 `AGENTS.md`、主规则文件、消费矩阵、门禁标准为准。
 
-主要来源：`mes-ai-dev/workspace/refresh/README.md`
+主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/reference/sdk-project-path-boundary.md`、`.opencode/references/mes-ai-reference/reference/operator-flight-manual.md`
 
 ### 3.8.1 骨架修改后的整链路审查约束
 
@@ -265,7 +265,7 @@ related_files:
 4. 若全局复盘发现可复发的治理问题，必须同步评估是否更新 `.opencode/references/mes-ai-reference/reference/governance-memory.md`。
 5. 未完成全局复盘或未给出建议方案，不得判定本次骨架约束变更已完成。
 
-主要来源：`.opencode/references/mes-ai-reference/reference/phase-gates.md`、`mes-ai-dev/workspace/refresh/skeleton-change-review-20260416-骨架治理闭环首件.md`
+主要来源：`.opencode/references/mes-ai-reference/reference/phase-gates/index.md`、`.opencode/references/mes-ai-reference/reference/phase-gates/common.md`、`.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`
 
 ### 3.9 上下文预算与大需求适配约束
 
@@ -275,7 +275,7 @@ related_files:
 4. 若新增骨架能力会增加上下文消耗，必须同时评估其对 `mes-guard-context-budget`、消费矩阵、模板体积与交接产物大小的影响。
 5. 骨架针对大需求应优先支持分阶段压缩、跨阶段摘要交接、多 Agent 并行拆分与按范围加载，防止单轮上下文爆掉。
 
-主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/rules/budget-audit-rules.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption-matrix.md`
+主要来源：`AGENTS.md`、`.opencode/references/mes-ai-reference/rules/budget-audit-rules.md`、`.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
 
 ### 3.10 复用与 Skill 集体系约束
 
@@ -302,7 +302,7 @@ related_files:
 3. 骨架必须假设业务代码仓缺乏 `.md` 说明文档，并通过索引化、依赖图、文件摘要、初始化产物、参考知识与映射关系来建立代码理解能力。
 4. 若新增骨架目录、文件或示例，会影响使用者理解成本，应同步补齐说明文件、索引入口或示例引用。
 
-主要来源：`AGENTS.md`、`mes-ai-dev/workspace/refresh/README.md`、`templates/template-index.md`
+主要来源：`AGENTS.md`、`mes-ai-dev/workspace/refresh/README.md`、`.opencode/references/mes-ai-reference/templates/template-index.md`
 
 ### 3.13 GSD 执行能力一致性约束
 
@@ -401,7 +401,7 @@ related_files:
    - `.opencode/references/mes-ai-reference/reference/skeleton-constraint-summary.md`
 6. 若新增约束涉及阶段治理、审查机制或状态追踪，还必须评估是否需要同步更新：
    - `.opencode/references/mes-ai-reference/reference/governance-memory.md`
-   - `.opencode/references/mes-ai-reference/reference/knowledge-consumption-matrix.md`
+   - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/index.md`
    - 对应说明入口或示例文件
 7. 若新增约束未同步纳入本规则体系，则该新增动作视为**未完成**，必须打回补齐。
 

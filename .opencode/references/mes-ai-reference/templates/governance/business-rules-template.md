@@ -1,6 +1,6 @@
 # 真实业务规则模板
 
-> 用于生成 `knowledge/code-map/business-rules.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/business-rules.md`。
 > 目标不是描述理想业务，而是沉淀代码仓中已经存在且可验证的真实业务规则。
 
 ## 一、文件定位
@@ -55,4 +55,4 @@
 |------|------|-----------|------|
 | E-01 | 源码 | `[路径:行号]` | [说明] |
 | E-02 | SQL | `[脚本路径]` | [说明] |
-| E-03 | 状态 | `state/state.yaml` | [说明] |
+| E-03 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | [说明] |

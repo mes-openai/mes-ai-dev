@@ -4,16 +4,16 @@
 
 | 类型 | 目录/文件 | 清理动作 | 是否必须确认 |
 |------|----------|---------|-------------|
-| 知识库索引 | `knowledge/code-map/services/` | 清空 | 是 |
-| 知识库索引 | `knowledge/code-map/modules/` | 清空 | 是 |
-| 知识库索引 | `knowledge/code-map/*.md` | 删除 | 是 |
-| 依赖图谱 | `knowledge/dependency-graph/*.md` | 删除 | 是 |
-| 数据库索引 | `knowledge/database-index/` | 清空 | 是 |
-| 主状态文件 | `knowledge/state/state.yaml` | 重置为初始模板 | 是 |
-| 状态详情 | `knowledge/state/state-detail/*.yaml` | 清空 | 是 |
-| 状态片段 | `knowledge/state/fragments/` | 清空 | 是 |
-| 同步记录 | `knowledge/.sync-record.json` | 删除 | 是 |
-| 初始化标记 | `knowledge/.init-checkpoint.yaml` | 删除 | 是 |
+| 知识库索引 | `mes-ai-dev/knowledge/code-map/services/` | 清空 | 是 |
+| 知识库索引 | `mes-ai-dev/knowledge/code-map/modules/` | 清空 | 是 |
+| 知识库索引 | `mes-ai-dev/knowledge/code-map/*.md` | 删除 | 是 |
+| 依赖图谱 | `mes-ai-dev/knowledge/dependency-graph/*.md` | 删除 | 是 |
+| 数据库索引 | `mes-ai-dev/knowledge/database-index/` | 清空 | 是 |
+| 主状态文件 | `mes-ai-dev/knowledge/state/state.yaml` | 重置为初始模板 | 是 |
+| 状态详情 | `mes-ai-dev/knowledge/state/state-detail/*.yaml` | 清空 | 是 |
+| 状态片段 | `mes-ai-dev/knowledge/state/fragments/` | 清空 | 是 |
+| 同步记录 | `mes-ai-dev/knowledge/.sync-record.json` | 删除 | 是 |
+| 初始化标记 | `mes-ai-dev/knowledge/.init-checkpoint.yaml` | 删除 | 是 |
 | 需求产物 | `workspace/requirements/` | 清空 | 是 |
 | 设计产物 | `workspace/designs/` | 清空 | 是 |
 | 开发产物 | `workspace/development/` | 清空 | 是 |

@@ -2,7 +2,7 @@
 
 ## 约束
 
-- 只在仓规模为 `large` 或 `mega` 时生成（优先依据 `state/state.yaml` 仓规模标签，兼容回退 `baseline.md`）
+- 只在仓规模为 `large` 或 `mega` 时生成（优先依据 `mes-ai-dev/knowledge/state/state.yaml` 仓规模标签，兼容回退 `baseline.md`）
 - 在 `/mes-init-converge` 场景下，热点层应按全局数据重算，不使用单仓增量结果直接替代全局排行
 - 所有排行必须标注数据来源和计算方法
 - 未确认的数据标注"待评估"，不猜测

@@ -26,9 +26,9 @@
 
 当前骨架采用：
 - `AGENTS.md`：最小常驻总则
-- `rules/scenarios/scenario-gsd.md`：GSD 场景主规则
-- `rules/governance/phase-gate-usage-standard.md`：门禁标准
-- `rules/governance/completion-sweep-standard.md`：收尾扫描标准
+- `mes-ai-dev/knowledge/rules/scenarios/scenario-gsd.md`：GSD 场景主规则
+- `mes-ai-dev/knowledge/rules/governance/phase-gate-usage-standard.md`：门禁标准
+- `mes-ai-dev/knowledge/rules/governance/completion-sweep-standard.md`：收尾扫描标准
 
 本文件仅用于：
 1. 兼容历史入口

@@ -24,7 +24,7 @@ related_files:
 
 ## 一、核心原则
 
-1. `state/state.yaml` 是唯一已合并机器事实源。
+1. `mes-ai-dev/knowledge/state/state.yaml` 是唯一已合并机器事实源。
 2. 默认按 **总览 → 索引 → 详情 → 文件摘要 → 精准源码** 的顺序消费。
 3. 非当前问题范围的知识分片默认不加载。
 4. 大文件必须优先按索引或分片消费，禁止无边界整份读取。
@@ -81,7 +81,7 @@ related_files:
 
 详细设计阶段至少应遵循以下顺序：
 
-1. overview：`knowledge/code-map/backend-overview.md`、`knowledge/code-map/frontend-overview.md`
+1. overview：`mes-ai-dev/knowledge/code-map/backend-overview.md`、`mes-ai-dev/knowledge/code-map/frontend-overview.md`
 2. index：`.opencode/references/mes-ai-reference/reference/parameter-switch-patterns.md`、`mes-ai-dev/knowledge/reference/terminology-glossary.md` 与当前主题索引
 3. detail / file-summaries：命中的服务 `index.md`、模块 `index.md`、Schema `index.md`
 4. 精准源码：仅在第 1～3 步不能支撑结论时进入

@@ -27,10 +27,10 @@ related_files:
 
 | 文件 | 角色 | 约束 |
 |------|------|------|
-| `state/state.yaml` | **唯一已合并机器事实源** | 只接受主控串行合并后的状态 |
-| `state/fragments/*.yaml` | 初始化暂存片段 | 仅初始化阶段写入；不可作为下游消费事实源 |
-| `knowledge/fragments/**/*.md` | 共享知识暂存片段 | 仅初始化/深化阶段写入；不可作为下游消费事实源 |
-| `state/summary.md` | 人工阅读摘要 | 从 state.yaml 渲染 |
+| `mes-ai-dev/knowledge/state/state.yaml` | **唯一已合并机器事实源** | 只接受主控串行合并后的状态 |
+| `mes-ai-dev/knowledge/state/fragments/*.yaml` | 初始化暂存片段 | 仅初始化阶段写入；不可作为下游消费事实源 |
+| `mes-ai-dev/knowledge/fragments/**/*.md` | 共享知识暂存片段 | 仅初始化/深化阶段写入；不可作为下游消费事实源 |
+| `mes-ai-dev/knowledge/state/summary.md` | 人工阅读摘要 | 从 state.yaml 渲染 |
 | `baseline.md` | 兼容摘要视图 | 从 state.yaml 渲染 |
 | `init-coverage.md` | 兼容清单视图 | 以统一状态源为准；若启用双写兼容，可按主文件 coverage 摘要 + `state-detail/coverage.yaml` 明细联合渲染 |
 | `state-detail/recent-execution.yaml` | 双写兼容明细 | 默认承接 recent_execution 过程态明细；主文件保留摘要字段 |
@@ -46,15 +46,15 @@ related_files:
 - ❌ 绕过 state.yaml 更新状态
 - ❌ 兼容视图间互相引用
 - ❌ 新代码依赖历史遗留文件
-- ❌ 并行初始化直接覆盖 `state/state.yaml`
-- ❌ 绕过收口流程直接消费 `knowledge/fragments/**/*.md`
+- ❌ 并行初始化直接覆盖 `mes-ai-dev/knowledge/state/state.yaml`
+- ❌ 绕过收口流程直接消费 `mes-ai-dev/knowledge/fragments/**/*.md`
 
 ---
 
 ## 三、渲染顺序
 
 ```text
-state/fragments/*.yaml（初始化暂存片段）
+mes-ai-dev/knowledge/state/fragments/*.yaml（初始化暂存片段）
     ↓ 主控串行合并
 state.yaml（唯一已合并事实源）
     ↓ 再渲染兼容视图
@@ -86,7 +86,7 @@ state.yaml（唯一已合并事实源）
 | 兼容视图与 state.yaml 不一致 | 以 state.yaml 为准，重新渲染 |
 | baseline 与 coverage 统计不一致 | 从 state.yaml.coverage 聚合重算 |
 | 时间戳不一致 | 以 state.yaml 为准 |
-| 多个初始化 session 并行写状态 | 以 `state/fragments/*.yaml` 暂存，禁止直接并行写 state.yaml |
+| 多个初始化 session 并行写状态 | 以 `mes-ai-dev/knowledge/state/fragments/*.yaml` 暂存，禁止直接并行写 state.yaml |
 | 共享知识片段未收口 | 以 `state.yaml.initialization.convergence` 的 pending 字段为准 |
 
 ---
@@ -95,6 +95,6 @@ state.yaml（唯一已合并事实源）
 
 | 执行者 | 职责 |
 |--------|------|
-| 主控 Agent | 合并 `state/fragments/*.yaml` 到 state.yaml + 渲染兼容视图 |
+| 主控 Agent | 合并 `mes-ai-dev/knowledge/state/fragments/*.yaml` 到 state.yaml + 渲染兼容视图 |
 | Skill | 只写局部产物、状态片段与知识片段，不直接写共享文件 |
 | 并行 Agent | 禁止直接写 baseline / init-coverage |

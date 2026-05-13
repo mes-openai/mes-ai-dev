@@ -53,9 +53,9 @@ related_files:
 
 | 对象 | canonical 模式 | 禁止示例 |
 |------|----------------|----------|
-| 服务目录 | `knowledge/code-map/services/service-<service-name>/` | `services/<service-name>/`, `services/service<name>/` |
-| 模块目录 | `knowledge/code-map/modules/module-<module-name>/` | `modules/<module-name>/` |
-| Schema 目录 | `knowledge/database-index/schema-<schema-name>/` | `database-index/<schema-name>/` |
+| 服务目录 | `mes-ai-dev/knowledge/code-map/services/service-<service-name>/` | `services/<service-name>/`, `services/service<name>/` |
+| 模块目录 | `mes-ai-dev/knowledge/code-map/modules/module-<module-name>/` | `modules/<module-name>/` |
+| Schema 目录 | `mes-ai-dev/knowledge/database-index/schema-<schema-name>/` | `mes-ai-dev/knowledge/database-index/<schema-name>/` |
 
 规则：
 1. 服务目录必须带 `service-` 前缀。
@@ -69,7 +69,7 @@ related_files:
 
 | 对象 | canonical 模式 | 禁止示例 |
 |------|----------------|----------|
-| 初始化状态片段 | `knowledge/state/fragments/<scope-type>-<scope-name>.yaml` | `messervice.yaml`, `mes-init-enrich-messervice.yaml` |
+| 初始化状态片段 | `mes-ai-dev/knowledge/state/fragments/<scope-type>-<scope-name>.yaml` | `messervice.yaml`, `mes-init-enrich-messervice.yaml` |
 
 规则：
 1. 片段文件名必须包含 scope 类型前缀，如 `repo-` / `module-` / `schema-` / `service-`。
@@ -82,17 +82,17 @@ related_files:
 
 | 片段类型 | canonical 模式 |
 |----------|----------------|
-| reference/terminology | `knowledge/fragments/reference/terminology/<scope>.md` |
-| reference/domain-model | `knowledge/fragments/reference/domain-model/<scope>.md` |
-| reference/data-dictionary | `knowledge/fragments/reference/data-dictionary/<scope>.md` |
-| rules/api-conventions | `knowledge/fragments/rules/api-conventions/<scope>.md` |
-| code-map/business-flows | `knowledge/fragments/code-map/business-flows/<scope>.md` |
-| code-map/hot-apis | `knowledge/fragments/code-map/hot-apis/<scope>.md` |
+| mes-ai-dev/knowledge/reference/terminology | `mes-ai-dev/knowledge/fragments/reference/terminology/<scope>.md` |
+| mes-ai-dev/knowledge/reference/domain-model | `mes-ai-dev/knowledge/fragments/reference/domain-model/<scope>.md` |
+| mes-ai-dev/knowledge/reference/data-dictionary | `mes-ai-dev/knowledge/fragments/reference/data-dictionary/<scope>.md` |
+| mes-ai-dev/knowledge/rules/api-conventions | `mes-ai-dev/knowledge/fragments/rules/api-conventions/<scope>.md` |
+| mes-ai-dev/knowledge/code-map/business-flows | `mes-ai-dev/knowledge/fragments/code-map/business-flows/<scope>.md` |
+| mes-ai-dev/knowledge/code-map/hot-apis | `mes-ai-dev/knowledge/fragments/code-map/hot-apis/<scope>.md` |
 
 规则：
 1. 片段命名必须可映射到 `repo/module/schema/service/group` 等 scope。
 2. 不允许混用旧式自由前缀与 canonical scope 命名。
-3. 索引文件中引用的分片路径必须与 `knowledge/fragments/` 下实际 canonical 路径一致。
+3. 索引文件中引用的分片路径必须与 `mes-ai-dev/knowledge/fragments/` 下实际 canonical 路径一致。
 
 ---
 

@@ -16,8 +16,8 @@ related_files:
 # 状态迁移场景规则（scenario-state-migration）
 
 ## 一、适用范围
-- 涉及 `knowledge/state/state.yaml`
-- 涉及 `knowledge/state/fragments/*.yaml`
+- 涉及 `mes-ai-dev/knowledge/state/state.yaml`
+- 涉及 `mes-ai-dev/knowledge/state/fragments/*.yaml`
 - 涉及 `.init-checkpoint.yaml`、`.sync-record.json` 等历史遗留状态文件
 
 ## 二、基本原则

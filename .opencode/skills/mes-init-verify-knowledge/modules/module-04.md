@@ -10,7 +10,7 @@
   1. 检查所有预期产物是否存在且非空
   2. 校验服务/模块/API/数据库覆盖率
   3. 检查交叉引用一致性
-  4. 初始化阶段先写 state/fragments/*.yaml，收拢时再合并到 state/state.yaml
+  4. 初始化阶段先写 mes-ai-dev/knowledge/state/fragments/*.yaml，收拢时再合并到 mes-ai-dev/knowledge/state/state.yaml
   5. 渲染兼容视图：baseline.md、init-coverage.md
   6. 输出校验摘要
 预期产出：状态片段或 state.yaml（按阶段），兼容视图（渲染），必要时形成全仓收敛结论
@@ -19,25 +19,25 @@
 
 ### 2. 文件完整性检查
 逐项检查以下产物：
-- code-map/: backend-overview, frontend-overview, services/*, modules/*, business-flows.md, ownership.md, patterns.md, test-assets.md, runtime.md
-- dependency-graph/: service-dependencies, api-registry, database-registry, frontend-backend-map
-- rules/: api-conventions, coding-standards, artifact-standards, environment-governance, budget-audit-rules
-- reference/: 全部参考文件
+- mes-ai-dev/knowledge/code-map/: backend-overview, frontend-overview, services/*, modules/*, business-flows.md, ownership.md, patterns.md, test-assets.md, runtime.md
+- mes-ai-dev/knowledge/dependency-graph/: service-dependencies, api-registry, database-registry, frontend-backend-map
+- mes-ai-dev/knowledge/rules/: api-conventions, coding-standards, artifact-standards, environment-governance, budget-audit-rules
+- mes-ai-dev/knowledge/reference/: 全部参考文件
 - baseline.md
 
-其中 `reference/terminology-glossary.md` 需执行**真实填充校验**：
+其中 `mes-ai-dev/knowledge/reference/terminology-glossary.md` 需执行**真实填充校验**：
 - 文件必须存在且非空
 - 不得仅包含占位说明、空章节或“后续补充”描述
 - 必须至少包含可消费的术语条目，以及来源依据或置信度信息
 
-同类 reference/rules 关键文件也需执行真实填充校验：
-- `reference/domain-model.md`
-- `reference/data-dictionary.md`
-- `reference/enum-registry.md`
-- `reference/error-code-registry.md`
-- `reference/permission-matrix.md`
-- `rules/api-conventions.md`
-- `rules/coding-standards.md`
+同类 mes-ai-dev/knowledge/reference/rules 关键文件也需执行真实填充校验：
+- `mes-ai-dev/knowledge/reference/domain-model.md`
+- `mes-ai-dev/knowledge/reference/data-dictionary.md`
+- `mes-ai-dev/knowledge/reference/enum-registry.md`
+- `mes-ai-dev/knowledge/reference/error-code-registry.md`
+- `mes-ai-dev/knowledge/reference/permission-matrix.md`
+- `mes-ai-dev/knowledge/rules/api-conventions.md`
+- `mes-ai-dev/knowledge/rules/coding-standards.md`
 
 契约类知识额外校验：
 - 若知识来自业务仓外部定义源，必须记录来源类型
@@ -47,23 +47,23 @@
 - 关键契约字段必须能映射回声明的事实源
 
 code-map 全局共享文件也需执行**收口完成性 + 真实内容校验**：
-- `code-map/business-flows.md`
-- `code-map/ownership.md`
-- `code-map/patterns.md`
-- `code-map/legacy-debt.md`
-- `code-map/hot-services.md`
-- `code-map/hot-apis.md`
-- `code-map/hot-tables.md`
+- `mes-ai-dev/knowledge/code-map/business-flows.md`
+- `mes-ai-dev/knowledge/code-map/ownership.md`
+- `mes-ai-dev/knowledge/code-map/patterns.md`
+- `mes-ai-dev/knowledge/code-map/legacy-debt.md`
+- `mes-ai-dev/knowledge/code-map/hot-services.md`
+- `mes-ai-dev/knowledge/code-map/hot-apis.md`
+- `mes-ai-dev/knowledge/code-map/hot-tables.md`
 
 校验原则：
 - 文件不得仅存在占位章节
 - 必须具备最小可消费内容
 - 必须标注来源依据、差异说明或置信度（适用时）
-- 若来自 `knowledge/fragments/code-map/`，必须确认已完成收口，不得仍停留在候选结果状态
+- 若来自 `mes-ai-dev/knowledge/fragments/code-map/`，必须确认已完成收口，不得仍停留在候选结果状态
 
 > 单仓/定向初始化允许共享 overview / registry / hot 文件缺失；此时应将其记录为“待收敛”，而不是直接判定初始化失败。
 
-**Step Gate A**：文件完整性检查不完整、缺失项未明确记录，或 reference/rules/code-map 关键文件仍为占位骨架、未收口候选结果 → 打回步骤2重做，不得进入覆盖率校验。
+**Step Gate A**：文件完整性检查不完整、缺失项未明确记录，或 mes-ai-dev/knowledge/reference/rules/code-map 关键文件仍为占位骨架、未收口候选结果 → 打回步骤2重做，不得进入覆盖率校验。
 
 ### 3. 覆盖率校验（6维度）
 1. **服务覆盖率**：jalor/ 下的 pom.xml 子目录 vs backend-overview 服务数 → 目标 100%

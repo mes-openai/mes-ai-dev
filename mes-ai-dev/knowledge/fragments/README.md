@@ -1,7 +1,7 @@
 # 共享知识片段目录说明
 
 > 本目录用于初始化/深化阶段的共享知识局部结果暂存。
-> 这些片段**不直接作为下游消费事实源**，必须由主控 Agent 或 `/mes-init-converge` 串行收口后，才能写入 `.opencode/references/mes-ai-reference/reference/`、`.opencode/references/mes-ai-reference/rules/` 与 `knowledge/code-map/` 下的最终共享文件。
+> 这些片段**不直接作为下游消费事实源**，必须由主控 Agent 或 `/mes-init-converge` 串行收口后，才能写入 `mes-ai-dev/knowledge/reference/`、`mes-ai-dev/knowledge/rules/` 与 `mes-ai-dev/knowledge/code-map/` 下的最终共享文件。
 
 ---
 
@@ -17,20 +17,20 @@
 - `mes-ai-dev/knowledge/reference/permission-matrix.md`
 - `mes-ai-dev/knowledge/rules/api-conventions.md`
 - `mes-ai-dev/knowledge/rules/coding-standards.md`
-- `knowledge/code-map/business-flows.md`
-- `knowledge/code-map/ownership.md`
-- `knowledge/code-map/patterns.md`
-- `knowledge/code-map/legacy-debt.md`
-- `knowledge/code-map/hot-services.md`
-- `knowledge/code-map/hot-apis.md`
-- `knowledge/code-map/hot-tables.md`
+- `mes-ai-dev/knowledge/code-map/business-flows.md`
+- `mes-ai-dev/knowledge/code-map/ownership.md`
+- `mes-ai-dev/knowledge/code-map/patterns.md`
+- `mes-ai-dev/knowledge/code-map/legacy-debt.md`
+- `mes-ai-dev/knowledge/code-map/hot-services.md`
+- `mes-ai-dev/knowledge/code-map/hot-apis.md`
+- `mes-ai-dev/knowledge/code-map/hot-tables.md`
 
 ---
 
 ## 二、目录结构
 
 ```text
-knowledge/fragments/
+mes-ai-dev/knowledge/fragments/
 ├── code-map/
 │   ├── business-flows/
 │   ├── ownership/
@@ -59,27 +59,27 @@ knowledge/fragments/
 
 ### reference 层示例
 
-- `reference/terminology/service-mes-production.md`
-- `reference/domain-model/service-mes-production.md`
-- `reference/data-dictionary/schema-mes_main.md`
-- `reference/enum-registry/service-mes-quality.md`
-- `reference/error-code/service-mes-production.md`
-- `reference/permission-matrix/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/reference/terminology/service-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/reference/domain-model/service-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/reference/data-dictionary/schema-mes_main.md`
+- `mes-ai-dev/knowledge/fragments/reference/enum-registry/service-mes-quality.md`
+- `mes-ai-dev/knowledge/fragments/reference/error-code/service-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/reference/permission-matrix/repo-mes-production.md`
 
 ### rules 层示例
 
-- `rules/api-conventions/repo-mes-production.md`
-- `rules/coding-standards/repo-mes-quality.md`
+- `mes-ai-dev/knowledge/fragments/rules/api-conventions/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/rules/coding-standards/repo-mes-quality.md`
 
 ### code-map 层示例
 
-- `code-map/business-flows/service-mes-production.md`
-- `code-map/ownership/service-mes-production.md`
-- `code-map/patterns/repo-mes-production.md`
-- `code-map/legacy-debt/repo-mes-production.md`
-- `code-map/hot-services/repo-mes-production.md`
-- `code-map/hot-apis/repo-mes-production.md`
-- `code-map/hot-tables/schema-mes_main.md`
+- `mes-ai-dev/knowledge/fragments/code-map/business-flows/service-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/ownership/service-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/patterns/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/legacy-debt/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-services/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-apis/repo-mes-production.md`
+- `mes-ai-dev/knowledge/fragments/code-map/hot-tables/schema-mes_main.md`
 
 ---
 

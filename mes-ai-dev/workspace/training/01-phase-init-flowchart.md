@@ -102,7 +102,7 @@ flowchart TB
     PH16 --> GATE1{"步骤门禁审查"}
 
     GATE1 -->|不通过| PH1
-    GATE1 -->|通过| STATE_WRITE["写入状态片段 state/fragments/*.yaml"]
+    GATE1 -->|通过| STATE_WRITE["写入状态片段 mes-ai-dev/knowledge/state/fragments/*.yaml"]
 
     STATE_WRITE --> MODE_CHECK{"初始化模式?"}
 
@@ -179,7 +179,7 @@ flowchart TB
     end
 
     subgraph DATABASE ["数据库产物"]
-        DB1["database-index/schema-xxx/ index / tables / relations"]
+        DB1["mes-ai-dev/knowledge/database-index/schema-xxx/ index / tables / relations"]
         DB2["database-registry.md 全局数据库注册表"]
     end
 
@@ -206,7 +206,7 @@ flowchart TB
 
     subgraph STATE ["状态管理"]
         S1["state.yaml 全局状态"]
-        S2["state/fragments/ 局部状态片段"]
+        S2["mes-ai-dev/knowledge/state/fragments/ 局部状态片段"]
     end
 
     subgraph KNOWLEDGE ["深度知识"]
@@ -298,7 +298,7 @@ flowchart TB
 | **四层索引** | L0 总览 → L1 索引 → L1.5 文件摘要 → L2 精准源码 |
 | **三态规则** | 确认（已验证）/ 候选（有依据待确认）/ 未知（无依据） |
 | **局部产物** | 按 repo/module/schema 命名的独立知识文件 |
-| **状态片段** | state/fragments/*.yaml，记录局部初始化进度 |
+| **状态片段** | mes-ai-dev/knowledge/state/fragments/*.yaml，记录局部初始化进度 |
 | **契约级知识** | 统一响应、错误码、SDK 模型、认证/MQ 契约等跨服务公共约定 |
 | **热点层** | hot-services / hot-apis / hot-tables，高频率入口点优先消费 |
 | **断点续传** | 初始化中断后从 checkpoint 继续，不必从头再来 |

@@ -13,14 +13,14 @@
   3. 评估测试质量（是否测试了真正的业务逻辑）
   4. 识别无回归入口的服务
   5. 生成 testability-matrix.md
-预期产出：knowledge/code-map/testability-matrix.md
+预期产出：mes-ai-dev/knowledge/code-map/testability-matrix.md
 风险：静态分析无法确定测试是否真的能通过运行
 ```
 
 ### 2. 读取前置输入
 
-- `knowledge/code-map/test-assets.md` — 测试索引
-- `knowledge/code-map/backend-overview.md` — 服务列表
+- `mes-ai-dev/knowledge/code-map/test-assets.md` — 测试索引
+- `mes-ai-dev/knowledge/code-map/backend-overview.md` — 服务列表
 - 各服务 src/test/ 目录
 
 **Step Gate A**：测试索引、服务列表或测试目录读取不完整 → 打回步骤2重做，不得进入逐服务评估。

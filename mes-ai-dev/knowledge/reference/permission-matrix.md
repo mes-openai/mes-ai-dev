@@ -67,7 +67,7 @@
 
 | 操作 | 权限 |
 |------|------|
-| 读取 knowledge/ | 所有角色 |
-| 修改 knowledge/ | 仅通过 `/mes-init-project` 或 `/mes-refresh-knowledge` |
-| 修改 rules/ | 仅项目经理 + 设计负责人 |
-| 修改 reference/ | 仅通过 `/mes-init-project` 或 `/mes-refresh-knowledge` |
+| 读取 `mes-ai-dev/knowledge/` | 所有角色 |
+| 修改 `mes-ai-dev/knowledge/` | 仅通过 `/mes-init-project` 或 `/mes-refresh-knowledge` |
+| 修改 `mes-ai-dev/knowledge/rules/` | 仅项目经理 + 设计负责人 |
+| 修改 `mes-ai-dev/knowledge/reference/` | 仅通过 `/mes-init-project` 或 `/mes-refresh-knowledge` |

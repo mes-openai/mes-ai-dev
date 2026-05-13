@@ -13,9 +13,9 @@
 
 | 业务域 | 核心实体 | 规则数量（估算） | 分片路径 | 优先级 | 说明 |
 |--------|----------|------------------|----------|--------|------|
-| 生产 | WorkOrder、Route、Operation | 38 | `knowledge/fragments/reference/domain-model/service-mes-production.md` | 高 | 工单主链路与状态流转核心域 |
-| 质量 | InspectionLot、DefectRecord | 24 | `knowledge/fragments/reference/domain-model/service-mes-quality.md` | 中 | 检验、不良、质量闭环 |
-| 库存 | InventoryLot、StockRecord、FreezeRecord | 31 | `knowledge/fragments/reference/domain-model/service-mes-inventory.md` | 高 | 批次、库存、冻结与解冻 |
+| 生产 | WorkOrder、Route、Operation | 38 | `mes-ai-dev/knowledge/fragments/reference/domain-model/service-mes-production.md` | 高 | 工单主链路与状态流转核心域 |
+| 质量 | InspectionLot、DefectRecord | 24 | `mes-ai-dev/knowledge/fragments/reference/domain-model/service-mes-quality.md` | 中 | 检验、不良、质量闭环 |
+| 库存 | InventoryLot、StockRecord、FreezeRecord | 31 | `mes-ai-dev/knowledge/fragments/reference/domain-model/service-mes-inventory.md` | 高 | 批次、库存、冻结与解冻 |
 
 ## 三、优先阅读分片
 
@@ -47,5 +47,5 @@
 
 | 编号 | 类型 | 路径/命令 | 说明 |
 |------|------|-----------|------|
-| E-01 | 分片 | `knowledge/fragments/reference/domain-model/service-mes-production.md` | 生产域正文片段 |
-| E-02 | 状态 | `knowledge/state/state.yaml` | 收口批次与范围来源 |
+| E-01 | 分片 | `mes-ai-dev/knowledge/fragments/reference/domain-model/service-mes-production.md` | 生产域正文片段 |
+| E-02 | 状态 | `mes-ai-dev/knowledge/state/state.yaml` | 收口批次与范围来源 |

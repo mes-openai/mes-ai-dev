@@ -103,7 +103,7 @@ related_files:
 
 ## 四、仓规模标签存储位置
 
-仓规模标签主存储在 `knowledge/state/state.yaml` 中；`knowledge/baseline.md` 为兼容摘要视图：
+仓规模标签主存储在 `mes-ai-dev/knowledge/state/state.yaml` 中；`mes-ai-dev/knowledge/baseline.md` 为兼容摘要视图：
 
 ```yaml
 # state.yaml 中的仓规模信息
@@ -148,9 +148,9 @@ initialization:
 
 所有Agent在执行消费类操作前，必须：
 
-1. **优先读取 `state/state.yaml` 获取仓规模标签**
+1. **优先读取 `mes-ai-dev/knowledge/state/state.yaml` 获取仓规模标签**
    - 若 `scale_label` 为空或 `backend_lines/service_count/api_count/table_count` 全为 0：
-     - **Fallback：读取 `state/fragments/*.yaml` 状态片段**，查找是否有本次 scope 的仓规模记录
+     - **Fallback：读取 `mes-ai-dev/knowledge/state/fragments/*.yaml` 状态片段**，查找是否有本次 scope 的仓规模记录
      - 若状态片段中存在有效 `repository_scale`，则使用片段值
      - 若状态片段中也不存在，则标记为 `local-only`（仅局部视角可用）
    - 若 `baseline.md` 存在且有 `scale_label`，兼容回退读取
@@ -162,7 +162,7 @@ initialization:
 
 当检测到以下情况时，不应误判为"未完整初始化"：
 - `state.yaml.repository_scale.scale_label` 为空
-- 但 `state/fragments/*.yaml` 存在本次 scope 的状态片段
+- 但 `mes-ai-dev/knowledge/state/fragments/*.yaml` 存在本次 scope 的状态片段
 - 且片段中 `checkpoint.status` 为 `completed` 或 `partial`
 
 此时应标记为：
@@ -174,7 +174,7 @@ initialization:
 
 `mes-verify-phase-gate` 在执行仓规模校验时必须：
 1. 先检查 `state.yaml.repository_scale.scale_label` 是否为有效值（非空且非默认零值）
-2. 若无效，检查 `state/fragments/*.yaml` 是否存在本次 scope 的片段
+2. 若无效，检查 `mes-ai-dev/knowledge/state/fragments/*.yaml` 是否存在本次 scope 的片段
 3. 若片段存在且 `checkpoint.status` 有效，允许通过进入门禁
 4. 输出校验报告中明确标注 `scale_source` 和 `scale_label`
 

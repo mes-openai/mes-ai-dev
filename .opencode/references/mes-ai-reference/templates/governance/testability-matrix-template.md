@@ -1,6 +1,6 @@
 # 测试可测性矩阵模板
 
-> 用于生成 `knowledge/code-map/testability-matrix.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/testability-matrix.md`。
 > 目标是量化服务/模块的可测性，帮助 AI 判断哪些变更需要补测试、哪些区域需要人工验证或 Mock。
 
 ## 一、文件定位

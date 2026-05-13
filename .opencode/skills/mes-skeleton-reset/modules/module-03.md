@@ -13,16 +13,16 @@
 
 清理范围：
   【知识库索引】
-  - knowledge/code-map/ 目录（清空，保留目录结构）
-  - knowledge/dependency-graph/ 目录（清空，保留目录结构）
-  - knowledge/database-index/ 目录（清空，保留目录结构）
+  - mes-ai-dev/knowledge/code-map/ 目录（清空，保留目录结构）
+  - mes-ai-dev/knowledge/dependency-graph/ 目录（清空，保留目录结构）
+  - mes-ai-dev/knowledge/database-index/ 目录（清空，保留目录结构）
   
   【状态文件】
-  - knowledge/state/state.yaml（重置为初始模板）
-  - knowledge/state/state-detail/*.yaml（清空）
-  - knowledge/state/fragments/ 目录（清空）
-  - knowledge/.sync-record.json（删除）
-  - knowledge/.init-checkpoint.yaml（删除）
+  - mes-ai-dev/knowledge/state/state.yaml（重置为初始模板）
+  - mes-ai-dev/knowledge/state/state-detail/*.yaml（清空）
+  - mes-ai-dev/knowledge/state/fragments/ 目录（清空）
+  - mes-ai-dev/knowledge/.sync-record.json（删除）
+  - mes-ai-dev/knowledge/.init-checkpoint.yaml（删除）
   
   【阶段产物】
   - workspace/requirements/ 目录（清空）
@@ -58,13 +58,13 @@
 
 按照以下顺序执行清理：
 
-#### 2.1 清空 knowledge/code-map/
+#### 2.1 清空 mes-ai-dev/knowledge/code-map/
 
 ```bash
 # 保留目录结构，清空文件
-rm -rf knowledge/code-map/services/*
-rm -rf knowledge/code-map/modules/*
-rm -f knowledge/code-map/*.md
+rm -rf mes-ai-dev/knowledge/code-map/services/*
+rm -rf mes-ai-dev/knowledge/code-map/modules/*
+rm -f mes-ai-dev/knowledge/code-map/*.md
 ```
 
 清理后验证：
@@ -74,16 +74,16 @@ rm -f knowledge/code-map/*.md
 - 所有 .md 文件已删除
 ```
 
-#### 2.2 清空 knowledge/dependency-graph/
+#### 2.2 清空 mes-ai-dev/knowledge/dependency-graph/
 
 ```bash
-rm -f knowledge/dependency-graph/*.md
+rm -f mes-ai-dev/knowledge/dependency-graph/*.md
 ```
 
-#### 2.3 清空 knowledge/database-index/
+#### 2.3 清空 mes-ai-dev/knowledge/database-index/
 
 ```bash
-rm -rf knowledge/database-index/*
+rm -rf mes-ai-dev/knowledge/database-index/*
 ```
 
 **Step Gate B**：知识库索引清理不完整 → 打回步骤2重做，不得进入状态文件清理。

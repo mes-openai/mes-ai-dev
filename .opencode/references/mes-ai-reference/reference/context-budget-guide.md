@@ -119,6 +119,6 @@ phase-gates 和 knowledge-consumption 已分片化，按阶段/主题加载：
 
 ## 相关文档
 
-- [`budget-audit-rules.md`](../rules/budget-audit-rules.md) - 预算审计规则
-- [`context-budget-optimization-plan.md`](../rules/governance/context-budget-optimization-plan.md) - 上下文预算优化方案
+- [`budget-audit-rules.md`](../mes-ai-dev/knowledge/rules/budget-audit-rules.md) - 预算审计规则
+- [`context-budget-optimization-plan.md`](../mes-ai-dev/knowledge/rules/governance/context-budget-optimization-plan.md) - 上下文预算优化方案
 - [`mes-guard-context-budget/SKILL.md`](../../../.opencode/skills/mes-guard-context-budget/SKILL.md) + [`mes-guard-context-budget/INDEX.md`](../../../.opencode/skills/mes-guard-context-budget/INDEX.md) - 预算守卫 Skill

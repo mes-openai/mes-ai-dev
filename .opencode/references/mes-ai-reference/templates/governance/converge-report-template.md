@@ -80,8 +80,8 @@
 
 | 文件 | 结果 | 说明 |
 |------|------|------|
-| `state/state.yaml` | ✅/⚠️/❌ | [说明] |
-| `state/summary.md` | ✅/⚠️/❌ | [说明] |
+| `mes-ai-dev/knowledge/state/state.yaml` | ✅/⚠️/❌ | [说明] |
+| `mes-ai-dev/knowledge/state/summary.md` | ✅/⚠️/❌ | [说明] |
 | `baseline.md` | ✅/⚠️/❌ | [说明] |
 | `init-coverage.md` | ✅/⚠️/❌ | [说明] |
 

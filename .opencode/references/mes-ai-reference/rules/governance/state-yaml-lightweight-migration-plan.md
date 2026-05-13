@@ -26,7 +26,7 @@ related_files:
 
 ## 2. 背景
 
-当前 `state/state.yaml` 同时承担以下职责：
+当前 `mes-ai-dev/knowledge/state/state.yaml` 同时承担以下职责：
 
 - 唯一已合并机器事实源
 - 运行时高频判断入口

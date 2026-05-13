@@ -50,14 +50,14 @@ flowchart TD
 - 记录热点候选、待确认事实、候选结论与未知项
 
 ### 4.4 状态与收口
-- 通过 `knowledge/state/fragments/*.yaml` 记录覆盖范围、checkpoint、pending shared files
+- 通过 `mes-ai-dev/knowledge/state/fragments/*.yaml` 记录覆盖范围、checkpoint、pending shared files
 - 仅在需要统一共享视图时进入 `/mes-init-converge`
 
 ## 5. 标准产物
 
 ### 5.1 关键输出
 - 局部知识产物：code-map / api-registry / dependency graph / database-index 片段
-- `knowledge/state/fragments/*.yaml`
+- `mes-ai-dev/knowledge/state/fragments/*.yaml`
 - `mes-ai-dev/workspace/init/{scope}/report/stage-output-report.md`
 
 ### 5.2 常见补充产物
@@ -76,13 +76,13 @@ flowchart TD
 - 若包含 Schema，相关 `index.md` 已生成且不是空壳
 - 后续阶段消费所需的最小结构化事实已补齐
 - `mes-ai-dev/workspace/init/{scope}/report/stage-output-report.md` 已生成
-- `knowledge/state/fragments/*.yaml` 已生成并记录 `coverage` / `checkpoint` / `pending_shared_files`
+- `mes-ai-dev/knowledge/state/fragments/*.yaml` 已生成并记录 `coverage` / `checkpoint` / `pending_shared_files`
 - 关键契约对象已识别定义点，或明确标记为候选/未知
 - 阶段评审结论为 `✅通过` 或 `⚠️有条件通过`
 
 ### should-check
 - 小仓全量模式下，detail/file-summaries/business-flows/ownership/patterns/test-assets/runtime 已补齐
-- `rules/api-conventions.md` 与 `rules/coding-standards.md` 已完成基础填充
+- `mes-ai-dev/knowledge/rules/api-conventions.md` 与 `mes-ai-dev/knowledge/rules/coding-standards.md` 已完成基础填充
 
 ## 7. 培训讲解要点与常见风险
 

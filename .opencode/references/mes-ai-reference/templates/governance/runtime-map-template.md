@@ -1,6 +1,6 @@
 # 运行时配置地图模板
 
-> 用于生成 `knowledge/code-map/runtime.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/runtime.md`。
 > 目标是沉淀环境差异、功能开关、外部依赖、配置来源和运行时约束，帮助 AI 在设计、开发、测试、交付阶段理解真实运行环境。
 
 ## 一、文件定位

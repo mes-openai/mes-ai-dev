@@ -12,7 +12,7 @@ summary_first: false
 default_allowed: false
 parent_index: .opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md
 related_files:
-  - knowledge/code-map/layer-decoupling-channel.md
+  - mes-ai-dev/knowledge/code-map/layer-decoupling-channel.md
   - .opencode/references/mes-ai-reference/rules/scenarios/scenario-multi-repo.md
 ---
 

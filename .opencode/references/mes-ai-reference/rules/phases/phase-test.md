@@ -40,9 +40,9 @@ related_files:
 - `.opencode/references/mes-ai-reference/rules/governance/completion-sweep-standard.md`
 
 ### 按需加载
-- `knowledge/code-map/test-assets.md`
-- `knowledge/code-map/testability-matrix.md`
-- `knowledge/code-map/e2e-chains.md`
+- `mes-ai-dev/knowledge/code-map/test-assets.md`
+- `mes-ai-dev/knowledge/code-map/testability-matrix.md`
+- `mes-ai-dev/knowledge/code-map/e2e-chains.md`
 - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-db-migration.md`
 - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-multi-repo.md`
 - `.opencode/references/mes-ai-reference/rules/scenarios/scenario-gsd.md`
@@ -74,9 +74,9 @@ related_files:
 - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/stage-memory.md`
 - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/code-map.md`
 - `.opencode/references/mes-ai-reference/reference/knowledge-consumption/convergence.md`
-- `knowledge/code-map/test-assets.md`（如存在）
-- `knowledge/code-map/testability-matrix.md`（如存在）
-- `knowledge/code-map/e2e-chains.md`（如存在）
+- `mes-ai-dev/knowledge/code-map/test-assets.md`（如存在）
+- `mes-ai-dev/knowledge/code-map/testability-matrix.md`（如存在）
+- `mes-ai-dev/knowledge/code-map/e2e-chains.md`（如存在）
 - `.opencode/references/mes-ai-reference/rules/governance/review-report-standard.md`
 - `.opencode/references/mes-ai-reference/rules/governance/stage-artifact-layout.md`
 - `.opencode/references/mes-ai-reference/rules/governance/completion-sweep-standard.md`

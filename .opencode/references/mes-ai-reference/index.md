@@ -8,9 +8,9 @@
 
 本目录只承载骨架自身运行需要的静态资料：
 
-- `rules/`：核心规则、阶段规则、场景规则、治理规则等静态规则文档。
-- `reference/`：知识消费、阶段门禁、骨架加载矩阵、异常手册、维护指南等静态参考文档。
-- `templates/`：阶段产物、治理审查、测试交付等模板文件。
+- `.opencode/references/mes-ai-reference/rules/`：核心规则、阶段规则、场景规则、治理规则等静态规则文档。
+- `.opencode/references/mes-ai-reference/reference/`：知识消费、阶段门禁、骨架加载矩阵、异常手册、维护指南等静态参考文档。
+- `.opencode/references/mes-ai-reference/templates/`：阶段产物、治理审查、测试交付等模板文件。
 
 ---
 

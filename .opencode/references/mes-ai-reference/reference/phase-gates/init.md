@@ -21,13 +21,13 @@
 
 ### 2.2 `/mes-init-project` / `/mes-init-enrich` 退出条件 must-pass
 - 对应 scope 的局部产物已生成
-- 若 scope 包含 Schema，则每个 `knowledge/database-index/schema-<schema-name>/index.md` 已生成且路径符合 canonical 规则
+- 若 scope 包含 Schema，则每个 `mes-ai-dev/knowledge/database-index/schema-<schema-name>/index.md` 已生成且路径符合 canonical 规则
 - 若 scope 包含 Schema，则 `index.md` 必须包含风险画像或语义等价章节，不得为空壳
 - 局部 registry 片段、知识片段或热点候选片段已生成
 - 已补齐后续阶段消费所需的最小结构化事实
 - 阶段完成产物报告已生成
-- `knowledge/state/fragments/*.yaml` 已生成并包含本次 scope 的 `coverage` / `checkpoint` / `pending_shared_files`
-- 待收口的 reference/code-map 片段状态已记录
+- `mes-ai-dev/knowledge/state/fragments/*.yaml` 已生成并包含本次 scope 的 `coverage` / `checkpoint` / `pending_shared_files`
+- 待收口的 mes-ai-dev/knowledge/reference/code-map 片段状态已记录
 - 本次 scope 对应初始化锁已获取或冲突已留痕
 - 所有局部产物、状态片段、知识片段路径均符合 canonical 命名规则
 - 未执行 `/mes-init-converge` 前，不要求形成最终共享视图，但必须有待收口状态留痕
@@ -41,7 +41,7 @@
 
 ### 2.3 should-check
 - 小仓全量模式下，`detail.md`、`file-summaries.md`、`business-flows.md`、`ownership.md`、`patterns.md`、`test-assets.md`、`runtime.md` 已生成
-- `rules/api-conventions.md` 与 `rules/coding-standards.md` 已完成基础填充
+- `mes-ai-dev/knowledge/rules/api-conventions.md` 与 `mes-ai-dev/knowledge/rules/coding-standards.md` 已完成基础填充
 - 核心服务 `repo-profile.md` 已生成
 - 大仓/超大仓的 `hot-services.md` / `hot-apis.md` / `hot-tables.md` 已生成
 - 若存在多套并存响应/错误/认证契约，已区分适用范围与推荐口径
@@ -77,7 +77,7 @@
 ### 可代偿推进项
 - detail 类深度内容可延后到 `/mes-init-enrich`
 - 热点层可在后续收口/深化阶段补齐
-- reference/rules 共享文件可延后到收口阶段统一生成
+- `mes-ai-dev/knowledge/reference/` 与 `mes-ai-dev/knowledge/rules/` 共享文件可延后到收口阶段统一生成
 
 ---
 
@@ -170,7 +170,7 @@
 
 ### 5.1 进入条件 must-pass
 - 已至少执行过一次 `/mes-init-project`
-- `state/state.yaml` 已存在，或存在待合并的 `state/fragments/*.yaml`
+- `mes-ai-dev/knowledge/state/state.yaml` 已存在，或存在待合并的 `mes-ai-dev/knowledge/state/fragments/*.yaml`
 - 已存在可收敛的局部知识产物（services/modules/database-index 至少一类存在）
 - `mes-init-converge.lock` 可获取，或锁冲突已按例外流程明确处理
 
@@ -179,8 +179,8 @@
 - `service-dependencies.md`、`api-registry.md`、`database-registry.md`、`frontend-backend-map.md` 已按全局视角重算或确认有效
 - `business-flows.md`、`ownership.md`、`patterns.md`、`legacy-debt.md` 已按全局视角收口或确认有效
 - `hot-services.md`、`hot-apis.md`、`hot-tables.md` 已由候选片段重算为全局正式文件或明确说明本次可跳过原因
-- `reference/terminology-glossary.md`、`reference/domain-model.md`、`reference/data-dictionary.md`、`reference/enum-registry.md`、`reference/error-code-registry.md`、`reference/permission-matrix.md`、`rules/api-conventions.md`、`rules/coding-standards.md` 已按全局视角收口或确认有效
-- `state/fragments/*.yaml` 已完成合并或 pending 已清空
+- `mes-ai-dev/knowledge/reference/terminology-glossary.md`、`mes-ai-dev/knowledge/reference/domain-model.md`、`mes-ai-dev/knowledge/reference/data-dictionary.md`、`mes-ai-dev/knowledge/reference/enum-registry.md`、`mes-ai-dev/knowledge/reference/error-code-registry.md`、`mes-ai-dev/knowledge/reference/permission-matrix.md`、`mes-ai-dev/knowledge/rules/api-conventions.md`、`mes-ai-dev/knowledge/rules/coding-standards.md` 已按全局视角收口或确认有效
+- `mes-ai-dev/knowledge/state/fragments/*.yaml` 已完成合并或 pending 已清空
 - `state.yaml`、`baseline.md`、`init-coverage.md`、`summary.md` 已同步更新
 - 阶段评审结论为 ✅通过 / ⚠️有条件通过
 

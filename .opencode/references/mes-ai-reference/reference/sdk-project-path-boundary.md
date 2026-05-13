@@ -21,7 +21,7 @@
 | SDK 静态规则 | `.opencode/references/mes-ai-reference/rules/**` | 是 | 否 | 核心、阶段、场景、治理等静态规则。 |
 | SDK 静态参考 | `.opencode/references/mes-ai-reference/reference/**` | 是 | 否 | 加载矩阵、门禁、消费规则、维护指南等静态参考。 |
 | SDK 静态模板 | `.opencode/references/mes-ai-reference/templates/**` | 是 | 否 | 模板源文件；模板实例不得写回本目录。 |
-| SDK 项目知识结构模板 | `.opencode/references/mes-ai-reference/templates/reference/**`、`.opencode/references/mes-ai-reference/templates/rules/**` | 是 | 否 | 用于生成项目侧 reference/rules 知识产物的结构模板。 |
+| SDK 项目知识结构模板 | `.opencode/references/mes-ai-reference/templates/reference/**`、`.opencode/references/mes-ai-reference/templates/rules/**` | 是 | 否 | 用于生成项目侧 mes-ai-dev/knowledge/reference/rules 知识产物的结构模板。 |
 | 项目过程产物 | `mes-ai-dev/workspace/**` | 否 | 是 | 需求、设计、开发、测试、交付、审查、memory、refresh 日志等过程产物。 |
 | 阶段主交接文档 | `mes-ai-dev/workspace/{phase}/{REQ-ID}/...` 或既有阶段目录 | 否 | 是 | `spec.md`、`design.md`、`tasks.md`、`test-report.md`、`handover-doc.md` 等。 |
 | 初始化/刷新代码地图 | `mes-ai-dev/knowledge/code-map/**` | 否 | 是 | 初始化或刷新代码仓后形成的项目事实。 |
@@ -81,7 +81,7 @@ SDK 静态区下不得出现以下运行态目录或文件：
 - `.opencode/references/mes-ai-reference/test-report.md`
 - `.opencode/references/mes-ai-reference/handover-doc.md`
 
-> 例外：`reference/phase-gates/design.md`、`reference/knowledge-consumption/stage-memory.md` 这类文件名与阶段产物同名，但语义是静态规则分片，可保留在 SDK 静态区。
+> 例外：`mes-ai-dev/knowledge/reference/phase-gates/design.md`、`mes-ai-dev/knowledge/reference/knowledge-consumption/stage-memory.md` 这类文件名与阶段产物同名，但语义是静态规则分片，可保留在 SDK 静态区。
 
 ---
 

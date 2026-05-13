@@ -1,6 +1,6 @@
 # 测试资产模板
 
-> 用于生成 `knowledge/code-map/test-assets.md`。
+> 用于生成 `mes-ai-dev/knowledge/code-map/test-assets.md`。
 > 目标是沉淀代码仓内已经存在的测试资产、回归入口、测试数据准备方式与高风险验证区，帮助 AI 规划回归与补测试。
 
 ## 一、文件定位

@@ -65,7 +65,7 @@ related_files:
 
 适用说明：
 
-- overview：如 `knowledge/code-map/backend-overview.md`、`knowledge/code-map/frontend-overview.md`
+- overview：如 `mes-ai-dev/knowledge/code-map/backend-overview.md`、`mes-ai-dev/knowledge/code-map/frontend-overview.md`
 - index：如 `.opencode/references/mes-ai-reference/reference/parameter-switch-patterns.md`、`mes-ai-dev/knowledge/reference/terminology-glossary.md`、服务/模块索引
 - detail / file-summaries：当前问题命中的服务、模块或 Schema 细化文档
 - 精准源码：仅在前三层无法支撑结论时进入

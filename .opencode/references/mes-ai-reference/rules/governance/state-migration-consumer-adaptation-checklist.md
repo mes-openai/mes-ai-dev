@@ -17,7 +17,7 @@ related_files:
 
 ## 1. 文档目的
 
-本文档用于收敛 `state/state.yaml` 轻量化迁移前的消费者影响面盘点结果，明确：
+本文档用于收敛 `mes-ai-dev/knowledge/state/state.yaml` 轻量化迁移前的消费者影响面盘点结果，明确：
 
 - 哪些规则、skill、消费入口依赖 `state.yaml`
 - 哪些依赖字段属于高风险迁移项
@@ -67,11 +67,11 @@ related_files:
 | `.opencode/references/mes-ai-reference/rules/budget-audit-rules.md` | 审计规则 | `sync.last_sync`、`sync.status` | P1 | 保持 sync 摘要留主文件，文档无需依赖 sync detail |
 | `.opencode/references/mes-ai-reference/rules/repository-scale-rules.md` | 规则 | `initialization.repository_scale.*` | P1 | 仓规模字段必须继续留主文件 |
 | `.opencode/references/mes-ai-reference/rules/core/runtime-entry.md` | 运行入口 | 高层状态判断入口 | P1 | 后续补“state 高层判断读主文件，明细按需下钻”的说明 |
-| `knowledge/state/state-schema-reference.md` | 说明文档 | coverage / recent_execution / convergence 字段说明 | P2 | 双写前同步更新字段去向说明 |
-| `knowledge/state/migration-checklist.md` | 迁移核查文档 | convergence、sync、checkpoint 等结构核对 | P2 | 双写阶段更新清单，接受主文件 + detail 双结构 |
-| `knowledge/init-coverage.md` | 兼容视图 | `state.yaml.initialization.coverage` 渲染来源 | P1 | 明确未来是从主文件摘要还是 `coverage.yaml` 渲染 |
-| `knowledge/state/summary.md` | 兼容视图 | trust / convergence / sync 摘要 | P1 | 摘要继续从主文件摘要字段渲染 |
-| `knowledge/baseline.md` | 兼容视图 | 仓规模、可信度、初始化摘要 | P1 | 继续从主文件摘要字段渲染 |
+| `mes-ai-dev/knowledge/state/state-schema-reference.md` | 说明文档 | coverage / recent_execution / convergence 字段说明 | P2 | 双写前同步更新字段去向说明 |
+| `mes-ai-dev/knowledge/state/migration-checklist.md` | 迁移核查文档 | convergence、sync、checkpoint 等结构核对 | P2 | 双写阶段更新清单，接受主文件 + detail 双结构 |
+| `mes-ai-dev/knowledge/init-coverage.md` | 兼容视图 | `state.yaml.initialization.coverage` 渲染来源 | P1 | 明确未来是从主文件摘要还是 `coverage.yaml` 渲染 |
+| `mes-ai-dev/knowledge/state/summary.md` | 兼容视图 | trust / convergence / sync 摘要 | P1 | 摘要继续从主文件摘要字段渲染 |
+| `mes-ai-dev/knowledge/baseline.md` | 兼容视图 | 仓规模、可信度、初始化摘要 | P1 | 继续从主文件摘要字段渲染 |
 | `mes-verify-state-migration` | Skill | `state.yaml`、checkpoint、sync、兼容视图一致性 | P1（专项） | 在双写期更新校验口径，让它接受主文件 + detail 并存 |
 | `mes-ai-dev/workspace/refresh/*` | 历史文档 | 旧字段路径说明 | P3 | 用历史口径说明处理，不阻断双写 |
 | `mes-ai-dev/workspace/examples/*` | 示例文档 | `state.yaml` 字段示例 | P3 | 双写稳定后再统一更新 |

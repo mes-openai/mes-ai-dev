@@ -31,5 +31,5 @@
 ## 历史报告阅读边界
 
 - `workspace/refresh/` 下的历史审计/复盘/说明类文档反映的是生成当时的骨架状态。
-- 若历史报告中的路径、命名、收口或并发治理口径与当前规则不一致，以最新 `AGENTS.md`、`phase-gates/index.md`、`state/state-rendering-index.md`、`knowledge-consumption/index.md` 为准。
+- 若历史报告中的路径、命名、收口或并发治理口径与当前规则不一致，以最新 `AGENTS.md`、`phase-gates/index.md`、`mes-ai-dev/knowledge/state/state-rendering-index.md`、`knowledge-consumption/index.md` 为准。
 - 历史报告默认不得作为当前 canonical 命名与路径规则的唯一依据。
