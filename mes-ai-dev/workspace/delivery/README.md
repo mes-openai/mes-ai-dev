@@ -17,5 +17,5 @@
 1. 每个需求独立一个目录：`REQ-YYYYMMDD-XXX/`
 2. 部署执行前必须完成验收检查
 3. 部署日志记录每步执行结果
-4. 交接完成后释放 `workspace/locks/` 下的锁文件
+4. 交接完成后释放 `mes-ai-dev/workspace/locks/` 下的锁文件
 5. 所有文件使用中文编写

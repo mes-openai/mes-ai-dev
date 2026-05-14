@@ -278,8 +278,8 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 | `mes-ai-dev/knowledge/reference/permission-matrix.md` | 全局收口后的权限矩阵 |
 | `mes-ai-dev/knowledge/rules/api-conventions.md` | 全局收口后的API规范基线 |
 | `mes-ai-dev/knowledge/rules/coding-standards.md` | 全局收口后的编码规范基线 |
-| `workspace/refresh/*-converge-report.md` | 建议使用 `templates/governance/converge-report-template.md` 记录本次收敛结论 |
-| `workspace/refresh/*-fragment-convergence-checklist.md` | 建议使用 `templates/governance/fragment-convergence-checklist-template.md` 记录收口前统一检查结果 |
+| `mes-ai-dev/workspace/refresh/*-converge-report.md` | 建议使用 `templates/governance/converge-report-template.md` 记录本次收敛结论 |
+| `mes-ai-dev/workspace/refresh/*-fragment-convergence-checklist.md` | 建议使用 `templates/governance/fragment-convergence-checklist-template.md` 记录收口前统一检查结果 |
 
 > **历史遗留**：`.init-checkpoint.yaml` / `.sync-record.json` 仅 `mes-verify-state-migration` 专项核查时引用。
 
@@ -302,11 +302,11 @@ description: "收敛多次单仓初始化结果，生成接近全仓初始化的
 
 1. **本命令是初始化共享产物唯一汇总入口**：所有最终共享文件一律由本命令统一生成或更新
 2. **本命令不替代 `/mes-init-project` / `/mes-init-enrich` 的局部扫描职责**：它负责汇总，不负责初次扫描代码仓或局部深化
-3. **本命令必须持有全局收口锁**：未获取 `workspace/locks/mes-init-converge.lock` 前，不得开始任何共享文件汇总、状态合并与热点重算
+3. **本命令必须持有全局收口锁**：未获取 `mes-ai-dev/workspace/locks/mes-init-converge.lock` 前，不得开始任何共享文件汇总、状态合并与热点重算
 4. **热点层必须全局重算**：不能以单仓增量结果直接替代全局热点层
 5. **全局收敛后才能视为初始化结果可消费**：初始化各阶段/步骤只产生局部结果；未执行 `/mes-init-converge` 前，不得将共享依赖文件视为最终可消费结果
 6. **统一状态源优先**：已合并状态写入 `state.yaml`，兼容视图从 state.yaml 渲染
-7. **初始化状态先片段后合并**：`/mes-init-converge` 必须先串行合并 `state.mes-ai-dev/knowledge/fragments/*.yaml`，再更新 `state.yaml`
+7. **初始化状态先片段后合并**：`/mes-init-converge` 必须先串行合并 `mes-ai-dev/knowledge/state/fragments/*.yaml`，再更新 `state.yaml`
 8. **共享知识文件必须串行写入**：不得并行覆盖 overview / registry / baseline / init-coverage
 9. **收敛状态必须留痕**：是否已完成全局收敛，应写入 `state.yaml.initialization.convergence`
 10. **共享 mes-ai-dev/knowledge/reference/rules 文件必须经收口**：多次单仓/多session 初始化后的 mes-ai-dev/knowledge/reference/rules 共享文件，必须由 `/mes-init-converge` 或主控等价收口过程串行合并，禁止各 session 直接覆盖最终文件

@@ -903,12 +903,12 @@ Step 4：开始使用
 ```
 操作步骤：
 1. 需求A和需求B分别执行各自的分析/设计/开发流程
-2. 开发阶段开始前，AI自动检查 workspace/locks/ 下的锁文件
+2. 开发阶段开始前，AI自动检查 mes-ai-dev/workspace/locks/ 下的锁文件
 3. 若两个需求涉及同一服务 → AI提示冲突，建议排队或拆分
 4. 若涉及不同服务 → 可并行开发，互不干扰
 
 锁机制说明：
-- 每个服务在开发时自动创建锁文件（workspace/locks/service-xxx.lock）
+- 每个服务在开发时自动创建锁文件（mes-ai-dev/workspace/locks/service-xxx.lock）
 - 锁文件记录占用需求ID、阶段、时间
 - 开发完成后自动释放
 - 检测到锁时，用户可选择：等待/强制获取/切换服务

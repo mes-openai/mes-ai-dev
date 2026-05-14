@@ -11,7 +11,7 @@ default_allowed: false
 parent_index: .opencode/references/mes-ai-reference/reference/skeleton-loading-matrix.md
 related_files:
   - .opencode/references/mes-ai-reference/rules/skeleton-change-governance-summary.md
-  - workspace/refresh/skeleton-change-log.md
+  - mes-ai-dev/workspace/refresh/skeleton-change-log.md
 ---
 
 # 骨架修改治理规则

@@ -457,4 +457,4 @@ mes-ai-dev/workspace/delivery/REQ-YYYYMMDD-XXX/
 2. **人工确认**：部署执行前必须获得人工确认，不可自动跳过
 3. **回滚准备**：部署前必须确认回滚方案可行
 4. **并行产出**：发布说明和交接文档可并行生成，提高效率
-5. **锁释放**：交接完成后必须释放 workspace/locks/ 下的锁文件
+5. **锁释放**：交接完成后必须释放 mes-ai-dev/workspace/locks/ 下的锁文件

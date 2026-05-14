@@ -10,7 +10,7 @@ summary_first: false
 default_allowed: true
 parent_index: .opencode/references/mes-ai-reference/rules/skeleton-change-governance.md
 related_files:
-  - workspace/refresh/skeleton-change-log.md
+- mes-ai-dev/workspace/refresh/skeleton-change-log.md
 ---
 
 # 骨架修改治理摘要

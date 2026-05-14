@@ -211,13 +211,13 @@ task()调用示例:
 
 ```
 task(category="deep", load_skills=["mes-refresh-update-code-map"], run_in_background=true,
-     prompt="更新代码地图。\n变更列表: workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/code-map/")
+     prompt="更新代码地图。\n变更列表: mes-ai-dev/workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/code-map/")
 
 task(category="deep", load_skills=["mes-refresh-update-dependency"], run_in_background=true,
-     prompt="更新依赖关系。\n变更列表: workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/dependency-graph/")
+     prompt="更新依赖关系。\n变更列表: mes-ai-dev/workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/dependency-graph/")
 
 task(category="deep", load_skills=["mes-refresh-update-api-registry"], run_in_background=true,
-     prompt="更新API注册表。\n变更列表: workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/dependency-graph/api-registry.md")
+     prompt="更新API注册表。\n变更列表: mes-ai-dev/workspace/refresh/change-list.md\n输出: mes-ai-dev/knowledge/dependency-graph/api-registry.md")
 ```
 
 结果合并:
